@@ -106,3 +106,8 @@ dependencies[] = better_exposed_filters
 dependencies[] = draggableviews
 dependencies[] = views
 dependencies[] = views_ui
+
+; Search
+dependencies[] = search_api
+dependencies[] = search_api_db
+dependencies[] = facetapi
