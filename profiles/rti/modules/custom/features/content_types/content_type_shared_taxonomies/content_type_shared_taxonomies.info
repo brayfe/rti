@@ -1,0 +1,14 @@
+name = Content Type Shared Taxonomies
+description = shared Taxonomy Categories for content types
+core = 7.x
+package = Content Types
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[taxonomy][] = ranking
+features[taxonomy][] = resource_stakeholders
+features[taxonomy][] = resource_subcategories
+features[taxonomy][] = special_populations
+features[taxonomy][] = tags
+project path = sites/all/modules/custom/features/content_types

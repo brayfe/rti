@@ -1,0 +1,18 @@
+/* custom media queries */
+
+@media all and (max-width: 1024px) {
+
+  $zen-column-count: 8;
+
+   /* The layout when there is only one sidebar, the left one. */
+  .sidebar-first {
+    #content {
+      @include zen-grid-item(8, 1);
+    }
+
+    /* hide first column */
+    .region-sidebar-first {
+      //display:none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+name = Resources Featured Items
+description = The Featured Items view of resources
+core = 7.x
+package = Views
+version = 7.x-1.0
+dependencies[] = better_exposed_filters
+dependencies[] = content_type_shared_field_bases
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = options
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[field_instance][] = node-resource_page-field_featured_resource
+features[views_view][] = resources_featured
+features_exclude[dependencies][list] = list
+project path = sites/all/modules/custom/features/views

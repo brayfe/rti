@@ -1,0 +1,12 @@
+name = Main Menu
+description = Navigation menu at top of page (about RTI, etc.)
+core = 7.x
+package = Menus
+version = 7.x-1.0
+dependencies[] = fe_block
+dependencies[] = features
+dependencies[] = menu
+features[fe_block_settings][] = system-main-menu
+features[features_api][] = api:2
+features[menu_custom][] = main-menu
+project path = sites/all/modules/custom/features/menus

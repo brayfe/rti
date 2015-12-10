@@ -1,0 +1,108 @@
+name = RTI
+description = Building RTI Installation Profile
+version = "7.x-2.0"
+core = 7.x
+php = 5.3
+
+; The distribution_name property is used in the installer and other places as
+; a label for the software being installed.
+distribution_name = rti
+
+; The exclusive flag auto-selects the profile during installation, if there
+; are no other exclusive ones.
+exclusive = FALSE
+
+; Required modules (Core)
+; Copy/pasted from standard.info
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = taxonomy
+dependencies[] = update
+
+
+; Required modules (Contrib)
+; Administration
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+dependencies[] = module_filter
+
+; Chaos Tools
+dependencies[] = ctools
+
+; Date/Time
+dependencies[] = date
+dependencies[] = date_all_day
+dependencies[] = date_api
+dependencies[] = date_popup
+dependencies[] = date_views
+
+; Feeds
+dependencies[] = feeds_tamper_ui
+
+; Fields
+dependencies[] = entityreference
+dependencies[] = field_group
+dependencies[] = link
+dependencies[] = term_reference_tree
+
+; Flex Slider
+dependencies[] = flexslider
+dependencies[] = flexslider_views
+
+; Front End
+dependencies[] = magic
+dependencies[] = modernizr
+
+; Input Filters
+dependencies[] = pathologic
+
+; Markup
+dependencies[] = html5_tools
+
+; Media
+dependencies[] = file_entity
+dependencies[] = imce
+dependencies[] = magnific_popup
+dependencies[] = media
+dependencies[] = media_wysiwyg
+dependencies[] = media_wysiwyg_view_mode
+
+; Other
+dependencies[] = backup_migrate
+dependencies[] = colorbox
+dependencies[] = diff
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = libraries
+dependencies[] = menu_attributes
+dependencies[] = menu_block_export
+dependencies[] = pathauto
+dependencies[] = redirect
+dependencies[] = special_menu_items
+dependencies[] = token
+
+; User Interface
+dependencies[] = ckeditor
+dependencies[] = ckeditor_swf
+dependencies[] = jquery_update
+
+; Views
+dependencies[] = better_exposed_filters
+dependencies[] = draggableviews
+dependencies[] = views
+dependencies[] = views_ui

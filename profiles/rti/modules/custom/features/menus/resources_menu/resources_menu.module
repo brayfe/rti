@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Resources Menu feature.
+ */
+
+include_once 'resources_menu.features.inc';

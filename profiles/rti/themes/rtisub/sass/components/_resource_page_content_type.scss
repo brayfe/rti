@@ -1,0 +1,34 @@
+/* resource page full node */
+
+/* documents resource content type - full nodes */
+
+.node-type-resource-page{
+	.type-image-wrapper{
+		float:left;
+		width:145px;
+		text-align:center;
+		.field-name-field-resource-type .field-item{
+			display: inline-block;
+			padding: 1px 6px;
+			font-size: 0.7em;
+			width: 100px;
+			text-align: center;
+		}
+		// change this field name below
+		.field-name-field-resource-page-image{
+			text-align:center;
+			img{
+				width:120px;
+				height:auto;
+			}
+		}
+	}
+	.node-fields-wrapper{
+		margin-left:160px;
+	}
+}
+
+
+
+
+

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Search Block feature.
+ */
+
+include_once 'search_block.features.inc';

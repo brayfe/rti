@@ -1,0 +1,14 @@
+name = Text Fromats
+description = advanced and full html
+core = 7.x
+package = Other Features
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = media_wysiwyg
+dependencies[] = pathologic
+features[features_api][] = api:2
+features[filter][] = filtered_html
+features[filter][] = full_html
+features_exclude[dependencies][ckeditor_swf] = ckeditor_swf
+project path = sites/all/modules/custom/features/other

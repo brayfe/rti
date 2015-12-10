@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Online Modules feature.
+ */
+
+include_once 'online_modules.features.inc';

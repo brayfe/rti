@@ -1,0 +1,10 @@
+name = User Roles
+description = the user roles for editor and view unpublished content
+core = 7.x
+package = Other Features
+version = 7.x-1.0
+dependencies[] = features
+features[features_api][] = api:2
+features[user_role][] = editor
+features[user_role][] = view nonpublished
+project path = sites/all/modules/custom/features/other

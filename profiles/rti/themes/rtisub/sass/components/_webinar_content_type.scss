@@ -1,0 +1,17 @@
+/* webinar content type full node */
+
+/* documents resource content type - full nodes */
+
+.node-type-webinar{
+	// change this field name below
+	.node-fields-wrapper .field-name-field-webinar-link{
+		a:after{
+				content: "Go to Webinar";
+		}
+	}
+}
+
+
+
+
+

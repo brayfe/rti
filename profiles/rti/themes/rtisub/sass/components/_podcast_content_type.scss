@@ -1,0 +1,18 @@
+/* podcast resources full node */
+
+/* documents resource content type - full nodes */
+
+.node-type-podcast{
+	// change this field name below
+	.node-fields-wrapper .field-name-field-podcast-link a,.field-name-field-podcast-captivate-link a{
+		&:after{
+			content: "Go to Podcast";
+		}
+	}
+}
+
+
+
+
+
+

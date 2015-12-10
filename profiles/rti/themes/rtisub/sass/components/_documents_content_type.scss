@@ -1,0 +1,16 @@
+/* documents resource content type - full nodes */
+
+.node-type-documents{
+	.field-name-field-document-resource-file{
+		.file a{
+			&:after{
+				content: "Get Document";
+			}
+		}
+	}
+}
+
+
+
+
+

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Migration Feeds feature.
+ */
+
+include_once 'migration_feeds.features.inc';
