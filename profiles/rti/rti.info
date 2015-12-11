@@ -136,7 +136,7 @@ dependencies[] = url_alias_patterns
 ; Features - Taxonomy
 
 ; Features - Text Formats
-dependencies[] = text_fromats
+dependencies[] = text_formats
 
 ; Features - Variables
 
