@@ -1,7 +1,7 @@
 name = URL Alias Patterns
 description = url patterns for content types
 core = 7.x
-package = Other Features
+package = Settings
 version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = strongarm
@@ -19,4 +19,4 @@ features[variable][] = pathauto_node_presentation_pattern
 features[variable][] = pathauto_node_resource_page_pattern
 features[variable][] = pathauto_node_video_resource_pattern
 features[variable][] = pathauto_node_webinar_pattern
-project path = sites/all/modules/custom/features/other
+project path = profiles/rti/modules/custom/features/settings

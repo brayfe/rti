@@ -1,6 +1,6 @@
 name = Responsive Menu Settings
 core = 7.x
-package = Other Features
+package = Settings
 version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = strongarm
@@ -15,4 +15,4 @@ features[variable][] = responsive_menus_sidr_on_close
 features[variable][] = responsive_menus_sidr_on_open
 features[variable][] = responsive_menus_sidr_trigger_txt
 features[variable][] = responsive_menus_style
-project path = sites/all/modules/custom/features/other
+project path = profiles/rti/modules/custom/features/settings

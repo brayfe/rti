@@ -1,7 +1,7 @@
-name = Text Fromats
+name = Text Formats
 description = advanced and full html
 core = 7.x
-package = Other Features
+package = Text Formats
 version = 7.x-1.0
 dependencies[] = features
 dependencies[] = filter
@@ -11,4 +11,4 @@ features[features_api][] = api:2
 features[filter][] = filtered_html
 features[filter][] = full_html
 features_exclude[dependencies][ckeditor_swf] = ckeditor_swf
-project path = sites/all/modules/custom/features/other
+project path = profiles/rti/modules/custom/features/text_formats

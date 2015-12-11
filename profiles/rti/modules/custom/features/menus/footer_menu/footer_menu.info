@@ -11,4 +11,4 @@ features[fe_block_settings][] = block-rti_footer_closing
 features[fe_block_settings][] = menu-menu-rti-footer-menu
 features[features_api][] = api:2
 features[menu_custom][] = menu-rti-footer-menu
-project path = sites/all/modules/custom/features/menus
+project path = profiles/rti/modules/custom/features/menus

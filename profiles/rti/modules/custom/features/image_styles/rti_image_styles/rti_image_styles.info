@@ -1,10 +1,10 @@
 name = RTI Image Styles
 description = image styles for site
 core = 7.x
-package = Other Features
+package = Image Styles
 version = 7.x-1.0
 dependencies[] = image
 features[features_api][] = api:2
 features[image][] = news_flash_slider_image
 features[image][] = resource_thumbnail
-project path = sites/all/modules/custom/features/other
+project path = profiles/rti/modules/custom/features/image_styles
