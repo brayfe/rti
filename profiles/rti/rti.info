@@ -111,3 +111,33 @@ dependencies[] = views_ui
 dependencies[] = search_api
 dependencies[] = search_api_db
 dependencies[] = facetapi
+
+; Features
+dependencies[] = features
+dependencies[] = fe_block
+
+; Features - Content Types
+
+; Features - Image Styles
+dependencies[] = rti_image_styles
+
+; Features - Menus
+dependencies[] = footer_menu
+
+; Features - Roles and Permissions
+dependencies[] = user_roles
+
+; Features - Settings
+dependencies[] = colorbox_load_setting
+dependencies[] = google_analytics
+dependencies[] = responsive_menu_settings
+dependencies[] = url_alias_patterns
+
+; Features - Taxonomy
+
+; Features - Text Formats
+dependencies[] = text_fromats
+
+; Features - Variables
+
+; Features - Views

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the News Flash feature.
- */
-
-include_once 'news_flash.features.inc';
