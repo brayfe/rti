@@ -279,7 +279,7 @@ function rti_install() {
     _install_menus();
     
     // Revert all Features
-    features_revert();
+    // features_revert();
 }
 
 /**
