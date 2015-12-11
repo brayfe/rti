@@ -20,13 +20,6 @@ function google_analytics_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'google_tag_container_id';
-  $strongarm->value = 'GTM-P3VJMZ';
-  $export['google_tag_container_id'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'google_tag_path_list';
   $strongarm->value = 'admin*
 batch*

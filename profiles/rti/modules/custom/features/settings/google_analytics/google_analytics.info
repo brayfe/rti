@@ -9,7 +9,6 @@ dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[variable][] = google_tag_compact_tag
-features[variable][] = google_tag_container_id
 features[variable][] = google_tag_path_list
 features[variable][] = google_tag_path_toggle
 features[variable][] = google_tag_role_list
