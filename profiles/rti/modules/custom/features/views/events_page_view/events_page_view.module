@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Events Page View feature.
- */
-
-include_once 'events_page_view.features.inc';

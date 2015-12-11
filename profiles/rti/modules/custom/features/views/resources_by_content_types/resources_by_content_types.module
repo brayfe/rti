@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Resources by Content Types feature.
- */
-
-include_once 'resources_by_content_types.features.inc';

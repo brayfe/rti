@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Resource Page feature.
- */
-
-include_once 'resource_page.features.inc';

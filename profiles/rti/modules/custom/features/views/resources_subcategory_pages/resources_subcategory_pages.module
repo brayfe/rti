@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Resources Subcategory Pages feature.
- */
-
-include_once 'resources_subcategory_pages.features.inc';

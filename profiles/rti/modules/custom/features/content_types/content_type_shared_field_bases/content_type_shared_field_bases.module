@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Content Type shared field bases feature.
- */
-
-include_once 'content_type_shared_field_bases.features.inc';

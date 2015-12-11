@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Booklets  feature.
- */
-
-include_once 'booklets_.features.inc';
