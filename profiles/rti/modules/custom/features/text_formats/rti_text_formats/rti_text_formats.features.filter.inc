@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * text_fromats.features.filter.inc
+ * rti_text_formats.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function text_fromats_filter_default_formats() {
+function rti_text_formats_filter_default_formats() {
   $formats = array();
 
   // Exported format: Filtered HTML.
@@ -54,10 +54,15 @@ function text_fromats_filter_default_formats() {
         'status' => 1,
         'settings' => array(
           'local_paths' => 'http://localhost:8888
+
 http://www.rti.local
+
 http://buildingrti.org
+
 http://10206.utweb.utexas.edu
+
 http://10208.utweb.utexas.edu
+
 http://10207.utweb.utexas.edu',
           'protocol_style' => 'proto-rel',
         ),
