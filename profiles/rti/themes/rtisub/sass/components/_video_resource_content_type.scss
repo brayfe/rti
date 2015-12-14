@@ -1,0 +1,41 @@
+/* video resource full nodes */
+
+/* documents resource content type - full nodes */
+
+.node-type-video-resource{
+	// change this field name below
+	.field-name-field-video-resource-file,.field-name-field-video-captivate-file{
+		.mfp-nogallery-iframe a,a.colorbox-load{
+			text-indent:-100000px;
+			padding:12px;
+			line-height:1em;
+			display: inline-block;
+			position:relative;
+			outline:0;
+			img.mfp-thumbnail {
+				display: none;
+			}
+			&:after{
+				position: absolute;
+				color: #fff;
+				white-space: nowrap;
+				background-color: #3169a2;
+				top: 0;
+				left: 0;
+				font-size: 0.75em;
+				line-height:1em;
+				text-transform: uppercase;
+				padding: 1em 1em 0.85em;
+				text-indent: 0;
+				width: auto;
+				content: "Get Video Resource";
+			}
+
+		}
+	}
+}
+
+
+
+
+

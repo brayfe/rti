@@ -1,0 +1,124 @@
+/* resources navigation styles */
+
+
+
+#block-menu-block-1{
+  h2{
+    background-color: #e6e6e6;
+    color: $darkgray;
+    text-align: center;
+    margin-bottom: 3px;
+    border: 1px solid #444;
+  }
+  ul:first-child{
+    padding:0;
+    margin-top: 0;
+  }
+  ul li {
+    list-style-image: none;
+    list-style-type: none;
+    .nolink{
+      cursor: pointer;
+      font-size: 1em;
+      padding: .3em .5em;
+      margin-bottom: 3px;
+      display: block;
+      font-family:$opensanscondensed;
+      color:#000;
+      border:1px solid $darkgray;
+      font-weight:700;
+      &:hover,&:focus{
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }
+  ul li ul{
+    display:none;
+    margin-bottom: 2px;
+    padding-left:0;
+    position:relative;
+    li{
+      a{
+        text-decoration: none;
+        font-weight: 600;
+        color: #000;
+        display: block;
+        padding: 3px 19px;
+        font-size: .9em;
+        &:hover,&:focus{
+          text-decoration:underline;
+        }
+      }
+      a.active{
+        color:#ae3d0d; //$orange;
+        font-weight: bold;
+        &:before{
+          content:"\25b6";
+          position: absolute;
+          left:1px;
+        }
+      }
+    }
+    li.is-active{
+      list-style-type: none;
+      list-style-position: inside;
+    }
+  }
+}
+/* mobile nav */
+#sidr-wrapper-0{
+  position:relative;
+  top: -61px;
+  left: -18px;
+  #sidr-0-button{
+    position: relative;
+    z-index: 10;
+    //background-color: rgba(250, 249, 249, 0.48);
+    background-color:#fff;
+    color: #333;
+    font-weight: 600;
+    padding: 4px 10px;
+    text-decoration: none;
+    border: 2px solid #333;
+    &:hover,&:focus{
+      background-color:$darkgray;
+      color:#fff;
+    }
+  }    
+}
+/* theme the menu */
+h2.sidr-class-block__title{
+  color:#9cf;
+  font-size: 2em;
+  padding: 5px;
+  line-height: 1.6em;
+  text-align: center;
+}
+.sidr-class-menu__link.sidr-class-nolink{
+  color:#fff;
+  padding-right:1.2em;
+  cursor:pointer;
+  &:after{
+    content:"\25b6";
+    color:#ccc;
+    float:right;
+  }
+}
+.sidr-class-menu__link.sidr-class-nolink.reveal{
+  &:after{
+    content:"\25bc";
+  }
+}
+.sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu{
+  display:none !important;
+}
+.sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu.show-me{
+  display:block !important;
+  a.sidr-class-menu__link{
+    color:$orange;
+    &:hover,&:focus{
+      color:#fff;
+    }
+  }
+}

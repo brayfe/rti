@@ -1,0 +1,349 @@
+/* main content area styles */
+
+/* hide homepage title */
+.front h1.title{
+	//display:none;
+  font-size:1.4em;
+  margin-top:1.5em !important;
+}
+/* hide page title for now */
+
+.page-resources #page-title,.page-resource #page-title,.section-introduction #page-title,.section-introduction-0 #page-title,.section-introduction-1  #page-title,.section-introduction-2 #page-title,.section-introduction-3 #page-title,.section-introduction-4 #page-title,.section-introduction-5 #page-title,.section-introduction-6 #page-title,.section-introduction-7 #page-title {
+  font-weight: 600;
+  color: #E3613B;
+  color:$darkgray;
+  line-height: 1.2em;
+  font-size:1.4em;
+  margin-bottom: 1em;
+}
+#page-title,.page-resources-featured #page-title,.page-resources-parents #page-title{
+  text-align: center;
+  font-weight: 600;
+  font-size:2em;
+  color: #E3613B;
+  line-height: 1.2em;
+  margin-top: 0;
+}
+.page-resources-featured h2.titleInsert,.page-resources-parents h2.titleInsert,.page-events h2.titleInsert,.section-contact-us h2.titleInsert{
+  display:none;
+}
+h2.titleInsert{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom:0em;
+  font-size:2em;
+  font-weight: 600;
+  color: #E3613B;
+  line-height: 1.2em;
+}
+#main-menu ul{
+	float:right;
+}
+
+.sidebar-first #main-wrapper{
+  width: 100%;
+  background: #fff;
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image:url('../images/bg3.jpg');
+  padding-top: 3em;
+  padding-bottom: 3em;
+  #main{
+	  max-width: 1150px;
+	  margin: 0 auto;
+	  background-color:rgba(255,255,255,0.85);
+	  padding:1.625em 1em 3em 1em;
+	  #content{
+	  	// text-shadow: 1px 1px 5px #fff !important;
+	  }
+  }
+}
+.page-inner,
+.region-bottom {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1150px;
+}
+
+/* pagers */
+/* set margin on oager items so it's margins instead of padding */
+.item-list{
+    margin: 2em 0;
+    text-align: center;
+}
+.pager-item{
+  margin:0 0.2em;
+  padding:0;
+}
+.view .item-list,.section-resource-subcategories .item-list{
+  text-align:center;
+  margin:3em 0;
+}
+ul.pager{
+  text-align: center;
+  padding: 15px 4px;
+  background-color: rgba(255, 255, 255,0.5);
+  border: 1px solid rgb(221, 221, 221);
+  margin: 1em auto;
+  display:inline;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  -ms-border-radius: 30px;
+  li{
+
+    a{
+        padding: 3px 10px;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -o-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        color: $darkgray;
+        border: 1px solid $darkgray;
+        background-color: rgb(255, 255, 255);
+        font-family:$opensans, monospace;
+        &:hover,&:focus{
+          background-color: $darkgray;
+          color: #fff
+        }
+    }
+  }
+  li.pager-current{
+    font-weight: bold;
+    border: 2px solid $darkgray;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -o-border-radius: 18px;
+    -ms-border-radius: 18px;
+    padding: 3px 10px;
+    background-color: #FFF;
+  }
+  li.pager-next{
+    padding-right:0;
+    a{
+      border-radius:0;
+      -webkit-border-radius:0;
+      -o-border-radius:0;
+      -moz-border-radius:0;
+      -ms-border-radius:0;
+      &:hover,&:focus{
+        background-color: $darkgray;
+        color: #fff
+      }
+    }
+  }
+  li.pager-last{
+    padding-left:0;
+    padding-right:0;
+    margin-right: 0.5em;
+    a{
+      border-radius:0 20px 20px 0;
+      -webkit-border-radius:0 20px 20px 0;
+      -moz-border-radius:0 20px 20px 0;
+      -o-border-radius:0 20px 20px 0;
+      -ms-border-radius:0 20px 20px 0;
+      &:hover,&:focus{
+        background-color: $darkgray;
+        color: #fff
+      }
+    }
+  }
+  li.pager-previous{
+    padding-left:0;
+    a{
+      border-radius:0;
+      -moz-border-radius:0;
+      -webkit-border-radius:0;
+      -ms-border-radius:0;
+      -o-border-radius:0;
+      &:hover,&:focus{
+        background-color: $darkgray;
+        color: #fff
+      }
+    }
+  }
+  li.pager-first{
+    padding-right:0;
+    padding-left:0;
+    a{
+      border-radius:20px 0 0 20px;
+      &:hover,&:focus{
+        background-color: $darkgray;
+        color: #fff;
+      }
+    }
+  }
+  li.pager-current.last{
+    margin-right: 0.5em;
+  }
+  li.pager-first.first{
+    margin-left: 0.5em;
+  }
+  li.pager-current.first{
+        margin-left: 0.5em;
+  }
+}
+
+/* no input outline when you click search */
+input{
+  outline:none;
+}
+
+/* bg images for main area */
+/* node type */
+.node-type-booklet,.node-type-documents,.node-type-module-resource,.node-type-podcast,.node-type-presentation,.node-type-webinar,.node-type-video-resource,.node-type-external-links-websites {
+  #main-wrapper{
+    background-image:url('../images/bg14.jpg');
+  }
+}
+.front{
+  #main-wrapper{
+    background-image:url('../images/bghome.jpg');
+  }
+}
+.page-resources,.page-resource{
+  #main-wrapper{
+    background-image:url('../images/bg3.jpg');
+  }
+}
+.page-resources-featured{
+  #main-wrapper{
+    background-image:url('../images/bg9.jpg');
+  }
+}
+.page-resources-parents{
+  #main-wrapper{
+    background-image:url('../images/bg10.jpg');
+  }
+}
+.page-events{
+  #main-wrapper{
+    background-image:url('../images/bg4.jpg');
+  }
+}
+.section-about-rti{
+  #main-wrapper{
+    background-image:url('../images/bg11.jpg');
+  }
+}
+.section-contact-us{
+  #main-wrapper{
+    background-image:url('../images/bg12.jpg');
+  }
+}
+/* video page inside captivate modules - make video responsive */
+#cboxContent{
+  iframe{
+    body{
+      embed#Captivate{
+        width:100%;
+        height:auto;
+      }
+    }
+  }
+}
+
+/* search results */
+.search-advanced a{
+  color:$darkgray;
+  font-size:0.9em;
+}
+ol.search-results{
+  padding-left:0;
+  li{
+    margin-bottom: 1em;
+    border-top: 1px solid $darkgray;
+    h3{
+      margin-bottom: 0;
+      a{
+        color: $darkgray;
+        text-decoration: none;
+        &:hover,&:focus{
+          text-decoration:underline;
+        }
+      }
+    }
+    .search-snippet-info{
+      padding-left:0;
+      margin-top: .3em;
+      p.search-snippet{
+        margin-top:0;
+      }
+      p.search-info{
+        display:none;
+      }
+    }
+  }
+}
+.page-search h2{
+  text-align:center;
+  margin: 0;
+}
+/* search page filter by content type - set to match the content type filter above the resources view lists */
+.custom-search-filter{
+  padding: 0;
+  width: 250px;
+  margin: 0 auto;
+  float: none;
+  font-size: 0.8em;
+  .item-list{
+    margin:0;
+  }
+  h3{
+    margin-bottom: 0.3em;
+    margin-top:0;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #666;
+    padding: 0;
+    background-color: #e6e6e6;
+    font-weight: bold;
+    text-shadow: none;
+    line-height: 1.6em;
+  }
+  ul{
+    margin-top:-4px;
+    padding-left: 0;
+    display:none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+    li{
+      list-style-type: none;
+      a{
+        color:$darkgray;
+        font-size:1em;
+        color: #333333;
+        line-height: 1.6em;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 2px 1em;
+        border-top: 1px solid #666;
+        &:hover,&:focus{
+          background-color: #e6e6e6;
+        }
+      }
+    }
+    li.first a{
+      border:none;
+    }
+  }
+}
+
+
+
+

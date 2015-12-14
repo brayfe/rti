@@ -1,0 +1,36 @@
+/* -footer styles- */
+
+#footer-wrapper{
+  width:100%;
+
+  background:#222;
+  footer{
+    max-width: 1200px;
+    margin: 0 auto;
+    color:#78B6F4;
+    text-shadow:none;
+    font-size:0.75em;
+    text-align:center;
+    a{
+    	color:#fff;
+
+    }
+    ul{
+
+    	li{
+    		list-style-type:none;
+    		display:inline;
+    		padding:1.2em;
+			a{
+				text-decoration:none;
+				color:#fff;
+				font-size:1.2em;
+			}
+
+    	}
+    }
+
+  }
+}
+
+

@@ -1,0 +1,120 @@
+/* -header styles- */
+
+/* very top university... bar */
+.ut-brand-wrapper{
+	height:26px;
+	background-color:#0E4985;
+	.ut-brand{
+		max-width:1177px;
+		margin:0 auto;
+		padding-left: 18px;
+		padding-right: 10px;
+		 text-align: right;
+		img{
+			width: 320px;
+			height: auto;
+			vertical-align: middle;
+			padding-left: 7px;
+		}
+	}
+}
+#header-wrapper{
+	width:100%;
+	background-color:#e6e6e6;
+	header.header{
+		max-width: 1200px;
+		margin: 0 auto;
+		.header__logo {
+			margin: 22px 0;
+            img{
+                width:130px;
+                height:auto;
+            }
+		}
+	}
+}
+
+.header__region {
+  clear: none !important;
+  #block-search-form{
+  float: right;
+  margin-top: 45px;
+  margin-bottom: 0;
+  }
+}
+
+#block-search-form{
+	width:450px;
+	#search-block-form{
+		text-align:right;
+        position: relative;
+        label[for=edit-custom-search-types]{
+            color:$niceblue;
+            font-weight: normal;
+            float: left;
+            margin-left: 160px;
+            font-style: italic;
+            font-size: 0.9em;
+            border:none;
+            //border-bottom: 1px solid $niceblue;
+            cursor:pointer;
+            &:hover,&:focus{
+                border-bottom: 1px solid $niceblue;
+                
+            }
+            &:after{
+                //content:" \00bb";
+            }
+        }
+	}
+    input.form-text, input.form-submit {
+        width: 80%;
+        height: 3em;
+        border:none;
+    }
+    #edit-custom-search-types {
+        font-size: 0.75em;
+        right: 0px;
+        text-align: left;
+        width: inherit;
+        display: none;
+        z-index: 5;
+        top: 75px;
+        position: absolute;
+        width: 90%;
+        background-color: #e6e6e6;
+        padding: 1em;
+        .form-item {
+            padding: 0 5px;
+            float: left;
+            width: 115px;
+        }
+    }
+    form input{
+        padding: 0 0.5em;
+        box-sizing: border-box;
+        border-radius: 4px 0 0 4px;
+        -webkit-border-radius: 4px 0 0 4px;
+        -moz-border-radius: 4px 0 0 4px;
+        -o-border-radius: 4px 0 0 4px;
+        -ms-border: none;
+    }
+    #edit-actions input{
+        width:80px;
+        background-color: rgb(49, 105, 162);
+        color:#fff;
+        border: none;
+        float:right;
+        text-transform:uppercase;
+        font-family:$opensans;
+        font-weight: 400;
+        border-radius: 0 4px 4px 0;
+
+        &:hover,&:focus{
+            background-color:$darkblue;
+        }
+    }
+}
+
+
+

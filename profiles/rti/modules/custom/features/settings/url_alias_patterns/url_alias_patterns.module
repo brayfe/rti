@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the URL Alias Patterns feature.
+ */
+
+include_once 'url_alias_patterns.features.inc';

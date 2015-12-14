@@ -1,0 +1,17 @@
+/* external links websites full node */
+
+/* documents resource content type - full nodes */
+
+.node-type-external-links-websites{
+	// change this field name below
+	.node-fields-wrapper .field-name-field-external-resource-link{
+		a:after{
+			content: "Go to External Link / Website";
+		}
+	}
+}
+
+
+
+
+

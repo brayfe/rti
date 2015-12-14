@@ -1,0 +1,413 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the utexas install profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+
+function rti_install() {
+    // Enable RTI main themes
+    $enable = array(
+      'theme_default' => 'rtisub',
+      'admin_theme' => 'subseven',
+    );
+    theme_enable($enable);
+
+    // Set RTI main themes as default
+    variable_set('theme_default', $enable['theme_default']);
+    variable_set('admin_theme', $enable['admin_theme']);
+    variable_set('node_admin_theme', '1');
+
+    // Disable the default Bartik theme
+    theme_disable(array('bartik', 'seven', 'zen'));
+
+
+    /*  START copy from standard install profile */
+    // Add text formats.
+    $filtered_html_format = array(
+      'format' => 'filtered_html',
+      'name' => 'Filtered HTML',
+      'weight' => 0,
+      'filters' => array(
+        // URL filter.
+        'filter_url' => array(
+          'weight' => 0,
+          'status' => 1,
+        ),
+        // HTML filter.
+        'filter_html' => array(
+          'weight' => 1,
+          'status' => 1,
+        ),
+        // Line break filter.
+        'filter_autop' => array(
+          'weight' => 2,
+          'status' => 1,
+        ),
+        // HTML corrector filter.
+        'filter_htmlcorrector' => array(
+          'weight' => 10,
+          'status' => 1,
+        ),
+      ),
+    );
+    $filtered_html_format = (object) $filtered_html_format;
+    filter_format_save($filtered_html_format);
+
+    $full_html_format = array(
+      'format' => 'full_html',
+      'name' => 'Full HTML',
+      'weight' => 1,
+      'filters' => array(
+        // URL filter.
+        'filter_url' => array(
+          'weight' => 0,
+          'status' => 1,
+        ),
+        // Line break filter.
+        'filter_autop' => array(
+          'weight' => 1,
+          'status' => 1,
+        ),
+        // HTML corrector filter.
+        'filter_htmlcorrector' => array(
+          'weight' => 10,
+          'status' => 1,
+        ),
+      ),
+    );
+    $full_html_format = (object) $full_html_format;
+    filter_format_save($full_html_format);
+
+    // Enable some standard blocks.
+    $default_theme = variable_get('theme_default', 'rtisub');
+    $admin_theme = variable_get('admin_theme', 'subseven');
+    $blocks = array(
+      array(
+        'module' => 'system',
+        'delta' => 'main',
+        'theme' => $default_theme,
+        'status' => 1,
+        'weight' => 0,
+        'region' => 'content',
+        'pages' => '',
+        'cache' => -1,
+      ),
+      array(
+        'module' => 'search',
+        'delta' => 'form',
+        'theme' => $default_theme,
+        'status' => 1,
+        'weight' => -1,
+        'region' => 'header',
+        'pages' => '',
+        'cache' => -1,
+      ),
+      array(
+        'module' => 'node',
+        'delta' => 'recent',
+        'theme' => $admin_theme,
+        'status' => 1,
+        'weight' => 10,
+        'region' => 'dashboard_main',
+        'pages' => '',
+        'cache' => -1,
+      ),
+      array(
+        'module' => 'user',
+        'delta' => 'login',
+        'theme' => $default_theme,
+        'status' => 0,
+        'weight' => -10,
+        'region' => 'sidebar_first',
+        'pages' => '',
+        'cache' => -1,
+      ),
+      array(
+        'module' => 'system',
+        'delta' => 'help',
+        'theme' => $default_theme,
+        'status' => 1,
+        'weight' => 0,
+        'region' => 'help',
+        'pages' => '',
+        'cache' => -1,
+      ),
+      array(
+        'module' => 'system',
+        'delta' => 'main',
+        'theme' => $admin_theme,
+        'status' => 1,
+        'weight' => 0,
+        'region' => 'content',
+        'pages' => '',
+        'cache' => -1,
+      ),
+      array(
+        'module' => 'system',
+        'delta' => 'help',
+        'theme' => $admin_theme,
+        'status' => 1,
+        'weight' => 0,
+        'region' => 'help',
+        'pages' => '',
+        'cache' => -1,
+      ),
+      array(
+        'module' => 'user',
+        'delta' => 'login',
+        'theme' => $admin_theme,
+        'status' => 0,
+        'weight' => 10,
+        'region' => 'content',
+        'pages' => '',
+        'cache' => -1,
+      ),
+      array(
+        'module' => 'user',
+        'delta' => 'new',
+        'theme' => $admin_theme,
+        'status' => 1,
+        'weight' => 0,
+        'region' => 'dashboard_sidebar',
+        'pages' => '',
+        'cache' => -1,
+      ),
+      array(
+        'module' => 'search',
+        'delta' => 'form',
+        'theme' => $admin_theme,
+        'status' => 1,
+        'weight' => -10,
+        'region' => 'dashboard_sidebar',
+        'pages' => '',
+        'cache' => -1,
+      ),
+    );
+    $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache'));
+    foreach ($blocks as $block) {
+      $query->values($block);
+    }
+    $query->execute();
+
+    // Insert default pre-defined node types into the database. For a complete
+    // list of available node type attributes, refer to the node type API
+    // documentation at: http://api.drupal.org/api/HEAD/function/hook_node_info.
+    $types = array(
+      array(
+        'type' => 'page',
+        'name' => st('Basic page'),
+        'base' => 'node_content',
+        'description' => st("Use <em>basic pages</em> for your static content, such as an 'About us' page."),
+        'custom' => 1,
+        'modified' => 1,
+        'locked' => 0,
+      ),
+    );
+
+    foreach ($types as $type) {
+        $type = node_type_set_defaults($type);
+        node_type_save($type);
+        node_add_body_field($type);
+    }
+
+    // Insert default pre-defined RDF mapping into the database.
+    $rdf_mappings = array(
+        array(
+            'type' => 'node',
+            'bundle' => 'page',
+            'mapping' => array(
+            'rdftype' => array('foaf:Document'),
+            ),
+        ),
+    );
+    foreach ($rdf_mappings as $rdf_mapping) {
+        rdf_mapping_save($rdf_mapping);
+    }
+
+    // Default "Basic page" to not be promoted and have comments disabled.
+    variable_set('node_options_page', array('status'));
+    variable_set('comment_page', COMMENT_NODE_HIDDEN);
+
+    // Don't display date and author information for "Basic page" nodes by default.
+    variable_set('node_submitted_page', FALSE);
+
+    // Enable user picture support and set the default to a square thumbnail option.
+    variable_set('user_pictures', '1');
+    variable_set('user_picture_dimensions', '1024x1024');
+    variable_set('user_picture_file_size', '800');
+    variable_set('user_picture_style', 'thumbnail');
+
+    // Allow visitor account creation with administrative approval.
+    variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
+
+    // Enable default permissions for system roles.
+    $filtered_html_permission = filter_permission_name($filtered_html_format);
+    user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access comments', $filtered_html_permission));
+    user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access comments', 'post comments', 'skip comment approval', $filtered_html_permission));
+
+    // Create a default role for site administrators, with all available permissions assigned.
+    $admin_role = new stdClass();
+    $admin_role->name = 'administrator';
+    $admin_role->weight = 2;
+    user_role_save($admin_role);
+    user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+    // Set this as the administrator role.
+    variable_set('user_admin_role', $admin_role->rid);
+
+    // Assign user 1 the "administrator" role.
+    db_insert('users_roles')
+      ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+      ->execute();
+
+    /*  End Copy from standard install profile */
+
+
+
+
+    // Install RTI Taxonomies
+    _install_taxonomy_terms();
+
+    // Install RTI Menu Links
+    _install_menus();
+    
+    // Revert all Features
+    features_revert();
+}
+
+/**
+ * Helper function to add default menus.
+ */
+function _install_menus() {
+ /**    Main Menu    **/
+ // Check if menu exists first, otherwise, create it
+  if (!menu_load('main-menu')) {
+    $menu = array(
+      'menu_name' => 'main-menu',
+      'title' => t('Main Menu'),
+      'description' => 'The Main menu is used on many sites to show the major sections of the site, often in a top navigation bar.',
+    );
+    menu_save($menu);
+  }
+  // Links for menu
+  $menu_items = array(
+    array(
+      'link_title' => st('Home'),
+      'link_path' => '<front>',
+    ),
+    array(
+      'link_title' => st('About RTI'),
+      'link_path' => '<front>',
+    ),
+    array(
+      'link_title' => st('Featured Items'),
+      'link_path' => '<front>',
+    ),
+    array(
+      'link_title' => st('For Parents'),
+      'link_path' => '<front>',
+    ),
+    array(
+      'link_title' => st('Events'),
+      'link_path' => '<front>',
+    ),
+    array(
+      'link_title' => st('Contact Us'),
+      'link_path' => '<front>',
+    ),
+  );
+
+  _menu_builder($menu_items, 'main-menu');
+
+
+  /**    Footer Menu    **/
+ // Check if menu exists first, otherwise, create it
+  if (!menu_load('menu-rti-footer-menu')) {
+    $menu = array(
+      'menu_name' => 'menu-rti-footer-menu',
+      'title' => t('RTI Footer Menu'),
+      'description' => 'Links located in the bottom footer area.',
+    );
+    menu_save($menu);
+  }
+  // Links for menu
+  $menu_items = array(
+    array(
+      'link_title' => st('College of Education'),
+      'link_path' => 'http://www.edb.utexas.edu/education',
+    ),
+    array(
+      'link_title' => st('Meadows Center for Preventing Educational Risk'),
+      'link_path' => 'http://meadowscenter.org',
+    ),
+    array(
+      'link_title' => st('RTI Network'),
+      'link_path' => 'https://sites.utexas.edu/rtinetwork',
+    ),
+  );
+
+  _menu_builder($menu_items, 'menu-rti-footer-menu');
+}
+
+/**
+ * Recursive function to build menu structures from an array.
+ *
+ * @param array $menu
+ *   An array representing a menu structure.
+ * @param string $menu_name
+ *   A string representing the machine name of the menu.
+ * @param int $plid
+ *   An integer representing the parent menu id.
+ */
+function _menu_builder(array $menu, $menu_name, $plid = 0) {
+  $weight = 0;
+  foreach ($menu as $menu_item) {
+    // Create a new menu item for saving.
+    $item = array(
+      'menu_name' => $menu_name,
+      'link_title' => $menu_item['link_title'],
+      'link_path' => $menu_item['link_path'],
+      'plid' => $plid,
+      'weight' => $weight,
+      'expanded' => (isset($menu_item['expanded'])) ? $menu_item['expanded'] : TRUE,
+      'customized' => 1,
+    );
+
+    // Save the menu item.
+    $mlid = menu_link_save($item);
+
+    // If there are children, recurse into those menus as well.
+    if (isset($menu_item['#children']) and !empty($menu_item['#children'])) {
+      _menu_builder($menu_item['#children'], $menu_name, $mlid);
+    }
+
+    // Increment the weight.
+    $weight++;
+  }
+}
+
+/**
+ * Helper function to add default taxonomy terms.
+ */
+function _install_taxonomy_terms() {
+
+}
+
+/**
+ * Helper function to create a taxonomy term.
+ */
+function _create_taxonomy_term($name, $vid, $weight) {
+  $term = new stdClass();
+  $term->name = $name;
+  $term->vid = $vid;
+  $term->weight = $weight;
+  
+  taxonomy_term_save($term);
+}
