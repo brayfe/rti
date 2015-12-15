@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Search View feature.
+ */
+
+include_once 'rti_search_view.features.inc';
