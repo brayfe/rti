@@ -412,6 +412,63 @@ function _install_taxonomy_terms() {
     }
   }
   
+  // Get the Special Populations taxonomy
+  $special_populations_vocab = taxonomy_vocabulary_machine_name_load('rti_special_populations');
+
+  $special_populations = array(
+    'English Learners',
+    'Spanish-speaking',
+    'Students in Foster Care',
+  );
+
+  // Create the taxonomy terms.
+  if ($special_populations_vocab != FALSE) {
+    foreach ($special_populations as $weight => $special_population) {
+      _create_taxonomy_term($special_population, $special_populations_vocab->vid, $weight);
+    }
+  }
+
+  // Get the Ranking taxonomy
+  $ranking_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_ranking');
+
+  $rankings = array(
+    'Project',
+    'Meadows Center/VGC',
+    'Texas',
+    'National',
+    'Other',
+  );
+
+  // Create the taxonomy terms.
+  if ($ranking_vocab != FALSE) {
+    foreach ($rankings as $weight => $ranking) {
+      _create_taxonomy_term($ranking, $ranking_vocab->vid, $weight);
+    }
+  }
+
+  // Get the Resource Type taxonomy
+  $resource_type_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_types');
+
+  $resource_types = array(
+    'Booklets',
+    'Instructional Materials',
+    'Leadership Tools',
+    'Lessons',
+    'Research',
+    'Modules',
+    'Presentations/Podcasts/Webinars',
+    'Videos',
+    'External Links/Websites',
+    'Other',
+  );
+
+  // Create the taxonomy terms.
+  if ($resource_type_vocab != FALSE) {
+    foreach ($resource_types as $weight => $resource_type) {
+      _create_taxonomy_term($resource_type, $resource_type_vocab->vid, $weight);
+    }
+  }
+
 }
 
 /**
