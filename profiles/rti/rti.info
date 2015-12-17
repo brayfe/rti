@@ -83,7 +83,7 @@ dependencies[] = media_wysiwyg
 dependencies[] = media_wysiwyg_view_mode
 
 ; Other
-dependencies[] = backup_migrate
+; dependencies[] = backup_migrate
 dependencies[] = colorbox
 dependencies[] = diff
 dependencies[] = entity
