@@ -398,6 +398,22 @@ function _menu_builder(array $menu, $menu_name, $plid = 0) {
  */
 function _install_taxonomy_terms() {
 
+  // Get the Special Populations taxonomy
+  $special_populations_vocab = taxonomy_vocabulary_machine_name_load('rti_special_populations');
+
+  $special_populations = array(
+    'English Learners',
+    'Spanish-speaking',
+    'Students in Foster Care',
+  );
+
+  // Create the taxonomy terms.
+  if ($special_populations_vocab != FALSE) {
+    foreach ($special_populations as $weight => $special_population) {
+      _create_taxonomy_term($special_population, $special_populations_vocab->vid, $weight);
+    }
+  }
+
 }
 
 /**

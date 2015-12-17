@@ -1,0 +1,9 @@
+name = RTI Special Populations
+core = 7.x
+package = Taxonomies
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[taxonomy][] = rti_special_populations
+project path = profiles/rti/modules/custom/features/taxonomies

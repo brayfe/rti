@@ -134,6 +134,7 @@ dependencies[] = responsive_menu_settings
 dependencies[] = url_alias_patterns
 
 ; Features - Taxonomy
+dependencies[] = rti_special_populations
 
 ; Features - Text Formats
 dependencies[] = rti_text_formats
