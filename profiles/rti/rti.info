@@ -138,6 +138,7 @@ dependencies[] = rti_stakeholders
 dependencies[] = rti_special_populations
 dependencies[] = rti_resource_ranking
 dependencies[] = rti_resource_types
+dependencies[] = rti_tags
 
 ; Features - Text Formats
 dependencies[] = rti_text_formats
