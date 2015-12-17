@@ -398,16 +398,86 @@ function _menu_builder(array $menu, $menu_name, $plid = 0) {
  */
 function _install_taxonomy_terms() {
 
+  $categories = array(
+    'Background Information' => array(
+      'Overview',
+      'Tools for Understanding RTI',
+      'RTI and Special Education',
+    ),
+    'Campus Implementation' => array(
+      'Planning for Implementation',
+      'Collaborating for Implementation',
+      'Scheduling Implementation',
+      'Monitoring Implementation',
+    ),
+    'Behavior' => array(),
+    'Instruction' => array(
+      'Instruction',
+      'Elementary Instruction',
+      'Secondary Instruction',
+      'Reading Instruction',
+      'Math Instruction',
+      'Effective Features of Instruction',
+    ),      
+    'Assessment' => array(
+      'Elementary Assessment',
+      'Secondary Assessment',
+      'Reading Assessment',
+      'Math Assessment',
+      'Campus Implementation Assessment',
+    ),
+    'Using Data' => array(
+      'Using Data for Instructional Planning',
+      'Using Data to Collaborate',
+      'Using Data to Monitor',
+      'Using Data to Select Interventions',
+      'Using Data from Specific Assessments',
+    ),
+    'Intervention' => array(
+      'Elementary Intervention',
+      'Secondary Intervention',
+      'Reading Intervention',
+      'Math Intervention',
+      'Collaboration for Intervention',
+    ),
+    'Professional Development (PD)' => array(
+      'Online Modules',
+      'Other PD Resources',
+    ),    
+  );
+  
+  $categories_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_categories');
+  
+  if ($categories_vocab) {
+    foreach ($categories as $category => $subcategories) {
+      $category_term = _create_taxonomy_term($category, $categories_vocab->vid);
+      if (!empty($subcategories)) {
+        foreach ($subcategories as $subcategory) {
+          $subcategory_tid = _create_taxonomy_term($subcategory, $categories_vocab->vid, NULL, $category_term->tid);
+        }
+      }
+    }
+  }
+  
 }
 
 /**
  * Helper function to create a taxonomy term.
  */
-function _create_taxonomy_term($name, $vid, $weight) {
+function _create_taxonomy_term($name, $vid, $weight=NULL, $parent_tid=NULL) {
   $term = new stdClass();
   $term->name = $name;
   $term->vid = $vid;
-  $term->weight = $weight;
-  
+  if ($weight) {
+    $term->weight = $weight;
+  } else {
+    $term->weight = NULL;
+  }
+  if ($parent_tid) {
+    $term->parent = array($parent_tid);
+  } else {
+    $term->parent = NULL;
+  }
   taxonomy_term_save($term);
+  return $term;
 }
