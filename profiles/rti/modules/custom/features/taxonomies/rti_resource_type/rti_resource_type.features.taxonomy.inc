@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * type.features.taxonomy.inc
+ * rti_resource_type.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function type_taxonomy_default_vocabularies() {
+function rti_resource_type_taxonomy_default_vocabularies() {
   return array(
-    'resource_type' => array(
+    'rti_resource_type' => array(
       'name' => 'Resource Type',
-      'machine_name' => 'resource_type',
+      'machine_name' => 'rti_resource_type',
       'description' => 'The actual type of resource being created.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
