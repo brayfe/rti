@@ -135,6 +135,7 @@ dependencies[] = url_alias_patterns
 
 ; Features - Taxonomy
 dependencies[] = rti_resource_ranking
+dependencies[] = rti_resource_types
 
 ; Features - Text Formats
 dependencies[] = rti_text_formats
