@@ -414,6 +414,47 @@ function _install_taxonomy_terms() {
     }
   }
 
+  // Get the Ranking taxonomy
+  $ranking_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_ranking');
+
+  $rankings = array(
+    'Project',
+    'Meadows Center/VGC',
+    'Texas',
+    'National',
+    'Other',
+  );
+
+  // Create the taxonomy terms.
+  if ($ranking_vocab != FALSE) {
+    foreach ($rankings as $weight => $ranking) {
+      _create_taxonomy_term($ranking, $ranking_vocab->vid, $weight);
+    }
+  }
+
+  // Get the Resource Type taxonomy
+  $resource_type_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_types');
+
+  $resource_types = array(
+    'Booklets',
+    'Instructional Materials',
+    'Leadership Tools',
+    'Lessons',
+    'Research',
+    'Modules',
+    'Presentations/Podcasts/Webinars',
+    'Videos',
+    'External Links/Websites',
+    'Other',
+  );
+
+  // Create the taxonomy terms.
+  if ($resource_type_vocab != FALSE) {
+    foreach ($resource_types as $weight => $resource_type) {
+      _create_taxonomy_term($resource_type, $resource_type_vocab->vid, $weight);
+    }
+  }
+
 }
 
 /**
