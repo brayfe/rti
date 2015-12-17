@@ -83,7 +83,7 @@ dependencies[] = media_wysiwyg
 dependencies[] = media_wysiwyg_view_mode
 
 ; Other
-dependencies[] = backup_migrate
+; dependencies[] = backup_migrate
 dependencies[] = colorbox
 dependencies[] = diff
 dependencies[] = entity
@@ -134,6 +134,7 @@ dependencies[] = responsive_menu_settings
 dependencies[] = url_alias_patterns
 
 ; Features - Taxonomy
+dependencies[] = rti_resource_ranking
 
 ; Features - Text Formats
 dependencies[] = rti_text_formats
