@@ -398,6 +398,20 @@ function _menu_builder(array $menu, $menu_name, $plid = 0) {
  */
 function _install_taxonomy_terms() {
 
+  // Get the Resource Stakeholders taxonomy
+  $stakeholders_vocab = taxonomy_vocabulary_machine_name_load('rti_stakeholders');
+
+  $stakeholders = array(
+    'Parents',
+  );
+
+  // Create the taxonomy terms.
+  if ($stakeholders_vocab != FALSE) {
+    foreach ($stakeholders as $weight => $stakeholder) {
+      _create_taxonomy_term($stakeholder, $stakeholders_vocab->vid, $weight);
+    }
+  }
+  
   // Get the Special Populations taxonomy
   $special_populations_vocab = taxonomy_vocabulary_machine_name_load('rti_special_populations');
 
