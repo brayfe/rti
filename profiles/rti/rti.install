@@ -398,6 +398,24 @@ function _menu_builder(array $menu, $menu_name, $plid = 0) {
  */
 function _install_taxonomy_terms() {
 
+  // Get the Ranking taxonomy
+  $ranking_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_ranking');
+
+  $rankings = array(
+    'Project',
+    'Meadows Center/VGC',
+    'Texas',
+    'National',
+    'Other',
+  );
+
+  // Create the taxonomy terms.
+  if ($ranking_vocab != FALSE) {
+    foreach ($rankings as $weight => $ranking) {
+      _create_taxonomy_term($ranking, $ranking_vocab->vid, $weight);
+    }
+  }
+
   // Get the Resource Type taxonomy
   $resource_type_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_types');
 
