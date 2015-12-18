@@ -1,4 +1,4 @@
-name = RTI Resource Ranking
+name = RTI Tags
 core = 7.x
 package = Taxonomies
 version = 7.x-1.0
@@ -8,6 +8,6 @@ dependencies[] = strongarm
 dependencies[] = taxonomy
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
-features[taxonomy][] = rti_resource_ranking
-features[variable][] = pathauto_taxonomy_term_rti_resource_ranking_pattern
+features[taxonomy][] = rti_tags
+features[variable][] = pathauto_taxonomy_term_rti_tags_pattern
 project path = profiles/rti/modules/custom/features/taxonomies
