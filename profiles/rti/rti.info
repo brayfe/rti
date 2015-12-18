@@ -134,6 +134,7 @@ dependencies[] = responsive_menu_settings
 dependencies[] = url_alias_patterns
 
 ; Features - Taxonomy
+dependencies[] = rti_resource_categories
 dependencies[] = rti_stakeholders
 dependencies[] = rti_special_populations
 dependencies[] = rti_resource_ranking
