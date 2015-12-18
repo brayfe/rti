@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the RTI Resource Types feature.
  */
+
+include_once 'rti_resource_types.features.inc';
