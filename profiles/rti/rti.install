@@ -541,13 +541,9 @@ function _create_taxonomy_term($name, $vid, $weight=NULL, $parent_tid=NULL) {
   $term->vid = $vid;
   if ($weight) {
     $term->weight = $weight;
-  } else {
-    $term->weight = NULL;
   }
   if ($parent_tid) {
     $term->parent = array($parent_tid);
-  } else {
-    $term->parent = NULL;
   }
   taxonomy_term_save($term);
   return $term;
