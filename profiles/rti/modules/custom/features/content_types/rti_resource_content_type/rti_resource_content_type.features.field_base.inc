@@ -150,7 +150,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'resource_categories',
+          'vocabulary' => 'rti_resource_categories',
           'parent' => 0,
         ),
       ),
@@ -199,7 +199,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'resource_ranking',
+          'vocabulary' => 'rti_resource_ranking',
           'parent' => 0,
         ),
       ),
@@ -225,7 +225,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'resource_type',
+          'vocabulary' => 'rti_resource_type',
           'parent' => 0,
         ),
       ),
@@ -251,7 +251,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'special_populations',
+          'vocabulary' => 'rti_special_populations',
           'parent' => 0,
         ),
       ),
@@ -277,7 +277,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'stakeholders',
+          'vocabulary' => 'rti_stakeholders',
           'parent' => 0,
         ),
       ),
