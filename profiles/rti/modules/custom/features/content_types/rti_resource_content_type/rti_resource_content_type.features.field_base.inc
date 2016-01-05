@@ -225,7 +225,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'rti_resource_type',
+          'vocabulary' => 'rti_resource_types',
           'parent' => 0,
         ),
       ),
