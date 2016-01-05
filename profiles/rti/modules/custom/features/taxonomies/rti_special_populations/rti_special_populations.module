@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTI Special Populations feature.
+ */
+
+include_once 'rti_special_populations.features.inc';

@@ -398,16 +398,153 @@ function _menu_builder(array $menu, $menu_name, $plid = 0) {
  */
 function _install_taxonomy_terms() {
 
+  $categories = array(
+    'Background Information' => array(
+      'Overview',
+      'Tools for Understanding RTI',
+      'RTI and Special Education',
+    ),
+    'Campus Implementation' => array(
+      'Planning for Implementation',
+      'Collaborating for Implementation',
+      'Scheduling Implementation',
+      'Monitoring Implementation',
+    ),
+    'Behavior' => array(),
+    'Instruction' => array(
+      'Instruction',
+      'Elementary Instruction',
+      'Secondary Instruction',
+      'Reading Instruction',
+      'Math Instruction',
+      'Effective Features of Instruction',
+    ),      
+    'Assessment' => array(
+      'Elementary Assessment',
+      'Secondary Assessment',
+      'Reading Assessment',
+      'Math Assessment',
+      'Campus Implementation Assessment',
+    ),
+    'Using Data' => array(
+      'Using Data for Instructional Planning',
+      'Using Data to Collaborate',
+      'Using Data to Monitor',
+      'Using Data to Select Interventions',
+      'Using Data from Specific Assessments',
+    ),
+    'Intervention' => array(
+      'Elementary Intervention',
+      'Secondary Intervention',
+      'Reading Intervention',
+      'Math Intervention',
+      'Collaboration for Intervention',
+    ),
+    'Professional Development (PD)' => array(
+      'Online Modules',
+      'Other PD Resources',
+    ),    
+  );
+  
+  $categories_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_categories');
+  
+  if ($categories_vocab) {
+    foreach ($categories as $category => $subcategories) {
+      $category_term = _create_taxonomy_term($category, $categories_vocab->vid);
+      if (!empty($subcategories)) {
+        foreach ($subcategories as $subcategory) {
+          $subcategory_tid = _create_taxonomy_term($subcategory, $categories_vocab->vid, NULL, $category_term->tid);
+        }
+      }
+    }
+  }
+  
+  // Get the Resource Stakeholders taxonomy
+  $stakeholders_vocab = taxonomy_vocabulary_machine_name_load('rti_stakeholders');
+
+  $stakeholders = array(
+    'Parents',
+  );
+
+  // Create the taxonomy terms.
+  if ($stakeholders_vocab != FALSE) {
+    foreach ($stakeholders as $weight => $stakeholder) {
+      _create_taxonomy_term($stakeholder, $stakeholders_vocab->vid, $weight);
+    }
+  }
+  
+  // Get the Special Populations taxonomy
+  $special_populations_vocab = taxonomy_vocabulary_machine_name_load('rti_special_populations');
+
+  $special_populations = array(
+    'English Learners',
+    'Spanish-speaking',
+    'Students in Foster Care',
+  );
+
+  // Create the taxonomy terms.
+  if ($special_populations_vocab != FALSE) {
+    foreach ($special_populations as $weight => $special_population) {
+      _create_taxonomy_term($special_population, $special_populations_vocab->vid, $weight);
+    }
+  }
+
+  // Get the Ranking taxonomy
+  $ranking_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_ranking');
+
+  $rankings = array(
+    'Project',
+    'Meadows Center/VGC',
+    'Texas',
+    'National',
+    'Other',
+  );
+
+  // Create the taxonomy terms.
+  if ($ranking_vocab != FALSE) {
+    foreach ($rankings as $weight => $ranking) {
+      _create_taxonomy_term($ranking, $ranking_vocab->vid, $weight);
+    }
+  }
+
+  // Get the Resource Type taxonomy
+  $resource_type_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_types');
+
+  $resource_types = array(
+    'Booklets',
+    'Instructional Materials',
+    'Leadership Tools',
+    'Lessons',
+    'Research',
+    'Modules',
+    'Presentations/Podcasts/Webinars',
+    'Videos',
+    'External Links/Websites',
+    'Other',
+  );
+
+  // Create the taxonomy terms.
+  if ($resource_type_vocab != FALSE) {
+    foreach ($resource_types as $weight => $resource_type) {
+      _create_taxonomy_term($resource_type, $resource_type_vocab->vid, $weight);
+    }
+  }
+
 }
 
 /**
  * Helper function to create a taxonomy term.
  */
-function _create_taxonomy_term($name, $vid, $weight) {
+function _create_taxonomy_term($name, $vid, $weight=NULL, $parent_tid=NULL) {
   $term = new stdClass();
   $term->name = $name;
   $term->vid = $vid;
-  $term->weight = $weight;
-  
+  if ($weight) {
+    $term->weight = $weight;
+  }
+  if ($parent_tid) {
+    $term->parent = array($parent_tid);
+  }
   taxonomy_term_save($term);
+  return $term;
 }

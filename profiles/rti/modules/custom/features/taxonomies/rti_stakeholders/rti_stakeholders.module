@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTI Stakeholders feature.
+ */
+
+include_once 'rti_stakeholders.features.inc';
