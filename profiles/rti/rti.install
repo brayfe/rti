@@ -16,7 +16,9 @@ function rti_install() {
     // Enable RTI main themes
     $enable = array(
       'theme_default' => 'rtisub',
-      'admin_theme' => 'subseven',
+      // changed from 'subseven' to create working Taxonomy Tree
+      // widget in the resource content type
+      'admin_theme' => 'seven',
     );
     theme_enable($enable);
 
@@ -26,7 +28,7 @@ function rti_install() {
     variable_set('node_admin_theme', '1');
 
     // Disable the default Bartik theme
-    theme_disable(array('bartik', 'seven', 'zen'));
+    theme_disable(array('bartik', 'subseven', 'zen'));
 
 
     /*  START copy from standard install profile */
@@ -277,7 +279,7 @@ function rti_install() {
 
     // Install RTI Menu Links
     _install_menus();
-    
+
     // Revert all Features
     features_revert();
 }
@@ -418,7 +420,7 @@ function _install_taxonomy_terms() {
       'Reading Instruction',
       'Math Instruction',
       'Effective Features of Instruction',
-    ),      
+    ),
     'Assessment' => array(
       'Elementary Assessment',
       'Secondary Assessment',
@@ -443,11 +445,11 @@ function _install_taxonomy_terms() {
     'Professional Development (PD)' => array(
       'Online Modules',
       'Other PD Resources',
-    ),    
+    ),
   );
-  
+
   $categories_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_categories');
-  
+
   if ($categories_vocab) {
     foreach ($categories as $category => $subcategories) {
       $category_term = _create_taxonomy_term($category, $categories_vocab->vid);
@@ -458,7 +460,7 @@ function _install_taxonomy_terms() {
       }
     }
   }
-  
+
   // Get the Resource Stakeholders taxonomy
   $stakeholders_vocab = taxonomy_vocabulary_machine_name_load('rti_stakeholders');
 
@@ -472,7 +474,7 @@ function _install_taxonomy_terms() {
       _create_taxonomy_term($stakeholder, $stakeholders_vocab->vid, $weight);
     }
   }
-  
+
   // Get the Special Populations taxonomy
   $special_populations_vocab = taxonomy_vocabulary_machine_name_load('rti_special_populations');
 
