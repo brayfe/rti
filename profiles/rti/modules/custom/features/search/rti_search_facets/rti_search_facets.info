@@ -7,6 +7,7 @@ dependencies[] = ctools
 dependencies[] = facetapi
 dependencies[] = facetapi_pretty_paths
 dependencies[] = fe_block
+dependencies[] = search_api_facetapi
 features[ctools][] = facetapi:facetapi_defaults:1
 features[ctools][] = strongarm:strongarm:1
 features[facetapi][] = search_api@rti_content_index::field_resource_category

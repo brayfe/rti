@@ -22,21 +22,21 @@ function rti_search_facets_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
-        'region' => 'sidebar_first',
+        'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'bartik',
         'weight' => -12,
       ),
       'rtisub' => array(
-        'region' => 'sidebar_first',
+        'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'rtisub',
         'weight' => -12,
       ),
-      'subseven' => array(
+      'seven' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'subseven',
+        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -54,21 +54,21 @@ function rti_search_facets_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
-        'region' => 'sidebar_first',
+        'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'bartik',
         'weight' => -11,
       ),
       'rtisub' => array(
-        'region' => 'sidebar_first',
+        'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'rtisub',
         'weight' => -11,
       ),
-      'subseven' => array(
+      'seven' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'subseven',
+        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -86,21 +86,21 @@ function rti_search_facets_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
-        'region' => 'sidebar_first',
+        'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'bartik',
         'weight' => -10,
       ),
       'rtisub' => array(
-        'region' => 'sidebar_first',
+        'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'rtisub',
         'weight' => -10,
       ),
-      'subseven' => array(
+      'seven' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'subseven',
+        'theme' => 'seven',
         'weight' => 0,
       ),
     ),

@@ -15,7 +15,9 @@
 function rti_install() {
     // Enable RTI main themes
     $enable = array(
-      'theme_default' => 'rtisub',
+      //'theme_default' => 'rtisub',
+      // changed from rtisub to make search view formatting work
+      'theme_default' => 'bartik',
       // changed from 'subseven' to create working Taxonomy Tree
       // widget in the resource content type
       'admin_theme' => 'seven',
@@ -28,7 +30,7 @@ function rti_install() {
     variable_set('node_admin_theme', '1');
 
     // Disable the default Bartik theme
-    theme_disable(array('bartik', 'subseven', 'zen'));
+    theme_disable(array('rtisub', 'subseven', 'zen'));
 
 
     /*  START copy from standard install profile */
