@@ -1,0 +1,12 @@
+name = Search View
+description = The view that runs the search for RTI's website
+core = 7.x
+package = Search
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = views
+dependencies[] = search_api_views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = rti_indexed_search
+project path = profiles/rti/modules/custom/features/search

@@ -111,6 +111,7 @@ dependencies[] = views_ui
 dependencies[] = search_api
 dependencies[] = search_api_db
 dependencies[] = facetapi
+dependencies[] = search_api_facetapi
 
 ; Features
 dependencies[] = features
@@ -127,6 +128,11 @@ dependencies[] = footer_menu
 
 ; Features - Roles and Permissions
 dependencies[] = user_roles
+
+; Features - Search
+dependencies[] = rti_search
+dependencies[] = rti_search_view
+dependencies[] = rti_search_facets
 
 ; Features - Settings
 dependencies[] = colorbox_load_setting
