@@ -18,19 +18,13 @@ function rti_search_facets_default_fe_block_settings() {
     'delta' => '4JMA8gockS17iYJYu7qr1bTPMmKQUt0z',
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => 'rti-search',
+    'pages' => 'rti-search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
         'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'bartik',
-        'weight' => -12,
-      ),
-      'rtisub' => array(
-        'region' => 'sidebar_second',
-        'status' => 1,
-        'theme' => 'rtisub',
         'weight' => -12,
       ),
       'seven' => array(
@@ -50,19 +44,13 @@ function rti_search_facets_default_fe_block_settings() {
     'delta' => '75QyZDcnQy6N6NZpHQe6H6zGSFpUEB2q',
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => 'rti-search',
+    'pages' => 'rti-search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
         'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'bartik',
-        'weight' => -11,
-      ),
-      'rtisub' => array(
-        'region' => 'sidebar_second',
-        'status' => 1,
-        'theme' => 'rtisub',
         'weight' => -11,
       ),
       'seven' => array(
@@ -82,19 +70,13 @@ function rti_search_facets_default_fe_block_settings() {
     'delta' => 'H6BRTu3HtQ341ZX355uDYYyj0FHcJeRZ',
     'module' => 'facetapi',
     'node_types' => array(),
-    'pages' => 'rti-search',
+    'pages' => 'rti-search*',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
         'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'bartik',
-        'weight' => -10,
-      ),
-      'rtisub' => array(
-        'region' => 'sidebar_second',
-        'status' => 1,
-        'theme' => 'rtisub',
         'weight' => -10,
       ),
       'seven' => array(
