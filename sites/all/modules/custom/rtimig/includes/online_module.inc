@@ -1,9 +1,9 @@
 <?php
 /**
- * Custom Booklet migration. Migrates old RTI booklet nodes to new RTI resource nodes.
+ * Custom Module migration. Migrates old RTI module nodes to new RTI resource nodes.
  * Look in the migrate_d2d source code for a list of extendable migration classes
  */
-class BookletMigration extends RTINodeMigration {
+class OnlineModuleMigration extends RTINodeMigration {
 
   // *** The Constructor *** //
   public function __construct(array $arguments) {
@@ -15,7 +15,7 @@ class BookletMigration extends RTINodeMigration {
      * The syntax is addFieldMapping('destField', 'srcField')
      */
     // Resource Image
-    $this->addFieldMapping( 'field_image', 'field_image_for_booklet' )
+    $this->addFieldMapping( 'field_image', 'field_online_module_image' )
       ->sourceMigration('File');
     $this->addFieldMapping('field_image:file_class')
       ->defaultValue('MigrateFileFid');
@@ -23,19 +23,17 @@ class BookletMigration extends RTINodeMigration {
       ->defaultValue(TRUE);
 
     // Resource Image Details
-    $this->addFieldMapping('field_image:title', 'field_image_for_booklet:title');
-    $this->addFieldMapping('field_image:alt', 'field_image_for_booklet:alt');
+    $this->addFieldMapping('field_image:title', 'field_online_module_image:title');
+    $this->addFieldMapping('field_image:alt', 'field_online_module_image:alt');
 
     // Resource Summary
     $this->addFieldMapping( 'field_summary', 'field_resource_summary' );
 
-    // Resource File
-    $this->addFieldMapping( 'field_resource_file', 'field_booklet_resource_file' )
-      ->sourceMigration('File');
-    $this->addFieldMapping('field_resource_file:file_class')
-      ->defaultValue('MigrateFileFid');
-    $this->addFieldMapping('field_resource_file:preserve_files')
-      ->defaultValue(TRUE);
+    // Resource Link
+    $this->addFieldMapping( 'field_link', 'field_module_link' )
+      ->callbacks(array($this, 'prependURL'));
+    $this->addFieldMapping( 'field_link:title', 'field_module_link:title' );
+    $this->addFieldMapping( 'field_link:attributes', 'field_module_link:attributes' );
 
     // Featured Resource
     $this->addFieldMapping( 'field_featured_resource', 'field_featured_resource' );
@@ -83,11 +81,19 @@ class BookletMigration extends RTINodeMigration {
 
   // *** prepareRow *** //
   public function prepareRow($row) {
+    //drush_print_r($row);
     // Allow our parent classes to ignore rows and edit $row.
     if (parent::prepareRow($row) === FALSE) {
         return FALSE;
     }
 
+  }
+
+  /**
+   *  Callback to prepend the server url where the modules are stored
+   */
+  public function prependURL($row) {
+    return 'http://resources.buildingrti.org/' . $row[0];
   }
 
 }

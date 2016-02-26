@@ -1,9 +1,9 @@
 <?php
 /**
- * Custom Booklet migration. Migrates old RTI booklet nodes to new RTI resource nodes.
+ * Custom Link/Website migration. Migrates old RTI Link/Website nodes to new RTI resource nodes.
  * Look in the migrate_d2d source code for a list of extendable migration classes
  */
-class BookletMigration extends RTINodeMigration {
+class LinkWebsiteMigration extends RTINodeMigration {
 
   // *** The Constructor *** //
   public function __construct(array $arguments) {
@@ -15,7 +15,7 @@ class BookletMigration extends RTINodeMigration {
      * The syntax is addFieldMapping('destField', 'srcField')
      */
     // Resource Image
-    $this->addFieldMapping( 'field_image', 'field_image_for_booklet' )
+    $this->addFieldMapping( 'field_image', 'field_link_website_image' )
       ->sourceMigration('File');
     $this->addFieldMapping('field_image:file_class')
       ->defaultValue('MigrateFileFid');
@@ -23,19 +23,16 @@ class BookletMigration extends RTINodeMigration {
       ->defaultValue(TRUE);
 
     // Resource Image Details
-    $this->addFieldMapping('field_image:title', 'field_image_for_booklet:title');
-    $this->addFieldMapping('field_image:alt', 'field_image_for_booklet:alt');
+    $this->addFieldMapping('field_image:title', 'field_link_website_image:title');
+    $this->addFieldMapping('field_image:alt', 'field_link_website_image:alt');
+
+    // Resource Link
+    $this->addFieldMapping( 'field_link', 'field_external_resource_link' );
+    $this->addFieldMapping( 'field_link:title', 'field_external_resource_link:title' );
+    $this->addFieldMapping( 'field_link:attributes', 'field_external_resource_link:attributes' );
 
     // Resource Summary
     $this->addFieldMapping( 'field_summary', 'field_resource_summary' );
-
-    // Resource File
-    $this->addFieldMapping( 'field_resource_file', 'field_booklet_resource_file' )
-      ->sourceMigration('File');
-    $this->addFieldMapping('field_resource_file:file_class')
-      ->defaultValue('MigrateFileFid');
-    $this->addFieldMapping('field_resource_file:preserve_files')
-      ->defaultValue(TRUE);
 
     // Featured Resource
     $this->addFieldMapping( 'field_featured_resource', 'field_featured_resource' );

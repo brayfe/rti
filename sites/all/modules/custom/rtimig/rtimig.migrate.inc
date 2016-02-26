@@ -74,7 +74,7 @@ function rtimig_migrate_api() {
       'source_vocabulary' => 'resource_stakeholders',
       'destination_vocabulary' => 'rti_stakeholders',
     ),
-    'Tags' => array(
+    'FreeTags' => array(
       'description' => t('Migration of Tags terms'),
       'source_vocabulary' => 'tags',
       'destination_vocabulary' => 'rti_tags',
@@ -108,7 +108,7 @@ function rtimig_migrate_api() {
      'class_name' => 'DrupalFile7Migration',
      'user_migration' => 'User',
      'default_uid' => 1,
-     'source_dir' => 'http://rti.local:8888/sites/default/files',
+     'source_dir' => 'http://buildingrti.utexas.org/sites/default/files',
      'destination_dir' => 'public://',
      'file_replace' => MigrateFile::FILE_EXISTS_REUSE,
      'preserve_files' => TRUE,
@@ -124,18 +124,66 @@ function rtimig_migrate_api() {
     'Booklet' => array(
       'class_name' => 'BookletMigration',
       'description' => t('Migration of Booklet nodes'),
-      //'machine_name' => '??',
       'source_type' => 'booklet',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'Tags'),
+      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
     ),
-    // 'Document' => array(
-    //   'class_name' => 'DocumentMigration',
-    //   'description' => t('Migration of Document nodes'),
-    //   'source_type' => 'document',
-    //   'destination_type' => 'resource',
-    //   'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'Tags'),
-    // ),
+    'Document' => array(
+      'class_name' => 'DocumentMigration',
+      'description' => t('Migration of Document nodes'),
+      'source_type' => 'documents',
+      'destination_type' => 'resource',
+      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+    ),
+    'Link' => array(
+      'class_name' => 'LinkWebsiteMigration',
+      'description' => t('Migration of Link and Website nodes'),
+      'source_type' => 'external_links_websites',
+      'destination_type' => 'resource',
+      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+    ),
+    'OnlineModule' => array(
+      'class_name' => 'OnlineModuleMigration',
+      'description' => t('Migration of Module nodes'),
+      'source_type' => 'module_resource',
+      'destination_type' => 'resource',
+      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+    ),
+    'Podcast' => array(
+      'class_name' => 'PodcastMigration',
+      'description' => t('Migration of Podcast nodes'),
+      'source_type' => 'podcast',
+      'destination_type' => 'resource',
+      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+    ),
+    'Presentation' => array(
+      'class_name' => 'PresentationMigration',
+      'description' => t('Migration of Presentation nodes'),
+      'source_type' => 'presentation',
+      'destination_type' => 'resource',
+      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+    ),
+    'ResourcePage' => array(
+      'class_name' => 'ResourcePageMigration',
+      'description' => t('Migration of Resource Pages'),
+      'source_type' => 'resource_page',
+      'destination_type' => 'resource',
+      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+    ),
+    'Video' => array(
+      'class_name' => 'VideoMigration',
+      'description' => t('Migration of Video nodes'),
+      'source_type' => 'video_resource',
+      'destination_type' => 'resource',
+      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+    ),
+    'Webinar' => array(
+      'class_name' => 'WebinarMigration',
+      'description' => t('Migration of Webinar nodes'),
+      'source_type' => 'webinar',
+      'destination_type' => 'resource',
+      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+    ),
   );
 
   /**
