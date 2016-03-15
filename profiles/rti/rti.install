@@ -170,7 +170,7 @@ function rti_install() {
 
 
     // Install RTI Taxonomies
-    _install_taxonomy_terms();
+    //_install_taxonomy_terms();
 
     // Install RTI Menu Links
     _install_menus();

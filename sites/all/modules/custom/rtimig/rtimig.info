@@ -1,0 +1,18 @@
+name = RTI Migrate vD2D
+description = "Migrate Code w/ D2D"
+core = 7.x
+
+dependencies[] = migrate
+dependencies[] = migrate_d2d
+
+files[] = includes/rtimig.migrate.inc
+files[] = includes/base.inc
+files[] = includes/booklet.inc
+files[] = includes/document.inc
+files[] = includes/link_website.inc
+files[] = includes/online_module.inc
+files[] = includes/podcast.inc
+files[] = includes/presentation.inc
+files[] = includes/resource_page.inc
+files[] = includes/video.inc
+files[] = includes/webinar.inc
