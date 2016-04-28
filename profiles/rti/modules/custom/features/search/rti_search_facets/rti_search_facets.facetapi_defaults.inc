@@ -46,7 +46,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
     'exclude' => 0,
     'pretty_paths_alias' => 'category',
     'pretty_paths_taxonomy_pathauto' => 1,
-    'pretty_paths_taxonomy_pathauto_vocabulary' => 'resource_categories',
+    'pretty_paths_taxonomy_pathauto_vocabulary' => 'rti_resource_categories',
   );
   $export['search_api@rti_content_index::field_resource_category'] = $facet;
 
@@ -76,7 +76,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
     'exclude' => 0,
     'pretty_paths_alias' => 'ranking',
     'pretty_paths_taxonomy_pathauto' => 1,
-    'pretty_paths_taxonomy_pathauto_vocabulary' => 'resource_ranking',
+    'pretty_paths_taxonomy_pathauto_vocabulary' => 'rti_resource_ranking',
   );
   $export['search_api@rti_content_index::field_resource_ranking'] = $facet;
 
@@ -106,7 +106,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
     'exclude' => 0,
     'pretty_paths_alias' => 'resource_type',
     'pretty_paths_taxonomy_pathauto' => 1,
-    'pretty_paths_taxonomy_pathauto_vocabulary' => 'resource_type',
+    'pretty_paths_taxonomy_pathauto_vocabulary' => 'rti_resource_types',
   );
   $export['search_api@rti_content_index::field_resource_type'] = $facet;
 
