@@ -7,9 +7,9 @@ dependencies[] = media_youtube
 dependencies[] = imagecache_actions
 dependencies[] = imagecache_canvasactions
 
-; Information added by Drupal.org packaging script on 2015-05-15
-version = "7.x-1.0"
+; Information added by Drupal.org packaging script on 2016-04-20
+version = "7.x-1.2"
 core = "7.x"
 project = "magnific_popup"
-datestamp = "1431711481"
+datestamp = "1461170055"
 
