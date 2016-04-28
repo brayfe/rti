@@ -9,9 +9,11 @@
  * Implements NodeMigration.
  */
 abstract class RTINodeMigration extends DrupalNode7Migration {
-  // A Migration constructor takes an array of arguments as its first parameter.
   /**
-   * The arguments must be passed through to the parent constructor.
+   * Migration constructor.
+   *
+   * Takes an array of arguments as its first parameter. Passes arguments
+   * through to the parent constructor.
    */
   public function __construct($arguments) {
     parent::__construct($arguments);
