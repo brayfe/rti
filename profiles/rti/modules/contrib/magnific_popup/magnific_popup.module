@@ -106,5 +106,18 @@ function _magnific_popup_add_api_js() {
   drupal_add_js($settings, $options);
 }
 
+/**
+ * Implements hook_page_alter().
+ */
+function magnific_popup_page_alter(&$page) {
+  // Add Magnific Popup library to page.
+   drupal_add_library('magnific_popup', 'magnific_popup_formatter', FALSE);
+
+  // Add API-derived extension JavaScript to the page; we do this here instead
+  // of another hook to prevent adding JS when it isn't necessary (i.e. when we
+  // aren't actually displaying any Magnific Popup content on the page).
+  _magnific_popup_add_api_js();
+}
+
 require_once('includes/magnific_popup.image_styles.inc');
 require_once('includes/magnific_popup.formatters.inc');
