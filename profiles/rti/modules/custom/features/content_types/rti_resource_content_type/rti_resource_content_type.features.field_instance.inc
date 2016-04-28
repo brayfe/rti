@@ -10,7 +10,7 @@
 function rti_resource_content_type_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-resource-body'
+  // Exported field_instance: 'node-resource-body'.
   $field_instances['node-resource-body'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -18,6 +18,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => 'The full description text of the resource that appears on the resource\'s individual page.',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -55,7 +62,7 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_featured_resource'
+  // Exported field_instance: 'node-resource-field_featured_resource'.
   $field_instances['node-resource-field_featured_resource'] = array(
     'bundle' => 'resource',
     'default_value' => array(
@@ -67,6 +74,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 10,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'list',
         'settings' => array(),
@@ -98,7 +112,7 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_free_tags'
+  // Exported field_instance: 'node-resource-field_free_tags'.
   $field_instances['node-resource-field_free_tags'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -106,6 +120,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
@@ -138,13 +159,23 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_image'
+  // Exported field_instance: 'node-resource-field_image'.
   $field_instances['node-resource-field_image'] = array(
     'bundle' => 'resource',
     'deleted' => 0,
     'description' => 'The image that will appear next to this resource in the listings.',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
@@ -200,7 +231,7 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_link'
+  // Exported field_instance: 'node-resource-field_link'.
   $field_instances['node-resource-field_link'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -208,6 +239,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => 'An internal or external link for this resource',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 11,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'link',
         'settings' => array(),
@@ -253,11 +291,64 @@ function rti_resource_content_type_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_category'
+  // Exported field_instance: 'node-resource-field_related_resources'.
+  $field_instances['node-resource-field_related_resources'] = array(
+    'bundle' => 'resource',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The title of a related resource within the system.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => TRUE,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_related_resources',
+    'label' => 'Related Resources',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-resource-field_resource_category'.
   $field_instances['node-resource-field_resource_category'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -265,6 +356,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => 'The category or categories that this resource belongs.',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
@@ -304,13 +402,20 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_file'
+  // Exported field_instance: 'node-resource-field_resource_file'.
   $field_instances['node-resource-field_resource_file'] = array(
     'bundle' => 'resource',
     'deleted' => 0,
     'description' => 'The resource file available for viewing or download.',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 3,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'file',
         'settings' => array(),
@@ -359,7 +464,7 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_ranking'
+  // Exported field_instance: 'node-resource-field_resource_ranking'.
   $field_instances['node-resource-field_resource_ranking'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -367,6 +472,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => 'The ranking that this resource should appear in for certain lists.',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
@@ -396,7 +508,7 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_type'
+  // Exported field_instance: 'node-resource-field_resource_type'.
   $field_instances['node-resource-field_resource_type'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -404,6 +516,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => 'The type of resource that is being created.',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
@@ -433,7 +552,7 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_special_populations'
+  // Exported field_instance: 'node-resource-field_special_populations'.
   $field_instances['node-resource-field_special_populations'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -441,6 +560,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 8,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
@@ -470,7 +596,7 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_stakeholders'
+  // Exported field_instance: 'node-resource-field_stakeholders'.
   $field_instances['node-resource-field_stakeholders'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -478,6 +604,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
@@ -507,7 +640,7 @@ function rti_resource_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_summary'
+  // Exported field_instance: 'node-resource-field_summary'.
   $field_instances['node-resource-field_summary'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -515,6 +648,13 @@ function rti_resource_content_type_field_default_field_instances() {
     'description' => 'The shortened summary of the resource that will appear next to the item in listings.',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -556,6 +696,7 @@ function rti_resource_content_type_field_default_field_instances() {
   t('Image');
   t('Link');
   t('Ranking');
+  t('Related Resources');
   t('Resource File');
   t('Special Populations');
   t('Stakeholder Group');
@@ -567,6 +708,7 @@ function rti_resource_content_type_field_default_field_instances() {
   t('The ranking that this resource should appear in for certain lists.');
   t('The resource file available for viewing or download.');
   t('The shortened summary of the resource that will appear next to the item in listings.');
+  t('The title of a related resource within the system.');
   t('The type of resource that is being created.');
   t('Type');
 

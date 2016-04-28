@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function rti_resource_content_type_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -21,14 +21,14 @@ function rti_resource_content_type_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Taxonomies',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
-      0 => 'field_resource_category',
-      1 => 'field_resource_ranking',
-      2 => 'field_resource_type',
-      3 => 'field_stakeholders',
+      0 => 'field_free_tags',
+      1 => 'field_resource_category',
+      2 => 'field_resource_ranking',
+      3 => 'field_resource_type',
       4 => 'field_special_populations',
-      5 => 'field_free_tags',
+      5 => 'field_stakeholders',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -41,7 +41,11 @@ function rti_resource_content_type_field_group_info() {
       'formatter' => 'collapsed',
     ),
   );
-  $export['group_taxonomies|node|resource|form'] = $field_group;
+  $field_groups['group_taxonomies|node|resource|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Taxonomies');
+
+  return $field_groups;
 }
