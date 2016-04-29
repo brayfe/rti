@@ -11,180 +11,173 @@
  *
  * @see system_install()
  */
-
 function rti_install() {
-    // Enable RTI main themes
-    $enable = array(
-      //'theme_default' => 'rtisub',
-      // changed from rtisub to make search view formatting work
-      'theme_default' => 'bartik',
-      // changed from 'subseven' to create working Taxonomy Tree
-      // widget in the resource content type
-      'admin_theme' => 'seven',
-    );
-    theme_enable($enable);
+  // Enable RTI main themes.
+  $enable = array(
+    // Changed from rtisub to make search view formatting work.
+    'theme_default' => 'bartik',
+    // Changed from 'subseven' to create working Taxonomy Tree
+    // widget in the resource content type.
+    'admin_theme' => 'seven',
+  );
+  theme_enable($enable);
 
-    // Set RTI main themes as default
-    variable_set('theme_default', $enable['theme_default']);
-    variable_set('admin_theme', $enable['admin_theme']);
-    variable_set('node_admin_theme', '1');
+  // Set RTI main themes as default.
+  variable_set('theme_default', $enable['theme_default']);
+  variable_set('admin_theme', $enable['admin_theme']);
+  variable_set('node_admin_theme', '1');
 
-    // Disable the default Bartik theme
-    theme_disable(array('rtisub', 'subseven', 'zen'));
+  // Disable the default Bartik theme.
+  theme_disable(array('rtisub', 'subseven', 'zen'));
 
-
-    /*  START copy from standard install profile */
-    // Add text formats.
-    $filtered_html_format = array(
-      'format' => 'filtered_html',
-      'name' => 'Filtered HTML',
-      'weight' => 0,
-      'filters' => array(
-        // URL filter.
-        'filter_url' => array(
-          'weight' => 0,
-          'status' => 1,
-        ),
-        // HTML filter.
-        'filter_html' => array(
-          'weight' => 1,
-          'status' => 1,
-        ),
-        // Line break filter.
-        'filter_autop' => array(
-          'weight' => 2,
-          'status' => 1,
-        ),
-        // HTML corrector filter.
-        'filter_htmlcorrector' => array(
-          'weight' => 10,
-          'status' => 1,
-        ),
+  /*  START copy from standard install profile */
+  // Add text formats.
+  $filtered_html_format = array(
+    'format' => 'filtered_html',
+    'name' => 'Filtered HTML',
+    'weight' => 0,
+    'filters' => array(
+      // URL filter.
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
       ),
-    );
-    $filtered_html_format = (object) $filtered_html_format;
-    filter_format_save($filtered_html_format);
-
-    $full_html_format = array(
-      'format' => 'full_html',
-      'name' => 'Full HTML',
-      'weight' => 1,
-      'filters' => array(
-        // URL filter.
-        'filter_url' => array(
-          'weight' => 0,
-          'status' => 1,
-        ),
-        // Line break filter.
-        'filter_autop' => array(
-          'weight' => 1,
-          'status' => 1,
-        ),
-        // HTML corrector filter.
-        'filter_htmlcorrector' => array(
-          'weight' => 10,
-          'status' => 1,
-        ),
+      // HTML filter.
+      'filter_html' => array(
+        'weight' => 1,
+        'status' => 1,
       ),
-    );
-    $full_html_format = (object) $full_html_format;
-    filter_format_save($full_html_format);
-
-    // Enable some standard blocks.
-    $default_theme = variable_get('theme_default', 'rtisub');
-    $admin_theme = variable_get('admin_theme', 'subseven');
-
-    // Insert default pre-defined node types into the database. For a complete
-    // list of available node type attributes, refer to the node type API
-    // documentation at: http://api.drupal.org/api/HEAD/function/hook_node_info.
-    $types = array(
-      array(
-        'type' => 'page',
-        'name' => st('Basic page'),
-        'base' => 'node_content',
-        'description' => st("Use <em>basic pages</em> for your static content, such as an 'About us' page."),
-        'custom' => 1,
-        'modified' => 1,
-        'locked' => 0,
+      // Line break filter.
+      'filter_autop' => array(
+        'weight' => 2,
+        'status' => 1,
       ),
-    );
+      // HTML corrector filter.
+      'filter_htmlcorrector' => array(
+        'weight' => 10,
+        'status' => 1,
+      ),
+    ),
+  );
+  $filtered_html_format = (object) $filtered_html_format;
+  filter_format_save($filtered_html_format);
 
-    foreach ($types as $type) {
-        $type = node_type_set_defaults($type);
-        node_type_save($type);
-        node_add_body_field($type);
-    }
+  $full_html_format = array(
+    'format' => 'full_html',
+    'name' => 'Full HTML',
+    'weight' => 1,
+    'filters' => array(
+      // URL filter.
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
+      ),
+      // Line break filter.
+      'filter_autop' => array(
+        'weight' => 1,
+        'status' => 1,
+      ),
+      // HTML corrector filter.
+      'filter_htmlcorrector' => array(
+        'weight' => 10,
+        'status' => 1,
+      ),
+    ),
+  );
+  $full_html_format = (object) $full_html_format;
+  filter_format_save($full_html_format);
 
-    // Insert default pre-defined RDF mapping into the database.
-    $rdf_mappings = array(
-        array(
-            'type' => 'node',
-            'bundle' => 'page',
-            'mapping' => array(
-            'rdftype' => array('foaf:Document'),
-            ),
-        ),
-    );
-    foreach ($rdf_mappings as $rdf_mapping) {
-        rdf_mapping_save($rdf_mapping);
-    }
+  // Enable some standard blocks.
+  $default_theme = variable_get('theme_default', 'rtisub');
+  $admin_theme = variable_get('admin_theme', 'subseven');
 
-    // Default "Basic page" to not be promoted and have comments disabled.
-    variable_set('node_options_page', array('status'));
-    variable_set('comment_page', COMMENT_NODE_HIDDEN);
+  // Insert default pre-defined node types into the database. For a complete
+  // list of available node type attributes, refer to the node type API
+  // documentation at: http://api.drupal.org/api/HEAD/function/hook_node_info.
+  $types = array(
+    array(
+      'type' => 'page',
+      'name' => st('Basic page'),
+      'base' => 'node_content',
+      'description' => st("Use <em>basic pages</em> for your static content, such as an 'About us' page."),
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+    ),
+  );
 
-    // Don't display date and author information for "Basic page" nodes by default.
-    variable_set('node_submitted_page', FALSE);
+  foreach ($types as $type) {
+    $type = node_type_set_defaults($type);
+    node_type_save($type);
+    node_add_body_field($type);
+  }
 
-    // Enable user picture support and set the default to a square thumbnail option.
-    variable_set('user_pictures', '1');
-    variable_set('user_picture_dimensions', '1024x1024');
-    variable_set('user_picture_file_size', '800');
-    variable_set('user_picture_style', 'thumbnail');
+  // Insert default pre-defined RDF mapping into the database.
+  $rdf_mappings = array(
+    array(
+      'type' => 'node',
+      'bundle' => 'page',
+      'mapping' => array(
+        'rdftype' => array('foaf:Document'),
+      ),
+    ),
+  );
+  foreach ($rdf_mappings as $rdf_mapping) {
+    rdf_mapping_save($rdf_mapping);
+  }
 
-    // Allow visitor account creation with administrative approval.
-    variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
+  // Default "Basic page" to not be promoted and have comments disabled.
+  variable_set('node_options_page', array('status'));
+  variable_set('comment_page', COMMENT_NODE_HIDDEN);
 
-    // Enable default permissions for system roles.
-    $filtered_html_permission = filter_permission_name($filtered_html_format);
-    user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access comments', $filtered_html_permission));
-    user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access comments', 'post comments', 'skip comment approval', $filtered_html_permission));
+  // Don't display date & author information for "Basic page" nodes by default.
+  variable_set('node_submitted_page', FALSE);
 
-    // Create a default role for site administrators, with all available permissions assigned.
-    $admin_role = new stdClass();
-    $admin_role->name = 'administrator';
-    $admin_role->weight = 2;
-    user_role_save($admin_role);
-    user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
-    // Set this as the administrator role.
-    variable_set('user_admin_role', $admin_role->rid);
+  // Enable user picture support and set default to a square thumbnail option.
+  variable_set('user_pictures', '1');
+  variable_set('user_picture_dimensions', '1024x1024');
+  variable_set('user_picture_file_size', '800');
+  variable_set('user_picture_style', 'thumbnail');
 
-    // Assign user 1 the "administrator" role.
-    db_insert('users_roles')
-      ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
-      ->execute();
+  // Allow visitor account creation with administrative approval.
+  variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
 
-    /*  End Copy from standard install profile */
+  // Enable default permissions for system roles.
+  $filtered_html_permission = filter_permission_name($filtered_html_format);
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access comments', $filtered_html_permission));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access comments', 'post comments', 'skip comment approval', $filtered_html_permission));
 
+  // Create a default role for site administrators, with all available permissions assigned.
+  $admin_role = new stdClass();
+  $admin_role->name = 'administrator';
+  $admin_role->weight = 2;
+  user_role_save($admin_role);
+  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $admin_role->rid);
 
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+  /*  End Copy from standard install profile */
 
+  // Install RTI Taxonomies.
+  // _install_taxonomy_terms();
 
-    // Install RTI Taxonomies
-    //_install_taxonomy_terms();
+  // Install RTI Menu Links.
+  _install_menus();
 
-    // Install RTI Menu Links
-    _install_menus();
-
-    // Revert all Features
-    features_revert();
+  // Revert all Features.
+  features_revert();
 }
 
 /**
  * Helper function to add default menus.
  */
 function _install_menus() {
- /**    Main Menu    **/
- // Check if menu exists first, otherwise, create it
+  /*    Main Menu    */
+  // Check if menu exists first, otherwise, create it.
   if (!menu_load('main-menu')) {
     $menu = array(
       'menu_name' => 'main-menu',
@@ -193,7 +186,7 @@ function _install_menus() {
     );
     menu_save($menu);
   }
-  // Links for menu
+  // Links for menu.
   $menu_items = array(
     array(
       'link_title' => st('Home'),
@@ -223,9 +216,8 @@ function _install_menus() {
 
   _menu_builder($menu_items, 'main-menu');
 
-
-  /**    Footer Menu    **/
- // Check if menu exists first, otherwise, create it
+  /*    Footer Menu    */
+  // Check if menu exists first, otherwise, create it.
   if (!menu_load('menu-rti-footer-menu')) {
     $menu = array(
       'menu_name' => 'menu-rti-footer-menu',
@@ -234,7 +226,7 @@ function _install_menus() {
     );
     menu_save($menu);
   }
-  // Links for menu
+  // Links for menu.
   $menu_items = array(
     array(
       'link_title' => st('College of Education'),
@@ -356,7 +348,7 @@ function _install_taxonomy_terms() {
     }
   }
 
-  // Get the Resource Stakeholders taxonomy
+  // Get the Resource Stakeholders taxonomy.
   $stakeholders_vocab = taxonomy_vocabulary_machine_name_load('rti_stakeholders');
 
   $stakeholders = array(
@@ -370,7 +362,7 @@ function _install_taxonomy_terms() {
     }
   }
 
-  // Get the Special Populations taxonomy
+  // Get the Special Populations taxonomy.
   $special_populations_vocab = taxonomy_vocabulary_machine_name_load('rti_special_populations');
 
   $special_populations = array(
@@ -386,7 +378,7 @@ function _install_taxonomy_terms() {
     }
   }
 
-  // Get the Ranking taxonomy
+  // Get the Ranking taxonomy.
   $ranking_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_ranking');
 
   $rankings = array(
@@ -404,7 +396,7 @@ function _install_taxonomy_terms() {
     }
   }
 
-  // Get the Resource Type taxonomy
+  // Get the Resource Type taxonomy.
   $resource_type_vocab = taxonomy_vocabulary_machine_name_load('rti_resource_types');
 
   $resource_types = array(
@@ -432,7 +424,7 @@ function _install_taxonomy_terms() {
 /**
  * Helper function to create a taxonomy term.
  */
-function _create_taxonomy_term($name, $vid, $weight=NULL, $parent_tid=NULL) {
+function _create_taxonomy_term($name, $vid, $weight = NULL, $parent_tid = NULL) {
   $term = new stdClass();
   $term->name = $name;
   $term->vid = $vid;
