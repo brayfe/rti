@@ -112,10 +112,13 @@ dependencies[] = search_api
 dependencies[] = search_api_db
 dependencies[] = facetapi
 dependencies[] = search_api_facetapi
+dependencies[] = facetapi_pretty_paths
 
 ; Features
 dependencies[] = features
 dependencies[] = fe_block
+
+; Required Modules (Custom)
 
 ; Features - Content Types
 dependencies[] = rti_resource_content_type
@@ -154,3 +157,6 @@ dependencies[] = rti_text_formats
 ; Features - Variables
 
 ; Features - Views
+
+; RTI Custom Deployment
+dependencies[] = rti_deployment
