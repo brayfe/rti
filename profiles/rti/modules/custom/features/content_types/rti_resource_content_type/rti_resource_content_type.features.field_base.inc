@@ -10,7 +10,7 @@
 function rti_resource_content_type_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_featured_resource'
+  // Exported field_base: 'field_featured_resource'.
   $field_bases['field_featured_resource'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -56,7 +56,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_free_tags'
+  // Exported field_base: 'field_free_tags'.
   $field_bases['field_free_tags'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -82,7 +82,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_image'
+  // Exported field_base: 'field_image'.
   $field_bases['field_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -104,7 +104,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_link'
+  // Exported field_base: 'field_link'.
   $field_bases['field_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -133,7 +133,42 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_resource_category'
+  // Exported field_base: 'field_related_resources'.
+  $field_bases['field_related_resources'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_related_resources',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'resource' => 'resource',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_resource_category'.
   $field_bases['field_resource_category'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -159,7 +194,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_resource_file'
+  // Exported field_base: 'field_resource_file'.
   $field_bases['field_resource_file'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -182,7 +217,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_resource_ranking'
+  // Exported field_base: 'field_resource_ranking'.
   $field_bases['field_resource_ranking'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -208,7 +243,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_resource_type'
+  // Exported field_base: 'field_resource_type'.
   $field_bases['field_resource_type'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -234,7 +269,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_special_populations'
+  // Exported field_base: 'field_special_populations'.
   $field_bases['field_special_populations'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -260,7 +295,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_stakeholders'
+  // Exported field_base: 'field_stakeholders'.
   $field_bases['field_stakeholders'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -286,7 +321,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_summary'
+  // Exported field_base: 'field_summary'.
   $field_bases['field_summary'] = array(
     'active' => 1,
     'cardinality' => 1,

@@ -1,8 +1,13 @@
 <?php
+
 /**
-* Implements hook_migrate_api().
-* Sets the API to the most up-to-date version
-*/
+ * @file
+ * Custom Migration for RTI.
+ */
+
+/**
+ * Implements hook_migrate_api().
+ */
 function rtimig_migrate_api() {
   $api = array(
     'api' => 2,
@@ -14,7 +19,7 @@ function rtimig_migrate_api() {
     'migrations' => array(),
   );
 
-  /**
+  /*
    * Each migration being registered takes an array of arguments, some required
    * and some optional. Start with the common arguments required by all - the
    * source_connection (connection key, set up in settings.php, pointing to
@@ -26,7 +31,7 @@ function rtimig_migrate_api() {
     'group_name' => 'RTI',
   );
 
-  /**
+  /*
    *
    *   ------- User Migration -------
    *
@@ -41,7 +46,7 @@ function rtimig_migrate_api() {
     'class_name' => 'DrupalUser7Migration',
   );
 
-  /**
+  /*
    *
    *   ------- Taxonomy Migrations -------
    *
@@ -94,7 +99,7 @@ function rtimig_migrate_api() {
     $api['migrations'][$migration_name] = $arguments;
   }
 
-  /**
+  /*
    *
    *   ------- File Migration -------
    *
@@ -103,16 +108,16 @@ function rtimig_migrate_api() {
    * we need to migrate the old site's files so that when we migrate
    * the field contents, the contents have something to point to.
    */
-   $api['migrations']['File'] = $common_arguments + array(
-     'description' => t('Import old RTI files'),
-     'class_name' => 'DrupalFile7Migration',
-     'user_migration' => 'User',
-     'default_uid' => 1,
-     'source_dir' => 'http://buildingrti.utexas.org/sites/default/files',
-     'destination_dir' => 'public://',
-     'file_replace' => MigrateFile::FILE_EXISTS_REUSE,
-     'preserve_files' => TRUE,
-   );
+  $api['migrations']['File'] = $common_arguments + array(
+    'description' => t('Import old RTI files'),
+    'class_name' => 'DrupalFile7Migration',
+    'user_migration' => 'User',
+    'default_uid' => 1,
+    'source_dir' => 'http://buildingrti.utexas.org/sites/default/files',
+    'destination_dir' => 'public://',
+    'file_replace' => MigrateFile::FILE_EXISTS_REUSE,
+    'preserve_files' => TRUE,
+  );
 
   /*
    *   ------- Node Migrations -------
@@ -126,81 +131,152 @@ function rtimig_migrate_api() {
       'description' => t('Migration of Booklet nodes'),
       'source_type' => 'booklet',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+      'dependencies' => array(
+        'File',
+        'Categories',
+        'SpecialPopulations',
+        'Ranking',
+        'Types',
+        'Stakeholders',
+        'FreeTags',
+      ),
     ),
     'Document' => array(
       'class_name' => 'DocumentMigration',
       'description' => t('Migration of Document nodes'),
       'source_type' => 'documents',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+      'dependencies' => array(
+        'File',
+        'Categories',
+        'SpecialPopulations',
+        'Ranking',
+        'Types',
+        'Stakeholders',
+        'FreeTags',
+      ),
     ),
     'Link' => array(
       'class_name' => 'LinkWebsiteMigration',
       'description' => t('Migration of Link and Website nodes'),
       'source_type' => 'external_links_websites',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+      'dependencies' => array(
+        'File',
+        'Categories',
+        'SpecialPopulations',
+        'Ranking',
+        'Types',
+        'Stakeholders',
+        'FreeTags',
+      ),
     ),
     'OnlineModule' => array(
       'class_name' => 'OnlineModuleMigration',
       'description' => t('Migration of Module nodes'),
       'source_type' => 'module_resource',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+      'dependencies' => array(
+        'File',
+        'Categories',
+        'SpecialPopulations',
+        'Ranking',
+        'Types',
+        'Stakeholders',
+        'FreeTags',
+      ),
     ),
     'Podcast' => array(
       'class_name' => 'PodcastMigration',
       'description' => t('Migration of Podcast nodes'),
       'source_type' => 'podcast',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+      'dependencies' => array(
+        'File',
+        'Categories',
+        'SpecialPopulations',
+        'Ranking',
+        'Types',
+        'Stakeholders',
+        'FreeTags',
+      ),
     ),
     'Presentation' => array(
       'class_name' => 'PresentationMigration',
       'description' => t('Migration of Presentation nodes'),
       'source_type' => 'presentation',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+      'dependencies' => array(
+        'File',
+        'Categories',
+        'SpecialPopulations',
+        'Ranking',
+        'Types',
+        'Stakeholders',
+        'FreeTags',
+      ),
     ),
     'ResourcePage' => array(
       'class_name' => 'ResourcePageMigration',
       'description' => t('Migration of Resource Pages'),
       'source_type' => 'resource_page',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+      'dependencies' => array(
+        'File',
+        'Categories',
+        'SpecialPopulations',
+        'Ranking',
+        'Types',
+        'Stakeholders',
+        'FreeTags',
+      ),
     ),
     'Video' => array(
       'class_name' => 'VideoMigration',
       'description' => t('Migration of Video nodes'),
       'source_type' => 'video_resource',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+      'dependencies' => array(
+        'File',
+        'Categories',
+        'SpecialPopulations',
+        'Ranking',
+        'Types',
+        'Stakeholders',
+        'FreeTags',
+      ),
     ),
     'Webinar' => array(
       'class_name' => 'WebinarMigration',
       'description' => t('Migration of Webinar nodes'),
       'source_type' => 'webinar',
       'destination_type' => 'resource',
-      'dependencies' => array('File', 'Categories', 'SpecialPopulations', 'Ranking', 'Types','Stakeholders', 'FreeTags'),
+      'dependencies' => array(
+        'File',
+        'Categories',
+        'SpecialPopulations',
+        'Ranking',
+        'Types',
+        'Stakeholders',
+        'FreeTags',
+      ),
     ),
   );
 
-  /**
+  /*
    * Since we have our user and file migrations, we need to
    * tell the node migrations where the users are coming from, so they can
    * set up the dependency and resolve D7->D7 uids.
    */
   $common_node_arguments = $common_arguments + array(
-      'user_migration' => 'User',
-      'default_uid' => 1,
+    'user_migration' => 'User',
+    'default_uid' => 1,
   );
 
   foreach ($node_arguments as $migration_name => $arguments) {
     $arguments = array_merge_recursive($arguments, $common_node_arguments);
     $api['migrations'][$migration_name] = $arguments;
   }
-
 
   return $api;
 
