@@ -59,18 +59,6 @@ function rtisub_preprocess_node(&$variables) {
     $url = file_create_url($uri);
     $variables['resource_image'] = $url;
    }
-   if($variables['node']->type == 'resource'){
-    dpm($variables['node']);   
-  }
-}
-
-// get default resource images to show when there isn't an existing one
-function rtisub_preprocess_views_view(&$variables) {
-  // if($variables['view']->name == 'rti_indexed_search'){
-  //   // dpm($variables['view']->field['field_image']->field_info['storage']['details']['sql']['FIELD_LOAD_CURRENT']['field_data_field_image']['fid']);
-  //   //dpm($variables['view']->display['page']->display_options['fields']['field_image']);
-  //   //dpm($variables);
-  // } 
 }
 
 function rtisub_preprocess_views_view_fields(&$variables) {
