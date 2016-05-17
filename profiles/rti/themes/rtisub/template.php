@@ -59,6 +59,9 @@ function rtisub_preprocess_node(&$variables) {
     $url = file_create_url($uri);
     $variables['resource_image'] = $url;
    }
+   if($variables['node']->type == 'resource'){
+    dpm($variables['node']);   
+  }
 }
 
 // get default resource images to show when there isn't an existing one
