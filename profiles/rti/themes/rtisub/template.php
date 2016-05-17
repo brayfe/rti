@@ -25,8 +25,7 @@ function rtisub_preprocess_maintenance_page(&$variables, $hook) {
   rtisub_preprocess_page($variables, $hook);
 }
 // */
-/* add function below prepending and appending the module resource link */
-function rtisub_preprocess_field(&$variables) {
+function rtisub_preprocess_field(&$variables) { 
   if($variables['element']['#field_name'] == 'field_module_link') {
       $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
       $variables['items']['0']['#element']['url'] = 'sites/default/files/modules/' . $variables['items']['0']['#element']['url'];  
@@ -40,6 +39,57 @@ function rtisub_preprocess_field(&$variables) {
       $variables['items']['0']['#element']['url'] = 'sites/default/files/podcasts/' . $variables['items']['0']['#element']['url'];  
   }
 }
+
+
+function rtisub_preprocess_node(&$variables) {
+  if(!empty($variables['field_image'][0]['fid'])){
+    $fid = $variables['field_image'][0]['fid'];
+    $file = file_load($fid);
+    $uri = $file->uri;
+    $url = file_create_url($uri);
+    $variables['resource_image'] = $url;
+  }
+   else{
+    // get tid of resource type
+    $term = $variables['field_resource_type'][0]['taxonomy_term']->tid;
+    $term_image  = taxonomy_term_load($term);
+    $fid = $term_image->field_default_resource_image['und'][0]['fid'];
+    $file = file_load($fid);
+    $uri = $file->uri;
+    $url = file_create_url($uri);
+    $variables['resource_image'] = $url;
+   }
+}
+
+// get default resource images to show when there isn't an existing one
+function rtisub_preprocess_views_view(&$variables) {
+  // if($variables['view']->name == 'rti_indexed_search'){
+  //   // dpm($variables['view']->field['field_image']->field_info['storage']['details']['sql']['FIELD_LOAD_CURRENT']['field_data_field_image']['fid']);
+  //   //dpm($variables['view']->display['page']->display_options['fields']['field_image']);
+  //   //dpm($variables);
+  // } 
+}
+
+function rtisub_preprocess_views_view_fields(&$variables) {
+  if(!empty($variables['row']->_field_data['field_image']['entity']->field_image['und'][0]['fid'])){
+     $fid = $variables['row']->_field_data['field_image']['entity']->field_image['und'][0]['fid'];
+     $file = file_load($fid);
+     $uri = $file->uri;
+     $url = file_create_url($uri);
+     $variables['resource_image'] = $url;
+  }
+   else{
+    // get tid of resource type
+    $term = $variables['row']->_entity_properties['field_resource_type'];
+    $term_image  = taxonomy_term_load($term);
+    $fid = $term_image->field_default_resource_image['und'][0]['fid'];
+    $file = file_load($fid);
+    $uri = $file->uri;
+    $url = file_create_url($uri);
+    $variables['resource_image'] = $url;
+   }
+}
+
 
 /**
  * Override or insert variables into the html templates.

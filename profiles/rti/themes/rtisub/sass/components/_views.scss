@@ -1,5 +1,19 @@
 /* styling for views */
-
+.view-rti-indexed-search{
+	.view-content{
+		.views-row{
+			border-top: 1px solid rgb(153, 153, 153);
+			padding: 1em 0 1em;
+			display: table;
+			content: "";
+			height: 0;
+			width: 100%;
+			&:first-child{
+				border-top:none;
+			}
+		}
+	}
+}
 /* no border-top for very first views row */
 .view-content  h3:first-child + .views-row{
 	//border-top:1px solid #999;
@@ -32,7 +46,7 @@
 .resource-type-thumb-wrapper{
 	width:110px;
 	float:left;
-	.resource-type .type{
+	.resource-type{
 		display: inline-block;
 		padding: 1px 6px;
 		font-size: 0.7em;

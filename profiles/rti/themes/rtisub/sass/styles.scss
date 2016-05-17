@@ -25,16 +25,18 @@
 @import "components/highlight";
 @import "components/main";
 @import "components/views";
-@import "components/resource_content_types";
-@import "components/booklet_content_type";
-@import "components/documents_content_type";
-@import "components/external_links_websites_content_type";
-@import "components/module_resource_content_type";
-@import "components/podcast_content_type";
-@import "components/presentation_content_type";
-@import "components/resource_page_content_type";
-@import "components/video_resource_content_type";
-@import "components/webinar_content_type";
+@import "components/facetapi-blocks";
+@import "components/resources";
+//@import "components/resource_content_types";
+//@import "components/booklet_content_type";
+//@import "components/documents_content_type";
+//@import "components/external_links_websites_content_type";
+//@import "components/module_resource_content_type";
+//@import "components/podcast_content_type";
+//@import "components/presentation_content_type";
+//@import "components/resource_page_content_type";
+//@import "components/video_resource_content_type";
+//@import "components/webinar_content_type";
 
 
 /* responsive Layout rules */
