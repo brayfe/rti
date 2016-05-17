@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Blocks: Search Sidebar feature.
+ */
+
+include_once 'blocks_search_sidebar.features.inc';
