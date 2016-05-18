@@ -17,20 +17,6 @@
     </header>
   <?php endif; ?>
 
-<?php 
-  // switch ($node->type) {
-  //   //case 'booklet': $resource_image = 'field_image_for_booklet'; break;
-  //   case 'documents': $resource_image = 'field_document_image'; break;
-  //   case 'external_links_websites': $resource_image = 'field_link_website_image'; break;
-  //   case 'module_resource':  $resource_image = 'field_online_module_image'; break;
-  //   case 'podcast': $resource_image = 'field_podcast_image'; break;
-  //   case 'presentation': $resource_image = 'field_presentation_image'; break;
-  //   case 'resource_page': $resource_image = 'field_resource_page_image'; break;
-  //   case 'video_resource': $resource_image = 'field_video_thumbnail_image'; break;
-  //   case 'webinar': $resource_image = 'field_webinar_image'; break;
-  // }
-?>
-
 <div class="type-image-wrapper">
     <?php print render($content['field_resource_type']); ?>
     <div class="resource-image">

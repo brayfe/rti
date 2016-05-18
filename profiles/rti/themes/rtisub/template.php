@@ -25,6 +25,7 @@ function rtisub_preprocess_maintenance_page(&$variables, $hook) {
   rtisub_preprocess_page($variables, $hook);
 }
 // */
+
 function rtisub_preprocess_field(&$variables) { 
   if($variables['element']['#field_name'] == 'field_module_link') {
       $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
@@ -42,23 +43,28 @@ function rtisub_preprocess_field(&$variables) {
 
 
 function rtisub_preprocess_node(&$variables) {
-  if(!empty($variables['field_image'][0]['fid'])){
-    $fid = $variables['field_image'][0]['fid'];
-    $file = file_load($fid);
-    $uri = $file->uri;
-    $url = file_create_url($uri);
-    $variables['resource_image'] = $url;
+  // if($variables['view_mode'] == 'teaser'){
+  //   $variables['resource_image'] = "";
+  // }
+  if($variables['type'] == 'resource' && $variables['view_mode'] !== 'teaser'){
+  
+    if(!empty($variables['field_image'][0]['fid'])){
+      $fid = $variables['field_image'][0]['fid'];
+      $file = file_load($fid);
+      $uri = $file->uri;
+      $url = file_create_url($uri);
+      $variables['resource_image'] = $url;
+    }
+     else{
+      $term = $variables['field_resource_type'][0]['taxonomy_term']->tid;
+      $term_image  = taxonomy_term_load($term);
+      $fid = $term_image->field_default_resource_image['und'][0]['fid'];
+      $file = file_load($fid);
+      $uri = $file->uri;
+      $url = file_create_url($uri);
+      $variables['resource_image'] = $url;
+     }
   }
-   else{
-    // get tid of resource type
-    $term = $variables['field_resource_type'][0]['taxonomy_term']->tid;
-    $term_image  = taxonomy_term_load($term);
-    $fid = $term_image->field_default_resource_image['und'][0]['fid'];
-    $file = file_load($fid);
-    $uri = $file->uri;
-    $url = file_create_url($uri);
-    $variables['resource_image'] = $url;
-   }
 }
 
 function rtisub_preprocess_views_view_fields(&$variables) {
@@ -70,7 +76,6 @@ function rtisub_preprocess_views_view_fields(&$variables) {
      $variables['resource_image'] = $url;
   }
    else{
-    // get tid of resource type
     $term = $variables['row']->_entity_properties['field_resource_type'];
     $term_image  = taxonomy_term_load($term);
     $fid = $term_image->field_default_resource_image['und'][0]['fid'];

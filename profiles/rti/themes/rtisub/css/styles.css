@@ -2588,34 +2588,6 @@ ol.search-results li .search-snippet-info p.search-info {
 }
 
 /* customize subtitles for a few taxonomy pages */
-/* line 278, ../sass/components/_views.scss */
-.page-resources-1 h1#page-title,
-.page-resources-5 h1#page-title,
-.page-resources-10 h1#page-title,
-.page-resources-11 h1#page-title,
-.page-resources-17 h1#page-title,
-.page-resources-23 h1#page-title,
-.page-resources-29 h1#page-title,
-.page-resources-35 h1#page-title {
-  font-size: 0;
-}
-/* line 287, ../sass/components/_views.scss */
-.page-resources-1 h1#page-title:after,
-.page-resources-5 h1#page-title:after,
-.page-resources-10 h1#page-title:after,
-.page-resources-11 h1#page-title:after,
-.page-resources-17 h1#page-title:after,
-.page-resources-23 h1#page-title:after,
-.page-resources-29 h1#page-title:after,
-.page-resources-35 h1#page-title:after {
-  content: "All Related Resources";
-  font-weight: 600;
-  color: #333333;
-  line-height: 1.2em;
-  font-size: 22px;
-  margin-bottom: 1em;
-}
-
 /* facetapi blocks for search page */
 /* line 3, ../sass/components/_facetapi-blocks.scss */
 .page-rti-search .block-facetapi {
