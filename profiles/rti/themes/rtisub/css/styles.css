@@ -2711,21 +2711,22 @@ ol.search-results li .search-snippet-info p.search-info {
 /* line 46, ../sass/components/_resources.scss */
 .node-fields-wrapper .field-name-field-resource-category, .node-fields-wrapper .field-name-field-free-tags {
   margin-top: 1em;
+  line-height: 1.2em;
 }
-/* line 48, ../sass/components/_resources.scss */
+/* line 49, ../sass/components/_resources.scss */
 .node-fields-wrapper .field-name-field-resource-category .field-label, .node-fields-wrapper .field-name-field-free-tags .field-label {
   display: inline;
 }
-/* line 51, ../sass/components/_resources.scss */
+/* line 52, ../sass/components/_resources.scss */
 .node-fields-wrapper .field-name-field-resource-category .field-items, .node-fields-wrapper .field-name-field-free-tags .field-items {
   display: inline;
   float: none;
 }
-/* line 54, ../sass/components/_resources.scss */
+/* line 55, ../sass/components/_resources.scss */
 .node-fields-wrapper .field-name-field-resource-category .field-items .field-item, .node-fields-wrapper .field-name-field-free-tags .field-items .field-item {
   display: inline-block;
 }
-/* line 56, ../sass/components/_resources.scss */
+/* line 57, ../sass/components/_resources.scss */
 .node-fields-wrapper .field-name-field-resource-category .field-items .field-item a, .node-fields-wrapper .field-name-field-free-tags .field-items .field-item a {
   font-size: 0.85em;
   text-decoration: none;
@@ -2734,9 +2735,92 @@ ol.search-results li .search-snippet-info p.search-info {
   font-weight: normal;
   padding-right: 1em;
 }
-/* line 67, ../sass/components/_resources.scss */
+/* line 68, ../sass/components/_resources.scss */
 .node-fields-wrapper .field-name-field-resource-category.clearfix:after {
   display: inline-block;
+}
+
+/* Related Resources */
+/* line 73, ../sass/components/_resources.scss */
+.field-name-field-related-resources {
+  margin-top: 2em;
+  padding: 1em;
+  border: 1px solid #CCC;
+  background-color: rgba(238, 238, 238, 0.75);
+}
+/* line 78, ../sass/components/_resources.scss */
+.field-name-field-related-resources .field-label {
+  font-size: 1em;
+  margin-top: 1px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+/* line 84, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser {
+  padding: 0;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+/* line 88, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser h2 {
+  font-size: 0.95em;
+  clear: left;
+}
+/* line 91, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser h2 a {
+  color: #000;
+  text-decoration: underline;
+}
+/* line 94, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser h2 a:hover, .field-name-field-related-resources .node-teaser h2 a:focus {
+  text-decoration: none;
+}
+/* line 99, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .type-image-wrapper {
+  float: left;
+  width: 105px;
+  text-align: center;
+}
+/* line 103, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .type-image-wrapper img {
+  width: 60px !important;
+  height: auto;
+}
+/* line 108, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser h2.node-title {
+  clear: none;
+  line-height: 1.6em;
+  padding-top: 20px;
+}
+/* line 113, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .node-fields-wrapper {
+  margin-left: 110px;
+}
+/* line 115, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .node-fields-wrapper .field-name-field-summary {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+/* line 122, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .node-readmore {
+  display: none;
+}
+/* line 126, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser:after {
+  margin-bottom: 0;
+}
+/* line 129, ../sass/components/_resources.scss */
+.field-name-field-related-resources:after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/* line 135, ../sass/components/_resources.scss */
+.field-name-field-other-resources > .field-items > .field-item:last-child .node-teaser {
+  margin-bottom: 0;
 }
 
 /* responsive Layout rules */

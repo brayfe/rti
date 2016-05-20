@@ -43,10 +43,8 @@ function rtisub_preprocess_field(&$variables) {
 
 
 function rtisub_preprocess_node(&$variables) {
-  // if($variables['view_mode'] == 'teaser'){
-  //   $variables['resource_image'] = "";
-  // }
-  if($variables['type'] == 'resource' && $variables['view_mode'] !== 'teaser'){
+
+  if($variables['type'] == 'resource'){
   
     if(!empty($variables['field_image'][0]['fid'])){
       $fid = $variables['field_image'][0]['fid'];

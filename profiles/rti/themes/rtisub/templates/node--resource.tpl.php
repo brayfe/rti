@@ -17,27 +17,37 @@
     </header>
   <?php endif; ?>
 
-<div class="type-image-wrapper">
-    <?php print render($content['field_resource_type']); ?>
-    <div class="resource-image">
-      <img class="resource-icon" src="<?php print $resource_image; ?>" >
-    </div> 
-</div>
-
-
-  <?php print render($title_prefix); ?>
-  <?php if (!$page && $title): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
-  
-  <div class="node-fields-wrapper">
-    <?php print render($content['body']); ?>
-    <?php print render($content['field_resource_file']); ?>
-    <?php print render($content['field_resource_category']); ?>
-    <?php print render($content['field_free_tags']); ?>
+<?php if($variables['view_mode'] == 'full'): ?>
+  <div class="type-image-wrapper">
+      <?php print render($content['field_resource_type']); ?>
+      <div class="resource-image">
+        <img class="resource-icon" src="<?php print $resource_image; ?>" >
+      </div> 
   </div>
+  <div class="node-fields-wrapper">
+    <?php
+      print render($content['body']);
+      print render($content['field_resource_file']);
+      print render($content['field_resource_category']);
+      print render($content['field_free_tags']); 
+      print render($content['field_related_resources']);
+    ?>
+  </div>
+<?php endif ?>
 
+<?php if($variables['view_mode'] == 'teaser'): ?>
+  <div class="type-image-wrapper">
+      <?php print render($content['field_resource_type']); ?>
+      <div class="resource-image">
+        <?php //print render($content['resource_image']); ?> 
+        <img class="related-resource-icon" src="<?php print $resource_image; ?>" > 
+      </div> 
+  </div>
+  <div class="node-fields-wrapper">
+    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <?php  print render($content['field_summary']);
+    ?>
+  </div>
+<?php endif ?>
 
 </article>
