@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Search Forms First Sidebar feature.
+ */
+
+include_once 'search_forms_first_sidebar.features.inc';

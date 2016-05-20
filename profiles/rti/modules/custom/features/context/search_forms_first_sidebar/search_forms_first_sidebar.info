@@ -1,0 +1,12 @@
+name = Search Forms First Sidebar
+description = put the search forms in the left (first) sidebar
+core = 7.x
+package = Context
+version = 7.x-1.0
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = facetapi
+features[context][] = search_forms_first_sidebar
+features[ctools][] = context:context:3
+features[features_api][] = api:2
+project path = profiles/rti/modules/custom/features/context
