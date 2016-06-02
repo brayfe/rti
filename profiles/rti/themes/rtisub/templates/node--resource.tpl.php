@@ -21,7 +21,7 @@
   <div class="type-image-wrapper">
       <?php print render($content['field_resource_type']); ?>
       <div class="resource-image">
-        <img class="resource-icon" src="<?php print $resource_image; ?>" >
+        <?php print render($resource_image); ?>
       </div> 
   </div>
   <div class="node-fields-wrapper">
@@ -38,9 +38,8 @@
 <?php if($variables['view_mode'] == 'teaser'): ?>
   <div class="type-image-wrapper">
       <?php print render($content['field_resource_type']); ?>
-      <div class="resource-image">
-        <?php //print render($content['resource_image']); ?> 
-        <img class="related-resource-icon" src="<?php print $resource_image; ?>" > 
+      <div class="resource-image"> 
+        <?php print render($resource_image); ?>
       </div> 
   </div>
   <div class="node-fields-wrapper">

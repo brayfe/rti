@@ -31,7 +31,7 @@
 <div class="resource-type-thumb-wrapper">
     <span class="resource-type"><?php print $fields['field_resource_type']->content; ?></span>
     <div class="resource-thumb">
-    	<img class="resource-icon" src="<?php print $resource_image; ?>" >
+    	<?php print render($resource_image); ?>
     </div>
 </div>
 
