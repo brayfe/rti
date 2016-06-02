@@ -1,63 +1,71 @@
 /* facetapi blocks for search page */
-.page-rti-search{
-	.block-facetapi{
-		margin-bottom: 5px;
-		h2.block-title{
-			font-size:1em;
-		}
-		.item-list{
-			margin:0;
-			ul{
-			    list-style-type: none;
-			    text-align: left;
-			    padding-left: 0;
-				margin: 0;
-				font-size: 0.8em;
-				li{
-					input.facetapi-checkbox{
-						float:left;
-						margin-top:4px;
+.block-facetapi{
+	margin-bottom: 25px;
+	h2.block-title{
+		font-size:1em;
+		font-size: 1em;
+		padding: 0 .5em;
+		margin-bottom: 3px;
+		display: block;
+		font-family: "Open Sans Condensed",sans-serif;
+		color: #000;
+		border: 1px solid #333333;
+		font-weight: 700;
+		background-color: #333;
+		color: #fff;
+	}
+	.item-list{
+		margin:0;
+		ul{
+		    list-style-type: none;
+		    text-align: left;
+		    padding-left: 0;
+			margin: 0;
+			font-size: 0.8em;
+			li{
+				input.facetapi-checkbox{
+					float:left;
+					margin-top:4px;
+				}
+				a{
+					color:#333;
+					text-decoration:none;
+					display:block;
+					margin-left:1.5em;
+					line-height:1.5em;
+					&:hover,&:focus{
+						text-decoration:underline;
 					}
-					a{
-						color:#333;
-						text-decoration:none;
-						display:block;
-						margin-left:1.5em;
-						line-height:1.5em;
-						&:hover,&:focus{
-							text-decoration:underline;
-						}
-					}
-					.item-list{
-						ul.expanded{
-							font-size:1em;
-						}
-					}
-
 				}
 				.item-list{
-					margin-left: 1.5em;
-				}
-			}
-			ul.facetapi-facet-field-resource-ranking{
-				li{
-					margin-bottom:7px;
-					line-height: 1.4em;
-					a{
-						margin-left:0;
+					ul.expanded{
+						font-size:1em;
 					}
 				}
+
 			}
-			ul.facetapi-facet-field-resource-category > li.expanded{
-				font-weight:bold;
-				.item-list ul li{
-					font-weight:normal;
+			.item-list{
+				margin-left: 1.5em;
+			}
+		}
+		ul.facetapi-facet-field-resource-ranking{
+			li{
+				margin-bottom:7px;
+				line-height: 1.4em;
+				a{
+					margin-left:0;
 				}
 			}
-			ul.facetapi-facet-field-resource-category > li.leaf{
-				//margin-bottom:2em;
-				font-weight:bold;
+		}
+		ul.facetapi-facet-field-resource-category > li.expanded{
+			font-weight:bold;
+			.item-list ul li{
+				font-weight:normal;
 			}
+		}
+		ul.facetapi-facet-field-resource-category > li.leaf{
+			//margin-bottom:2em;
+			font-weight:bold;
 		}
 	}
 }

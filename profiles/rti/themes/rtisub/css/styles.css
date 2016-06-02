@@ -2571,70 +2571,80 @@ form input {
 }
 
 /* facetapi blocks for search page */
-/* line 3, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi {
-  margin-bottom: 5px;
+/* line 2, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi {
+  margin-bottom: 25px;
 }
-/* line 5, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi h2.block-title {
+/* line 4, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi h2.block-title {
   font-size: 1em;
+  font-size: 1em;
+  padding: 0 .5em;
+  margin-bottom: 3px;
+  display: block;
+  font-family: "Open Sans Condensed",sans-serif;
+  color: #000;
+  border: 1px solid #333333;
+  font-weight: 700;
+  background-color: #333;
+  color: #fff;
 }
-/* line 8, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list {
+/* line 17, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list {
   margin: 0;
 }
-/* line 10, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul {
+/* line 19, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul {
   list-style-type: none;
   text-align: left;
   padding-left: 0;
   margin: 0;
   font-size: 0.8em;
 }
-/* line 17, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul li input.facetapi-checkbox {
+/* line 26, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul li input.facetapi-checkbox {
   float: left;
   margin-top: 4px;
 }
-/* line 21, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul li a {
+/* line 30, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul li a {
   color: #333;
   text-decoration: none;
   display: block;
   margin-left: 1.5em;
   line-height: 1.5em;
 }
-/* line 27, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul li a:hover, .page-rti-search .block-facetapi .item-list ul li a:focus {
+/* line 36, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul li a:hover, .block-facetapi .item-list ul li a:focus {
   text-decoration: underline;
 }
-/* line 32, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul li .item-list ul.expanded {
+/* line 41, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul li .item-list ul.expanded {
   font-size: 1em;
 }
-/* line 38, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul .item-list {
+/* line 47, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul .item-list {
   margin-left: 1.5em;
 }
-/* line 43, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul.facetapi-facet-field-resource-ranking li {
+/* line 52, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-ranking li {
   margin-bottom: 7px;
   line-height: 1.4em;
 }
-/* line 46, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul.facetapi-facet-field-resource-ranking li a {
+/* line 55, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-ranking li a {
   margin-left: 0;
 }
-/* line 51, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.expanded {
+/* line 60, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.expanded {
   font-weight: bold;
 }
-/* line 53, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.expanded .item-list ul li {
+/* line 62, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.expanded .item-list ul li {
   font-weight: normal;
 }
-/* line 57, ../sass/components/_facetapi-blocks.scss */
-.page-rti-search .block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.leaf {
+/* line 66, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.leaf {
   font-weight: bold;
 }
 
