@@ -1491,89 +1491,6 @@ tr.selected td {
 .header__region {
   clear: none !important;
 }
-/* line 39, ../sass/components/_header.scss */
-.header__region #block-search-form {
-  float: right;
-  margin-top: 45px;
-  margin-bottom: 0;
-}
-
-/* line 46, ../sass/components/_header.scss */
-#block-search-form {
-  width: 450px;
-}
-/* line 48, ../sass/components/_header.scss */
-#block-search-form #search-block-form {
-  text-align: right;
-  position: relative;
-}
-/* line 51, ../sass/components/_header.scss */
-#block-search-form #search-block-form label[for=edit-custom-search-types] {
-  color: #3169a2;
-  font-weight: normal;
-  float: left;
-  margin-left: 160px;
-  font-style: italic;
-  font-size: 0.9em;
-  border: none;
-  cursor: pointer;
-}
-/* line 61, ../sass/components/_header.scss */
-#block-search-form #search-block-form label[for=edit-custom-search-types]:hover, #block-search-form #search-block-form label[for=edit-custom-search-types]:focus {
-  border-bottom: 1px solid #3169a2;
-}
-/* line 70, ../sass/components/_header.scss */
-#block-search-form input.form-text, #block-search-form input.form-submit {
-  width: 80%;
-  height: 3em;
-  border: none;
-}
-/* line 75, ../sass/components/_header.scss */
-#block-search-form #edit-custom-search-types {
-  font-size: 0.75em;
-  right: 0px;
-  text-align: left;
-  width: inherit;
-  display: none;
-  z-index: 5;
-  top: 75px;
-  position: absolute;
-  width: 90%;
-  background-color: #e6e6e6;
-  padding: 1em;
-}
-/* line 87, ../sass/components/_header.scss */
-#block-search-form #edit-custom-search-types .form-item {
-  padding: 0 5px;
-  float: left;
-  width: 115px;
-}
-/* line 93, ../sass/components/_header.scss */
-#block-search-form form input {
-  padding: 0 0.5em;
-  box-sizing: border-box;
-  border-radius: 4px 0 0 4px;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  -o-border-radius: 4px 0 0 4px;
-  -ms-border: none;
-}
-/* line 102, ../sass/components/_header.scss */
-#block-search-form #edit-actions input {
-  width: 80px;
-  background-color: #3169a2;
-  color: #fff;
-  border: none;
-  float: right;
-  text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  border-radius: 0 4px 4px 0;
-}
-/* line 113, ../sass/components/_header.scss */
-#block-search-form #edit-actions input:hover, #block-search-form #edit-actions input:focus {
-  background-color: #0A4886;
-}
 
 /* top navigation */
 /* line 3, ../sass/components/_top-nav.scss */
@@ -2587,7 +2504,72 @@ ol.search-results li .search-snippet-info p.search-info {
   float: left;
 }
 
-/* customize subtitles for a few taxonomy pages */
+/* line 279, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page .views-exposed-widgets {
+  text-align: center;
+}
+/* line 282, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper {
+  width: 450px;
+  display: inline-block;
+  margin-top: 0;
+}
+/* line 286, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper label {
+  display: none;
+}
+/* line 289, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget {
+  display: inline-block;
+  border: none;
+  font-size: 1em;
+}
+/* line 293, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget input {
+  width: 100%;
+  font-size: 1.6em;
+  height: 50px;
+}
+/* line 300, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page .views-submit-button {
+  display: inline-block;
+  width: 100px;
+  margin-left: -3px;
+  margin-top: 0;
+}
+/* line 305, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page .views-submit-button input {
+  width: 100%;
+  margin-top: 0;
+  background-color: #3169a2;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  border-radius: 0 4px 4px 0;
+  font-size: 1.6em;
+  height: 50px;
+}
+
+/* line 320, ../sass/components/_views.scss */
+input.form-text, input.form-submit {
+  width: 80%;
+  height: 3em;
+  border: none;
+}
+
+/* line 326, ../sass/components/_views.scss */
+form input {
+  padding: 0 0.5em;
+  box-sizing: border-box;
+  border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+  -ms-border: none;
+}
+
 /* facetapi blocks for search page */
 /* line 3, ../sass/components/_facetapi-blocks.scss */
 .page-rti-search .block-facetapi {
