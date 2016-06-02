@@ -1,21 +1,21 @@
 <?php
 /**
  * @file
- * blocks_search_sidebar.context.inc
+ * rti_search_facets_blocks.context.inc
  */
 
 /**
  * Implements hook_context_default_contexts().
  */
-function blocks_search_sidebar_context_default_contexts() {
+function rti_search_facets_blocks_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'search_forms_first_sidebar';
-  $context->description = 'put the search forms in the first (left) sidebar';
-  $context->tag = 'Context';
+  $context->name = 'rti_sidebar_search_facets';
+  $context->description = '';
+  $context->tag = '';
   $context->conditions = array(
     'path' => array(
       'values' => array(
@@ -48,12 +48,7 @@ function blocks_search_sidebar_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Context');
-  t('put the search forms in the first (left) sidebar');
-  $export['search_forms_first_sidebar'] = $context;
+  $export['rti_sidebar_search_facets'] = $context;
 
   return $export;
 }
