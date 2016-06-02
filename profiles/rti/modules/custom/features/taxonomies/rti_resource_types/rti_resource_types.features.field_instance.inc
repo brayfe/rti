@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * rti_resource_types_image_field.features.field_instance.inc
+ * rti_resource_types.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function rti_resource_types_image_field_field_default_field_instances() {
+function rti_resource_types_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
