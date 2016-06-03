@@ -136,6 +136,7 @@ dependencies[] = user_roles
 dependencies[] = rti_search
 dependencies[] = rti_search_view
 dependencies[] = rti_search_facets
+dependencies[] = rti_search_facets_blocks
 
 ; Features - Settings
 dependencies[] = colorbox_load_setting

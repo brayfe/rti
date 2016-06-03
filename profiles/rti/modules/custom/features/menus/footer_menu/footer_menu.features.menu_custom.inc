@@ -21,6 +21,5 @@ function footer_menu_menu_default_menu_custom() {
   t('Links located in the bottom footer area.');
   t('RTI Footer Menu');
 
-
   return $menus;
 }

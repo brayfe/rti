@@ -1,0 +1,137 @@
+/* resources - full nodes styles */
+.type-image-wrapper{
+	float:left;
+	width:145px;
+	text-align: center;
+	.field-name-field-resource-type{
+		display: inline-block;
+		padding: 1px 6px;
+		font-size: 0.7em;
+	}
+	img.resource-icon{
+			width: 120px;
+			height: auto;
+	}
+}
+.node-fields-wrapper{
+	margin-left: 160px;
+	.field-name-body p{
+		padding-top: 22px;
+	}
+	.field-name-field-resource-file{
+		a{
+			text-indent: -100000px;
+			padding: 12px;
+			line-height: 1em;
+			display: inline-block;
+			position: relative;
+			outline: 0;
+			&:after{
+			    position: absolute;
+			    color: rgb(255, 255, 255);
+			    white-space: nowrap;
+			    background-color: rgb(49, 105, 162);
+			    top: 0;
+			    left: 0;
+			    font-size: 0.75em;
+			    line-height: 1em;
+			    text-transform: uppercase;
+			    padding: 1em 1em 0.85em;
+			    text-indent: 0;
+			    width: auto;
+			    content: "Get Resource";
+			}
+		}
+	}
+	.field-name-field-resource-category,.field-name-field-free-tags{
+		margin-top: 1em;
+		line-height: 1.2em;
+		.field-label{
+			display:inline;
+		}
+		.field-items{
+			display:inline;
+			float:none;
+			.field-item{
+				display:inline-block;
+				a{
+					font-size: 0.85em;
+					text-decoration: none;
+					margin-top: 1px;
+					color: rgb(51, 51, 51);
+					font-weight: normal;
+					padding-right: 1em;
+				}
+			}
+		}
+	}
+	.field-name-field-resource-category.clearfix:after{
+		display:inline-block;
+	}
+}
+/* Related Resources */
+.field-name-field-related-resources{
+    margin-top:2em;
+    padding: 1em;
+    border: 1px solid #CCC;
+    background-color:rgba(238, 238, 238, 0.75);
+	.field-label{
+		font-size: 1em;
+		margin-top: 1px;
+		margin-bottom: 1em;
+		text-align:center;
+	}
+	.node-teaser{
+		padding:0;
+		margin-left:1em;
+		margin-bottom: 1em;
+		h2{
+			font-size: 0.95em;
+			clear:left;
+			a{
+				color:#000;
+				text-decoration:underline;
+				&:hover,&:focus{
+					text-decoration: none;
+				}
+			}
+		}
+		.type-image-wrapper{
+			float: left;
+			width: 105px;
+			text-align: center;
+			img{
+				width:60px !important;
+				height:auto;
+			}
+		}
+		h2.node-title{
+			clear:none;
+			line-height: 1.6em;
+			padding-top: 20px;
+		}
+		.node-fields-wrapper{
+			margin-left:110px;
+			.field-name-field-summary{
+				margin-top: 0;
+				margin-bottom:0;
+				font-size: 0.8em;
+				line-height: 1.5em;
+			}
+		}
+		.node-readmore{
+			display:none;
+		}
+	}
+	.node-teaser:after{
+		margin-bottom: 0;
+	}
+	&:after{
+		clear:both;
+		display:table;
+		content:"";
+	}
+}
+.field-name-field-other-resources > .field-items > .field-item:last-child .node-teaser{
+	margin-bottom:0;
+}

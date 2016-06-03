@@ -121,7 +121,7 @@ $tabs-border: #bbb;
 // =============================================================================
 
 // Add Compass' IE and vendor prefix support variables.
-@import "compass/support";
+//@import "compass/support";
 // Better than Drupal's clearfix.
 @import "compass/utilities/general/clearfix";
 // See http://compass-style.org/help/tutorials/spriting/
@@ -132,6 +132,7 @@ $tabs-border: #bbb;
 @import "compass/typography/vertical_rhythm";
 // Add the Zen Grids responsive layout mixins.
 @import "zen";
+@import "zen/background";
 
 // Now we add our custom helper mixins.
 @import "mixins";

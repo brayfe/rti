@@ -1,5 +1,19 @@
 /* styling for views */
-
+.view-rti-indexed-search{
+	.view-content{
+		.views-row{
+			border-top: 1px solid rgb(153, 153, 153);
+			padding: 1em 0 1em;
+			display: table;
+			content: "";
+			height: 0;
+			width: 100%;
+			&:first-child{
+				border-top:none;
+			}
+		}
+	}
+}
 /* no border-top for very first views row */
 .view-content  h3:first-child + .views-row{
 	//border-top:1px solid #999;
@@ -32,7 +46,7 @@
 .resource-type-thumb-wrapper{
 	width:110px;
 	float:left;
-	.resource-type .type{
+	.resource-type{
 		display: inline-block;
 		padding: 1px 6px;
 		font-size: 0.7em;
@@ -260,25 +274,65 @@
 	}
 }
 
-/* customize subtitles for a few taxonomy pages */
-.page-resources-1 h1#page-title,
-.page-resources-5 h1#page-title,
-.page-resources-10 h1#page-title,
-.page-resources-11 h1#page-title,
-.page-resources-17 h1#page-title,
-.page-resources-23 h1#page-title,
-.page-resources-29 h1#page-title,
-.page-resources-35 h1#page-title{
-	font-size:0;
-	&:after{
-		content:"All Related Resources";
-		font-weight: 600;
-	    color: #333333;
-	    line-height: 1.2em;
-	    font-size: 22px;
-	    margin-bottom: 1em;
+// search form in the rti search view
+#views-exposed-form-rti-indexed-search-page{
+	.views-exposed-widgets{
+		text-align:center;
+	}
+	#edit-search-text-wrapper{
+		width: 450px;
+		display: inline-block;
+		margin-top: 0;
+		label{
+			display: none;
+		}
+		.views-widget{
+			display: inline-block;
+			border: none;
+			font-size:1em;
+			input{
+				width: 100%;
+				font-size: 1.6em;
+				height: 50px;
+			}
+		}
+	}
+	.views-submit-button {
+	    display: inline-block;
+	    width:100px;
+	    margin-left: -3px;
+	    margin-top: 0;
+	    input{
+		    width: 100%;
+		    margin-top: 0;
+		    background-color: #3169a2;
+		    color: #fff;
+		    border: none;
+		    text-transform: uppercase;
+		    font-family: "Open Sans", sans-serif;
+		    font-weight: 400;
+		    border-radius: 0 4px 4px 0;
+			font-size: 1.4em;
+			height: 50px;
+		}
 	}
 }
+	input.form-text, input.form-submit {
+	    width: 80%;
+	    height: 3em;
+	    border:none;
+	}
+
+form input{
+    padding: 0 0.5em;
+    box-sizing: border-box;
+    border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    -o-border-radius: 4px 0 0 4px;
+    -ms-border: none;
+}
+
 
 
 

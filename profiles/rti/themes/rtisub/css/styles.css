@@ -34,7 +34,7 @@ p, h1, h2, h3, h4, ul li, a {
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
-/* line 39, ../sass/_normalize.scss */
+/* line 29, ../sass/_normalize.scss */
 article,
 aside,
 details,
@@ -50,7 +50,7 @@ summary {
 }
 
 /* Correct `inline-block` display not defined in IE 8/9. */
-/* line 46, ../sass/_normalize.scss */
+/* line 44, ../sass/_normalize.scss */
 audio,
 canvas,
 video {
@@ -149,7 +149,7 @@ a:focus {
 }
 
 /* Improve readability when focused and also mouse hovered in all browsers. */
-/* line 160, ../sass/_normalize.scss */
+/* line 159, ../sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -165,7 +165,7 @@ a:hover {
  * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
  */
 /* Set 1 unit of vertical rhythm on the top and bottom margin. */
-/* line 176, ../sass/_normalize.scss */
+/* line 175, ../sass/_normalize.scss */
 p,
 pre {
   margin: 1.5em 0;
@@ -238,7 +238,7 @@ abbr[title] {
 }
 
 /* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
-/* line 229, ../sass/_normalize.scss */
+/* line 228, ../sass/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -253,8 +253,8 @@ dfn {
 /* Address differences between Firefox and other browsers. */
 /* line 239, ../sass/_normalize.scss */
 hr {
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   border: 1px solid #666;
@@ -270,7 +270,7 @@ mark {
 }
 
 /* Correct font family set oddly in Safari 5 and Chrome. */
-/* line 259, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -301,7 +301,7 @@ small {
 }
 
 /* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-/* line 291, ../sass/_normalize.scss */
+/* line 290, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -323,7 +323,7 @@ sub {
 /**
  * Lists
  */
-/* line 310, ../sass/_normalize.scss */
+/* line 307, ../sass/_normalize.scss */
 dl,
 menu,
 ol,
@@ -332,7 +332,7 @@ ul {
   margin: 1.5em 0;
 }
 
-/* line 317, ../sass/_normalize.scss */
+/* line 316, ../sass/_normalize.scss */
 ol ol,
 ol ul,
 ul ol,
@@ -348,7 +348,7 @@ dd {
 }
 
 /* Address paddings set differently in IE 6/7. */
-/* line 329, ../sass/_normalize.scss */
+/* line 327, ../sass/_normalize.scss */
 menu,
 ol,
 ul {
@@ -395,17 +395,17 @@ fieldset {
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
   border-color: #c0c0c0;
-  border-top-style: solid;
   border-top-width: 0.0625em;
+  border-top-style: solid;
   padding-top: 0.4625em;
-  border-bottom-style: solid;
   border-bottom-width: 0.0625em;
+  border-bottom-style: solid;
   padding-bottom: 0.9125em;
-  border-left-style: solid;
   border-left-width: 0.0625em;
+  border-left-style: solid;
   padding-left: 0.9125em;
-  border-right-style: solid;
   border-right-width: 0.0625em;
+  border-right-style: solid;
   padding-right: 0.9125em;
 }
 
@@ -429,7 +429,7 @@ legend {
  * 4. Improve appearance and consistency with IE 6/7.
  * 5. Keep form elements constrained in their containers.
  */
-/* line 422, ../sass/_normalize.scss */
+/* line 419, ../sass/_normalize.scss */
 button,
 input,
 select,
@@ -442,8 +442,8 @@ textarea {
   /* 3 */
   max-width: 100%;
   /* 5 */
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 5 */
 }
@@ -452,7 +452,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 439, ../sass/_normalize.scss */
+/* line 438, ../sass/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -464,7 +464,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 450, ../sass/_normalize.scss */
+/* line 449, ../sass/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -479,7 +479,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 466, ../sass/_normalize.scss */
+/* line 463, ../sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -493,7 +493,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 478, ../sass/_normalize.scss */
+/* line 477, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -505,11 +505,11 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 489, ../sass/_normalize.scss */
+/* line 488, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -525,8 +525,8 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
 }
@@ -535,14 +535,14 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 513, ../sass/_normalize.scss */
+/* line 512, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /* Remove inner padding and border in Firefox 4+. */
-/* line 519, ../sass/_normalize.scss */
+/* line 518, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -607,7 +607,7 @@ body {
 /**
  * Wireframes.
  */
-/* line 30, ../sass/components/_misc.scss */
+/* line 23, ../sass/components/_misc.scss */
 .with-wireframes #header,
 .with-wireframes #main,
 .with-wireframes #content,
@@ -623,7 +623,7 @@ body {
  * Accessibility features.
  */
 /* element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
-/* line 48, ../sass/components/_misc.scss */
+/* line 47, ../sass/components/_misc.scss */
 .element-invisible,
 .element-focusable,
 #navigation .block-menu .block__title,
@@ -652,7 +652,7 @@ body {
 #skip-link {
   margin: 0;
 }
-/* line 74, ../sass/components/_misc.scss */
+/* line 73, ../sass/components/_misc.scss */
 #skip-link a,
 #skip-link a:visited {
   display: block;
@@ -696,12 +696,12 @@ body {
 }
 
 /* The link around the name of the website. */
-/* line 114, ../sass/components/_misc.scss */
+/* line 113, ../sass/components/_misc.scss */
 .header__site-link:link, .header__site-link:visited {
   color: #000;
   text-decoration: none;
 }
-/* line 120, ../sass/components/_misc.scss */
+/* line 119, ../sass/components/_misc.scss */
 .header__site-link:hover, .header__site-link:focus {
   text-decoration: underline;
 }
@@ -739,7 +739,7 @@ body {
 #navigation .block {
   margin-bottom: 0;
 }
-/* line 159, ../sass/components/_misc.scss */
+/* line 158, ../sass/components/_misc.scss */
 #navigation .links,
 #navigation .menu {
   margin: 0;
@@ -778,7 +778,7 @@ body {
 /**
  * Titles.
  */
-/* line 198, ../sass/components/_misc.scss */
+/* line 193, ../sass/components/_misc.scss */
 .page__title,
 .node__title,
 .block__title,
@@ -829,25 +829,25 @@ body {
 /* Core/module installation error messages. */
 /* line 247, ../sass/components/_misc.scss */
 .messages--error p.error {
-  color: #333333;
+  color: #333;
 }
 
 /* System status report. */
-/* line 253, ../sass/components/_misc.scss */
+/* line 252, ../sass/components/_misc.scss */
 .ok,
 .messages--status {
   background-color: #f8fff0;
   color: #234600;
 }
 
-/* line 258, ../sass/components/_misc.scss */
+/* line 257, ../sass/components/_misc.scss */
 .warning,
 .messages--warning {
   background-color: #fffce5;
   color: #840;
 }
 
-/* line 263, ../sass/components/_misc.scss */
+/* line 262, ../sass/components/_misc.scss */
 .error,
 .messages--error {
   background-color: #fef5f1;
@@ -861,14 +861,16 @@ body {
 /* line 273, ../sass/components/_misc.scss */
 .tabs-primary, .tabs-secondary {
   overflow: hidden;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #bbbbbb), color-stop(100%, transparent));
-  background-image: -webkit-linear-gradient(bottom, #bbbbbb 1px, transparent 1px);
-  background-image: -moz-linear-gradient(bottom, #bbbbbb 1px, transparent 1px);
-  background-image: -o-linear-gradient(bottom, #bbbbbb 1px, transparent 1px);
-  background-image: linear-gradient(bottom, #bbbbbb 1px, transparent 1px);
+  *zoom: 1;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYmJiYmJiIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #bbbbbb), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -moz-linear-gradient(bottom, #bbbbbb 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: -webkit-linear-gradient(bottom, #bbbbbb 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: linear-gradient(to top, #bbbbbb 1px, rgba(0, 0, 0, 0) 1px);
   /* IE 9 and earlier don't understand gradients. */
   list-style: none;
-  border-bottom: 1px solid #bbbbbb \0/ie;
+  border-bottom: 1px solid #bbb \0/ie;
   margin: 1.5em 0;
   padding: 0 2px;
   white-space: nowrap;
@@ -901,16 +903,16 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  text-shadow: 1px 1px 0 white;
-  border: 1px solid #bbbbbb;
+  text-shadow: 1px 1px 0 #fff;
+  border: 1px solid #bbb;
   border-bottom-color: transparent;
   /* IE 9 and earlier don't understand gradients. */
   border-bottom: 0 \0/ie;
 }
 
 /* line 309, ../sass/components/_misc.scss */
-.is-active.tabs-primary__tab {
-  border-bottom-color: white;
+.tabs-primary__tab.is-active {
+  border-bottom-color: #fff;
 }
 
 /* line 315, ../sass/components/_misc.scss */
@@ -921,11 +923,11 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  color: #333333;
+  color: #333;
   background-color: #dedede;
   letter-spacing: 1px;
   padding: 0 1em;
@@ -941,11 +943,13 @@ a.tabs-primary__tab-link:hover, a.tabs-primary__tab-link:focus {
 /* line 329, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   background-color: transparent;
+  *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e9e9), color-stop(100%, rgba(233, 233, 233, 0)));
-  background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: -moz-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
-  background-image: -o-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   border-color: #fff;
 }
@@ -958,7 +962,7 @@ a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   margin-top: -1.5em;
 }
 
-/* line 360, ../sass/components/_misc.scss */
+/* line 359, ../sass/components/_misc.scss */
 .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   margin: 0.75em 3px;
@@ -966,16 +970,14 @@ a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
 
 /* line 366, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
-  -webkit-border-radius: 0.75em;
   -moz-border-radius: 0.75em;
-  -ms-border-radius: 0.75em;
-  -o-border-radius: 0.75em;
+  -webkit-border-radius: 0.75em;
   border-radius: 0.75em;
-  -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  text-shadow: 1px 1px 0 white;
+  text-shadow: 1px 1px 0 #fff;
   background-color: #f2f2f2;
   color: #666;
   padding: 0 .5em;
@@ -990,7 +992,7 @@ a.tabs-secondary__tab-link:hover, a.tabs-secondary__tab-link:focus {
 
 /* line 380, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
-  text-shadow: 1px 1px 0 #333333;
+  text-shadow: 1px 1px 0 #333;
   background-color: #666;
   border-color: #000;
   color: #fff;
@@ -1069,7 +1071,7 @@ span.field-label {
   background-image: none;
 }
 
-/* line 465, ../sass/components/_misc.scss */
+/* line 460, ../sass/components/_misc.scss */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -1126,7 +1128,7 @@ span.field-label {
  * Marker.
  */
 /* The "new" or "updated" marker. */
-/* line 520, ../sass/components/_misc.scss */
+/* line 519, ../sass/components/_misc.scss */
 .new,
 .update {
   color: #c00;
@@ -1202,16 +1204,16 @@ span.field-label {
   /* Highlight the form elements that caused a form submission error. */
   /* The descriptive help text (separate from the label). */
 }
-/* line 595, ../sass/components/_misc.scss */
+/* line 594, ../sass/components/_misc.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Drupal core uses "0.4em 0". */
   margin: 0;
 }
-/* line 602, ../sass/components/_misc.scss */
+/* line 601, ../sass/components/_misc.scss */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 609, ../sass/components/_misc.scss */
+/* line 607, ../sass/components/_misc.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
@@ -1244,13 +1246,12 @@ label.option {
 /* Buttons used by contrib modules like Media. */
 /* line 638, ../sass/components/_misc.scss */
 a.button {
-  -webkit-appearance: button;
   -moz-appearance: button;
-  appearance: button;
+  -webkit-appearance: button;
 }
 
 /* Password confirmation. */
-/* line 644, ../sass/components/_misc.scss */
+/* line 643, ../sass/components/_misc.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
@@ -1277,13 +1278,13 @@ a.button {
 }
 
 /* The "Log in using OpenID" and "Cancel OpenID login" links. */
-/* line 668, ../sass/components/_misc.scss */
+/* line 667, ../sass/components/_misc.scss */
 .openid-link,
 .user-link {
   margin-top: 1.5em;
 }
 
-/* line 672, ../sass/components/_misc.scss */
+/* line 671, ../sass/components/_misc.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
@@ -1316,7 +1317,7 @@ form table ul {
   margin: 0;
 }
 
-/* line 697, ../sass/components/_misc.scss */
+/* line 696, ../sass/components/_misc.scss */
 tr.even,
 tr.odd {
   background-color: #eee;
@@ -1336,7 +1337,7 @@ td.active {
 }
 
 /* Center checkboxes inside table cell. */
-/* line 723, ../sass/components/_misc.scss */
+/* line 722, ../sass/components/_misc.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
@@ -1432,16 +1433,14 @@ tr.selected td {
   background: #ccc;
   border-color: #666;
   margin: 0 0.2em;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 /* line 811, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1442351678');
+  background-image: url('../images/progress.gif?1461618228');
 }
 
 /* parts of the layout */
@@ -1492,89 +1491,6 @@ tr.selected td {
 .header__region {
   clear: none !important;
 }
-/* line 39, ../sass/components/_header.scss */
-.header__region #block-search-form {
-  float: right;
-  margin-top: 45px;
-  margin-bottom: 0;
-}
-
-/* line 46, ../sass/components/_header.scss */
-#block-search-form {
-  width: 450px;
-}
-/* line 48, ../sass/components/_header.scss */
-#block-search-form #search-block-form {
-  text-align: right;
-  position: relative;
-}
-/* line 51, ../sass/components/_header.scss */
-#block-search-form #search-block-form label[for=edit-custom-search-types] {
-  color: #3169a2;
-  font-weight: normal;
-  float: left;
-  margin-left: 160px;
-  font-style: italic;
-  font-size: 0.9em;
-  border: none;
-  cursor: pointer;
-}
-/* line 61, ../sass/components/_header.scss */
-#block-search-form #search-block-form label[for=edit-custom-search-types]:hover, #block-search-form #search-block-form label[for=edit-custom-search-types]:focus {
-  border-bottom: 1px solid #3169a2;
-}
-/* line 70, ../sass/components/_header.scss */
-#block-search-form input.form-text, #block-search-form input.form-submit {
-  width: 80%;
-  height: 3em;
-  border: none;
-}
-/* line 75, ../sass/components/_header.scss */
-#block-search-form #edit-custom-search-types {
-  font-size: 0.75em;
-  right: 0px;
-  text-align: left;
-  width: inherit;
-  display: none;
-  z-index: 5;
-  top: 75px;
-  position: absolute;
-  width: 90%;
-  background-color: #e6e6e6;
-  padding: 1em;
-}
-/* line 87, ../sass/components/_header.scss */
-#block-search-form #edit-custom-search-types .form-item {
-  padding: 0 5px;
-  float: left;
-  width: 115px;
-}
-/* line 93, ../sass/components/_header.scss */
-#block-search-form form input {
-  padding: 0 0.5em;
-  box-sizing: border-box;
-  border-radius: 4px 0 0 4px;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  -o-border-radius: 4px 0 0 4px;
-  -ms-border: none;
-}
-/* line 102, ../sass/components/_header.scss */
-#block-search-form #edit-actions input {
-  width: 80px;
-  background-color: #3169a2;
-  color: #fff;
-  border: none;
-  float: right;
-  text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  border-radius: 0 4px 4px 0;
-}
-/* line 113, ../sass/components/_header.scss */
-#block-search-form #edit-actions input:hover, #block-search-form #edit-actions input:focus {
-  background-color: #0a4886;
-}
 
 /* top navigation */
 /* line 3, ../sass/components/_top-nav.scss */
@@ -1615,11 +1531,11 @@ tr.selected td {
 }
 /* line 31, ../sass/components/_top-nav.scss */
 #nav-wrapper #navigation ul.links li a:hover, #nav-wrapper #navigation ul.links li a:focus {
-  background-color: #0a4886;
+  background-color: #0A4886;
 }
 /* line 35, ../sass/components/_top-nav.scss */
 #nav-wrapper #navigation ul.links li a.active {
-  background-color: #0a4886;
+  background-color: #0A4886;
 }
 /* line 39, ../sass/components/_top-nav.scss */
 #nav-wrapper #navigation ul.links li.first a {
@@ -1662,7 +1578,7 @@ tr.selected td {
 /* line 6, ../sass/components/_resources-nav.scss */
 #block-menu-block-1 h2 {
   background-color: #e6e6e6;
-  color: #333333;
+  color: #333;
   text-align: center;
   margin-bottom: 3px;
   border: 1px solid #444;
@@ -1686,7 +1602,7 @@ tr.selected td {
   display: block;
   font-family: "Open Sans Condensed", sans-serif;
   color: #000;
-  border: 1px solid #333333;
+  border: 1px solid #333;
   font-weight: 700;
 }
 /* line 30, ../sass/components/_resources-nav.scss */
@@ -1751,7 +1667,7 @@ tr.selected td {
 }
 /* line 84, ../sass/components/_resources-nav.scss */
 #sidr-wrapper-0 #sidr-0-button:hover, #sidr-wrapper-0 #sidr-0-button:focus {
-  background-color: #333333;
+  background-color: #333;
   color: #fff;
 }
 
@@ -1822,7 +1738,7 @@ h2.sidr-class-block__title {
   width: 55%;
   display: inline-block;
   box-sizing: border-box;
-  color: #333333;
+  color: #333;
   padding-left: 1em;
 }
 /* line 27, ../sass/components/_highlight.scss */
@@ -1830,7 +1746,7 @@ h2.sidr-class-block__title {
   text-decoration: none;
   font-size: 1.3em;
   font-weight: bold;
-  color: #333333;
+  color: #333;
 }
 /* line 34, ../sass/components/_highlight.scss */
 .news-flash-slider .news-flash-slider-copy .news-slider-body p {
@@ -1842,8 +1758,8 @@ h2.sidr-class-block__title {
   text-decoration: none;
   font-weight: 600;
   font-family: "Open Sans Condensed", sans-serif;
-  color: #333333;
-  border: 1px solid #333333;
+  color: #333;
+  border: 1px solid #333;
 }
 /* line 45, ../sass/components/_highlight.scss */
 .news-flash-slider .news-flash-slider-copy .news-slider-link a:after {
@@ -1851,7 +1767,7 @@ h2.sidr-class-block__title {
 }
 /* line 48, ../sass/components/_highlight.scss */
 .news-flash-slider .news-flash-slider-copy .news-slider-link a:hover, .news-flash-slider .news-flash-slider-copy .news-slider-link a:focus {
-  background-color: #333333;
+  background-color: #333;
   color: #fff;
 }
 /* line 54, ../sass/components/_highlight.scss */
@@ -1904,7 +1820,7 @@ h2.sidr-class-block__title {
 .page-resources #page-title, .page-resource #page-title, .section-introduction #page-title, .section-introduction-0 #page-title, .section-introduction-1 #page-title, .section-introduction-2 #page-title, .section-introduction-3 #page-title, .section-introduction-4 #page-title, .section-introduction-5 #page-title, .section-introduction-6 #page-title, .section-introduction-7 #page-title {
   font-weight: 600;
   color: #E3613B;
-  color: #333333;
+  color: #333;
   line-height: 1.2em;
   font-size: 1.4em;
   margin-bottom: 1em;
@@ -1914,7 +1830,7 @@ h2.sidr-class-block__title {
 #page-title, .page-resources-featured #page-title, .page-resources-parents #page-title {
   text-align: center;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 1.75em;
   color: #E3613B;
   line-height: 1.2em;
   margin-top: 0;
@@ -1942,7 +1858,7 @@ h2.titleInsert {
 }
 
 /* line 43, ../sass/components/_main.scss */
-.sidebar-first #main-wrapper {
+.sidebar-first #main-wrapper, #main-wrapper {
   width: 100%;
   background: #fff;
   background-repeat: no-repeat;
@@ -1957,14 +1873,14 @@ h2.titleInsert {
   padding-bottom: 3em;
 }
 /* line 56, ../sass/components/_main.scss */
-.sidebar-first #main-wrapper #main {
+.sidebar-first #main-wrapper #main, #main-wrapper #main {
   max-width: 1150px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.85);
   padding: 1.625em 1em 3em 1em;
 }
 
-/* line 67, ../sass/components/_main.scss */
+/* line 66, ../sass/components/_main.scss */
 .page-inner,
 .region-bottom {
   margin-left: auto;
@@ -2016,20 +1932,20 @@ ul.pager li a {
   -o-border-radius: 16px;
   -moz-border-radius: 16px;
   -ms-border-radius: 16px;
-  color: #333333;
-  border: 1px solid #333333;
+  color: #333;
+  border: 1px solid #333;
   background-color: white;
   font-family: "Open Sans", sans-serif, monospace;
 }
 /* line 114, ../sass/components/_main.scss */
 ul.pager li a:hover, ul.pager li a:focus {
-  background-color: #333333;
-  color: white;
+  background-color: #333;
+  color: #fff;
 }
 /* line 120, ../sass/components/_main.scss */
 ul.pager li.pager-current {
   font-weight: bold;
-  border: 2px solid #333333;
+  border: 2px solid #333;
   border-radius: 18px;
   -moz-border-radius: 18px;
   -webkit-border-radius: 18px;
@@ -2052,8 +1968,8 @@ ul.pager li.pager-next a {
 }
 /* line 139, ../sass/components/_main.scss */
 ul.pager li.pager-next a:hover, ul.pager li.pager-next a:focus {
-  background-color: #333333;
-  color: white;
+  background-color: #333;
+  color: #fff;
 }
 /* line 145, ../sass/components/_main.scss */
 ul.pager li.pager-last {
@@ -2071,8 +1987,8 @@ ul.pager li.pager-last a {
 }
 /* line 155, ../sass/components/_main.scss */
 ul.pager li.pager-last a:hover, ul.pager li.pager-last a:focus {
-  background-color: #333333;
-  color: white;
+  background-color: #333;
+  color: #fff;
 }
 /* line 161, ../sass/components/_main.scss */
 ul.pager li.pager-previous {
@@ -2088,8 +2004,8 @@ ul.pager li.pager-previous a {
 }
 /* line 169, ../sass/components/_main.scss */
 ul.pager li.pager-previous a:hover, ul.pager li.pager-previous a:focus {
-  background-color: #333333;
-  color: white;
+  background-color: #333;
+  color: #fff;
 }
 /* line 175, ../sass/components/_main.scss */
 ul.pager li.pager-first {
@@ -2102,7 +2018,7 @@ ul.pager li.pager-first a {
 }
 /* line 180, ../sass/components/_main.scss */
 ul.pager li.pager-first a:hover, ul.pager li.pager-first a:focus {
-  background-color: #333333;
+  background-color: #333;
   color: #fff;
 }
 /* line 186, ../sass/components/_main.scss */
@@ -2176,7 +2092,7 @@ input {
 /* search results */
 /* line 257, ../sass/components/_main.scss */
 .search-advanced a {
-  color: #333333;
+  color: #333;
   font-size: 0.9em;
 }
 
@@ -2187,7 +2103,7 @@ ol.search-results {
 /* line 263, ../sass/components/_main.scss */
 ol.search-results li {
   margin-bottom: 1em;
-  border-top: 1px solid #333333;
+  border-top: 1px solid #333;
 }
 /* line 266, ../sass/components/_main.scss */
 ol.search-results li h3 {
@@ -2195,7 +2111,7 @@ ol.search-results li h3 {
 }
 /* line 268, ../sass/components/_main.scss */
 ol.search-results li h3 a {
-  color: #333333;
+  color: #333;
   text-decoration: none;
 }
 /* line 271, ../sass/components/_main.scss */
@@ -2266,7 +2182,7 @@ ol.search-results li .search-snippet-info p.search-info {
 }
 /* line 326, ../sass/components/_main.scss */
 .custom-search-filter ul li a {
-  color: #333333;
+  color: #333;
   font-size: 1em;
   color: #333333;
   line-height: 1.6em;
@@ -2286,16 +2202,30 @@ ol.search-results li .search-snippet-info p.search-info {
 }
 
 /* styling for views */
+/* line 4, ../sass/components/_views.scss */
+.view-rti-indexed-search .view-content .views-row {
+  border-top: 1px solid #999999;
+  padding: 1em 0 1em;
+  display: table;
+  content: "";
+  height: 0;
+  width: 100%;
+}
+/* line 11, ../sass/components/_views.scss */
+.view-rti-indexed-search .view-content .views-row:first-child {
+  border-top: none;
+}
+
 /* no border-top for very first views row */
 /* views dynamic pages fo resources */
-/* line 15, ../sass/components/_views.scss */
+/* line 29, ../sass/components/_views.scss */
 .view-resources-dynamic-filtered-pages .view-content,
 .view-resources-featured .view-content,
 .view-resources-specpop .view-content,
 .view-resources-pages-by-content-type .view-content {
   margin-top: 1em;
 }
-/* line 18, ../sass/components/_views.scss */
+/* line 32, ../sass/components/_views.scss */
 .view-resources-dynamic-filtered-pages .views-row,
 .view-resources-featured .views-row,
 .view-resources-specpop .views-row,
@@ -2307,7 +2237,7 @@ ol.search-results li .search-snippet-info p.search-info {
   height: 0;
   width: 100%;
 }
-/* line 26, ../sass/components/_views.scss */
+/* line 40, ../sass/components/_views.scss */
 .view-resources-dynamic-filtered-pages .views-row-1,
 .view-resources-featured .views-row-1,
 .view-resources-specpop .views-row-1,
@@ -2317,56 +2247,56 @@ ol.search-results li .search-snippet-info p.search-info {
 }
 
 /* put icon labels on resources for the view, but also the full node display */
-/* line 32, ../sass/components/_views.scss */
+/* line 46, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper {
   width: 110px;
   float: left;
 }
-/* line 35, ../sass/components/_views.scss */
-.resource-type-thumb-wrapper .resource-type .type {
+/* line 49, ../sass/components/_views.scss */
+.resource-type-thumb-wrapper .resource-type {
   display: inline-block;
   padding: 1px 6px;
   font-size: 0.7em;
   width: 100px;
   text-align: center;
 }
-/* line 42, ../sass/components/_views.scss */
+/* line 56, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper .resource-thumb {
   text-align: center;
 }
-/* line 44, ../sass/components/_views.scss */
+/* line 58, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper .resource-thumb img {
   width: 60px;
   height: auto;
 }
 
 /* margin-top the thumbs on resource by type pages because resource type text is gone */
-/* line 52, ../sass/components/_views.scss */
+/* line 66, ../sass/components/_views.scss */
 .view-resources-pages-by-content-type .resource-type-thumb-wrapper {
   margin-top: 0;
 }
 
-/* line 56, ../sass/components/_views.scss */
+/* line 70, ../sass/components/_views.scss */
 .resource-list-text {
   margin-left: 145px;
 }
-/* line 58, ../sass/components/_views.scss */
+/* line 72, ../sass/components/_views.scss */
 .resource-list-text h3.resource-title {
   margin-bottom: 0.4em;
   margin-top: 0;
   display: block;
   line-height: 1.2em;
 }
-/* line 63, ../sass/components/_views.scss */
+/* line 77, ../sass/components/_views.scss */
 .resource-list-text h3.resource-title a {
-  color: #333333;
+  color: #333;
   text-decoration: none;
 }
-/* line 68, ../sass/components/_views.scss */
+/* line 82, ../sass/components/_views.scss */
 .resource-list-text .resource-summary, .resource-list-text .resource-summary p {
   margin-top: 0;
 }
-/* line 73, ../sass/components/_views.scss */
+/* line 87, ../sass/components/_views.scss */
 .resource-list-text .get-resource-btn a {
   text-decoration: none;
   padding: .5em;
@@ -2379,20 +2309,20 @@ ol.search-results li .search-snippet-info p.search-info {
   font-size: 0.75em;
   display: inline-block;
 }
-/* line 84, ../sass/components/_views.scss */
+/* line 98, ../sass/components/_views.scss */
 .resource-list-text .get-resource-btn a:hover, .resource-list-text .get-resource-btn a:focus {
-  background-color: #333333;
+  background-color: #333;
 }
 
-/* line 91, ../sass/components/_views.scss */
+/* line 105, ../sass/components/_views.scss */
 .views-exposed-form .views-submit-button {
   display: none;
 }
-/* line 94, ../sass/components/_views.scss */
+/* line 108, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widgets {
   text-align: center;
 }
-/* line 97, ../sass/components/_views.scss */
+/* line 111, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget {
   padding: 0;
   width: 250px;
@@ -2401,7 +2331,7 @@ ol.search-results li .search-snippet-info p.search-info {
   float: none;
   font-size: 0.8em;
 }
-/* line 104, ../sass/components/_views.scss */
+/* line 118, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .views-widget {
   display: none;
   width: 100%;
@@ -2410,13 +2340,13 @@ ol.search-results li .search-snippet-info p.search-info {
   border-right: 1px solid #666;
   border-bottom: 1px solid #666;
 }
-/* line 112, ../sass/components/_views.scss */
+/* line 126, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget #edit-submit-resources-dynamic-filtered-pages {
   display: none;
 }
-/* line 116, ../sass/components/_views.scss */
+/* line 130, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item a {
-  color: #333333;
+  color: #333;
   line-height: 1.2em;
   display: block;
   text-align: center;
@@ -2424,19 +2354,19 @@ ol.search-results li .search-snippet-info p.search-info {
   padding: 2px 1em;
   border-top: 1px solid #666;
 }
-/* line 124, ../sass/components/_views.scss */
+/* line 138, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item a:hover, .views-exposed-form .views-exposed-widget .form-item a:focus {
   background-color: #e6e6e6;
 }
-/* line 128, ../sass/components/_views.scss */
+/* line 142, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item #edit-type-1-all a {
   border-top: none;
 }
-/* line 132, ../sass/components/_views.scss */
+/* line 146, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item-edit-type-all a:first-child {
   border: none;
 }
-/* line 135, ../sass/components/_views.scss */
+/* line 149, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget label {
   font-weight: normal;
   width: 100%;
@@ -2450,7 +2380,7 @@ ol.search-results li .search-snippet-info p.search-info {
 }
 
 /* hide the grouping name from the list of resources */
-/* line 150, ../sass/components/_views.scss */
+/* line 164, ../sass/components/_views.scss */
 .view h3 .rank-name {
   display: block;
   text-align: center;
@@ -2459,18 +2389,18 @@ ol.search-results li .search-snippet-info p.search-info {
 }
 
 /* events */
-/* line 158, ../sass/components/_views.scss */
+/* line 172, ../sass/components/_views.scss */
 .view-events {
   margin-top: 1em;
 }
-/* line 160, ../sass/components/_views.scss */
+/* line 174, ../sass/components/_views.scss */
 .view-events .views-row {
   margin-bottom: 1em;
   border-bottom: 1px solid #333;
 }
-/* line 164, ../sass/components/_views.scss */
+/* line 178, ../sass/components/_views.scss */
 .view-events .views-row .views-field-title a {
-  color: #333333;
+  color: #333;
   font-size: 1.17em;
   text-decoration: none;
   margin-bottom: 0.4em;
@@ -2480,39 +2410,39 @@ ol.search-results li .search-snippet-info p.search-info {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
-/* line 176, ../sass/components/_views.scss */
+/* line 190, ../sass/components/_views.scss */
 .view-events .views-row span.date-display-single, .view-events .views-row .date-display-range {
   font-size: 0.8em;
 }
-/* line 179, ../sass/components/_views.scss */
+/* line 193, ../sass/components/_views.scss */
 .view-events .views-row .views-field-body p {
   margin-top: 6px;
 }
-/* line 181, ../sass/components/_views.scss */
+/* line 195, ../sass/components/_views.scss */
 .view-events .views-row .views-field-body p a {
-  color: #333333;
+  color: #333;
   border-bottom: 1px solid #333;
   font-weight: 600;
   text-decoration: none;
   font-style: italic;
 }
-/* line 187, ../sass/components/_views.scss */
+/* line 201, ../sass/components/_views.scss */
 .view-events .views-row .views-field-body p a:after {
   content: " \00bb";
 }
-/* line 190, ../sass/components/_views.scss */
+/* line 204, ../sass/components/_views.scss */
 .view-events .views-row .views-field-body p a:hover, .view-events .views-row .views-field-body p a:focus {
   border: none;
 }
-/* line 196, ../sass/components/_views.scss */
+/* line 210, ../sass/components/_views.scss */
 .view-events .views-row-last {
   border-bottom: none;
 }
 
 /* taxonomy term pages */
-/* line 203, ../sass/components/_views.scss */
+/* line 217, ../sass/components/_views.scss */
 .page-taxonomy-term h2.node-title a {
-  color: #333333;
+  color: #333;
   font-size: 0.78em;
   margin-bottom: 0.4em;
   margin-top: 0;
@@ -2521,116 +2451,232 @@ ol.search-results li .search-snippet-info p.search-info {
   text-decoration: none;
   margin-left: 145px;
 }
-/* line 212, ../sass/components/_views.scss */
+/* line 226, ../sass/components/_views.scss */
 .page-taxonomy-term h2.node-title a:hover, .page-taxonomy-term h2.node-title a:focus {
   text-decoration: underline;
 }
-/* line 216, ../sass/components/_views.scss */
+/* line 230, ../sass/components/_views.scss */
 .page-taxonomy-term article {
   border-top: 1px solid #999;
   padding: 1em 0 1em;
 }
-/* line 219, ../sass/components/_views.scss */
+/* line 233, ../sass/components/_views.scss */
 .page-taxonomy-term article ul.links {
   display: none;
 }
-/* line 223, ../sass/components/_views.scss */
+/* line 237, ../sass/components/_views.scss */
 .page-taxonomy-term article .type-image-wrapper {
   width: 110px !important;
   float: left;
   text-align: center;
 }
-/* line 228, ../sass/components/_views.scss */
+/* line 242, ../sass/components/_views.scss */
 .page-taxonomy-term article .type-image-wrapper .field-name-field-resource-type .field-item {
   font-size: 0.7em;
 }
-/* line 233, ../sass/components/_views.scss */
+/* line 247, ../sass/components/_views.scss */
 .page-taxonomy-term article .type-image-wrapper .field-type-image a img {
   width: 60px !important;
   height: auto;
 }
-/* line 239, ../sass/components/_views.scss */
+/* line 253, ../sass/components/_views.scss */
 .page-taxonomy-term article .node-fields-wrapper {
   margin-left: 145px !important;
 }
-/* line 241, ../sass/components/_views.scss */
+/* line 255, ../sass/components/_views.scss */
 .page-taxonomy-term article .node-fields-wrapper p {
   margin-top: 0;
 }
-/* line 246, ../sass/components/_views.scss */
+/* line 260, ../sass/components/_views.scss */
 .page-taxonomy-term .feed-icon {
   display: none;
 }
 
 /* error view to fix problem */
-/* line 253, ../sass/components/_views.scss */
+/* line 267, ../sass/components/_views.scss */
 .view-error-view .views-row {
   margin-bottom: 1em;
 }
-/* line 255, ../sass/components/_views.scss */
+/* line 269, ../sass/components/_views.scss */
 .view-error-view .views-row img {
   width: 20px;
   clear: both;
   float: left;
 }
 
-/* customize subtitles for a few taxonomy pages */
-/* line 271, ../sass/components/_views.scss */
-.page-resources-1 h1#page-title,
-.page-resources-5 h1#page-title,
-.page-resources-10 h1#page-title,
-.page-resources-11 h1#page-title,
-.page-resources-17 h1#page-title,
-.page-resources-23 h1#page-title,
-.page-resources-29 h1#page-title,
-.page-resources-35 h1#page-title {
-  font-size: 0;
+/* line 279, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page .views-exposed-widgets {
+  text-align: center;
 }
-/* line 273, ../sass/components/_views.scss */
-.page-resources-1 h1#page-title:after,
-.page-resources-5 h1#page-title:after,
-.page-resources-10 h1#page-title:after,
-.page-resources-11 h1#page-title:after,
-.page-resources-17 h1#page-title:after,
-.page-resources-23 h1#page-title:after,
-.page-resources-29 h1#page-title:after,
-.page-resources-35 h1#page-title:after {
-  content: "All Related Resources";
-  font-weight: 600;
-  color: #333333;
-  line-height: 1.2em;
-  font-size: 22px;
-  margin-bottom: 1em;
+/* line 282, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper {
+  width: 450px;
+  display: inline-block;
+  margin-top: 0;
+}
+/* line 286, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper label {
+  display: none;
+}
+/* line 289, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget {
+  display: inline-block;
+  border: none;
+  font-size: 1em;
+}
+/* line 293, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget input {
+  width: 100%;
+  font-size: 1.6em;
+  height: 50px;
+}
+/* line 300, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page .views-submit-button {
+  display: inline-block;
+  width: 100px;
+  margin-left: -3px;
+  margin-top: 0;
+}
+/* line 305, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page .views-submit-button input {
+  width: 100%;
+  margin-top: 0;
+  background-color: #3169a2;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  border-radius: 0 4px 4px 0;
+  font-size: 1.4em;
+  height: 50px;
 }
 
-/* booklet resource content type - full nodes */
-/* line 5, ../sass/components/_resource_content_types.scss */
-.node-booklet .type-image-wrapper, .node-type-documents .type-image-wrapper, .node-type-external-links-websites .type-image-wrapper, .node-type-podcast .type-image-wrapper, .node-type-webinar .type-image-wrapper, .node-type-presentation .type-image-wrapper, .node-type-video-resource .type-image-wrapper, .node-type-module-resource .type-image-wrapper, .node-type-resource-page .type-image-wrapper {
+/* line 320, ../sass/components/_views.scss */
+input.form-text, input.form-submit {
+  width: 80%;
+  height: 3em;
+  border: none;
+}
+
+/* line 326, ../sass/components/_views.scss */
+form input {
+  padding: 0 0.5em;
+  box-sizing: border-box;
+  border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+  -ms-border: none;
+}
+
+/* facetapi blocks for search page */
+/* line 2, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi {
+  margin-bottom: 25px;
+}
+/* line 4, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi h2.block-title {
+  font-size: 1em;
+  font-size: 1em;
+  padding: 0 .5em;
+  margin-bottom: 3px;
+  display: block;
+  font-family: "Open Sans Condensed",sans-serif;
+  color: #000;
+  border: 1px solid #333333;
+  font-weight: 700;
+  background-color: #333;
+  color: #fff;
+}
+/* line 17, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list {
+  margin: 0;
+}
+/* line 19, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.8em;
+}
+/* line 26, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul li input.facetapi-checkbox {
+  float: left;
+  margin-top: 4px;
+}
+/* line 30, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-left: 1.5em;
+  line-height: 1.5em;
+}
+/* line 36, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul li a:hover, .block-facetapi .item-list ul li a:focus {
+  text-decoration: underline;
+}
+/* line 41, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul li .item-list ul.expanded {
+  font-size: 1em;
+}
+/* line 47, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul .item-list {
+  margin-left: 1.5em;
+}
+/* line 52, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-ranking li {
+  margin-bottom: 7px;
+  line-height: 1.4em;
+}
+/* line 55, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-ranking li a {
+  margin-left: 0;
+}
+/* line 60, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.expanded {
+  font-weight: bold;
+}
+/* line 62, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.expanded .item-list ul li {
+  font-weight: normal;
+}
+/* line 66, ../sass/components/_facetapi-blocks.scss */
+.block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.leaf {
+  font-weight: bold;
+}
+
+/* resources - full nodes styles */
+/* line 2, ../sass/components/_resources.scss */
+.type-image-wrapper {
   float: left;
   width: 145px;
   text-align: center;
 }
-/* line 9, ../sass/components/_resource_content_types.scss */
-.node-booklet .type-image-wrapper .field-name-field-resource-type .field-item, .node-type-documents .type-image-wrapper .field-name-field-resource-type .field-item, .node-type-external-links-websites .type-image-wrapper .field-name-field-resource-type .field-item, .node-type-podcast .type-image-wrapper .field-name-field-resource-type .field-item, .node-type-webinar .type-image-wrapper .field-name-field-resource-type .field-item, .node-type-presentation .type-image-wrapper .field-name-field-resource-type .field-item, .node-type-video-resource .type-image-wrapper .field-name-field-resource-type .field-item, .node-type-module-resource .type-image-wrapper .field-name-field-resource-type .field-item, .node-type-resource-page .type-image-wrapper .field-name-field-resource-type .field-item {
+/* line 6, ../sass/components/_resources.scss */
+.type-image-wrapper .field-name-field-resource-type {
   display: inline-block;
   padding: 1px 6px;
   font-size: 0.7em;
 }
-/* line 14, ../sass/components/_resource_content_types.scss */
-.node-booklet .type-image-wrapper div:nth-child(2), .node-type-documents .type-image-wrapper div:nth-child(2), .node-type-external-links-websites .type-image-wrapper div:nth-child(2), .node-type-podcast .type-image-wrapper div:nth-child(2), .node-type-webinar .type-image-wrapper div:nth-child(2), .node-type-presentation .type-image-wrapper div:nth-child(2), .node-type-video-resource .type-image-wrapper div:nth-child(2), .node-type-module-resource .type-image-wrapper div:nth-child(2), .node-type-resource-page .type-image-wrapper div:nth-child(2) {
-  text-align: center;
-}
-/* line 16, ../sass/components/_resource_content_types.scss */
-.node-booklet .type-image-wrapper div:nth-child(2) img, .node-type-documents .type-image-wrapper div:nth-child(2) img, .node-type-external-links-websites .type-image-wrapper div:nth-child(2) img, .node-type-podcast .type-image-wrapper div:nth-child(2) img, .node-type-webinar .type-image-wrapper div:nth-child(2) img, .node-type-presentation .type-image-wrapper div:nth-child(2) img, .node-type-video-resource .type-image-wrapper div:nth-child(2) img, .node-type-module-resource .type-image-wrapper div:nth-child(2) img, .node-type-resource-page .type-image-wrapper div:nth-child(2) img {
+/* line 11, ../sass/components/_resources.scss */
+.type-image-wrapper img.resource-icon {
   width: 120px;
   height: auto;
 }
-/* line 22, ../sass/components/_resource_content_types.scss */
-.node-booklet .node-fields-wrapper, .node-type-documents .node-fields-wrapper, .node-type-external-links-websites .node-fields-wrapper, .node-type-podcast .node-fields-wrapper, .node-type-webinar .node-fields-wrapper, .node-type-presentation .node-fields-wrapper, .node-type-video-resource .node-fields-wrapper, .node-type-module-resource .node-fields-wrapper, .node-type-resource-page .node-fields-wrapper {
+
+/* line 16, ../sass/components/_resources.scss */
+.node-fields-wrapper {
   margin-left: 160px;
 }
-/* line 27, ../sass/components/_resource_content_types.scss */
-.node-booklet .node-fields-wrapper .file a, .node-booklet .node-fields-wrapper .field-name-field-module-link a, .node-booklet .node-fields-wrapper .field-name-field-podcast-link a, .node-booklet .node-fields-wrapper .field-name-field-podcast-captivate-link a, .node-booklet .node-fields-wrapper .field-name-field-webinar-link a, .node-booklet .node-fields-wrapper .field-name-field-external-resource-link a, .node-type-documents .node-fields-wrapper .file a, .node-type-documents .node-fields-wrapper .field-name-field-module-link a, .node-type-documents .node-fields-wrapper .field-name-field-podcast-link a, .node-type-documents .node-fields-wrapper .field-name-field-podcast-captivate-link a, .node-type-documents .node-fields-wrapper .field-name-field-webinar-link a, .node-type-documents .node-fields-wrapper .field-name-field-external-resource-link a, .node-type-external-links-websites .node-fields-wrapper .file a, .node-type-external-links-websites .node-fields-wrapper .field-name-field-module-link a, .node-type-external-links-websites .node-fields-wrapper .field-name-field-podcast-link a, .node-type-external-links-websites .node-fields-wrapper .field-name-field-podcast-captivate-link a, .node-type-external-links-websites .node-fields-wrapper .field-name-field-webinar-link a, .node-type-external-links-websites .node-fields-wrapper .field-name-field-external-resource-link a, .node-type-podcast .node-fields-wrapper .file a, .node-type-podcast .node-fields-wrapper .field-name-field-module-link a, .node-type-podcast .node-fields-wrapper .field-name-field-podcast-link a, .node-type-podcast .node-fields-wrapper .field-name-field-podcast-captivate-link a, .node-type-podcast .node-fields-wrapper .field-name-field-webinar-link a, .node-type-podcast .node-fields-wrapper .field-name-field-external-resource-link a, .node-type-webinar .node-fields-wrapper .file a, .node-type-webinar .node-fields-wrapper .field-name-field-module-link a, .node-type-webinar .node-fields-wrapper .field-name-field-podcast-link a, .node-type-webinar .node-fields-wrapper .field-name-field-podcast-captivate-link a, .node-type-webinar .node-fields-wrapper .field-name-field-webinar-link a, .node-type-webinar .node-fields-wrapper .field-name-field-external-resource-link a, .node-type-presentation .node-fields-wrapper .file a, .node-type-presentation .node-fields-wrapper .field-name-field-module-link a, .node-type-presentation .node-fields-wrapper .field-name-field-podcast-link a, .node-type-presentation .node-fields-wrapper .field-name-field-podcast-captivate-link a, .node-type-presentation .node-fields-wrapper .field-name-field-webinar-link a, .node-type-presentation .node-fields-wrapper .field-name-field-external-resource-link a, .node-type-video-resource .node-fields-wrapper .file a, .node-type-video-resource .node-fields-wrapper .field-name-field-module-link a, .node-type-video-resource .node-fields-wrapper .field-name-field-podcast-link a, .node-type-video-resource .node-fields-wrapper .field-name-field-podcast-captivate-link a, .node-type-video-resource .node-fields-wrapper .field-name-field-webinar-link a, .node-type-video-resource .node-fields-wrapper .field-name-field-external-resource-link a, .node-type-module-resource .node-fields-wrapper .file a, .node-type-module-resource .node-fields-wrapper .field-name-field-module-link a, .node-type-module-resource .node-fields-wrapper .field-name-field-podcast-link a, .node-type-module-resource .node-fields-wrapper .field-name-field-podcast-captivate-link a, .node-type-module-resource .node-fields-wrapper .field-name-field-webinar-link a, .node-type-module-resource .node-fields-wrapper .field-name-field-external-resource-link a, .node-type-resource-page .node-fields-wrapper .file a, .node-type-resource-page .node-fields-wrapper .field-name-field-module-link a, .node-type-resource-page .node-fields-wrapper .field-name-field-podcast-link a, .node-type-resource-page .node-fields-wrapper .field-name-field-podcast-captivate-link a, .node-type-resource-page .node-fields-wrapper .field-name-field-webinar-link a, .node-type-resource-page .node-fields-wrapper .field-name-field-external-resource-link a {
+/* line 18, ../sass/components/_resources.scss */
+.node-fields-wrapper .field-name-body p {
+  padding-top: 22px;
+}
+/* line 22, ../sass/components/_resources.scss */
+.node-fields-wrapper .field-name-field-resource-file a {
   text-indent: -100000px;
   padding: 12px;
   line-height: 1em;
@@ -2638,10 +2684,10 @@ ol.search-results li .search-snippet-info p.search-info {
   position: relative;
   outline: 0;
 }
-/* line 34, ../sass/components/_resource_content_types.scss */
-.node-booklet .node-fields-wrapper .file a:after, .node-booklet .node-fields-wrapper .field-name-field-module-link a:after, .node-booklet .node-fields-wrapper .field-name-field-podcast-link a:after, .node-booklet .node-fields-wrapper .field-name-field-podcast-captivate-link a:after, .node-booklet .node-fields-wrapper .field-name-field-webinar-link a:after, .node-booklet .node-fields-wrapper .field-name-field-external-resource-link a:after, .node-type-documents .node-fields-wrapper .file a:after, .node-type-documents .node-fields-wrapper .field-name-field-module-link a:after, .node-type-documents .node-fields-wrapper .field-name-field-podcast-link a:after, .node-type-documents .node-fields-wrapper .field-name-field-podcast-captivate-link a:after, .node-type-documents .node-fields-wrapper .field-name-field-webinar-link a:after, .node-type-documents .node-fields-wrapper .field-name-field-external-resource-link a:after, .node-type-external-links-websites .node-fields-wrapper .file a:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-module-link a:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-podcast-link a:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-podcast-captivate-link a:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-webinar-link a:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-external-resource-link a:after, .node-type-podcast .node-fields-wrapper .file a:after, .node-type-podcast .node-fields-wrapper .field-name-field-module-link a:after, .node-type-podcast .node-fields-wrapper .field-name-field-podcast-link a:after, .node-type-podcast .node-fields-wrapper .field-name-field-podcast-captivate-link a:after, .node-type-podcast .node-fields-wrapper .field-name-field-webinar-link a:after, .node-type-podcast .node-fields-wrapper .field-name-field-external-resource-link a:after, .node-type-webinar .node-fields-wrapper .file a:after, .node-type-webinar .node-fields-wrapper .field-name-field-module-link a:after, .node-type-webinar .node-fields-wrapper .field-name-field-podcast-link a:after, .node-type-webinar .node-fields-wrapper .field-name-field-podcast-captivate-link a:after, .node-type-webinar .node-fields-wrapper .field-name-field-webinar-link a:after, .node-type-webinar .node-fields-wrapper .field-name-field-external-resource-link a:after, .node-type-presentation .node-fields-wrapper .file a:after, .node-type-presentation .node-fields-wrapper .field-name-field-module-link a:after, .node-type-presentation .node-fields-wrapper .field-name-field-podcast-link a:after, .node-type-presentation .node-fields-wrapper .field-name-field-podcast-captivate-link a:after, .node-type-presentation .node-fields-wrapper .field-name-field-webinar-link a:after, .node-type-presentation .node-fields-wrapper .field-name-field-external-resource-link a:after, .node-type-video-resource .node-fields-wrapper .file a:after, .node-type-video-resource .node-fields-wrapper .field-name-field-module-link a:after, .node-type-video-resource .node-fields-wrapper .field-name-field-podcast-link a:after, .node-type-video-resource .node-fields-wrapper .field-name-field-podcast-captivate-link a:after, .node-type-video-resource .node-fields-wrapper .field-name-field-webinar-link a:after, .node-type-video-resource .node-fields-wrapper .field-name-field-external-resource-link a:after, .node-type-module-resource .node-fields-wrapper .file a:after, .node-type-module-resource .node-fields-wrapper .field-name-field-module-link a:after, .node-type-module-resource .node-fields-wrapper .field-name-field-podcast-link a:after, .node-type-module-resource .node-fields-wrapper .field-name-field-podcast-captivate-link a:after, .node-type-module-resource .node-fields-wrapper .field-name-field-webinar-link a:after, .node-type-module-resource .node-fields-wrapper .field-name-field-external-resource-link a:after, .node-type-resource-page .node-fields-wrapper .file a:after, .node-type-resource-page .node-fields-wrapper .field-name-field-module-link a:after, .node-type-resource-page .node-fields-wrapper .field-name-field-podcast-link a:after, .node-type-resource-page .node-fields-wrapper .field-name-field-podcast-captivate-link a:after, .node-type-resource-page .node-fields-wrapper .field-name-field-webinar-link a:after, .node-type-resource-page .node-fields-wrapper .field-name-field-external-resource-link a:after {
+/* line 29, ../sass/components/_resources.scss */
+.node-fields-wrapper .field-name-field-resource-file a:after {
   position: absolute;
-  color: #fff;
+  color: white;
   white-space: nowrap;
   background-color: #3169a2;
   top: 0;
@@ -2654,81 +2700,26 @@ ol.search-results li .search-snippet-info p.search-info {
   width: auto;
   content: "Get Resource";
 }
-/* line 50, ../sass/components/_resource_content_types.scss */
-.node-booklet .node-fields-wrapper .file a:hover:after, .node-booklet .node-fields-wrapper .file a:focus:after, .node-booklet .node-fields-wrapper .field-name-field-module-link a:hover:after, .node-booklet .node-fields-wrapper .field-name-field-module-link a:focus:after, .node-booklet .node-fields-wrapper .field-name-field-podcast-link a:hover:after, .node-booklet .node-fields-wrapper .field-name-field-podcast-link a:focus:after, .node-booklet .node-fields-wrapper .field-name-field-webinar-link a:hover:after, .node-booklet .node-fields-wrapper .field-name-field-webinar-link a:focus:after, .node-booklet .node-fields-wrapper .field-name-field-external-resource-link a:hover:after, .node-booklet .node-fields-wrapper .field-name-field-external-resource-link a:focus:after, .node-type-documents .node-fields-wrapper .file a:hover:after, .node-type-documents .node-fields-wrapper .file a:focus:after, .node-type-documents .node-fields-wrapper .field-name-field-module-link a:hover:after, .node-type-documents .node-fields-wrapper .field-name-field-module-link a:focus:after, .node-type-documents .node-fields-wrapper .field-name-field-podcast-link a:hover:after, .node-type-documents .node-fields-wrapper .field-name-field-podcast-link a:focus:after, .node-type-documents .node-fields-wrapper .field-name-field-webinar-link a:hover:after, .node-type-documents .node-fields-wrapper .field-name-field-webinar-link a:focus:after, .node-type-documents .node-fields-wrapper .field-name-field-external-resource-link a:hover:after, .node-type-documents .node-fields-wrapper .field-name-field-external-resource-link a:focus:after, .node-type-external-links-websites .node-fields-wrapper .file a:hover:after, .node-type-external-links-websites .node-fields-wrapper .file a:focus:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-module-link a:hover:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-module-link a:focus:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-podcast-link a:hover:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-podcast-link a:focus:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-webinar-link a:hover:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-webinar-link a:focus:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-external-resource-link a:hover:after, .node-type-external-links-websites .node-fields-wrapper .field-name-field-external-resource-link a:focus:after, .node-type-podcast .node-fields-wrapper .file a:hover:after, .node-type-podcast .node-fields-wrapper .file a:focus:after, .node-type-podcast .node-fields-wrapper .field-name-field-module-link a:hover:after, .node-type-podcast .node-fields-wrapper .field-name-field-module-link a:focus:after, .node-type-podcast .node-fields-wrapper .field-name-field-podcast-link a:hover:after, .node-type-podcast .node-fields-wrapper .field-name-field-podcast-link a:focus:after, .node-type-podcast .node-fields-wrapper .field-name-field-webinar-link a:hover:after, .node-type-podcast .node-fields-wrapper .field-name-field-webinar-link a:focus:after, .node-type-podcast .node-fields-wrapper .field-name-field-external-resource-link a:hover:after, .node-type-podcast .node-fields-wrapper .field-name-field-external-resource-link a:focus:after, .node-type-webinar .node-fields-wrapper .file a:hover:after, .node-type-webinar .node-fields-wrapper .file a:focus:after, .node-type-webinar .node-fields-wrapper .field-name-field-module-link a:hover:after, .node-type-webinar .node-fields-wrapper .field-name-field-module-link a:focus:after, .node-type-webinar .node-fields-wrapper .field-name-field-podcast-link a:hover:after, .node-type-webinar .node-fields-wrapper .field-name-field-podcast-link a:focus:after, .node-type-webinar .node-fields-wrapper .field-name-field-webinar-link a:hover:after, .node-type-webinar .node-fields-wrapper .field-name-field-webinar-link a:focus:after, .node-type-webinar .node-fields-wrapper .field-name-field-external-resource-link a:hover:after, .node-type-webinar .node-fields-wrapper .field-name-field-external-resource-link a:focus:after, .node-type-presentation .node-fields-wrapper .file a:hover:after, .node-type-presentation .node-fields-wrapper .file a:focus:after, .node-type-presentation .node-fields-wrapper .field-name-field-module-link a:hover:after, .node-type-presentation .node-fields-wrapper .field-name-field-module-link a:focus:after, .node-type-presentation .node-fields-wrapper .field-name-field-podcast-link a:hover:after, .node-type-presentation .node-fields-wrapper .field-name-field-podcast-link a:focus:after, .node-type-presentation .node-fields-wrapper .field-name-field-webinar-link a:hover:after, .node-type-presentation .node-fields-wrapper .field-name-field-webinar-link a:focus:after, .node-type-presentation .node-fields-wrapper .field-name-field-external-resource-link a:hover:after, .node-type-presentation .node-fields-wrapper .field-name-field-external-resource-link a:focus:after, .node-type-video-resource .node-fields-wrapper .file a:hover:after, .node-type-video-resource .node-fields-wrapper .file a:focus:after, .node-type-video-resource .node-fields-wrapper .field-name-field-module-link a:hover:after, .node-type-video-resource .node-fields-wrapper .field-name-field-module-link a:focus:after, .node-type-video-resource .node-fields-wrapper .field-name-field-podcast-link a:hover:after, .node-type-video-resource .node-fields-wrapper .field-name-field-podcast-link a:focus:after, .node-type-video-resource .node-fields-wrapper .field-name-field-webinar-link a:hover:after, .node-type-video-resource .node-fields-wrapper .field-name-field-webinar-link a:focus:after, .node-type-video-resource .node-fields-wrapper .field-name-field-external-resource-link a:hover:after, .node-type-video-resource .node-fields-wrapper .field-name-field-external-resource-link a:focus:after, .node-type-module-resource .node-fields-wrapper .file a:hover:after, .node-type-module-resource .node-fields-wrapper .file a:focus:after, .node-type-module-resource .node-fields-wrapper .field-name-field-module-link a:hover:after, .node-type-module-resource .node-fields-wrapper .field-name-field-module-link a:focus:after, .node-type-module-resource .node-fields-wrapper .field-name-field-podcast-link a:hover:after, .node-type-module-resource .node-fields-wrapper .field-name-field-podcast-link a:focus:after, .node-type-module-resource .node-fields-wrapper .field-name-field-webinar-link a:hover:after, .node-type-module-resource .node-fields-wrapper .field-name-field-webinar-link a:focus:after, .node-type-module-resource .node-fields-wrapper .field-name-field-external-resource-link a:hover:after, .node-type-module-resource .node-fields-wrapper .field-name-field-external-resource-link a:focus:after, .node-type-resource-page .node-fields-wrapper .file a:hover:after, .node-type-resource-page .node-fields-wrapper .file a:focus:after, .node-type-resource-page .node-fields-wrapper .field-name-field-module-link a:hover:after, .node-type-resource-page .node-fields-wrapper .field-name-field-module-link a:focus:after, .node-type-resource-page .node-fields-wrapper .field-name-field-podcast-link a:hover:after, .node-type-resource-page .node-fields-wrapper .field-name-field-podcast-link a:focus:after, .node-type-resource-page .node-fields-wrapper .field-name-field-webinar-link a:hover:after, .node-type-resource-page .node-fields-wrapper .field-name-field-webinar-link a:focus:after, .node-type-resource-page .node-fields-wrapper .field-name-field-external-resource-link a:hover:after, .node-type-resource-page .node-fields-wrapper .field-name-field-external-resource-link a:focus:after {
-  background-color: #333333;
-  color: #fff;
+/* line 46, ../sass/components/_resources.scss */
+.node-fields-wrapper .field-name-field-resource-category, .node-fields-wrapper .field-name-field-free-tags {
+  margin-top: 1em;
+  line-height: 1.2em;
 }
-/* line 55, ../sass/components/_resource_content_types.scss */
-.node-booklet .field-label-inline .field-label, .node-booklet .field-label-inline .field-items, .node-type-documents .field-label-inline .field-label, .node-type-documents .field-label-inline .field-items, .node-type-external-links-websites .field-label-inline .field-label, .node-type-external-links-websites .field-label-inline .field-items, .node-type-podcast .field-label-inline .field-label, .node-type-podcast .field-label-inline .field-items, .node-type-webinar .field-label-inline .field-label, .node-type-webinar .field-label-inline .field-items, .node-type-presentation .field-label-inline .field-label, .node-type-presentation .field-label-inline .field-items, .node-type-video-resource .field-label-inline .field-label, .node-type-video-resource .field-label-inline .field-items, .node-type-module-resource .field-label-inline .field-label, .node-type-module-resource .field-label-inline .field-items, .node-type-resource-page .field-label-inline .field-label, .node-type-resource-page .field-label-inline .field-items {
+/* line 49, ../sass/components/_resources.scss */
+.node-fields-wrapper .field-name-field-resource-category .field-label, .node-fields-wrapper .field-name-field-free-tags .field-label {
+  display: inline;
+}
+/* line 52, ../sass/components/_resources.scss */
+.node-fields-wrapper .field-name-field-resource-category .field-items, .node-fields-wrapper .field-name-field-free-tags .field-items {
   display: inline;
   float: none;
 }
-/* line 59, ../sass/components/_resource_content_types.scss */
-.node-booklet .field-name-field-free-tags, .node-type-documents .field-name-field-free-tags, .node-type-external-links-websites .field-name-field-free-tags, .node-type-podcast .field-name-field-free-tags, .node-type-webinar .field-name-field-free-tags, .node-type-presentation .field-name-field-free-tags, .node-type-video-resource .field-name-field-free-tags, .node-type-module-resource .field-name-field-free-tags, .node-type-resource-page .field-name-field-free-tags {
-  margin-top: 1em;
-  padding-bottom: 1.6em;
-}
-/* line 65, ../sass/components/_resource_content_types.scss */
-.node-booklet .field-name-field-free-tags .field-label, .node-type-documents .field-name-field-free-tags .field-label, .node-type-external-links-websites .field-name-field-free-tags .field-label, .node-type-podcast .field-name-field-free-tags .field-label, .node-type-webinar .field-name-field-free-tags .field-label, .node-type-presentation .field-name-field-free-tags .field-label, .node-type-video-resource .field-name-field-free-tags .field-label, .node-type-module-resource .field-name-field-free-tags .field-label, .node-type-resource-page .field-name-field-free-tags .field-label {
-  font-size: 0.85em;
-  margin-top: 1px;
-  margin-right: 8px;
-}
-/* line 70, ../sass/components/_resource_content_types.scss */
-.node-booklet .field-name-field-free-tags .field-item, .node-type-documents .field-name-field-free-tags .field-item, .node-type-external-links-websites .field-name-field-free-tags .field-item, .node-type-podcast .field-name-field-free-tags .field-item, .node-type-webinar .field-name-field-free-tags .field-item, .node-type-presentation .field-name-field-free-tags .field-item, .node-type-video-resource .field-name-field-free-tags .field-item, .node-type-module-resource .field-name-field-free-tags .field-item, .node-type-resource-page .field-name-field-free-tags .field-item {
-  display: inline;
-}
-/* line 72, ../sass/components/_resource_content_types.scss */
-.node-booklet .field-name-field-free-tags .field-item a, .node-type-documents .field-name-field-free-tags .field-item a, .node-type-external-links-websites .field-name-field-free-tags .field-item a, .node-type-podcast .field-name-field-free-tags .field-item a, .node-type-webinar .field-name-field-free-tags .field-item a, .node-type-presentation .field-name-field-free-tags .field-item a, .node-type-video-resource .field-name-field-free-tags .field-item a, .node-type-module-resource .field-name-field-free-tags .field-item a, .node-type-resource-page .field-name-field-free-tags .field-item a {
-  text-decoration: none;
-  font-weight: normal;
-  font-size: 0.85em;
-  padding-right: 1em;
-  color: #333333;
-}
-/* line 78, ../sass/components/_resource_content_types.scss */
-.node-booklet .field-name-field-free-tags .field-item a:hover, .node-booklet .field-name-field-free-tags .field-item a:focus, .node-type-documents .field-name-field-free-tags .field-item a:hover, .node-type-documents .field-name-field-free-tags .field-item a:focus, .node-type-external-links-websites .field-name-field-free-tags .field-item a:hover, .node-type-external-links-websites .field-name-field-free-tags .field-item a:focus, .node-type-podcast .field-name-field-free-tags .field-item a:hover, .node-type-podcast .field-name-field-free-tags .field-item a:focus, .node-type-webinar .field-name-field-free-tags .field-item a:hover, .node-type-webinar .field-name-field-free-tags .field-item a:focus, .node-type-presentation .field-name-field-free-tags .field-item a:hover, .node-type-presentation .field-name-field-free-tags .field-item a:focus, .node-type-video-resource .field-name-field-free-tags .field-item a:hover, .node-type-video-resource .field-name-field-free-tags .field-item a:focus, .node-type-module-resource .field-name-field-free-tags .field-item a:hover, .node-type-module-resource .field-name-field-free-tags .field-item a:focus, .node-type-resource-page .field-name-field-free-tags .field-item a:hover, .node-type-resource-page .field-name-field-free-tags .field-item a:focus {
-  text-decoration: underline;
-}
-/* line 83, ../sass/components/_resource_content_types.scss */
-.node-booklet .field-name-field-free-tags:after, .node-type-documents .field-name-field-free-tags:after, .node-type-external-links-websites .field-name-field-free-tags:after, .node-type-podcast .field-name-field-free-tags:after, .node-type-webinar .field-name-field-free-tags:after, .node-type-presentation .field-name-field-free-tags:after, .node-type-video-resource .field-name-field-free-tags:after, .node-type-module-resource .field-name-field-free-tags:after, .node-type-resource-page .field-name-field-free-tags:after {
-  clear: none;
-}
-
-/* prepend "tags" before tag term name*/
-/* line 89, ../sass/components/_resource_content_types.scss */
-.section-tags #page-title:before {
-  content: "Tag: ";
-}
-
-/* full node category terms */
-/* line 93, ../sass/components/_resource_content_types.scss */
-.section-resource-subcategories #page-title:before {
-  content: "Category: ";
-}
-
-/* line 96, ../sass/components/_resource_content_types.scss */
-.field-name-field-resource-subcategory {
-  margin-top: 1.4em;
-  line-height: 1.2em;
-}
-/* line 99, ../sass/components/_resource_content_types.scss */
-.field-name-field-resource-subcategory:after {
+/* line 55, ../sass/components/_resources.scss */
+.node-fields-wrapper .field-name-field-resource-category .field-items .field-item, .node-fields-wrapper .field-name-field-free-tags .field-items .field-item {
   display: inline-block;
 }
-/* line 102, ../sass/components/_resource_content_types.scss */
-.field-name-field-resource-subcategory .field-label {
-  font-size: 0.85em;
-  margin-top: 1px;
-  margin-right: 8px;
-}
-/* line 107, ../sass/components/_resource_content_types.scss */
-.field-name-field-resource-subcategory .field-item {
-  display: inline-block;
-}
-/* line 109, ../sass/components/_resource_content_types.scss */
-.field-name-field-resource-subcategory .field-item a {
+/* line 57, ../sass/components/_resources.scss */
+.node-fields-wrapper .field-name-field-resource-category .field-items .field-item a, .node-fields-wrapper .field-name-field-free-tags .field-items .field-item a {
   font-size: 0.85em;
   text-decoration: none;
   margin-top: 1px;
@@ -2736,204 +2727,92 @@ ol.search-results li .search-snippet-info p.search-info {
   font-weight: normal;
   padding-right: 1em;
 }
-/* line 116, ../sass/components/_resource_content_types.scss */
-.field-name-field-resource-subcategory .field-item a:hover, .field-name-field-resource-subcategory .field-item a:focus {
-  text-decoration: underline;
+/* line 68, ../sass/components/_resources.scss */
+.node-fields-wrapper .field-name-field-resource-category.clearfix:after {
+  display: inline-block;
 }
 
 /* Related Resources */
-/* line 126, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources {
-  margin-top: 0;
+/* line 73, ../sass/components/_resources.scss */
+.field-name-field-related-resources {
+  margin-top: 2em;
   padding: 1em;
   border: 1px solid #CCC;
   background-color: rgba(238, 238, 238, 0.75);
 }
-/* line 131, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .field-label {
+/* line 78, ../sass/components/_resources.scss */
+.field-name-field-related-resources .field-label {
   font-size: 1em;
   margin-top: 1px;
   margin-bottom: 1em;
   text-align: center;
 }
-/* line 137, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser {
+/* line 84, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser {
   padding: 0;
   margin-left: 1em;
   margin-bottom: 1em;
 }
-/* line 141, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser h2 {
+/* line 88, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser h2 {
   font-size: 0.95em;
   clear: left;
 }
-/* line 144, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser h2 a {
+/* line 91, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser h2 a {
   color: #000;
   text-decoration: underline;
 }
-/* line 147, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser h2 a:hover, .field-name-field-other-resources .node-teaser h2 a:focus {
+/* line 94, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser h2 a:hover, .field-name-field-related-resources .node-teaser h2 a:focus {
   text-decoration: none;
 }
-/* line 152, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser .type-image-wrapper {
+/* line 99, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .type-image-wrapper {
   float: left;
   width: 105px;
   text-align: center;
 }
-/* line 156, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser .type-image-wrapper img {
+/* line 103, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .type-image-wrapper img {
   width: 60px !important;
   height: auto;
 }
-/* line 161, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser h2.node-title {
+/* line 108, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser h2.node-title {
   clear: none;
   line-height: 1.6em;
+  padding-top: 20px;
 }
-/* line 165, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser .node-fields-wrapper {
+/* line 113, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .node-fields-wrapper {
   margin-left: 110px;
 }
-/* line 167, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser .node-fields-wrapper p {
+/* line 115, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .node-fields-wrapper .field-name-field-summary {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 0.85em;
+  font-size: 0.8em;
+  line-height: 1.5em;
 }
-/* line 173, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser .node-readmore {
+/* line 122, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser .node-readmore {
   display: none;
 }
-/* line 177, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources .node-teaser:after {
+/* line 126, ../sass/components/_resources.scss */
+.field-name-field-related-resources .node-teaser:after {
   margin-bottom: 0;
 }
-/* line 180, ../sass/components/_resource_content_types.scss */
-.field-name-field-other-resources:after {
+/* line 129, ../sass/components/_resources.scss */
+.field-name-field-related-resources:after {
   clear: both;
   display: table;
   content: "";
 }
 
-/* line 186, ../sass/components/_resource_content_types.scss */
+/* line 135, ../sass/components/_resources.scss */
 .field-name-field-other-resources > .field-items > .field-item:last-child .node-teaser {
   margin-bottom: 0;
-}
-
-/* booklet resource content type - full nodes */
-/* line 6, ../sass/components/_booklet_content_type.scss */
-.node-booklet .field-name-field-booklet-resource-file .file a:after {
-  content: "Get Booklet";
-}
-
-/* documents resource content type - full nodes */
-/* line 6, ../sass/components/_documents_content_type.scss */
-.node-type-documents .field-name-field-document-resource-file .file a:after {
-  content: "Get Document";
-}
-
-/* external links websites full node */
-/* documents resource content type - full nodes */
-/* line 8, ../sass/components/_external_links_websites_content_type.scss */
-.node-type-external-links-websites .node-fields-wrapper .field-name-field-external-resource-link a:after {
-  content: "Go to External Link / Website";
-}
-
-/* module resource */
-/* documents resource content type - full nodes */
-/* line 7, ../sass/components/_module_resource_content_type.scss */
-body.node-type-module-resource .node-fields-wrapper .field-name-field-module-link a:after {
-  content: "Get Online Module";
-}
-
-/* podcast resources full node */
-/* documents resource content type - full nodes */
-/* line 8, ../sass/components/_podcast_content_type.scss */
-.node-type-podcast .node-fields-wrapper .field-name-field-podcast-link a:after, .node-type-podcast .field-name-field-podcast-captivate-link a:after {
-  content: "Go to Podcast";
-}
-
-/* presentation content type full node */
-/* documents resource content type - full nodes */
-/* line 10, ../sass/components/_presentation_content_type.scss */
-.node-type-presentation .field-name-field-presentation-resource-file .file a:after {
-  content: "Get Presentation";
-}
-/* line 15, ../sass/components/_presentation_content_type.scss */
-.node-type-presentation .field-name-field-presentation-resource-file .file-size {
-  display: block;
-  font-size: 0.8em;
-}
-
-/* resource page full node */
-/* documents resource content type - full nodes */
-/* line 6, ../sass/components/_resource_page_content_type.scss */
-.node-type-resource-page .type-image-wrapper {
-  float: left;
-  width: 145px;
-  text-align: center;
-}
-/* line 10, ../sass/components/_resource_page_content_type.scss */
-.node-type-resource-page .type-image-wrapper .field-name-field-resource-type .field-item {
-  display: inline-block;
-  padding: 1px 6px;
-  font-size: 0.7em;
-  width: 100px;
-  text-align: center;
-}
-/* line 18, ../sass/components/_resource_page_content_type.scss */
-.node-type-resource-page .type-image-wrapper .field-name-field-resource-page-image {
-  text-align: center;
-}
-/* line 20, ../sass/components/_resource_page_content_type.scss */
-.node-type-resource-page .type-image-wrapper .field-name-field-resource-page-image img {
-  width: 120px;
-  height: auto;
-}
-/* line 26, ../sass/components/_resource_page_content_type.scss */
-.node-type-resource-page .node-fields-wrapper {
-  margin-left: 160px;
-}
-
-/* video resource full nodes */
-/* documents resource content type - full nodes */
-/* line 8, ../sass/components/_video_resource_content_type.scss */
-.node-type-video-resource .field-name-field-video-resource-file .mfp-nogallery-iframe a, .node-type-video-resource .field-name-field-video-resource-file a.colorbox-load, .node-type-video-resource .field-name-field-video-captivate-file .mfp-nogallery-iframe a, .node-type-video-resource .field-name-field-video-captivate-file a.colorbox-load {
-  text-indent: -100000px;
-  padding: 12px;
-  line-height: 1em;
-  display: inline-block;
-  position: relative;
-  outline: 0;
-}
-/* line 15, ../sass/components/_video_resource_content_type.scss */
-.node-type-video-resource .field-name-field-video-resource-file .mfp-nogallery-iframe a img.mfp-thumbnail, .node-type-video-resource .field-name-field-video-resource-file a.colorbox-load img.mfp-thumbnail, .node-type-video-resource .field-name-field-video-captivate-file .mfp-nogallery-iframe a img.mfp-thumbnail, .node-type-video-resource .field-name-field-video-captivate-file a.colorbox-load img.mfp-thumbnail {
-  display: none;
-}
-/* line 18, ../sass/components/_video_resource_content_type.scss */
-.node-type-video-resource .field-name-field-video-resource-file .mfp-nogallery-iframe a:after, .node-type-video-resource .field-name-field-video-resource-file a.colorbox-load:after, .node-type-video-resource .field-name-field-video-captivate-file .mfp-nogallery-iframe a:after, .node-type-video-resource .field-name-field-video-captivate-file a.colorbox-load:after {
-  position: absolute;
-  color: #fff;
-  white-space: nowrap;
-  background-color: #3169a2;
-  top: 0;
-  left: 0;
-  font-size: 0.75em;
-  line-height: 1em;
-  text-transform: uppercase;
-  padding: 1em 1em 0.85em;
-  text-indent: 0;
-  width: auto;
-  content: "Get Video Resource";
-}
-
-/* webinar content type full node */
-/* documents resource content type - full nodes */
-/* line 8, ../sass/components/_webinar_content_type.scss */
-.node-type-webinar .node-fields-wrapper .field-name-field-webinar-link a:after {
-  content: "Go to Webinar";
 }
 
 /* responsive Layout rules */
@@ -2953,7 +2832,7 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
  * by setting a max-width.
  */
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-/* line 42, ../sass/layouts/_responsive.scss */
+/* line 38, ../sass/layouts/_responsive.scss */
 #header,
 #content,
 #navigation,
@@ -2970,7 +2849,7 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
 }
 
 /* Containers for grid items and flow items. */
-/* line 46, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 45, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
 #main:before,
 #main:after,
@@ -2988,14 +2867,14 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
-  /* line 56, ../sass/layouts/_responsive.scss */
+  /* line 57, ../sass/layouts/_responsive.scss */
   #main {
     /* Move all the children of #main down to make room. */
     padding-top: 3em;
     position: relative;
   }
 
-  /* line 61, ../sass/layouts/_responsive.scss */
+  /* line 62, ../sass/layouts/_responsive.scss */
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
@@ -3011,78 +2890,78 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 82, ../sass/layouts/_responsive.scss */
+  /* line 83, ../sass/layouts/_responsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 84, ../sass/layouts/_responsive.scss */
+  /* line 85, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
-    width: 66.66667%;
-    margin-left: 33.33333%;
-    margin-right: -100%;
+    width: 25%;
+    margin-left: 12.5%;
+    margin-right: -37.5%;
   }
-  /* line 89, ../sass/layouts/_responsive.scss */
+  /* line 90, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
-    width: 33.33333%;
+    width: 12.5%;
     margin-left: 0%;
-    margin-right: -33.33333%;
+    margin-right: -12.5%;
   }
 
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 97, ../sass/layouts/_responsive.scss */
+  /* line 98, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 99, ../sass/layouts/_responsive.scss */
+  /* line 100, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
-    width: 66.66667%;
+    width: 25%;
     margin-left: 0%;
-    margin-right: -66.66667%;
+    margin-right: -25%;
   }
-  /* line 104, ../sass/layouts/_responsive.scss */
+  /* line 105, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
+    width: 12.5%;
+    margin-left: 25%;
+    margin-right: -37.5%;
   }
 
   /**
    * The layout when there are two sidebars.
    */
-  /* line 112, ../sass/layouts/_responsive.scss */
+  /* line 113, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 114, ../sass/layouts/_responsive.scss */
+  /* line 115, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
-    width: 66.66667%;
-    margin-left: 33.33333%;
-    margin-right: -100%;
+    width: 25%;
+    margin-left: 12.5%;
+    margin-right: -37.5%;
   }
-  /* line 119, ../sass/layouts/_responsive.scss */
+  /* line 120, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
-    width: 33.33333%;
+    width: 12.5%;
     margin-left: 0%;
-    margin-right: -33.33333%;
+    margin-right: -12.5%;
   }
-  /* line 124, ../sass/layouts/_responsive.scss */
+  /* line 125, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
-    width: 100%;
+    width: 37.5%;
     margin-left: 0%;
-    margin-right: -100%;
+    margin-right: -37.5%;
     padding-left: 0;
     padding-right: 0;
     clear: left;
@@ -3091,7 +2970,7 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 130, ../sass/layouts/_responsive.scss */
+  /* line 131, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -3101,49 +2980,49 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 134, ../sass/layouts/_responsive.scss */
+  /* line 135, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
-    width: 33.33333%;
+    width: 12.5%;
     margin-left: 0%;
-    margin-right: -33.33333%;
+    margin-right: -12.5%;
     clear: left;
   }
-  /* line 139, ../sass/layouts/_responsive.scss */
+  /* line 140, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
-    width: 33.33333%;
-    margin-left: 33.33333%;
-    margin-right: -66.66667%;
+    width: 12.5%;
+    margin-left: 12.5%;
+    margin-right: -25%;
   }
-  /* line 143, ../sass/layouts/_responsive.scss */
+  /* line 144, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
+    width: 12.5%;
+    margin-left: 25%;
+    margin-right: -37.5%;
   }
 }
 /**
- * Use 5 grid columns for larger screens.
+ * Use 8 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 160, ../sass/layouts/_responsive.scss */
-  .sidebar-first {
-    /* Span 4 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-  }
   /* line 162, ../sass/layouts/_responsive.scss */
+  .sidebar-first {
+    /* Span 4 columns, starting in 3rd column from left. */
+    /* Span 2 column, starting in 1st column from left. */
+  }
+  /* line 167, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
     width: 75%;
     margin-left: 25%;
     margin-right: -100%;
   }
-  /* line 167, ../sass/layouts/_responsive.scss */
+  /* line 172, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 25%;
@@ -3154,19 +3033,19 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 175, ../sass/layouts/_responsive.scss */
+  /* line 180, ../sass/layouts/_responsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 177, ../sass/layouts/_responsive.scss */
+  /* line 182, ../sass/layouts/_responsive.scss */
   .sidebar-second #content {
     float: left;
     width: 50%;
     margin-left: 0%;
     margin-right: -50%;
   }
-  /* line 182, ../sass/layouts/_responsive.scss */
+  /* line 187, ../sass/layouts/_responsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 12.5%;
@@ -3177,27 +3056,27 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
   /**
    * The layout when there are two sidebars.
    */
-  /* line 190, ../sass/layouts/_responsive.scss */
+  /* line 195, ../sass/layouts/_responsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 192, ../sass/layouts/_responsive.scss */
+  /* line 197, ../sass/layouts/_responsive.scss */
   .two-sidebars #content {
     float: left;
     width: 37.5%;
     margin-left: 12.5%;
     margin-right: -50%;
   }
-  /* line 197, ../sass/layouts/_responsive.scss */
+  /* line 202, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 12.5%;
     margin-left: 0%;
     margin-right: -12.5%;
   }
-  /* line 202, ../sass/layouts/_responsive.scss */
+  /* line 207, ../sass/layouts/_responsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 12.5%;
@@ -3232,7 +3111,7 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
  */
 @media print {
   /* Underline all links. */
-  /* line 16, ../sass/_print.scss */
+  /* line 15, ../sass/_print.scss */
   a:link,
   a:visited {
     text-decoration: underline !important;
@@ -3256,7 +3135,7 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
     font-weight: normal;
     font-size: 16px;
   }
-  /* line 35, ../sass/_print.scss */
+  /* line 34, ../sass/_print.scss */
   #content a[href^="javascript:"]:after,
   #content a[href^="#"]:after {
     content: "";
@@ -3276,7 +3155,7 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
   }
 
   /* Turn off any background colors or images. */
-  /* line 57, ../sass/_print.scss */
+  /* line 54, ../sass/_print.scss */
   body,
   #page,
   #main,
@@ -3287,7 +3166,7 @@ body.node-type-module-resource .node-fields-wrapper .field-name-field-module-lin
   }
 
   /* Hide sidebars and nav elements. */
-  /* line 77, ../sass/_print.scss */
+  /* line 64, ../sass/_print.scss */
   #skip-link,
   #toolbar,
   #navigation,

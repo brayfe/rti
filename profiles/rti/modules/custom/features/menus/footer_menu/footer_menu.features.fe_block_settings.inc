@@ -21,16 +21,22 @@ function footer_menu_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rtisub' => array(
-        'region' => 'footer',
-        'status' => 1,
-        'theme' => 'rtisub',
-        'weight' => -11,
-      ),
-      'subseven' => array(
+      'bartik' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'subseven',
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'rtisub' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rtisub',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
@@ -47,16 +53,22 @@ function footer_menu_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'rtisub' => array(
-        'region' => 'footer',
-        'status' => 1,
-        'theme' => 'rtisub',
-        'weight' => -12,
-      ),
-      'subseven' => array(
+      'bartik' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'subseven',
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'rtisub' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'rtisub',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
         'weight' => 0,
       ),
     ),
