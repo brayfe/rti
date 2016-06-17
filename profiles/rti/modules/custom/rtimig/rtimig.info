@@ -15,3 +15,4 @@ files[] = includes/presentation.inc
 files[] = includes/resource_page.inc
 files[] = includes/video.inc
 files[] = includes/webinar.inc
+files[] = includes/taxonomy.inc
