@@ -307,8 +307,8 @@ function rti_resource_content_type_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => TRUE,
-          'view_mode' => 'default',
+          'links' => 1,
+          'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 12,
