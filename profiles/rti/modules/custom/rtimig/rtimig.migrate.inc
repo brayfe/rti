@@ -91,7 +91,7 @@ function rtimig_migrate_api() {
   // first, we want to make sure it's listed first so the vocabularies are
   // listed right ahead of the node migrations.
   $common_vocabulary_arguments = $common_arguments + array(
-    'class_name' => 'DrupalTerm7Migration',
+    'class_name' => 'TaxonomyMigration',
     'soft_dependencies' => array('User'),
   );
   foreach ($vocabulary_arguments as $migration_name => $arguments) {
