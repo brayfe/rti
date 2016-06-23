@@ -17,11 +17,15 @@ class TaxonomyMigration extends RTITermMigration {
   public $icons = array(
     'Booklet' => 'booklet-icon-large.png',
     'Document' => 'document-icon-large.png',
+    'Instructional Material' => 'instructional-materials-icon-large.png',
+    'Leadership Tool' => 'leadership-tool-icon-large.png',
+    'Lesson' => 'lesson-icon-large.png',
     'Link & Website' => 'link-website-icon-large.png',
     'Module' => 'module-icon-large.png',
     'Podcast' => 'podcast-icon-large.png',
     'Presentation' => 'presentation-icon-large.png',
     'Resource Page' => 'resource-page-icon-large.png',
+    'Research' => 'research-icon-large.png',
     'Video' => 'video-icon-large.png',
     'Webinar' => 'webinar-icon-large.png',
   );
