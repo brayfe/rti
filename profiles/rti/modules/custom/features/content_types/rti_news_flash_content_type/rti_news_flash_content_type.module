@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTI News Flash Content Type feature.
+ */
+
+include_once 'rti_news_flash_content_type.features.inc';
