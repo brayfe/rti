@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTI Category Menu feature.
+ */
+
+include_once 'rti_category_menu.features.inc';

@@ -83,7 +83,6 @@ dependencies[] = media_wysiwyg
 dependencies[] = media_wysiwyg_view_mode
 
 ; Other
-; dependencies[] = backup_migrate
 dependencies[] = colorbox
 dependencies[] = diff
 dependencies[] = entity
@@ -94,6 +93,7 @@ dependencies[] = menu_block_export
 dependencies[] = pathauto
 dependencies[] = redirect
 dependencies[] = special_menu_items
+dependencies[] = taxonomy_menu
 dependencies[] = token
 
 ; User Interface
@@ -128,6 +128,7 @@ dependencies[] = rti_image_styles
 
 ; Features - Menus
 dependencies[] = footer_menu
+dependencies[] = rti_category_menu
 
 ; Features - Roles and Permissions
 dependencies[] = user_roles
