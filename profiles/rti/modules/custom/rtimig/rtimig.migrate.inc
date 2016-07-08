@@ -261,6 +261,24 @@ function rtimig_migrate_api() {
         'FreeTags',
       ),
     ),
+    'Events' => array(
+        'class_name' => 'EventMigration',
+        'description' => t('Migration of Event nodes'),
+        'source_type' => 'events',
+        'destination_type' => 'event',
+    ),
+    'News' => array(
+        'class_name' => 'NewsFlashMigration',
+        'description' => t('Migration of News Flash nodes'),
+        'source_type' => 'news',
+        'destination_type' => 'news',
+    ),
+    'BasicPage' => array(
+        'class_name' => 'DrupalNode7Migration',
+        'description' => t('Migration of Basic Page nodes'),
+        'source_type' => 'page',
+        'destination_type' => 'page',
+    ),
   );
 
   /*
