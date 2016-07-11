@@ -20,6 +20,7 @@ function rti_search_facets_blocks_context_default_contexts() {
     'path' => array(
       'values' => array(
         'rti-search*' => 'rti-search*',
+        'resources*' => 'resources*',
       ),
     ),
   );

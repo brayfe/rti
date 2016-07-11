@@ -30,7 +30,6 @@ function rti_deployment_update_7101() {
       if ($menu_link = menu_link_load($row->mlid)) {
         // Set the new menu link data.
         $menu_link['link_path'] = get_menu_path($row->link_title);
-        drush_print_r($menu_link['link_path']);
         // Save the menu link.
         menu_link_save($menu_link);
       }
@@ -42,5 +41,8 @@ function rti_deployment_update_7101() {
   else {
     // No menu links were found for this $path.
   }
+
+  // Set the homepage to a recently migrated Basic Page.
+  variable_set('site_frontpage', 'node/5');
 
 }
