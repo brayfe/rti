@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTI Event Content Type feature.
+ */
+
+include_once 'rti_event_content_type.features.inc';

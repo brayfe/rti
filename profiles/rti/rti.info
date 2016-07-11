@@ -122,6 +122,8 @@ dependencies[] = fe_block
 
 ; Features - Content Types
 dependencies[] = rti_resource_content_type
+dependencies[] = rti_event_content_type
+dependencies[] = rti_news_flash_content_type
 
 ; Features - Image Styles
 dependencies[] = rti_image_styles
