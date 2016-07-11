@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTI Parents Page feature.
+ */
+
+include_once 'rti_parents_page.features.inc';

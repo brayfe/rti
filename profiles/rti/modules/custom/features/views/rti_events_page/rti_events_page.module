@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTI Events Page feature.
+ */
+
+include_once 'rti_events_page.features.inc';
