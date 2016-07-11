@@ -11,3 +11,36 @@
 function rti_deployment_install() {
   drupal_set_installed_schema_version('rti_deployment', 7100);
 }
+
+/**
+ * Implements hook_update_N().
+ *
+ * Update Main menu for migrated Basic Page nodes.
+ */
+function rti_deployment_update_7101() {
+  // The current path of the link.  Defaulted by install.
+  $path = '<front>';
+  // The menu the link is in.
+  $menu = 'main-menu';
+  // Query the db for links needing update.
+  $result = db_query("SELECT mlid, link_title FROM {menu_links} WHERE link_path = :path AND menu_name = :menu", array(':path' => $path, ':menu' => $menu))->fetchAll();
+  if ($result) {
+    // Loop through the matching menu items and update them.
+    foreach ($result as $row) {
+      if ($menu_link = menu_link_load($row->mlid)) {
+        // Set the new menu link data.
+        $menu_link['link_path'] = get_menu_path($row->link_title);
+        drush_print_r($menu_link['link_path']);
+        // Save the menu link.
+        menu_link_save($menu_link);
+      }
+      else {
+        // Menu link not found.
+      }
+    }
+  }
+  else {
+    // No menu links were found for this $path.
+  }
+
+}
