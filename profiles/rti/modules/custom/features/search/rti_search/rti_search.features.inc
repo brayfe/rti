@@ -16,7 +16,7 @@ function rti_search_default_search_api_index() {
     "server" : "rti_db_search_server",
     "item_type" : "node",
     "options" : {
-      "datasource" : { "bundles" : [] },
+      "datasource" : { "bundles" : ["resource"] },
       "index_directly" : 0,
       "cron_limit" : "50",
       "fields" : {
