@@ -161,6 +161,9 @@ dependencies[] = rti_text_formats
 ; Features - Variables
 
 ; Features - Views
+dependencies[] = rti_events_page
+dependencies[] = rti_featured_items_page
+dependencies[] = rti_parents_page
 
 ; RTI Custom Deployment
 dependencies[] = rti_deployment
