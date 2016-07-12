@@ -17,13 +17,21 @@ function get_menu_path($link_title) {
         return 'events';
 
       case 'About RTI':
-        return 'node/1';
+        return menu_path_helper($link_title);
 
       case 'Contact Us':
-        return 'node/4';
+        return menu_path_helper($link_title);;
 
       default:
         return '<front>';
     }
   }
+}
+
+function menu_path_helper($link_title) {
+  $result = db_query("SELECT nid FROM {node} WHERE type = 'page' AND title = :title", array(':title' => $link_title))->fetchField();
+  if ($result) {
+    return "node/" . $result;
+  }
+  return "<front>";
 }
