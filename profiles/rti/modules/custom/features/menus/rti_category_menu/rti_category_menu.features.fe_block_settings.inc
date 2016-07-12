@@ -18,7 +18,8 @@ function rti_category_menu_default_fe_block_settings() {
     'delta' => 'menu-category-menu',
     'module' => 'menu',
     'node_types' => array(),
-    'pages' => 'rti-search*',
+    'pages' => 'rti-search*
+resources*',
     'roles' => array(),
     'themes' => array(
       'rtisub' => array(

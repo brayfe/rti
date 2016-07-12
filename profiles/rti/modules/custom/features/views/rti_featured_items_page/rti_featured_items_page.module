@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTI Featured Items Page feature.
+ */
+
+include_once 'rti_featured_items_page.features.inc';

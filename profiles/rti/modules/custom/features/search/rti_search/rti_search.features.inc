@@ -21,6 +21,7 @@ function rti_search_default_search_api_index() {
       "cron_limit" : "50",
       "fields" : {
         "body:value" : { "type" : "text" },
+        "field_featured_resource" : { "type" : "boolean" },
         "field_free_tags" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_resource_category" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_resource_ranking" : { "type" : "integer", "entity_type" : "taxonomy_term" },
@@ -167,6 +168,12 @@ function rti_search_default_search_api_server() {
           "body:value" : {
             "table" : "search_api_db_rti_content_index_text",
             "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_featured_resource" : {
+            "table" : "search_api_db_rti_content_index",
+            "column" : "field_featured_resource",
+            "type" : "boolean",
             "boost" : "1.0"
           }
         }

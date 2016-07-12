@@ -2,5 +2,36 @@
 
 /**
  * @file
- * RTI Deployment module. File intentionally left blank.
+ * RTI Deployment module.
  */
+function get_menu_path($link_title) {
+  if ($link_title) {
+    switch ($link_title) {
+      case 'Featured Items':
+        return 'resources/featured';
+
+      case 'For Parents':
+        return 'resources/parents';
+
+      case 'Events':
+        return 'events';
+
+      case 'About RTI':
+        return menu_path_helper($link_title);
+
+      case 'Contact Us':
+        return menu_path_helper($link_title);;
+
+      default:
+        return '<front>';
+    }
+  }
+}
+
+function menu_path_helper($link_title) {
+  $result = db_query("SELECT nid FROM {node} WHERE type = 'page' AND title = :title", array(':title' => $link_title))->fetchField();
+  if ($result) {
+    return "node/" . $result;
+  }
+  return "<front>";
+}

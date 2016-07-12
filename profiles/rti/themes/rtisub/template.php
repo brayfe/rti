@@ -26,18 +26,18 @@ function rtisub_preprocess_maintenance_page(&$variables, $hook) {
 }
 // */
 
-function rtisub_preprocess_field(&$variables) { 
+function rtisub_preprocess_field(&$variables) {
   if($variables['element']['#field_name'] == 'field_module_link') {
       $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
-      $variables['items']['0']['#element']['url'] = 'sites/default/files/modules/' . $variables['items']['0']['#element']['url'];  
+      $variables['items']['0']['#element']['url'] = 'sites/default/files/modules/' . $variables['items']['0']['#element']['url'];
   }
   if($variables['element']['#field_name'] == 'field_video_captivate_file') {
       $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
-      $variables['items']['0']['#element']['url'] = 'sites/default/files/videos/' . $variables['items']['0']['#element']['url'];  
+      $variables['items']['0']['#element']['url'] = 'sites/default/files/videos/' . $variables['items']['0']['#element']['url'];
   }
   if($variables['element']['#field_name'] == 'field_podcast_captivate_link') {
       $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
-      $variables['items']['0']['#element']['url'] = 'sites/default/files/podcasts/' . $variables['items']['0']['#element']['url'];  
+      $variables['items']['0']['#element']['url'] = 'sites/default/files/podcasts/' . $variables['items']['0']['#element']['url'];
   }
 }
 
@@ -84,31 +84,32 @@ function rtisub_preprocess_node(&$variables) {
 }
 
 function rtisub_preprocess_views_view_fields(&$variables) {
-  
-  $term_id = $variables['row']->_entity_properties['field_resource_type'];
-  $term = taxonomy_term_load($term_id);
-  $term_name = $term->name;
-  $alt = $term_name;
-  $title = $term_name;
+  if ($variables['view']->name == "rti_indexed_search") {
+    $term_id = $variables['row']->_entity_properties['field_resource_type'];
+    $term = taxonomy_term_load($term_id);
+    $term_name = $term->name;
+    $alt = $term_name;
+    $title = $term_name;
 
-  if (!empty($variables['row']->_field_data['field_image']['entity']->field_image['und'][0]['fid'])){
-    $fid = $variables['row']->_field_data['field_image']['entity']->field_image['und'][0]['fid'];
-    $file = file_load($fid);
-    if ($file->alt != '') {
-      $alt = $file->alt;
+    if (!empty($variables['row']->_field_data['field_image']['entity']->field_image['und'][0]['fid'])){
+      $fid = $variables['row']->_field_data['field_image']['entity']->field_image['und'][0]['fid'];
+      $file = file_load($fid);
+      if ($file->alt != '') {
+        $alt = $file->alt;
+      }
+      if ($file->title != '') {
+        $title = $file->title;
+      }
     }
-    if ($file->title != '') {
-      $title = $file->title;
+    else {
+      $term = $variables['row']->_entity_properties['field_resource_type'];
+      $term_image  = taxonomy_term_load($term);
+      $fid = $term_image->field_default_resource_image['und'][0]['fid'];
+      $file = file_load($fid);
+      $alt = $term_name . " about " . $variables['row']->_entity_properties['entity object']->title;
+      $title = $variables['row']->_entity_properties['entity object']->title;
     }
-  }
-   else {
-    $term = $variables['row']->_entity_properties['field_resource_type'];
-    $term_image  = taxonomy_term_load($term);
-    $fid = $term_image->field_default_resource_image['und'][0]['fid'];
-    $file = file_load($fid);
-    $alt = $term_name . " about " . $variables['row']->_entity_properties['entity object']->title;
-    $title = $variables['row']->_entity_properties['entity object']->title;
-   }
+
     $info = image_get_info($file->uri);
     $variables['resource_image'] = theme('image', array(
       'path' => $file->uri,
@@ -118,6 +119,7 @@ function rtisub_preprocess_views_view_fields(&$variables) {
       'title' => $title,
       'attributes' => array('class' => array('resource-icon')),
     ));
+  }
 }
 
 
