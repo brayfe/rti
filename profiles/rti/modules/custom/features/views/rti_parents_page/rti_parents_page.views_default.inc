@@ -29,7 +29,7 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '15';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '8';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '6';
@@ -171,8 +171,14 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_resource_ranking',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['style_options']['row_class'] = 'views-row';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -180,6 +186,17 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Indexed Node: Ranking */
+  $handler->display->display_options['fields']['field_resource_ranking']['id'] = 'field_resource_ranking';
+  $handler->display->display_options['fields']['field_resource_ranking']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['fields']['field_resource_ranking']['field'] = 'field_resource_ranking';
+  $handler->display->display_options['fields']['field_resource_ranking']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_ranking']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_resource_ranking']['alter']['text'] = '<span class="rank-name">[field_resource_ranking]</span>';
+  $handler->display->display_options['fields']['field_resource_ranking']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_ranking']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['field_resource_ranking']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_resource_ranking']['bypass_access'] = 0;
   /* Field: Indexed Node: Type */
   $handler->display->display_options['fields']['field_resource_type']['id'] = 'field_resource_type';
   $handler->display->display_options['fields']['field_resource_type']['table'] = 'search_api_index_rti_content_index';
