@@ -43,9 +43,9 @@
       </div> 
   </div>
   <div class="node-fields-wrapper">
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php  print render($content['field_summary']);
-    ?>
+    <h3<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+    <?php print render($content['field_summary']); ?>
+    <span class="get-resource-btn"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></span>
   </div>
 <?php endif ?>
 

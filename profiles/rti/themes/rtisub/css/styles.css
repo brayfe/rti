@@ -2775,6 +2775,92 @@ section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
   font-family: "Open Sans", sans-serif;
 }
 
+/* line 3, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term #main #content article:first-of-type {
+  border-top: none !important;
+}
+/* line 6, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article {
+  border-top: 1px solid #999999;
+  padding: 1em 0 1.5em;
+  display: table;
+  content: "";
+  height: 0;
+  width: 100%;
+}
+/* line 13, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .type-image-wrapper {
+  margin-top: 0;
+  width: 110px;
+  float: left;
+}
+/* line 17, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .type-image-wrapper .field-name-field-resource-type {
+  display: inline-block;
+  padding: 1px 6px;
+  font-size: 0.7em;
+  width: 100px;
+  text-align: center;
+}
+/* line 24, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .type-image-wrapper .resource-image {
+  text-align: center;
+}
+/* line 26, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .type-image-wrapper .resource-image img {
+  width: 60px;
+  height: auto;
+}
+/* line 32, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .node-fields-wrapper {
+  margin-left: 145px;
+}
+/* line 34, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .node-fields-wrapper h3.node-title {
+  margin-bottom: 0.4em;
+  margin-top: 0;
+  display: block;
+  line-height: 1.2em;
+}
+/* line 39, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .node-fields-wrapper h3.node-title a {
+  color: #333;
+  text-decoration: none;
+}
+/* line 44, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .node-fields-wrapper .field-name-field-summary {
+  margin-bottom: 1em;
+}
+/* line 48, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .node-fields-wrapper .get-resource-btn a {
+  text-indent: -100000px;
+  padding: 12px 0 0;
+  line-height: 1em;
+  display: inline-block;
+  position: relative;
+  outline: 0;
+}
+/* line 55, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term article .node-fields-wrapper .get-resource-btn a:after {
+  position: absolute;
+  color: white;
+  white-space: nowrap;
+  background-color: #3169a2;
+  top: 0;
+  left: 0;
+  font-size: 0.75em;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding: 1em 1em 0.85em;
+  text-indent: 0;
+  width: auto;
+  content: "Get Resource";
+}
+/* line 74, ../sass/components/_taxonomy_resource_pages.scss */
+.page-taxonomy-term a.feed-icon {
+  display: none;
+}
+
 /* responsive Layout rules */
 /**
  * @file
