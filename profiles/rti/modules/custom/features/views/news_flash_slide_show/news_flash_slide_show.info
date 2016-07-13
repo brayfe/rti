@@ -1,0 +1,13 @@
+name = News Flash Slide Show
+core = 7.x
+package = Views
+version = 7.x-1.0
+dependencies[] = fe_block
+dependencies[] = flexslider_views
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[fe_block_settings][] = views-news_flash_slideshow-block
+features[features_api][] = api:2
+features[views_view][] = news_flash_slideshow
+features_exclude[dependencies][ctools] = ctools
+project path = profiles/rti/modules/custom/features/views
