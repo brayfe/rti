@@ -191,6 +191,7 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['field_resource_ranking']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['fields']['field_resource_ranking']['field'] = 'field_resource_ranking';
   $handler->display->display_options['fields']['field_resource_ranking']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_ranking']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_resource_ranking']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_resource_ranking']['alter']['text'] = '<span class="rank-name">[field_resource_ranking]</span>';
   $handler->display->display_options['fields']['field_resource_ranking']['element_label_colon'] = FALSE;
@@ -202,6 +203,7 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['field_resource_type']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['fields']['field_resource_type']['field'] = 'field_resource_type';
   $handler->display->display_options['fields']['field_resource_type']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_resource_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_resource_type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['field_resource_type']['view_mode'] = 'full';
@@ -211,6 +213,7 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['field_image']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
@@ -225,18 +228,12 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_rti_content_index';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Indexed Node: Summary */
   $handler->display->display_options['fields']['field_summary']['id'] = 'field_summary';
   $handler->display->display_options['fields']['field_summary']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['fields']['field_summary']['field'] = 'field_summary';
   $handler->display->display_options['fields']['field_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_summary']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_summary']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_summary']['type'] = 'text_plain';
@@ -245,6 +242,7 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['alter']['text'] = '<a href=node/[nid]>Get Res</a>';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Get Resource';
@@ -255,6 +253,25 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['search_api_excerpt']['exclude'] = TRUE;
   $handler->display->display_options['fields']['search_api_excerpt']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['search_api_excerpt']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="resource-type-thumb-wrapper">
+<span class="resource-type">[field_resource_type]</span>
+<div class="resource-thumb">
+[field_image]
+</div>
+</div>
+<div class="resource-list-text">
+<h3 class="resource-title">[title]</h3>
+<div class="resource-summary"><p>[field_summary]</p></div>
+<span class="get-resource-btn">[view_node]</span>
+</div>';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   $handler->display->display_options['path'] = 'resources/parents';
   $handler->display->display_options['menu']['title'] = 'RTI Indexed Search';
   $handler->display->display_options['menu']['weight'] = '0';
