@@ -93,7 +93,6 @@ function rti_featured_items_page_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = 'We frequently add resources and tools to our website, and highlight information from other organizations.
-
 Check this page often for new additions and information on “hot topics”.';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   /* Field: Indexed Node: Title */
@@ -219,7 +218,7 @@ Check this page often for new additions and information on “hot topics”.';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'resource_thumbnail',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';

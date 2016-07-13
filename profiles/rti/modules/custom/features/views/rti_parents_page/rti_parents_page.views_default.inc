@@ -218,7 +218,7 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'resource_thumbnail',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
