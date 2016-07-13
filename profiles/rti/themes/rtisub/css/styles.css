@@ -2203,341 +2203,64 @@ ol.search-results li .search-snippet-info p.search-info {
 
 /* styling for views */
 /* line 4, ../sass/components/_views.scss */
-.view-rti-indexed-search .view-content .views-row {
-  border-top: 1px solid #999999;
-  padding: 1em 0 1em;
-  display: table;
-  content: "";
-  height: 0;
-  width: 100%;
-}
-/* line 11, ../sass/components/_views.scss */
-.view-rti-indexed-search .view-content .views-row:first-child {
-  border-top: none;
-}
-
-/* no border-top for very first views row */
-/* views dynamic pages fo resources */
-/* line 29, ../sass/components/_views.scss */
-.view-resources-dynamic-filtered-pages .view-content,
-.view-resources-featured .view-content,
-.view-resources-specpop .view-content,
-.view-resources-pages-by-content-type .view-content {
-  margin-top: 1em;
-}
-/* line 32, ../sass/components/_views.scss */
-.view-resources-dynamic-filtered-pages .views-row,
-.view-resources-featured .views-row,
-.view-resources-specpop .views-row,
-.view-resources-pages-by-content-type .views-row {
-  border-top: 1px solid #999;
-  padding: 1em 0 1em;
-  display: table;
-  content: "";
-  height: 0;
-  width: 100%;
-}
-/* line 40, ../sass/components/_views.scss */
-.view-resources-dynamic-filtered-pages .views-row-1,
-.view-resources-featured .views-row-1,
-.view-resources-specpop .views-row-1,
-.view-resources-pages-by-content-type .views-row-1 {
-  border-top: 0;
-  padding-top: 0;
-}
-
-/* put icon labels on resources for the view, but also the full node display */
-/* line 46, ../sass/components/_views.scss */
-.resource-type-thumb-wrapper {
-  width: 110px;
-  float: left;
-}
-/* line 49, ../sass/components/_views.scss */
-.resource-type-thumb-wrapper .resource-type {
-  display: inline-block;
-  padding: 1px 6px;
-  font-size: 0.7em;
-  width: 100px;
-  text-align: center;
-}
-/* line 56, ../sass/components/_views.scss */
-.resource-type-thumb-wrapper .resource-thumb {
-  text-align: center;
-}
-/* line 58, ../sass/components/_views.scss */
-.resource-type-thumb-wrapper .resource-thumb img {
-  width: 60px;
-  height: auto;
-}
-
-/* margin-top the thumbs on resource by type pages because resource type text is gone */
-/* line 66, ../sass/components/_views.scss */
-.view-resources-pages-by-content-type .resource-type-thumb-wrapper {
-  margin-top: 0;
-}
-
-/* line 70, ../sass/components/_views.scss */
-.resource-list-text {
-  margin-left: 145px;
-}
-/* line 72, ../sass/components/_views.scss */
-.resource-list-text h3.resource-title {
-  margin-bottom: 0.4em;
-  margin-top: 0;
-  display: block;
-  line-height: 1.2em;
-}
-/* line 77, ../sass/components/_views.scss */
-.resource-list-text h3.resource-title a {
-  color: #333;
-  text-decoration: none;
-}
-/* line 82, ../sass/components/_views.scss */
-.resource-list-text .resource-summary, .resource-list-text .resource-summary p {
-  margin-top: 0;
-}
-/* line 87, ../sass/components/_views.scss */
-.resource-list-text .get-resource-btn a {
-  text-decoration: none;
-  padding: .5em;
-  border: 1px solid #164D84;
-  background-color: #3169a2;
-  color: #fff;
-  text-shadow: none;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  display: inline-block;
-}
-/* line 98, ../sass/components/_views.scss */
-.resource-list-text .get-resource-btn a:hover, .resource-list-text .get-resource-btn a:focus {
-  background-color: #333;
-}
-
-/* line 105, ../sass/components/_views.scss */
-.views-exposed-form .views-submit-button {
-  display: none;
-}
-/* line 108, ../sass/components/_views.scss */
-.views-exposed-form .views-exposed-widgets {
-  text-align: center;
-}
-/* line 111, ../sass/components/_views.scss */
-.views-exposed-form .views-exposed-widget {
-  padding: 0;
-  width: 250px;
-  margin: 0 auto;
-  margin-top: 1em;
-  float: none;
-  font-size: 0.8em;
-}
-/* line 118, ../sass/components/_views.scss */
-.views-exposed-form .views-exposed-widget .views-widget {
-  display: none;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-left: 1px solid #666;
-  border-right: 1px solid #666;
-  border-bottom: 1px solid #666;
-}
-/* line 126, ../sass/components/_views.scss */
-.views-exposed-form .views-exposed-widget #edit-submit-resources-dynamic-filtered-pages {
-  display: none;
-}
-/* line 130, ../sass/components/_views.scss */
-.views-exposed-form .views-exposed-widget .form-item a {
-  color: #333;
-  line-height: 1.2em;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  padding: 2px 1em;
-  border-top: 1px solid #666;
-}
-/* line 138, ../sass/components/_views.scss */
-.views-exposed-form .views-exposed-widget .form-item a:hover, .views-exposed-form .views-exposed-widget .form-item a:focus {
-  background-color: #e6e6e6;
-}
-/* line 142, ../sass/components/_views.scss */
-.views-exposed-form .views-exposed-widget .form-item #edit-type-1-all a {
-  border-top: none;
-}
-/* line 146, ../sass/components/_views.scss */
-.views-exposed-form .views-exposed-widget .form-item-edit-type-all a:first-child {
-  border: none;
-}
-/* line 149, ../sass/components/_views.scss */
-.views-exposed-form .views-exposed-widget label {
-  font-weight: normal;
-  width: 100%;
-  display: inline-block;
-  cursor: pointer;
-  border: 1px solid #666;
-  padding: 0;
-  background-color: #e6e6e6;
-  font-weight: bold;
-  text-shadow: none;
-}
-
-/* hide the grouping name from the list of resources */
-/* line 164, ../sass/components/_views.scss */
-.view h3 .rank-name {
-  display: block;
+.view-rti-indexed-search .view-content h3 span.rank-name, .view-rti-parents .view-content h3 span.rank-name, .view-rti-featured-items .view-content h3 span.rank-name {
   text-align: center;
   color: #3169a2;
-  padding: 4px;
+  width: 100%;
+  display: inline-block;
+}
+/* line 10, ../sass/components/_views.scss */
+.view-rti-indexed-search .view-content .views-row, .view-rti-parents .view-content .views-row, .view-rti-featured-items .view-content .views-row {
+  border-top: 1px solid #999999;
+  padding: 1em 0 1.5em;
+  display: table;
+  content: "";
+  height: 0;
+  width: 100%;
+}
+/* line 17, ../sass/components/_views.scss */
+.view-rti-indexed-search .view-content .views-row:first-child, .view-rti-parents .view-content .views-row:first-child, .view-rti-featured-items .view-content .views-row:first-child {
+  border-top: none;
+}
+/* line 21, ../sass/components/_views.scss */
+.view-rti-indexed-search .view-content .views-row-1, .view-rti-parents .view-content .views-row-1, .view-rti-featured-items .view-content .views-row-1 {
+  border-top: none;
 }
 
-/* events */
-/* line 172, ../sass/components/_views.scss */
-.view-events {
-  margin-top: 1em;
-}
-/* line 174, ../sass/components/_views.scss */
-.view-events .views-row {
-  margin-bottom: 1em;
-  border-bottom: 1px solid #333;
-}
-/* line 178, ../sass/components/_views.scss */
-.view-events .views-row .views-field-title a {
-  color: #333;
-  font-size: 1.17em;
-  text-decoration: none;
-  margin-bottom: 0.4em;
-  margin-top: 0px;
-  display: block;
-  line-height: 1.2em;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-}
-/* line 190, ../sass/components/_views.scss */
-.view-events .views-row span.date-display-single, .view-events .views-row .date-display-range {
-  font-size: 0.8em;
-}
-/* line 193, ../sass/components/_views.scss */
-.view-events .views-row .views-field-body p {
-  margin-top: 6px;
-}
-/* line 195, ../sass/components/_views.scss */
-.view-events .views-row .views-field-body p a {
-  color: #333;
-  border-bottom: 1px solid #333;
-  font-weight: 600;
-  text-decoration: none;
-  font-style: italic;
-}
-/* line 201, ../sass/components/_views.scss */
-.view-events .views-row .views-field-body p a:after {
-  content: " \00bb";
-}
-/* line 204, ../sass/components/_views.scss */
-.view-events .views-row .views-field-body p a:hover, .view-events .views-row .views-field-body p a:focus {
-  border: none;
-}
-/* line 210, ../sass/components/_views.scss */
-.view-events .views-row-last {
-  border-bottom: none;
-}
-
-/* taxonomy term pages */
-/* line 217, ../sass/components/_views.scss */
-.page-taxonomy-term h2.node-title a {
-  color: #333;
-  font-size: 0.78em;
-  margin-bottom: 0.4em;
-  margin-top: 0;
-  display: block;
-  line-height: 1.2em;
-  text-decoration: none;
-  margin-left: 145px;
-}
-/* line 226, ../sass/components/_views.scss */
-.page-taxonomy-term h2.node-title a:hover, .page-taxonomy-term h2.node-title a:focus {
-  text-decoration: underline;
-}
-/* line 230, ../sass/components/_views.scss */
-.page-taxonomy-term article {
-  border-top: 1px solid #999;
-  padding: 1em 0 1em;
-}
-/* line 233, ../sass/components/_views.scss */
-.page-taxonomy-term article ul.links {
-  display: none;
-}
-/* line 237, ../sass/components/_views.scss */
-.page-taxonomy-term article .type-image-wrapper {
-  width: 110px !important;
-  float: left;
-  text-align: center;
-}
-/* line 242, ../sass/components/_views.scss */
-.page-taxonomy-term article .type-image-wrapper .field-name-field-resource-type .field-item {
-  font-size: 0.7em;
-}
-/* line 247, ../sass/components/_views.scss */
-.page-taxonomy-term article .type-image-wrapper .field-type-image a img {
-  width: 60px !important;
-  height: auto;
-}
-/* line 253, ../sass/components/_views.scss */
-.page-taxonomy-term article .node-fields-wrapper {
-  margin-left: 145px !important;
-}
-/* line 255, ../sass/components/_views.scss */
-.page-taxonomy-term article .node-fields-wrapper p {
-  margin-top: 0;
-}
-/* line 260, ../sass/components/_views.scss */
-.page-taxonomy-term .feed-icon {
-  display: none;
-}
-
-/* error view to fix problem */
-/* line 267, ../sass/components/_views.scss */
-.view-error-view .views-row {
-  margin-bottom: 1em;
-}
-/* line 269, ../sass/components/_views.scss */
-.view-error-view .views-row img {
-  width: 20px;
-  clear: both;
-  float: left;
-}
-
-/* line 279, ../sass/components/_views.scss */
+/* line 29, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-exposed-widgets {
   text-align: center;
 }
-/* line 282, ../sass/components/_views.scss */
+/* line 32, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper {
   width: 450px;
   display: inline-block;
   margin-top: 0;
 }
-/* line 286, ../sass/components/_views.scss */
+/* line 36, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper label {
   display: none;
 }
-/* line 289, ../sass/components/_views.scss */
+/* line 39, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget {
   display: inline-block;
   border: none;
   font-size: 1em;
 }
-/* line 293, ../sass/components/_views.scss */
+/* line 43, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget input {
   width: 100%;
   font-size: 1.6em;
   height: 50px;
 }
-/* line 300, ../sass/components/_views.scss */
+/* line 50, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-submit-button {
   display: inline-block;
   width: 100px;
   margin-left: -3px;
   margin-top: 0;
 }
-/* line 305, ../sass/components/_views.scss */
+/* line 55, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-submit-button input {
   width: 100%;
   margin-top: 0;
@@ -2552,14 +2275,14 @@ ol.search-results li .search-snippet-info p.search-info {
   height: 50px;
 }
 
-/* line 320, ../sass/components/_views.scss */
+/* line 70, ../sass/components/_views.scss */
 input.form-text, input.form-submit {
   width: 80%;
   height: 3em;
   border: none;
 }
 
-/* line 326, ../sass/components/_views.scss */
+/* line 76, ../sass/components/_views.scss */
 form input {
   padding: 0 0.5em;
   box-sizing: border-box;
@@ -2570,6 +2293,191 @@ form input {
   -ms-border: none;
 }
 
+/* put icon labels on resources for the view, but also the full node display */
+/* line 87, ../sass/components/_views.scss */
+.resource-type-thumb-wrapper {
+  margin-top: 0;
+  width: 110px;
+  float: left;
+}
+/* line 91, ../sass/components/_views.scss */
+.resource-type-thumb-wrapper .resource-type {
+  display: inline-block;
+  padding: 1px 6px;
+  font-size: 0.7em;
+  width: 100px;
+  text-align: center;
+}
+/* line 98, ../sass/components/_views.scss */
+.resource-type-thumb-wrapper .resource-thumb {
+  text-align: center;
+}
+/* line 100, ../sass/components/_views.scss */
+.resource-type-thumb-wrapper .resource-thumb img {
+  width: 60px;
+  height: auto;
+}
+
+/* line 107, ../sass/components/_views.scss */
+.resource-list-text {
+  margin-left: 145px;
+}
+/* line 109, ../sass/components/_views.scss */
+.resource-list-text h3.resource-title {
+  margin-bottom: 0.4em;
+  margin-top: 0;
+  display: block;
+  line-height: 1.2em;
+}
+/* line 114, ../sass/components/_views.scss */
+.resource-list-text h3.resource-title a {
+  color: #333;
+  text-decoration: none;
+}
+/* line 119, ../sass/components/_views.scss */
+.resource-list-text .resource-summary, .resource-list-text .resource-summary p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+/* line 124, ../sass/components/_views.scss */
+.resource-list-text .get-resource-btn a {
+  text-decoration: none;
+  padding: .5em;
+  border: 1px solid #164D84;
+  background-color: #3169a2;
+  color: #fff;
+  text-shadow: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  display: inline-block;
+}
+/* line 135, ../sass/components/_views.scss */
+.resource-list-text .get-resource-btn a:hover, .resource-list-text .get-resource-btn a:focus {
+  background-color: #333;
+}
+
+/* line 142, ../sass/components/_views.scss */
+.views-exposed-form .views-submit-button {
+  display: none;
+}
+/* line 145, ../sass/components/_views.scss */
+.views-exposed-form .views-exposed-widgets {
+  text-align: center;
+}
+/* line 148, ../sass/components/_views.scss */
+.views-exposed-form .views-exposed-widget {
+  padding: 0;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 1em;
+  float: none;
+  font-size: 0.8em;
+}
+/* line 155, ../sass/components/_views.scss */
+.views-exposed-form .views-exposed-widget .views-widget {
+  display: none;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+/* line 163, ../sass/components/_views.scss */
+.views-exposed-form .views-exposed-widget #edit-submit-resources-dynamic-filtered-pages {
+  display: none;
+}
+/* line 167, ../sass/components/_views.scss */
+.views-exposed-form .views-exposed-widget .form-item a {
+  color: #333;
+  line-height: 1.2em;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 2px 1em;
+  border-top: 1px solid #666;
+}
+/* line 175, ../sass/components/_views.scss */
+.views-exposed-form .views-exposed-widget .form-item a:hover, .views-exposed-form .views-exposed-widget .form-item a:focus {
+  background-color: #e6e6e6;
+}
+/* line 179, ../sass/components/_views.scss */
+.views-exposed-form .views-exposed-widget .form-item #edit-type-1-all a {
+  border-top: none;
+}
+/* line 183, ../sass/components/_views.scss */
+.views-exposed-form .views-exposed-widget .form-item-edit-type-all a:first-child {
+  border: none;
+}
+/* line 186, ../sass/components/_views.scss */
+.views-exposed-form .views-exposed-widget label {
+  font-weight: normal;
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #666;
+  padding: 0;
+  background-color: #e6e6e6;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+/* events */
+/* line 226, ../sass/components/_views.scss */
+.view-events {
+  margin-top: 1em;
+}
+/* line 228, ../sass/components/_views.scss */
+.view-events .views-row {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #333;
+}
+/* line 232, ../sass/components/_views.scss */
+.view-events .views-row .views-field-title a {
+  color: #333;
+  font-size: 1.17em;
+  text-decoration: none;
+  margin-bottom: 0.4em;
+  margin-top: 0px;
+  display: block;
+  line-height: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+/* line 244, ../sass/components/_views.scss */
+.view-events .views-row span.date-display-single, .view-events .views-row .date-display-range {
+  font-size: 0.8em;
+}
+/* line 247, ../sass/components/_views.scss */
+.view-events .views-row .views-field-body p {
+  margin-top: 6px;
+}
+/* line 249, ../sass/components/_views.scss */
+.view-events .views-row .views-field-body p a {
+  color: #333;
+  border-bottom: 1px solid #333;
+  font-weight: 600;
+  text-decoration: none;
+  font-style: italic;
+}
+/* line 255, ../sass/components/_views.scss */
+.view-events .views-row .views-field-body p a:after {
+  content: " \00bb";
+}
+/* line 258, ../sass/components/_views.scss */
+.view-events .views-row .views-field-body p a:hover, .view-events .views-row .views-field-body p a:focus {
+  border: none;
+}
+/* line 264, ../sass/components/_views.scss */
+.view-events .views-row-last {
+  border-bottom: none;
+}
+
+/* views dynamic pages fo resources */
+/* margin-top the thumbs on resource by type pages because resource type text is gone */
+/* hide the grouping name from the list of resources */
+/* taxonomy term pages */
+/* error view to fix problem */
 /* facetapi blocks for search page */
 /* line 2, ../sass/components/_facetapi-blocks.scss */
 .block-facetapi {
@@ -2650,33 +2558,36 @@ form input {
 
 /* resources - full nodes styles */
 /* line 2, ../sass/components/_resources.scss */
-.type-image-wrapper {
+.node-type-resource {
+  /* Related Resources */
+}
+/* line 4, ../sass/components/_resources.scss */
+.node-type-resource .type-image-wrapper {
   float: left;
   width: 145px;
   text-align: center;
 }
-/* line 6, ../sass/components/_resources.scss */
-.type-image-wrapper .field-name-field-resource-type {
+/* line 8, ../sass/components/_resources.scss */
+.node-type-resource .type-image-wrapper .field-name-field-resource-type {
   display: inline-block;
   padding: 1px 6px;
   font-size: 0.7em;
 }
-/* line 11, ../sass/components/_resources.scss */
-.type-image-wrapper img.resource-icon {
+/* line 13, ../sass/components/_resources.scss */
+.node-type-resource .type-image-wrapper img.resource-icon {
   width: 120px;
   height: auto;
 }
-
-/* line 16, ../sass/components/_resources.scss */
-.node-fields-wrapper {
+/* line 18, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper {
   margin-left: 160px;
 }
-/* line 18, ../sass/components/_resources.scss */
-.node-fields-wrapper .field-name-body p {
+/* line 20, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper .field-name-body p {
   padding-top: 22px;
 }
-/* line 22, ../sass/components/_resources.scss */
-.node-fields-wrapper .field-name-field-resource-file a {
+/* line 24, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper .field-name-field-resource-file a {
   text-indent: -100000px;
   padding: 12px;
   line-height: 1em;
@@ -2684,8 +2595,8 @@ form input {
   position: relative;
   outline: 0;
 }
-/* line 29, ../sass/components/_resources.scss */
-.node-fields-wrapper .field-name-field-resource-file a:after {
+/* line 31, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper .field-name-field-resource-file a:after {
   position: absolute;
   color: white;
   white-space: nowrap;
@@ -2700,26 +2611,26 @@ form input {
   width: auto;
   content: "Get Resource";
 }
-/* line 46, ../sass/components/_resources.scss */
-.node-fields-wrapper .field-name-field-resource-category, .node-fields-wrapper .field-name-field-free-tags {
+/* line 48, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper .field-name-field-resource-category, .node-type-resource .node-fields-wrapper .field-name-field-free-tags {
   margin-top: 1em;
   line-height: 1.2em;
 }
-/* line 49, ../sass/components/_resources.scss */
-.node-fields-wrapper .field-name-field-resource-category .field-label, .node-fields-wrapper .field-name-field-free-tags .field-label {
+/* line 51, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper .field-name-field-resource-category .field-label, .node-type-resource .node-fields-wrapper .field-name-field-free-tags .field-label {
   display: inline;
 }
-/* line 52, ../sass/components/_resources.scss */
-.node-fields-wrapper .field-name-field-resource-category .field-items, .node-fields-wrapper .field-name-field-free-tags .field-items {
+/* line 54, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper .field-name-field-resource-category .field-items, .node-type-resource .node-fields-wrapper .field-name-field-free-tags .field-items {
   display: inline;
   float: none;
 }
-/* line 55, ../sass/components/_resources.scss */
-.node-fields-wrapper .field-name-field-resource-category .field-items .field-item, .node-fields-wrapper .field-name-field-free-tags .field-items .field-item {
+/* line 57, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper .field-name-field-resource-category .field-items .field-item, .node-type-resource .node-fields-wrapper .field-name-field-free-tags .field-items .field-item {
   display: inline-block;
 }
-/* line 57, ../sass/components/_resources.scss */
-.node-fields-wrapper .field-name-field-resource-category .field-items .field-item a, .node-fields-wrapper .field-name-field-free-tags .field-items .field-item a {
+/* line 59, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper .field-name-field-resource-category .field-items .field-item a, .node-type-resource .node-fields-wrapper .field-name-field-free-tags .field-items .field-item a {
   font-size: 0.85em;
   text-decoration: none;
   margin-top: 1px;
@@ -2727,92 +2638,141 @@ form input {
   font-weight: normal;
   padding-right: 1em;
 }
-/* line 68, ../sass/components/_resources.scss */
-.node-fields-wrapper .field-name-field-resource-category.clearfix:after {
+/* line 70, ../sass/components/_resources.scss */
+.node-type-resource .node-fields-wrapper .field-name-field-resource-category.clearfix:after {
   display: inline-block;
 }
-
-/* Related Resources */
-/* line 73, ../sass/components/_resources.scss */
-.field-name-field-related-resources {
+/* line 75, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources {
   margin-top: 2em;
   padding: 1em;
   border: 1px solid #CCC;
   background-color: rgba(238, 238, 238, 0.75);
 }
-/* line 78, ../sass/components/_resources.scss */
-.field-name-field-related-resources .field-label {
+/* line 80, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .field-label {
   font-size: 1em;
   margin-top: 1px;
   margin-bottom: 1em;
   text-align: center;
 }
-/* line 84, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser {
+/* line 86, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser {
   padding: 0;
   margin-left: 1em;
   margin-bottom: 1em;
 }
-/* line 88, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser h2 {
+/* line 90, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser h2 {
   font-size: 0.95em;
   clear: left;
 }
-/* line 91, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser h2 a {
+/* line 93, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser h2 a {
   color: #000;
   text-decoration: underline;
 }
-/* line 94, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser h2 a:hover, .field-name-field-related-resources .node-teaser h2 a:focus {
+/* line 96, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser h2 a:hover, .node-type-resource .field-name-field-related-resources .node-teaser h2 a:focus {
   text-decoration: none;
 }
-/* line 99, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser .type-image-wrapper {
+/* line 101, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser .type-image-wrapper {
   float: left;
   width: 105px;
   text-align: center;
 }
-/* line 103, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser .type-image-wrapper img {
+/* line 105, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser .type-image-wrapper img {
   width: 60px !important;
   height: auto;
 }
-/* line 108, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser h2.node-title {
+/* line 110, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser h2.node-title {
   clear: none;
   line-height: 1.6em;
   padding-top: 20px;
 }
-/* line 113, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser .node-fields-wrapper {
+/* line 115, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser .node-fields-wrapper {
   margin-left: 110px;
 }
-/* line 115, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser .node-fields-wrapper .field-name-field-summary {
+/* line 117, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser .node-fields-wrapper .field-name-field-summary {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 0.8em;
   line-height: 1.5em;
 }
-/* line 122, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser .node-readmore {
+/* line 124, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser .node-readmore {
   display: none;
 }
-/* line 126, ../sass/components/_resources.scss */
-.field-name-field-related-resources .node-teaser:after {
+/* line 128, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser:after {
   margin-bottom: 0;
 }
-/* line 129, ../sass/components/_resources.scss */
-.field-name-field-related-resources:after {
+/* line 131, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources:after {
   clear: both;
   display: table;
   content: "";
 }
-
-/* line 135, ../sass/components/_resources.scss */
-.field-name-field-other-resources > .field-items > .field-item:last-child .node-teaser {
+/* line 137, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-other-resources > .field-items > .field-item:last-child .node-teaser {
   margin-bottom: 0;
+}
+
+/* line 4, ../sass/components/_sidebar.scss */
+section.sidebar #block-menu-menu-category-menu h2 {
+  background-color: #e6e6e6;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 3px;
+  border: 1px solid #444;
+}
+/* line 11, ../sass/components/_sidebar.scss */
+section.sidebar #block-menu-menu-category-menu ul.menu {
+  padding-left: 0;
+  margin-top: 12px;
+}
+/* line 14, ../sass/components/_sidebar.scss */
+section.sidebar #block-menu-menu-category-menu ul.menu li {
+  font-size: 1em;
+  list-style-image: none;
+  list-style-type: none;
+}
+/* line 18, ../sass/components/_sidebar.scss */
+section.sidebar #block-menu-menu-category-menu ul.menu li a {
+  cursor: pointer;
+  padding: .3em .5em;
+  margin-bottom: 3px;
+  display: block;
+  text-decoration: none;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #000;
+  font-weight: 700;
+}
+/* line 30, ../sass/components/_sidebar.scss */
+section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu {
+  margin-top: -4px;
+}
+/* line 32, ../sass/components/_sidebar.scss */
+section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li {
+  list-style-image: none;
+  list-style-type: none;
+  line-height: 16px;
+}
+/* line 36, ../sass/components/_sidebar.scss */
+section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  display: block;
+  padding: 3px 19px;
+  font-size: .9em;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* responsive Layout rules */

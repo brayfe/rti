@@ -84,7 +84,7 @@ function rtisub_preprocess_node(&$variables) {
 }
 
 function rtisub_preprocess_views_view_fields(&$variables) {
-  if ($variables['view']->name == "rti_indexed_search") {
+  if ($variables['view']->name == "rti_indexed_search" || "rti_feaured_items" || "rti_parents") {
     $term_id = $variables['row']->_entity_properties['field_resource_type'];
     $term = taxonomy_term_load($term_id);
     $term_name = $term->name;
