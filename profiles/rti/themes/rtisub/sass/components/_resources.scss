@@ -86,15 +86,14 @@
 		.node-teaser{
 			padding:0;
 			margin-left:1em;
-			margin-bottom: 1em;
-			h2{
+			margin-bottom: 2em;
+			h3{
 				font-size: 0.95em;
-				clear:left;
 				a{
 					color:#000;
-					text-decoration:underline;
+					text-decoration:none;
 					&:hover,&:focus{
-						text-decoration: none;
+						text-decoration: underline;
 					}
 				}
 			}
@@ -102,6 +101,7 @@
 				float: left;
 				width: 105px;
 				text-align: center;
+				margin-top: -3px;
 				img{
 					width:60px !important;
 					height:auto;
@@ -116,9 +116,34 @@
 				margin-left:110px;
 				.field-name-field-summary{
 					margin-top: 0;
-					margin-bottom:0;
+					margin-bottom:1em;
 					font-size: 0.8em;
 					line-height: 1.5em;
+				}
+				.get-resource-btn{
+					a{
+						text-indent: -100000px;
+						padding: 12px 0 0;
+						line-height: 1em;
+						display: inline-block;
+						position: relative;
+						outline: 0;
+						&:after{
+							position: absolute;
+							color: white;
+							white-space: nowrap;
+							background-color: #3169a2;
+							top: 0;
+							left: 0;
+							font-size: 0.75em;
+							line-height: 1em;
+							text-transform: uppercase;
+							padding: 1em 1em 0.85em;
+							text-indent: 0;
+							width: auto;
+							content: "Get Resource";
+						}
+					}
 				}
 			}
 			.node-readmore{

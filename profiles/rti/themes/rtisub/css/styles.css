@@ -2666,27 +2666,27 @@ form input {
 .node-type-resource .field-name-field-related-resources .node-teaser {
   padding: 0;
   margin-left: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 /* line 90, ../sass/components/_resources.scss */
-.node-type-resource .field-name-field-related-resources .node-teaser h2 {
+.node-type-resource .field-name-field-related-resources .node-teaser h3 {
   font-size: 0.95em;
-  clear: left;
 }
-/* line 93, ../sass/components/_resources.scss */
-.node-type-resource .field-name-field-related-resources .node-teaser h2 a {
+/* line 92, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser h3 a {
   color: #000;
-  text-decoration: underline;
-}
-/* line 96, ../sass/components/_resources.scss */
-.node-type-resource .field-name-field-related-resources .node-teaser h2 a:hover, .node-type-resource .field-name-field-related-resources .node-teaser h2 a:focus {
   text-decoration: none;
 }
-/* line 101, ../sass/components/_resources.scss */
+/* line 95, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser h3 a:hover, .node-type-resource .field-name-field-related-resources .node-teaser h3 a:focus {
+  text-decoration: underline;
+}
+/* line 100, ../sass/components/_resources.scss */
 .node-type-resource .field-name-field-related-resources .node-teaser .type-image-wrapper {
   float: left;
   width: 105px;
   text-align: center;
+  margin-top: -3px;
 }
 /* line 105, ../sass/components/_resources.scss */
 .node-type-resource .field-name-field-related-resources .node-teaser .type-image-wrapper img {
@@ -2706,25 +2706,50 @@ form input {
 /* line 117, ../sass/components/_resources.scss */
 .node-type-resource .field-name-field-related-resources .node-teaser .node-fields-wrapper .field-name-field-summary {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1em;
   font-size: 0.8em;
   line-height: 1.5em;
 }
 /* line 124, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser .node-fields-wrapper .get-resource-btn a {
+  text-indent: -100000px;
+  padding: 12px 0 0;
+  line-height: 1em;
+  display: inline-block;
+  position: relative;
+  outline: 0;
+}
+/* line 131, ../sass/components/_resources.scss */
+.node-type-resource .field-name-field-related-resources .node-teaser .node-fields-wrapper .get-resource-btn a:after {
+  position: absolute;
+  color: white;
+  white-space: nowrap;
+  background-color: #3169a2;
+  top: 0;
+  left: 0;
+  font-size: 0.75em;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding: 1em 1em 0.85em;
+  text-indent: 0;
+  width: auto;
+  content: "Get Resource";
+}
+/* line 149, ../sass/components/_resources.scss */
 .node-type-resource .field-name-field-related-resources .node-teaser .node-readmore {
   display: none;
 }
-/* line 128, ../sass/components/_resources.scss */
+/* line 153, ../sass/components/_resources.scss */
 .node-type-resource .field-name-field-related-resources .node-teaser:after {
   margin-bottom: 0;
 }
-/* line 131, ../sass/components/_resources.scss */
+/* line 156, ../sass/components/_resources.scss */
 .node-type-resource .field-name-field-related-resources:after {
   clear: both;
   display: table;
   content: "";
 }
-/* line 137, ../sass/components/_resources.scss */
+/* line 162, ../sass/components/_resources.scss */
 .node-type-resource .field-name-field-other-resources > .field-items > .field-item:last-child .node-teaser {
   margin-bottom: 0;
 }
