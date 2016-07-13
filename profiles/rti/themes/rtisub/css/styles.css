@@ -1491,6 +1491,12 @@ tr.selected td {
 .header__region {
   clear: none !important;
 }
+/* line 39, ../sass/components/_header.scss */
+.header__region #block-views-exp-rti-indexed-search-page {
+  display: inline-block;
+  float: right;
+  margin-top: 2em;
+}
 
 /* top navigation */
 /* line 3, ../sass/components/_top-nav.scss */
@@ -2424,16 +2430,16 @@ form input {
 
 /* events */
 /* line 226, ../sass/components/_views.scss */
-.view-events {
+.view-rti-events {
   margin-top: 1em;
 }
 /* line 228, ../sass/components/_views.scss */
-.view-events .views-row {
+.view-rti-events .views-row {
   margin-bottom: 1em;
   border-bottom: 1px solid #333;
 }
 /* line 232, ../sass/components/_views.scss */
-.view-events .views-row .views-field-title a {
+.view-rti-events .views-row .views-field-title a {
   color: #333;
   font-size: 1.17em;
   text-decoration: none;
@@ -2445,15 +2451,15 @@ form input {
   font-weight: 600;
 }
 /* line 244, ../sass/components/_views.scss */
-.view-events .views-row span.date-display-single, .view-events .views-row .date-display-range {
+.view-rti-events .views-row span.date-display-single, .view-rti-events .views-row .date-display-range {
   font-size: 0.8em;
 }
 /* line 247, ../sass/components/_views.scss */
-.view-events .views-row .views-field-body p {
+.view-rti-events .views-row .views-field-body p {
   margin-top: 6px;
 }
 /* line 249, ../sass/components/_views.scss */
-.view-events .views-row .views-field-body p a {
+.view-rti-events .views-row .views-field-body p a {
   color: #333;
   border-bottom: 1px solid #333;
   font-weight: 600;
@@ -2461,15 +2467,15 @@ form input {
   font-style: italic;
 }
 /* line 255, ../sass/components/_views.scss */
-.view-events .views-row .views-field-body p a:after {
+.view-rti-events .views-row .views-field-body p a:after {
   content: " \00bb";
 }
 /* line 258, ../sass/components/_views.scss */
-.view-events .views-row .views-field-body p a:hover, .view-events .views-row .views-field-body p a:focus {
+.view-rti-events .views-row .views-field-body p a:hover, .view-rti-events .views-row .views-field-body p a:focus {
   border: none;
 }
 /* line 264, ../sass/components/_views.scss */
-.view-events .views-row-last {
+.view-rti-events .views-row-last {
   border-bottom: none;
 }
 
