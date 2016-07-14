@@ -28,6 +28,7 @@
     <?php
       print render($content['body']);
       print render($content['field_resource_file']);
+      print render($content['field_link']);
       print render($content['field_resource_category']);
       print render($content['field_free_tags']); 
       print render($content['field_related_resources']);

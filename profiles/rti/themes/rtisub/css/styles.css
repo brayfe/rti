@@ -2589,11 +2589,11 @@ form input {
   margin-left: 160px;
 }
 /* line 20, ../sass/components/_resources.scss */
-.node-type-resource .node-fields-wrapper .field-name-body p {
+.node-type-resource .node-fields-wrapper .field-name-body p:first-of-type {
   padding-top: 22px;
 }
 /* line 24, ../sass/components/_resources.scss */
-.node-type-resource .node-fields-wrapper .field-name-field-resource-file a {
+.node-type-resource .node-fields-wrapper .field-name-field-resource-file a, .node-type-resource .node-fields-wrapper .field-name-field-link a {
   text-indent: -100000px;
   padding: 12px;
   line-height: 1em;
@@ -2602,7 +2602,7 @@ form input {
   outline: 0;
 }
 /* line 31, ../sass/components/_resources.scss */
-.node-type-resource .node-fields-wrapper .field-name-field-resource-file a:after {
+.node-type-resource .node-fields-wrapper .field-name-field-resource-file a:after, .node-type-resource .node-fields-wrapper .field-name-field-link a:after {
   position: absolute;
   color: white;
   white-space: nowrap;
@@ -2804,6 +2804,11 @@ section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
   padding: 3px 19px;
   font-size: .9em;
   font-family: "Open Sans", sans-serif;
+}
+/* line 46, ../sass/components/_sidebar.scss */
+section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a.is-active-trail {
+  border: 1px solid #E3613B;
+  color: #E3613B;
 }
 
 /* line 3, ../sass/components/_taxonomy_resource_pages.scss */

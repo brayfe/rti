@@ -17,10 +17,10 @@
 	}
 	.node-fields-wrapper{
 		margin-left: 160px;
-		.field-name-body p{
+		.field-name-body p:first-of-type{
 			padding-top: 22px;
 		}
-		.field-name-field-resource-file{
+		.field-name-field-resource-file,.field-name-field-link{
 			a{
 				text-indent: -100000px;
 				padding: 12px;
