@@ -2785,16 +2785,21 @@ section.sidebar #block-menu-menu-category-menu ul.menu li a {
   font-weight: 700;
 }
 /* line 30, ../sass/components/_sidebar.scss */
+section.sidebar #block-menu-menu-category-menu ul.menu li a.is-active-trail.active {
+  border: 1px solid #d63405;
+  color: #d63405;
+}
+/* line 34, ../sass/components/_sidebar.scss */
 section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu {
   margin-top: -4px;
 }
-/* line 32, ../sass/components/_sidebar.scss */
+/* line 36, ../sass/components/_sidebar.scss */
 section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li {
   list-style-image: none;
   list-style-type: none;
   line-height: 16px;
 }
-/* line 36, ../sass/components/_sidebar.scss */
+/* line 40, ../sass/components/_sidebar.scss */
 section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
   color: #333;
   text-decoration: none;
@@ -2804,11 +2809,6 @@ section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
   padding: 3px 19px;
   font-size: .9em;
   font-family: "Open Sans", sans-serif;
-}
-/* line 46, ../sass/components/_sidebar.scss */
-section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a.is-active-trail {
-  border: 1px solid #E3613B;
-  color: #E3613B;
 }
 
 /* line 3, ../sass/components/_taxonomy_resource_pages.scss */

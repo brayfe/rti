@@ -27,6 +27,10 @@ section.sidebar{
 					//border: 1px solid #333333;
 					font-weight: 700;
 				}
+				a.is-active-trail.active{
+					border: 1px solid #d63405;
+					color:#d63405;
+				}
 				ul.menu{
 					margin-top:-4px;
 					li{
@@ -43,10 +47,10 @@ section.sidebar{
 								font-size: .9em;
 								font-family: "Open Sans", sans-serif;
 							}
-							a.is-active-trail{
-								border: 1px solid #E3613B;
-								color:#E3613B;
-							}
+							// a.is-active-trail.active{
+							// 	border: 1px solid #d63405;
+							// 	color:#d63405;
+							// }
 					}
 				}
 
