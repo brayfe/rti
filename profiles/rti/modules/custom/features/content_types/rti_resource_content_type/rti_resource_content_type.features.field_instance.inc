@@ -247,10 +247,10 @@ function rti_resource_content_type_field_default_field_instances() {
         'weight' => 11,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'link_url',
         'weight' => 11,
       ),
       'teaser' => array(
