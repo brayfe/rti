@@ -16,7 +16,7 @@ function rti_search_default_search_api_index() {
     "server" : "rti_db_search_server",
     "item_type" : "node",
     "options" : {
-      "datasource" : { "bundles" : ["resource"] },
+      "datasource" : { "bundles" : [ "resource" ] },
       "index_directly" : 0,
       "cron_limit" : "50",
       "fields" : {
@@ -28,8 +28,9 @@ function rti_search_default_search_api_index() {
         "field_resource_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_special_populations" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_stakeholders" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "search_api_aggregation_1" : { "type" : "text", "boost" : "8.0" },
         "search_api_language" : { "type" : "string" },
-        "title" : { "type" : "text", "boost" : "8.0" }
+        "title" : { "type" : "string", "boost" : "8.0" }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
@@ -46,7 +47,18 @@ function rti_search_default_search_api_index() {
         },
         "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } },
         "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] }
+        "search_api_alter_add_aggregation" : {
+          "status" : 1,
+          "weight" : "0",
+          "settings" : { "fields" : { "search_api_aggregation_1" : {
+                "name" : "FullText Title",
+                "type" : "fulltext",
+                "fields" : [ "title" ],
+                "description" : "A Fulltext aggregation of the following fields: Title."
+              }
+            }
+          }
+        }
       },
       "processors" : {
         "search_api_case_ignore" : {
@@ -119,9 +131,10 @@ function rti_search_default_search_api_server() {
       "partial_matches" : 1,
       "indexes" : { "rti_content_index" : {
           "title" : {
-            "table" : "search_api_db_rti_content_index_text",
-            "type" : "text",
-            "boost" : "8.0"
+            "table" : "search_api_db_rti_content_index",
+            "type" : "string",
+            "boost" : "8.0",
+            "column" : "title"
           },
           "field_resource_category" : {
             "table" : "search_api_db_rti_content_index_field_resource_category",
@@ -175,6 +188,11 @@ function rti_search_default_search_api_server() {
             "column" : "field_featured_resource",
             "type" : "boolean",
             "boost" : "1.0"
+          },
+          "search_api_aggregation_1" : {
+            "table" : "search_api_db_rti_content_index_text",
+            "type" : "text",
+            "boost" : "8.0"
           }
         }
       }

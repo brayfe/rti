@@ -155,6 +155,10 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['sorts']['field_resource_ranking']['id'] = 'field_resource_ranking';
   $handler->display->display_options['sorts']['field_resource_ranking']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['sorts']['field_resource_ranking']['field'] = 'field_resource_ranking';
+  /* Sort criterion: Indexed Node: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Indexed Node: Stakeholder Group */
   $handler->display->display_options['filters']['field_stakeholders']['id'] = 'field_stakeholders';
   $handler->display->display_options['filters']['field_stakeholders']['table'] = 'search_api_index_rti_content_index';
