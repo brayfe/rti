@@ -49,11 +49,13 @@
 				}
 			}
 		}
-		.field-name-field-resource-category,.field-name-field-free-tags{
+		.field-name-field-resource-category,
+		.field-name-field-free-tags{
 			margin-top: 1em;
 			line-height: 1.2em;
 			.field-label{
 				display:inline;
+				font-size: .85em;
 			}
 			.field-items{
 				display:inline;
