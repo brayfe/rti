@@ -164,7 +164,7 @@ dependencies[] = rti_text_formats
 dependencies[] = rti_events_page
 dependencies[] = rti_featured_items_page
 dependencies[] = rti_parents_page
-dependencies[] = news_flash_slide_show
+dependencies[] = rti_news_flash_slider
 
 ; RTI Custom Deployment
 dependencies[] = rti_deployment

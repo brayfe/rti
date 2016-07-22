@@ -4,4 +4,4 @@
  * Code for the News Flash Slide Show feature.
  */
 
-include_once 'news_flash_slide_show.features.inc';
+include_once 'rti_news_flash_slider.features.inc';

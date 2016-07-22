@@ -1,21 +1,21 @@
 <?php
 /**
  * @file
- * news_flash_slide_show.views_default.inc
+ * rti_newsflash_slider.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function news_flash_slide_show_views_default_views() {
+function rti_news_flash_slider_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'news_flash_slideshow';
+  $view->name = 'rti_news_flashes';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'News Flash Slideshow';
+  $view->human_name = 'RTI News Flash Slider';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -93,7 +93,7 @@ function news_flash_slide_show_views_default_views() {
 
   /* Display: Home Page Slide Show */
   $handler = $view->new_display('block', 'Home Page Slide Show', 'block');
-  $export['news_flash_slideshow'] = $view;
+  $export['rti_news_flashes'] = $view;
 
   return $export;
 }
