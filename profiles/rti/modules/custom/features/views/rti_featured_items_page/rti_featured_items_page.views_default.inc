@@ -22,7 +22,7 @@ function rti_featured_items_page_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'RTI Featured Items';
+  $handler->display->display_options['title'] = 'Featured Items';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -93,6 +93,7 @@ function rti_featured_items_page_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = 'We frequently add resources and tools to our website, and highlight information from other organizations.
+
 Check this page often for new additions and information on “hot topics”.';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   /* Field: Indexed Node: Title */
@@ -156,6 +157,10 @@ Check this page often for new additions and information on “hot topics”.';
   $handler->display->display_options['sorts']['field_resource_ranking']['id'] = 'field_resource_ranking';
   $handler->display->display_options['sorts']['field_resource_ranking']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['sorts']['field_resource_ranking']['field'] = 'field_resource_ranking';
+  /* Sort criterion: Indexed Node: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Indexed Node: Featured Resource */
   $handler->display->display_options['filters']['field_featured_resource']['id'] = 'field_featured_resource';
   $handler->display->display_options['filters']['field_featured_resource']['table'] = 'search_api_index_rti_content_index';
