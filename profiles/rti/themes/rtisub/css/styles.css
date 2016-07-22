@@ -2594,7 +2594,7 @@ form input {
 }
 /* line 20, ../sass/components/_resources.scss */
 .node-type-resource .node-fields-wrapper .field-name-body p:first-of-type {
-  padding-top: 22px;
+  padding-top: 2px;
 }
 /* line 23, ../sass/components/_resources.scss */
 .node-type-resource .node-fields-wrapper .field-name-body a {
@@ -2720,7 +2720,7 @@ form input {
 }
 /* line 123, ../sass/components/_resources.scss */
 .node-type-resource .field-name-field-related-resources .node-teaser .node-fields-wrapper .field-name-field-summary {
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 1em;
   font-size: 0.8em;
   line-height: 1.5em;
