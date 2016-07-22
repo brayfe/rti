@@ -21,12 +21,6 @@ function rti_search_view_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
       'rtisub' => array(
         'region' => 'header',
         'status' => 1,
