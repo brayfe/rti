@@ -84,7 +84,8 @@ function rtisub_preprocess_node(&$variables) {
 }
 
 function rtisub_preprocess_views_view_fields(&$variables) {
-  if ($variables['view']->name == "rti_indexed_search") {
+
+if ($variables['view']->name == "rti_indexed_search" || $variables['view']->name == "rti_featured_items" || $variables['view']->name == "rti_parents") {
     $term_id = $variables['row']->_entity_properties['field_resource_type'];
     $term = taxonomy_term_load($term_id);
     $term_name = $term->name;
@@ -102,12 +103,10 @@ function rtisub_preprocess_views_view_fields(&$variables) {
       }
     }
     else {
-      $term = $variables['row']->_entity_properties['field_resource_type'];
-      $term_image  = taxonomy_term_load($term);
-      $fid = $term_image->field_default_resource_image['und'][0]['fid'];
+      $fid = $term->field_default_resource_image['und'][0]['fid'];
       $file = file_load($fid);
-      $alt = $term_name . " about " . $variables['row']->_entity_properties['entity object']->title;
       $title = $variables['row']->_entity_properties['entity object']->title;
+      $alt = $term_name . " about " . $title;
     }
 
     $info = image_get_info($file->uri);
@@ -119,6 +118,12 @@ function rtisub_preprocess_views_view_fields(&$variables) {
       'title' => $title,
       'attributes' => array('class' => array('resource-icon')),
     ));
+
+    if(isset($variables['row']->_entity_properties['search_api_excerpt']) &&
+        $variables['row']->_entity_properties['search_api_excerpt'] != '') {
+      $variables['excerpt'] = $variables['row']->_entity_properties['search_api_excerpt'];
+      $variables['relevance'] = $variables['row']->_entity_properties['search_api_relevance'];
+    }
   }
 }
 

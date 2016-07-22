@@ -22,7 +22,7 @@ function rti_featured_items_page_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'RTI Featured Items';
+  $handler->display->display_options['title'] = 'Featured Items';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -157,6 +157,10 @@ Check this page often for new additions and information on “hot topics”.';
   $handler->display->display_options['sorts']['field_resource_ranking']['id'] = 'field_resource_ranking';
   $handler->display->display_options['sorts']['field_resource_ranking']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['sorts']['field_resource_ranking']['field'] = 'field_resource_ranking';
+  /* Sort criterion: Indexed Node: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Indexed Node: Featured Resource */
   $handler->display->display_options['filters']['field_featured_resource']['id'] = 'field_featured_resource';
   $handler->display->display_options['filters']['field_featured_resource']['table'] = 'search_api_index_rti_content_index';
@@ -227,13 +231,6 @@ Check this page often for new additions and information on “hot topics”.';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_rti_content_index';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Indexed Node: Summary */
   $handler->display->display_options['fields']['field_summary']['id'] = 'field_summary';
   $handler->display->display_options['fields']['field_summary']['table'] = 'search_api_index_rti_content_index';
@@ -257,6 +254,13 @@ Check this page often for new additions and information on “hot topics”.';
   $handler->display->display_options['fields']['search_api_excerpt']['exclude'] = TRUE;
   $handler->display->display_options['fields']['search_api_excerpt']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['search_api_excerpt']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   $handler->display->display_options['path'] = 'resources/featured';
   $handler->display->display_options['menu']['title'] = 'RTI Indexed Search';
   $handler->display->display_options['menu']['weight'] = '0';

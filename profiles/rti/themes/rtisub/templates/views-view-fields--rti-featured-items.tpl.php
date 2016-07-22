@@ -24,28 +24,28 @@
  * @ingroup views_templates
  */
 ?>
-<?php if (!empty($field->separator)): ?>
-  <?php print $field->separator; ?>
-<?php endif; ?>
-
+  <?php if (!empty($field->separator)): ?>
+    <?php print $field->separator; ?>
+  <?php endif; ?>
+ 
 <div class="resource-type-thumb-wrapper">
-  <span class="resource-type"><?php print $fields['field_resource_type']->content; ?></span>
-  <div class="resource-thumb">
-    <?php print render($resource_image); ?>
-  </div>
+    <span class="resource-type"><?php print $fields['field_resource_type']->content; ?></span>
+    <div class="resource-thumb">
+      <?php print render($resource_image); ?>
+    </div>
 </div>
 
-<div class="resource-list-text">
+ <div class="resource-list-text">
   <h3 class="resource-title">
-    <?php print $fields['title']->content; ?>
-	</h3>
-  <?php if(isset($excerpt)): ?>
-    <p><?php print render($excerpt); ?></p>
-  <?php elseif($fields['field_summary']): ?>
-		<p class="resource-summary"><?php print $fields['field_summary']->content; ?></p>
-	<?php elseif($content['field_summary'] == ''): ?>
-		<p><?php print $fields['body']->content; ?></p>
-	<?php endif; ?>
+  <?php print $fields['title']->content; ?>
+  </h3>
 
-  <span class="get-resource-btn"><?php print $fields['view_node']->content; ?></span><br />
+  <?php if($fields['field_summary']) : ?> 
+    <p class="resource-summary"><?php print $fields['field_summary']->content; ?></p>
+  <?php elseif($content['field_summary'] == '') : ?>
+    <p><?php print $fields['body']->content; ?></p>
+  <?php endif?>
+  
+ <span class="get-resource-btn"><?php print $fields['view_node']->content; ?></span>
 </div>
+

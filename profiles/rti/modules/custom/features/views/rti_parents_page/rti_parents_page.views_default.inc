@@ -155,6 +155,10 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['sorts']['field_resource_ranking']['id'] = 'field_resource_ranking';
   $handler->display->display_options['sorts']['field_resource_ranking']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['sorts']['field_resource_ranking']['field'] = 'field_resource_ranking';
+  /* Sort criterion: Indexed Node: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Indexed Node: Stakeholder Group */
   $handler->display->display_options['filters']['field_stakeholders']['id'] = 'field_stakeholders';
   $handler->display->display_options['filters']['field_stakeholders']['table'] = 'search_api_index_rti_content_index';
@@ -191,6 +195,7 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['field_resource_ranking']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['fields']['field_resource_ranking']['field'] = 'field_resource_ranking';
   $handler->display->display_options['fields']['field_resource_ranking']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_ranking']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_resource_ranking']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_resource_ranking']['alter']['text'] = '<span class="rank-name">[field_resource_ranking]</span>';
   $handler->display->display_options['fields']['field_resource_ranking']['element_label_colon'] = FALSE;
@@ -225,13 +230,6 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_rti_content_index';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   /* Field: Indexed Node: Summary */
   $handler->display->display_options['fields']['field_summary']['id'] = 'field_summary';
   $handler->display->display_options['fields']['field_summary']['table'] = 'search_api_index_rti_content_index';
@@ -255,6 +253,13 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['fields']['search_api_excerpt']['exclude'] = TRUE;
   $handler->display->display_options['fields']['search_api_excerpt']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['search_api_excerpt']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   $handler->display->display_options['path'] = 'resources/parents';
   $handler->display->display_options['menu']['title'] = 'RTI Indexed Search';
   $handler->display->display_options['menu']['weight'] = '0';

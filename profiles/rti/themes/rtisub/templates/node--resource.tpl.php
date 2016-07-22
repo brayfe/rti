@@ -28,6 +28,7 @@
     <?php
       print render($content['body']);
       print render($content['field_resource_file']);
+      print render($content['field_link']);
       print render($content['field_resource_category']);
       print render($content['field_free_tags']); 
       print render($content['field_related_resources']);
@@ -43,9 +44,9 @@
       </div> 
   </div>
   <div class="node-fields-wrapper">
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php  print render($content['field_summary']);
-    ?>
+    <h3<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+    <?php print render($content['field_summary']); ?>
+
   </div>
 <?php endif ?>
 
