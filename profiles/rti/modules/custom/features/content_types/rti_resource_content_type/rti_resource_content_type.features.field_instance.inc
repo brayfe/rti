@@ -678,7 +678,7 @@ function rti_resource_content_type_field_default_field_instances() {
     'label' => 'Summary',
     'required' => 1,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

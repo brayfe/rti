@@ -289,6 +289,8 @@ function rtimig_migrate_api() {
   $common_node_arguments = $common_arguments + array(
     'user_migration' => 'User',
     'default_uid' => 1,
+    'file_replace' => MigrateFile::FILE_EXISTS_REUSE,
+    'preserve_files' => TRUE,
   );
 
   foreach ($node_arguments as $migration_name => $arguments) {

@@ -26,9 +26,22 @@ function rtimig_drush_command() {
  */
 function drush_rtimig_clear_highwater() {
   // Set highwater field to 0 on table migrate_status.
+  $types = array(
+    'BasicPage',
+    'Booklet',
+    'Document',
+    'Link',
+    'OnlineModule',
+    'Podcast',
+    'Presentation',
+    'ResourcePage',
+    'Video',
+    'Webinar',
+  );
+
   db_update('migrate_status')
     ->fields(array('highwater' => 0))
     ->isNotNull('highwater')
-    ->condition('machine_name', 'File', '!=')
+    ->condition('machine_name', $types, 'IN')
     ->execute();
 }
