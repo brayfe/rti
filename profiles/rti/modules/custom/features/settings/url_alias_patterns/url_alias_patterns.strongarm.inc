@@ -13,6 +13,13 @@ function url_alias_patterns_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_ignore_words';
+  $strongarm->value = 'a, an, as, at, before, but, by, is, in, into, like, off, on, onto, per, since, than, the, this, that, up, via, with';
+  $export['pathauto_ignore_words'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_booklet_pattern';
   $strongarm->value = 'booklets/[node:title]';
   $export['pathauto_node_booklet_pattern'] = $strongarm;

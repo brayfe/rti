@@ -149,16 +149,25 @@ function rtisub_preprocess_html(&$variables, $hook) {
 /**
  * Override or insert variables into the page templates.
  *
- * @param $variables
+ * @param $vars
  *   An array of variables to pass to the theme template.
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function rtisub_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+function rtisub_preprocess_page(&$vars, $hook) {
+  //dpm($vars);
+  if (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) {
+    $vars['theme_hook_suggestions'][] = 'page__vocabulary__rti_resource_categories';
+    if(isset($vars['page']['content']['system_main']['term_heading']['term']['description'])) {
+      $vars['term_description'] = $vars['page']['content']['system_main']['term_heading']['term']['description'];
+    }
+
+    $term_name = str_replace(' ', '-', strtolower($vars['page']['content']['system_main']['term_heading']['term']['#term']->name));
+
+    $vars['term_link'] = $vars['base_path'] . 'rti-search/category/' . $term_name;
+  }
 }
-// */
+
 
 /**
  * Override or insert variables into the node templates.
