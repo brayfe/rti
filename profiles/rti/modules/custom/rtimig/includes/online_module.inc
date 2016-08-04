@@ -38,6 +38,7 @@ class OnlineModuleMigration extends RTINodeMigration {
 
     // Resource Summary.
     $this->addFieldMapping('field_summary', 'field_resource_summary');
+    $this->addFieldMapping('field_summary:format', 'field_resource_summary:format');
 
     // Resource Link.
     $this->addFieldMapping('field_link', 'field_module_link')
@@ -104,22 +105,10 @@ class OnlineModuleMigration extends RTINodeMigration {
   }
 
   /**
-   * PrepareRow.
-   */
-  public function prepareRow($row) {
-    // drush_print_r($row);
-    // Allow our parent classes to ignore rows and edit $row.
-    if (parent::prepareRow($row) === FALSE) {
-      return FALSE;
-    }
-
-  }
-
-  /**
    * Callback to prepend the server url where the modules are stored.
    */
   public function prependURL($row) {
-    return 'http://resources.buildingrti.org/' . $row[0];
+    return 'http://resources.buildingrti.utexas.org/Drupal_Modules/' . $row[0];
   }
 
   /**

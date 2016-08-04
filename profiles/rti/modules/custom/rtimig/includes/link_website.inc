@@ -43,6 +43,7 @@ class LinkWebsiteMigration extends RTINodeMigration {
 
     // Resource Summary.
     $this->addFieldMapping('field_summary', 'field_resource_summary');
+    $this->addFieldMapping('field_summary:format', 'field_resource_summary:format');
 
     // Featured Resource.
     $this->addFieldMapping('field_featured_resource', 'field_featured_resource');
@@ -98,17 +99,6 @@ class LinkWebsiteMigration extends RTINodeMigration {
       ->sourceMigration('FreeTags');
     $this->addFieldMapping('field_free_tags:source_type')
       ->defaultValue('tid');
-
-  }
-
-  /**
-   * PrepareRow.
-   */
-  public function prepareRow($row) {
-    // Allow our parent classes to ignore rows and edit $row.
-    if (parent::prepareRow($row) === FALSE) {
-      return FALSE;
-    }
 
   }
 
