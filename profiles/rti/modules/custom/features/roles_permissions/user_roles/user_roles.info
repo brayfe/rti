@@ -5,6 +5,6 @@ package = Roles and Permissions
 version = 7.x-1.0
 dependencies[] = features
 features[features_api][] = api:2
+features[user_role][] = auditor
 features[user_role][] = editor
-features[user_role][] = view nonpublished
 project path = profiles/rti/modules/custom/features/roles_permissions
