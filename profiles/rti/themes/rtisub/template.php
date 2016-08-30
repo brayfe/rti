@@ -38,15 +38,25 @@ function rtisub_preprocess_maintenance_page(&$variables, $hook) {
  *   The name of the template being rendered.
  */
 function rtisub_preprocess_field(&$variables, $hook) {
-  $colorbox_types = array('Module', 'Video',);
-  $resource_type = $variables['element']['#object']->field_resource_type['und'][0]['taxonomy_term']->name;
+  if($variables['element']['#field_name'] == 'field_link' && isset($variables['element']['#object']->field_resource_type['und'][0]['taxonomy_term']->name)) {
+    $colorbox_types = array('Module', 'Video',);
+    $resource_type = $variables['element']['#object']->field_resource_type['und'][0]['taxonomy_term']->name;
 
-  if($variables['element']['#field_name'] == 'field_link' && in_array($resource_type, $colorbox_types)) {
-    $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
-    $variables['items'][0]['#element']['attributes'] = array('class' => array('colorbox-load'));
+    if(in_array($resource_type, $colorbox_types)) {
+      $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
+      $variables['items'][0]['#element']['attributes'] = array('class' => array('colorbox-load'));
+    }
   }
 }
 
+/**
+ * Override or insert variables into the node templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("node" in this case.)
+ */
 function rtisub_preprocess_node(&$variables) {
 
   if($variables['type'] == 'resource'){
