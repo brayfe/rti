@@ -80,18 +80,18 @@ function rti_search_default_search_api_index() {
           "status" : 1,
           "weight" : "20",
           "settings" : {
-            "fields" : { "title" : true, "body:value" : true },
+            "fields" : { "body:value" : true },
             "spaces" : "[^[:alnum:]\\\\-]",
             "ignorable" : "[\\u0027\\\\-]"
           }
         },
         "search_api_stopwords" : {
-          "status" : 0,
+          "status" : 1,
           "weight" : "30",
           "settings" : {
-            "fields" : { "title" : true, "body:value" : true },
+            "fields" : { "title" : true, "search_api_aggregation_1" : true, "body:value" : true },
             "file" : "",
-            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc"
+            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc\\r\\nand"
           }
         },
         "search_api_highlighting" : {

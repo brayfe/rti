@@ -10,16 +10,16 @@
 function user_roles_user_default_roles() {
   $roles = array();
 
+  // Exported role: auditor.
+  $roles['auditor'] = array(
+    'name' => 'auditor',
+    'weight' => 4,
+  );
+
   // Exported role: editor.
   $roles['editor'] = array(
     'name' => 'editor',
     'weight' => 3,
-  );
-
-  // Exported role: view nonpublished.
-  $roles['view nonpublished'] = array(
-    'name' => 'view nonpublished',
-    'weight' => 4,
   );
 
   return $roles;

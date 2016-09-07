@@ -7,3 +7,38 @@ profiles/rti/themes/rtisub/.sass-cache
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+/cache
+
+# Packages #
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Logs and databases #
+*.log
+*.sql
+
+# OS generated files #
+.DS_Store*
+ehthumbs.db
+Icon
+Thumbs.db
+._*
+
+# Vim generated files #
+*.un~
+
+# SASS #
+.sass-cache
+
+# PHPStorm .idea files #
+.idea
+
+
