@@ -26,32 +26,39 @@ function rtisub_preprocess_maintenance_page(&$variables, $hook) {
 }
 // */
 
-function rtisub_preprocess_field(&$variables) {
-  if($variables['element']['#field_name'] == 'field_module_link') {
-      $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
-      $variables['items']['0']['#element']['url'] = 'sites/default/files/modules/' . $variables['items']['0']['#element']['url'];
-  }
-  if($variables['element']['#field_name'] == 'field_video_captivate_file') {
-      $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
-      $variables['items']['0']['#element']['url'] = 'sites/default/files/videos/' . $variables['items']['0']['#element']['url'];
-  }
-  if($variables['element']['#field_name'] == 'field_podcast_captivate_link') {
-      $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
-      $variables['items']['0']['#element']['url'] = 'sites/default/files/podcasts/' . $variables['items']['0']['#element']['url'];
+/**
+ * Override field variables in theme.
+ *
+ * @see theme_field()
+ * @see field.tpl.php
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered.
+ */
+function rtisub_preprocess_field(&$variables, $hook) {
+  $colorbox_types = array('Module', 'Video',);
+  $resource_type = $variables['element']['#object']->field_resource_type['und'][0]['taxonomy_term']->name;
+
+  if($variables['element']['#field_name'] == 'field_link' && in_array($resource_type, $colorbox_types)) {
+    $variables['items'][0]['#element']['query'] = array('width' => 1230, 'height' => 800, 'iframe' => true);
+    $variables['items'][0]['#element']['attributes'] = array('class' => array('colorbox-load'));
   }
 }
-
 
 function rtisub_preprocess_node(&$variables) {
 
   if($variables['type'] == 'resource'){
-
+    // Set default alt and title text.
     $alt = $variables['field_resource_type'][0]['taxonomy_term']->name;
     $title = $variables['field_resource_type'][0]['taxonomy_term']->name;
 
+    // If there is already an assigned image.
     if (!empty($variables['field_image'][0]['fid'])) {
       $fid = $variables['field_image'][0]['fid'];
       $file = file_load($fid);
+      // Assign alt and title text if not blank.
       if ($file->alt != '') {
         $alt = $file->alt;
       }
@@ -59,6 +66,7 @@ function rtisub_preprocess_node(&$variables) {
         $title = $file->title;
       }
     }
+    // Else, there is no image; load default image for resource type.
     else {
       $term = $variables['field_resource_type'][0]['taxonomy_term']->tid;
       $term_image  = taxonomy_term_load($term);
