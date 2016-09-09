@@ -59,7 +59,28 @@ h2.titleInsert{
 	  background-color:rgba(255,255,255,0.85);
 	  padding:1.625em 1em 3em 1em;
 	  #content{
-	  	// text-shadow: 1px 1px 5px #fff !important;
+	  	.main-region-search-form{
+        float:none;
+        margin:2em 0;
+
+        .views-reset-button{
+          display:inline-block;
+          width: auto;
+          input#edit-reset{
+            width: auto;
+            margin-top: 0;
+            background-color: #3169a2;
+            color: #fff;
+            border: none;
+            text-transform: uppercase;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            border-radius: 4px;
+            font-size: 1.4em;
+            height: 50px;
+          }
+        }
+      }
 	  }
   }
 }
