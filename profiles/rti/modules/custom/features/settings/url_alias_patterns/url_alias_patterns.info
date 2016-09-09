@@ -1,5 +1,5 @@
 name = URL Alias Patterns
-description = url patterns for content types
+description = URL patterns for content types
 core = 7.x
 package = Settings
 version = 7.x-1.0
@@ -7,6 +7,7 @@ dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[variable][] = pathauto_ignore_words
 features[variable][] = pathauto_node_booklet_pattern
 features[variable][] = pathauto_node_documents_pattern
 features[variable][] = pathauto_node_events_pattern
