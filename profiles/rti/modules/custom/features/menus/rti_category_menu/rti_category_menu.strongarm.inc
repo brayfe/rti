@@ -35,7 +35,7 @@ function rti_category_menu_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'taxonomy_menu_expanded_rti_resource_categories';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['taxonomy_menu_expanded_rti_resource_categories'] = $strongarm;
 
   $strongarm = new stdClass();
