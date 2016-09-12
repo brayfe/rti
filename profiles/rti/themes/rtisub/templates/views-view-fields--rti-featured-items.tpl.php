@@ -27,25 +27,27 @@
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
   <?php endif; ?>
- 
+
 <div class="resource-type-thumb-wrapper">
     <span class="resource-type"><?php print $fields['field_resource_type']->content; ?></span>
     <div class="resource-thumb">
-      <?php print render($resource_image); ?>
+      <?php print render($fields['field_image']->content); ?>
+      <?php if (isset($default_image)): ?>
+        <?php print render($default_image); ?>
+      <?php endif; ?>
     </div>
 </div>
 
- <div class="resource-list-text">
+<div class="resource-list-text">
   <h3 class="resource-title">
-  <?php print $fields['title']->content; ?>
+    <?php print $fields['title']->content; ?>
   </h3>
 
-  <?php if($fields['field_summary']) : ?> 
+  <?php if ($fields['field_summary']): ?>
     <p class="resource-summary"><?php print $fields['field_summary']->content; ?></p>
-  <?php elseif($content['field_summary'] == '') : ?>
+  <?php else: ?>
     <p><?php print $fields['body']->content; ?></p>
   <?php endif?>
-  
- <span class="get-resource-btn"><?php print $fields['view_node']->content; ?></span>
-</div>
 
+  <span class="get-resource-btn"><?php print $fields['view_node']->content; ?></span>
+</div>

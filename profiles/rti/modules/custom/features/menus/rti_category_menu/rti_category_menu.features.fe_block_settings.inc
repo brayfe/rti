@@ -19,7 +19,7 @@ function rti_category_menu_default_fe_block_settings() {
     'module' => 'menu',
     'node_types' => array(),
     'pages' => 'rti-search*
-resources*',
+resources/parents',
     'roles' => array(),
     'themes' => array(
       'rtisub' => array(
