@@ -1491,12 +1491,20 @@ tr.selected td {
   float: right;
   margin: 2em 0 2em 0;
 }
+/* line 38, ../sass/components/_header.scss */
+#header-wrapper header.header .header-region-search-form .views-reset-button {
+  display: none;
+}
+/* line 42, ../sass/components/_header.scss */
+#header-wrapper header.header .header-region-search-form .views-submit-button {
+  margin-left: -5px;
+}
 
-/* line 41, ../sass/components/_header.scss */
+/* line 49, ../sass/components/_header.scss */
 .header__region {
   clear: none !important;
 }
-/* line 43, ../sass/components/_header.scss */
+/* line 51, ../sass/components/_header.scss */
 .header__region #block-views-exp-rti-indexed-search-page {
   display: inline-block;
   float: right;
@@ -1899,12 +1907,12 @@ h2.titleInsert {
 .sidebar-first #main-wrapper #main #content .main-region-search-form .views-reset-button, #main-wrapper #main #content .main-region-search-form .views-reset-button {
   display: inline-block;
   width: auto;
+  margin-top: 0;
 }
-/* line 69, ../sass/components/_main.scss */
+/* line 70, ../sass/components/_main.scss */
 .sidebar-first #main-wrapper #main #content .main-region-search-form .views-reset-button input#edit-reset, #main-wrapper #main #content .main-region-search-form .views-reset-button input#edit-reset {
   width: auto;
   margin-top: 0;
-  background-color: #3169a2;
   color: #fff;
   border: none;
   text-transform: uppercase;
@@ -2271,35 +2279,39 @@ ol.search-results li .search-snippet-info p.search-info {
 #views-exposed-form-rti-indexed-search-page #edit-search-text--2-wrapper {
   width: 450px;
   display: inline-block;
+  vertical-align: top;
   margin-top: 0;
 }
-/* line 37, ../sass/components/_views.scss */
+/* line 38, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper label,
 #views-exposed-form-rti-indexed-search-page #edit-search-text--2-wrapper label {
   display: none;
 }
-/* line 40, ../sass/components/_views.scss */
+/* line 41, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget,
 #views-exposed-form-rti-indexed-search-page #edit-search-text--2-wrapper .views-widget {
   display: inline-block;
   border: none;
   font-size: 1em;
 }
-/* line 44, ../sass/components/_views.scss */
+/* line 45, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget input,
 #views-exposed-form-rti-indexed-search-page #edit-search-text--2-wrapper .views-widget input {
   width: 100%;
   font-size: 1.6em;
   height: 50px;
+  vertical-align: middle;
+  border: 1px solid #3169a2;
 }
-/* line 51, ../sass/components/_views.scss */
+/* line 54, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-submit-button {
   display: inline-block;
+  vertical-align: top;
   width: 100px;
-  margin-left: -3px;
+  margin-left: -4px;
   margin-top: 0;
 }
-/* line 56, ../sass/components/_views.scss */
+/* line 60, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-submit-button input {
   width: 100%;
   margin-top: 0;
@@ -2313,19 +2325,33 @@ ol.search-results li .search-snippet-info p.search-info {
   font-size: 1.4em;
   height: 50px;
 }
-/* line 70, ../sass/components/_views.scss */
+/* line 73, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page .views-submit-button input:hover, #views-exposed-form-rti-indexed-search-page .views-submit-button input:focus {
+  background-color: #333;
+}
+/* line 79, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-reset-button {
   display: none;
+  vertical-align: top;
+  display: inline-block;
+}
+/* line 84, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page .views-reset-button input#edit-reset {
+  background-color: #3169a2;
+}
+/* line 87, ../sass/components/_views.scss */
+#views-exposed-form-rti-indexed-search-page .views-reset-button input#edit-reset:hover, #views-exposed-form-rti-indexed-search-page .views-reset-button input#edit-reset:focus {
+  background-color: #333;
 }
 
-/* line 74, ../sass/components/_views.scss */
+/* line 94, ../sass/components/_views.scss */
 input.form-text, input.form-submit {
   width: 80%;
   height: 3em;
   border: none;
 }
 
-/* line 80, ../sass/components/_views.scss */
+/* line 100, ../sass/components/_views.scss */
 form input {
   padding: 0 0.5em;
   box-sizing: border-box;
@@ -2337,13 +2363,13 @@ form input {
 }
 
 /* put icon labels on resources for the view, but also the full node display */
-/* line 91, ../sass/components/_views.scss */
+/* line 111, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper {
   margin-top: 0;
   width: 110px;
   float: left;
 }
-/* line 95, ../sass/components/_views.scss */
+/* line 115, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper .resource-type {
   display: inline-block;
   padding: 1px 6px;
@@ -2351,38 +2377,38 @@ form input {
   width: 100px;
   text-align: center;
 }
-/* line 102, ../sass/components/_views.scss */
+/* line 122, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper .resource-thumb {
   text-align: center;
 }
-/* line 104, ../sass/components/_views.scss */
+/* line 124, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper .resource-thumb img {
   width: 60px;
   height: auto;
 }
 
-/* line 111, ../sass/components/_views.scss */
+/* line 131, ../sass/components/_views.scss */
 .resource-list-text {
   margin-left: 145px;
 }
-/* line 113, ../sass/components/_views.scss */
+/* line 133, ../sass/components/_views.scss */
 .resource-list-text h3.resource-title {
   margin-bottom: 0.4em;
   margin-top: 0;
   display: block;
   line-height: 1.2em;
 }
-/* line 118, ../sass/components/_views.scss */
+/* line 138, ../sass/components/_views.scss */
 .resource-list-text h3.resource-title a {
   color: #333;
   text-decoration: none;
 }
-/* line 123, ../sass/components/_views.scss */
+/* line 143, ../sass/components/_views.scss */
 .resource-list-text .resource-summary, .resource-list-text .resource-summary p {
   margin-top: 0;
   margin-bottom: 1em;
 }
-/* line 128, ../sass/components/_views.scss */
+/* line 148, ../sass/components/_views.scss */
 .resource-list-text .get-resource-btn a {
   text-decoration: none;
   padding: .5em;
@@ -2395,20 +2421,20 @@ form input {
   font-size: 0.75em;
   display: inline-block;
 }
-/* line 139, ../sass/components/_views.scss */
+/* line 159, ../sass/components/_views.scss */
 .resource-list-text .get-resource-btn a:hover, .resource-list-text .get-resource-btn a:focus {
   background-color: #333;
 }
 
-/* line 146, ../sass/components/_views.scss */
+/* line 166, ../sass/components/_views.scss */
 .views-exposed-form .views-submit-button {
   display: none;
 }
-/* line 149, ../sass/components/_views.scss */
+/* line 169, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widgets {
   text-align: center;
 }
-/* line 152, ../sass/components/_views.scss */
+/* line 172, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget {
   padding: 0;
   width: 250px;
@@ -2417,7 +2443,7 @@ form input {
   float: none;
   font-size: 0.8em;
 }
-/* line 159, ../sass/components/_views.scss */
+/* line 179, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .views-widget {
   display: none;
   width: 100%;
@@ -2426,11 +2452,11 @@ form input {
   border-right: 1px solid #666;
   border-bottom: 1px solid #666;
 }
-/* line 167, ../sass/components/_views.scss */
+/* line 187, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget #edit-submit-resources-dynamic-filtered-pages {
   display: none;
 }
-/* line 171, ../sass/components/_views.scss */
+/* line 191, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item a {
   color: #333;
   line-height: 1.2em;
@@ -2440,19 +2466,19 @@ form input {
   padding: 2px 1em;
   border-top: 1px solid #666;
 }
-/* line 179, ../sass/components/_views.scss */
+/* line 199, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item a:hover, .views-exposed-form .views-exposed-widget .form-item a:focus {
   background-color: #e6e6e6;
 }
-/* line 183, ../sass/components/_views.scss */
+/* line 203, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item #edit-type-1-all a {
   border-top: none;
 }
-/* line 187, ../sass/components/_views.scss */
+/* line 207, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item-edit-type-all a:first-child {
   border: none;
 }
-/* line 190, ../sass/components/_views.scss */
+/* line 210, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget label {
   font-weight: normal;
   width: 100%;
@@ -2466,16 +2492,16 @@ form input {
 }
 
 /* events */
-/* line 230, ../sass/components/_views.scss */
+/* line 250, ../sass/components/_views.scss */
 .view-rti-events {
   margin-top: 1em;
 }
-/* line 232, ../sass/components/_views.scss */
+/* line 252, ../sass/components/_views.scss */
 .view-rti-events .views-row {
   margin-bottom: 1em;
   border-bottom: 1px solid #333;
 }
-/* line 236, ../sass/components/_views.scss */
+/* line 256, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-title a {
   color: #333;
   font-size: 1.17em;
@@ -2487,15 +2513,15 @@ form input {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
-/* line 248, ../sass/components/_views.scss */
+/* line 268, ../sass/components/_views.scss */
 .view-rti-events .views-row span.date-display-single, .view-rti-events .views-row .date-display-range {
   font-size: 0.8em;
 }
-/* line 251, ../sass/components/_views.scss */
+/* line 271, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-body p {
   margin-top: 6px;
 }
-/* line 253, ../sass/components/_views.scss */
+/* line 273, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-body p a {
   color: #333;
   border-bottom: 1px solid #333;
@@ -2503,15 +2529,15 @@ form input {
   text-decoration: none;
   font-style: italic;
 }
-/* line 259, ../sass/components/_views.scss */
+/* line 279, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-body p a:after {
   content: " \00bb";
 }
-/* line 262, ../sass/components/_views.scss */
+/* line 282, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-body p a:hover, .view-rti-events .views-row .views-field-body p a:focus {
   border: none;
 }
-/* line 268, ../sass/components/_views.scss */
+/* line 288, ../sass/components/_views.scss */
 .view-rti-events .views-row-last {
   border-bottom: none;
 }

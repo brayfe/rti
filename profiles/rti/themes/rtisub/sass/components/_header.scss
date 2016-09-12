@@ -33,7 +33,15 @@
 		}
 		.header-region-search-form{
 			float: right;
-			margin: 2em 0 2em 0;			
+			margin: 2em 0 2em 0;
+
+			.views-reset-button {
+				display: none;
+			}
+
+			.views-submit-button {
+				margin-left: -5px;
+			}			
 		}
 	}
 }

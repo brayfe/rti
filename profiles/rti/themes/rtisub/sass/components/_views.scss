@@ -33,6 +33,7 @@
 	#edit-search-text--2-wrapper{
 		width: 450px;
 		display: inline-block;
+		vertical-align: top;
 		margin-top: 0;
 		label{
 			display: none;
@@ -45,13 +46,16 @@
 				width: 100%;
 				font-size: 1.6em;
 				height: 50px;
+				vertical-align: middle;
+				border: 1px solid $niceblue;
 			}
 		}
 	}
 	.views-submit-button {
 	    display: inline-block;
+	    vertical-align: top;
 	    width:100px;
-	    margin-left: -3px;
+	    margin-left: -4px;
 	    margin-top: 0;
 	    input{
 		    width: 100%;
@@ -65,10 +69,26 @@
 		    border-radius: 0 4px 4px 0;
 			font-size: 1.4em;
 			height: 50px;
+
+			&:hover,
+			&:focus {
+				background-color: $darkgray;
+			}
 		}
 	}
 	.views-reset-button{
 		display:none;
+		vertical-align: top;
+		display: inline-block;
+
+		input#edit-reset {
+			background-color: $niceblue;
+
+			&:hover,
+			&:focus {
+				background-color: $darkgray;
+			}
+		}
 	}
 }
 	input.form-text, input.form-submit {
