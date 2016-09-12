@@ -2327,7 +2327,7 @@ ol.search-results li .search-snippet-info p.search-info {
 }
 /* line 73, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-submit-button input:hover, #views-exposed-form-rti-indexed-search-page .views-submit-button input:focus {
-  background-color: #333;
+  background-color: #0A4886;
 }
 /* line 79, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-reset-button {
@@ -2341,7 +2341,7 @@ ol.search-results li .search-snippet-info p.search-info {
 }
 /* line 87, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-reset-button input#edit-reset:hover, #views-exposed-form-rti-indexed-search-page .views-reset-button input#edit-reset:focus {
-  background-color: #333;
+  background-color: #0A4886;
 }
 
 /* line 94, ../sass/components/_views.scss */
