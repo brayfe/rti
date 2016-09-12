@@ -2207,6 +2207,12 @@ ol.search-results li .search-snippet-info p.search-info {
   border: none;
 }
 
+/* line 351, ../sass/components/_main.scss */
+article iframe {
+  min-height: 960px;
+  border: 0 !important;
+}
+
 /* styling for views */
 /* line 4, ../sass/components/_views.scss */
 .view-rti-indexed-search .view-content h3 span.rank-name, .view-rti-parents .view-content h3 span.rank-name, .view-rti-featured-items .view-content h3 span.rank-name {
