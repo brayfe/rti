@@ -1,5 +1,7 @@
 /* styling for views */
-.view-rti-indexed-search, .view-rti-parents,.view-rti-featured-items{
+.view-rti-indexed-search, 
+.view-rti-parents,
+.view-rti-featured-items{
 	.view-content{
 		h3 span.rank-name{
 			text-align:center;
@@ -22,6 +24,20 @@
 			border-top:none;
 		}
 	}
+
+	.view-empty {
+		border: 3px solid $orange;
+	    width: 49%;
+	    padding: 0 2em;
+	    margin: 2em auto;
+	    text-align: center;
+
+	    p {
+	    	color: $orange;
+	    	margin: .5em 0;
+    		font-size: 1.3em;
+	    }
+	}
 }
 
 // search form in the rti search view
@@ -33,6 +49,7 @@
 	#edit-search-text--2-wrapper{
 		width: 450px;
 		display: inline-block;
+		vertical-align: top;
 		margin-top: 0;
 		label{
 			display: none;
@@ -45,13 +62,16 @@
 				width: 100%;
 				font-size: 1.6em;
 				height: 50px;
+				vertical-align: middle;
+				border: 1px solid $niceblue;
 			}
 		}
 	}
 	.views-submit-button {
 	    display: inline-block;
+	    vertical-align: top;
 	    width:100px;
-	    margin-left: -3px;
+	    margin-left: -4px;
 	    margin-top: 0;
 	    input{
 		    width: 100%;
@@ -65,6 +85,25 @@
 		    border-radius: 0 4px 4px 0;
 			font-size: 1.4em;
 			height: 50px;
+
+			&:hover,
+			&:focus {
+				background-color: $darkblue;
+			}
+		}
+	}
+	.views-reset-button{
+		display:none;
+		vertical-align: top;
+		display: inline-block;
+
+		input#edit-reset {
+			background-color: $niceblue;
+
+			&:hover,
+			&:focus {
+				background-color: $darkblue;
+			}
 		}
 	}
 }
@@ -198,30 +237,6 @@ form input{
 	}
 }
 
-// featured items
-// .view-rti-featured-items, .view-rti-parents {
-// 	.views-field-field-resource-type {
-// 		display: inline-block;
-// 		padding: 1px 6px;
-// 		font-size: 0.7em;
-// 		width: 100px;
-// 		text-align: center;
-// 	}
-// 	.views-field-field-image {
-// 		margin-top: 0;
-// 		width: 110px;
-// 		float: left;
-// 		img {
-// 			width: 60px;
-// 	    	height: auto;
-// 	    	text-align: center;		 	
-// 	    }
-// 	}
-// 	.views-field-title {
-// 		margin-left: 145px;
-
-// 	}
-// }
 
 /* events */
 .view-rti-events{
@@ -266,133 +281,3 @@ form input{
 		border-bottom:none;
 	}	
 }
-/* views dynamic pages fo resources */
-// .view-resources-dynamic-filtered-pages,
-// .view-resources-featured, 
-// .view-resources-specpop,
-// .view-resources-pages-by-content-type{
-
-// 	.view-content{
-// 		margin-top:1em;
-// 	}
-// 	.views-row{
-// 		border-top:1px solid #999;
-// 		padding:1em 0 1em;
-// 		display: table;
-// 		content: "";
-// 		height: 0;
-// 		width: 100%;
-// 	}
-// 	.views-row-1{
-// 		border-top:0;
-// 		padding-top:0;
-// 	}
-// }
-
-/* margin-top the thumbs on resource by type pages because resource type text is gone */
-// .view-resources-pages-by-content-type{
-// 	.resource-type-thumb-wrapper{
-// 		margin-top:0;
-// 	}
-// }
-
-
-/* hide the grouping name from the list of resources */
-// .view h3 .rank-name{
-// 	display:block;
-//     text-align: center;
-//     color:$niceblue;
-//     padding: 4px;
-// }
-
-
-
-/* taxonomy term pages */
-// .page-taxonomy-term {
-// 	h2.node-title a{
-// 		color:$darkgray;
-// 		font-size:0.78em;
-// 		margin-bottom: 0.4em;
-// 		margin-top: 0;
-// 		display: block;
-// 		line-height: 1.2em;
-// 		text-decoration:none;
-// 		margin-left: 145px;
-//         &:hover,&:focus{
-//           text-decoration:underline;
-//         }
-// 	}
-// 	article{ 
-// 		border-top: 1px solid #999;
-// 		padding: 1em 0 1em;
-// 		ul.links{
-// 			display:none;
-// 			.node-fields-wrapper{}
-// 		}
-// 		.type-image-wrapper{
-// 			width: 110px !important;
-// 	    	float: left;
-// 	    	text-align: center;
-// 	    	.field-name-field-resource-type{
-// 	    		.field-item{
-// 	    			font-size:0.7em;
-// 	    		}
-// 	    	}
-// 			.field-type-image{
-// 				a img{
-// 					width:60px !important;
-// 					height:auto;
-// 				}
-// 			}
-// 		}
-// 		.node-fields-wrapper{
-// 			margin-left:145px !important;
-// 			p{
-// 				margin-top:0;
-// 			}
-// 		}
-// 	}
-// 	.feed-icon{
-// 		display:none;
-// 	}
-// }
-
-/* error view to fix problem */
-// .view-error-view{
-// 	.views-row{
-// 		margin-bottom: 1em;
-// 		img{
-// 			width: 20px;
-// 			clear: both;
-// 			float: left;
-// 		}
-// 	}
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
