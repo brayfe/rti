@@ -45,6 +45,12 @@ function rti_search_facets_blocks_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-8',
         ),
+        'facetapi-2T6lt7kSOtuU7aJcwi0uBD3eZ6dSmmfG' => array(
+          'module' => 'facetapi',
+          'delta' => '2T6lt7kSOtuU7aJcwi0uBD3eZ6dSmmfG',
+          'region' => 'sidebar_first',
+          'weight' => '-7',
+        ),
       ),
     ),
   );
