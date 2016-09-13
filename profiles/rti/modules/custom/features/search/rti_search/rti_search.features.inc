@@ -64,13 +64,13 @@ function rti_search_default_search_api_index() {
         "search_api_case_ignore" : {
           "status" : 1,
           "weight" : "0",
-          "settings" : { "fields" : { "title" : true, "body:value" : true } }
+          "settings" : { "fields" : { "title" : true, "search_api_aggregation_1" : true, "body:value" : true } }
         },
         "search_api_html_filter" : {
           "status" : 1,
           "weight" : "10",
           "settings" : {
-            "fields" : { "title" : true, "body:value" : true },
+            "fields" : { "title" : true, "search_api_aggregation_1" : true, "body:value" : true },
             "title" : 0,
             "alt" : 1,
             "tags" : "h1 = 5\\r\\nh2 = 3\\r\\nh3 = 2\\r\\nstrong = 2\\r\\nb = 2\\r\\nem = 1.5\\r\\nu = 1.5"
@@ -80,9 +80,9 @@ function rti_search_default_search_api_index() {
           "status" : 1,
           "weight" : "20",
           "settings" : {
-            "fields" : { "body:value" : true },
-            "spaces" : "[^[:alnum:]\\\\-]",
-            "ignorable" : "[\\u0027\\\\-]"
+            "fields" : { "search_api_aggregation_1" : true, "body:value" : true },
+            "spaces" : "[^[:alnum:]-]",
+            "ignorable" : "[\\u0027-]"
           }
         },
         "search_api_stopwords" : {
