@@ -73,7 +73,7 @@ function rti_resource_content_type_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'tags',
+          'vocabulary' => 'rti_tags',
           'parent' => 0,
         ),
       ),

@@ -18,6 +18,7 @@ dependencies[] = rti_resource_ranking
 dependencies[] = rti_resource_types
 dependencies[] = rti_special_populations
 dependencies[] = rti_stakeholders
+dependencies[] = rti_tags
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = term_reference_tree
