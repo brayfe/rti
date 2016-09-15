@@ -1492,19 +1492,15 @@ tr.selected td {
   margin: 2em 0 2em 0;
 }
 /* line 38, ../sass/components/_header.scss */
-#header-wrapper header.header .header-region-search-form .views-reset-button {
-  display: none;
-}
-/* line 42, ../sass/components/_header.scss */
 #header-wrapper header.header .header-region-search-form .views-submit-button {
   margin-left: -5px;
 }
 
-/* line 49, ../sass/components/_header.scss */
+/* line 45, ../sass/components/_header.scss */
 .header__region {
   clear: none !important;
 }
-/* line 51, ../sass/components/_header.scss */
+/* line 47, ../sass/components/_header.scss */
 .header__region #block-views-exp-rti-indexed-search-page {
   display: inline-block;
   float: right;
