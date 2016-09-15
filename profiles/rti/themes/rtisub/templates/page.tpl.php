@@ -40,18 +40,10 @@
 
   <div class="header-region-search-form">
     <?php 
-
-      $path = $_SERVER['REQUEST_URI'];
-      $find = 'rti-search';
-      $pos = strpos($path, $find);
-
-      if ($pos){
-        print '';
-        }
-        else{
-          $block = module_invoke('views', 'block_view', '-exp-rti_indexed_search-page');
-          print $block['content']['#markup'];        
-        }
+      if (current_path() != 'rti-search') {
+        $block = module_invoke('views', 'block_view', '-exp-rti_indexed_search-page');
+        print $block['content']['#markup'];        
+      }
     ?>
   </div>
 
@@ -109,24 +101,8 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
 
-<div class="main-region-search-form">
-  
-  <?php 
 
-    $path = $_SERVER['REQUEST_URI'];
-    $find = 'rti-search';
-    $pos = strpos($path, $find);
 
-    if ($pos === false){
-      print '';
-      }
-      else{
-        $block = module_invoke('views', 'block_view', '-exp-rti_indexed_search-page');
-        print $block['content']['#markup'];        
-      }
-  ?>
-
-</div>
 
 
 

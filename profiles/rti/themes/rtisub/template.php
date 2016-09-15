@@ -27,6 +27,19 @@ function rtisub_preprocess_maintenance_page(&$variables, $hook) {
 // */
 
 /**
+ * Implements hook_views_pre_render().
+ *
+ */
+function rtisub_views_pre_render(&$view) {
+  if ($view->name == 'rti_indexed_search' && $view->current_display == 'page') {
+    $block = module_invoke('views', 'block_view', '-exp-rti_indexed_search-page');
+    $view->attachment_before = '<div class="main-region-search-form">' .
+    $block['content']['#markup'] . '<span class="reset-btn"><a href="/rti-search">Reset</a></span></div>';
+  }
+}
+
+
+/**
  * Override field variables in theme.
  *
  * @see theme_field()
