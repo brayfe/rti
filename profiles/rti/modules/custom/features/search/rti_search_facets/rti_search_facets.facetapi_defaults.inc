@@ -41,7 +41,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
     'individual_parent' => '1',
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => TRUE,
+    'default_true' => '1',
     'facet_search_ids' => array(),
     'exclude' => 0,
     'pretty_paths_alias' => 'category',
@@ -64,6 +64,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
+      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -71,7 +72,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
     'individual_parent' => '0',
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => TRUE,
+    'default_true' => '1',
     'facet_search_ids' => array(),
     'exclude' => 0,
     'pretty_paths_alias' => 'ranking',
@@ -141,14 +142,15 @@ function rti_search_facets_facetapi_default_facet_settings() {
       'count' => '3',
       'indexed' => '4',
     ),
-    'empty_behavior' => 'none',
+    'empty_behavior' => 'text',
     'facet_more_text' => 'Show more',
     'facet_fewer_text' => 'Show fewer',
     'soft_limit' => '0',
     'nofollow' => 1,
     'show_expanded' => 1,
     'empty_text' => array(
-      'value' => '',
+      'value' => '<p>No results.</p>
+',
       'format' => 'filtered_html',
     ),
   );
@@ -174,24 +176,25 @@ function rti_search_facets_facetapi_default_facet_settings() {
     ),
     'sort_weight' => array(
       'active' => '-50',
-      'count' => '-48',
       'display' => '-49',
+      'count' => '-48',
       'indexed' => '-47',
     ),
     'sort_order' => array(
       'active' => '3',
-      'count' => '3',
       'display' => '4',
+      'count' => '3',
       'indexed' => '4',
     ),
-    'empty_behavior' => 'none',
+    'empty_behavior' => 'text',
     'facet_more_text' => 'Show more',
     'facet_fewer_text' => 'Show fewer',
     'soft_limit' => '20',
     'nofollow' => 1,
     'show_expanded' => 0,
     'empty_text' => array(
-      'value' => '',
+      'value' => '<p>No results.</p>
+',
       'format' => 'filtered_html',
     ),
   );
@@ -227,14 +230,15 @@ function rti_search_facets_facetapi_default_facet_settings() {
       'display' => '4',
       'indexed' => '4',
     ),
-    'empty_behavior' => 'none',
+    'empty_behavior' => 'text',
     'facet_more_text' => 'Show more',
     'facet_fewer_text' => 'Show fewer',
     'soft_limit' => '20',
     'nofollow' => 1,
     'show_expanded' => 0,
     'empty_text' => array(
-      'value' => '',
+      'value' => '<p>No results.</p>
+',
       'format' => 'filtered_html',
     ),
   );
