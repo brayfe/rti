@@ -59,7 +59,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
   $facet->facet = 'field_resource_ranking';
   $facet->enabled = FALSE;
   $facet->settings = array(
-    'operator' => 'and',
+    'operator' => 'or',
     'hard_limit' => '50',
     'dependencies' => array(
       'bundle' => 'none',
@@ -72,7 +72,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
     'individual_parent' => '0',
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
     'pretty_paths_alias' => 'ranking',
@@ -90,7 +90,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
   $facet->facet = 'field_resource_type';
   $facet->enabled = FALSE;
   $facet->settings = array(
-    'operator' => 'and',
+    'operator' => 'or',
     'hard_limit' => '50',
     'dependencies' => array(
       'bundle' => 'none',
@@ -103,7 +103,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
     'individual_parent' => '0',
     'query_type' => 'term',
     'limit_active_items' => 0,
-    'default_true' => '1',
+    'default_true' => TRUE,
     'facet_search_ids' => array(),
     'exclude' => 0,
     'pretty_paths_alias' => 'resource_type',
