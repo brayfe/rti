@@ -12,7 +12,33 @@
  * @param array $variables
  *   An array of variables to pass to the theme template.
  * @param string $hook
- *   The name of the template being rendered.
+ *   The name of the template being rendered ("maintenance_page" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function rtisub_preprocess_maintenance_page(&$variables, $hook) {
+  // When a variable is manipulated or added in preprocess_html or
+  // preprocess_page, that same work is probably needed for the maintenance page
+  // as well, so we can just re-use those functions to do that work here.
+  rtisub_preprocess_html($variables, $hook);
+  rtisub_preprocess_page($variables, $hook);
+}
+// */
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ */
+function rtisub_views_pre_render(&$view) {
+  if ($view->name == 'rti_indexed_search' && $view->current_display == 'page') {
+    $block = module_invoke('views', 'block_view', '-exp-rti_indexed_search-page');
+    $view->attachment_before = '<div class="main-region-search-form">' .
+    $block['content']['#markup'] . '<span class="reset-btn"><a href="/rti-search">Reset</a></span></div>';
+  }
+}
+
+
+/**
+ * Override field variables in theme.
  *
  * @see theme_field()
  * @see field.tpl.php

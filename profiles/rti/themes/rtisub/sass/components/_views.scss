@@ -71,12 +71,12 @@
 	    display: inline-block;
 	    vertical-align: top;
 	    width:100px;
-	    margin-left: -4px;
+	    margin-left: -5px;
 	    margin-top: 0;
 	    input{
 		    width: 100%;
 		    margin-top: 0;
-		    background-color: #3169a2;
+		    background-color: $niceblue;
 		    color: #fff;
 		    border: none;
 		    text-transform: uppercase;
@@ -92,21 +92,9 @@
 			}
 		}
 	}
-	.views-reset-button{
-		display:none;
-		vertical-align: top;
-		display: inline-block;
 
-		input#edit-reset {
-			background-color: $niceblue;
-
-			&:hover,
-			&:focus {
-				background-color: $darkblue;
-			}
-		}
-	}
 }
+
 	input.form-text, input.form-submit {
 	    width: 80%;
 	    height: 3em;

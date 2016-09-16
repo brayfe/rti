@@ -18,12 +18,12 @@ function rti_search_view_default_fe_block_settings() {
     'delta' => '-exp-rti_indexed_search-page',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'rti-search?search_text=*',
     'roles' => array(),
     'themes' => array(
       'rtisub' => array(
-        'region' => 'header',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'rtisub',
         'weight' => 0,
       ),
