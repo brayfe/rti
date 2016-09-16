@@ -53,9 +53,9 @@ ul {
   /* line 85, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: right;
-    width: 25%;
-    margin-right: 12.5%;
-    margin-left: -37.5%;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: -100%;
   }
   /* line 90, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
@@ -68,100 +68,11 @@ ul {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 98, ../sass/layouts/_responsive.scss */
-  .sidebar-second {
-    /* Span 2 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 3rd column from left. */
-  }
-  /* line 100, ../sass/layouts/_responsive.scss */
-  .sidebar-second #content {
-    float: right;
-    width: 25%;
-    margin-right: 0%;
-    margin-left: -25%;
-  }
-  /* line 105, ../sass/layouts/_responsive.scss */
-  .sidebar-second .region-sidebar-second {
-    float: right;
-    width: 12.5%;
-    margin-right: 25%;
-    margin-left: -37.5%;
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-  /* line 113, ../sass/layouts/_responsive.scss */
-  .two-sidebars {
-    /* Span 2 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-    /* Start a new row and span all 3 columns. */
-  }
-  /* line 115, ../sass/layouts/_responsive.scss */
-  .two-sidebars #content {
-    float: right;
-    width: 25%;
-    margin-right: 12.5%;
-    margin-left: -37.5%;
-  }
-  /* line 120, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-first {
-    float: right;
-    width: 12.5%;
-    margin-right: 0%;
-    margin-left: -12.5%;
-  }
-  /* line 125, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second {
-    float: right;
-    width: 37.5%;
-    margin-right: 0%;
-    margin-left: -37.5%;
-    padding-left: 0;
-    padding-right: 0;
-    clear: right;
-    /* Apply the shared properties of grid items in a single, efficient ruleset. */
-    /* Span 1 column, starting in the 1st column from left. */
-    /* Span 1 column, starting in the 2nd column from left. */
-    /* Span 1 column, starting in the 3rd column from left. */
-  }
-  /* line 131, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block {
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-  /* line 135, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
-    float: right;
-    width: 12.5%;
-    margin-right: 0%;
-    margin-left: -12.5%;
-    clear: right;
-  }
-  /* line 140, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
-    float: right;
-    width: 12.5%;
-    margin-right: 12.5%;
-    margin-left: -25%;
-  }
-  /* line 144, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
-    float: right;
-    width: 12.5%;
-    margin-right: 25%;
-    margin-left: -37.5%;
-  }
 }
 /**
  * Use 8 grid columns for larger screens.
  */
-@media all and (min-width: 960px) {
+@media all and (min-width: 999px) {
   /**
    * The layout when there is only one sidebar, the left one.
    */

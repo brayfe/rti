@@ -1504,16 +1504,16 @@ tr.selected td {
   width: 100%;
   background: #3169a2;
   margin-top: 1px;
-  margin-top: 1px;
   margin-bottom: 1px;
 }
-/* line 9, ../sass/components/_top-nav.scss */
+/* line 8, ../sass/components/_top-nav.scss */
 #nav-wrapper #navigation {
   position: relative;
   height: 3em;
   max-width: 1200px;
   margin: 0 auto;
   height: 34px;
+  padding-left: 160px;
 }
 /* line 15, ../sass/components/_top-nav.scss */
 #nav-wrapper #navigation ul.links {
@@ -1656,29 +1656,25 @@ tr.selected td {
 /* mobile nav */
 /* line 70, ../sass/components/_resources-nav.scss */
 #sidr-wrapper-0 {
-  position: relative;
-  top: -61px;
-  left: -18px;
+  position: absolute;
+  top: -78px;
+  left: 9px;
 }
 /* line 74, ../sass/components/_resources-nav.scss */
 #sidr-wrapper-0 #sidr-0-button {
   position: relative;
   z-index: 10;
-  background-color: #fff;
-  color: #333;
+  color: #fff;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
   font-weight: 600;
   padding: 4px 10px;
   text-decoration: none;
-  border: 2px solid #333;
-}
-/* line 84, ../sass/components/_resources-nav.scss */
-#sidr-wrapper-0 #sidr-0-button:hover, #sidr-wrapper-0 #sidr-0-button:focus {
-  background-color: #333;
-  color: #fff;
+  outline: 0;
 }
 
 /* theme the menu */
-/* line 91, ../sass/components/_resources-nav.scss */
+/* line 87, ../sass/components/_resources-nav.scss */
 h2.sidr-class-block__title {
   color: #9cf;
   font-size: 2em;
@@ -1687,38 +1683,30 @@ h2.sidr-class-block__title {
   text-align: center;
 }
 
+/* line 95, ../sass/components/_resources-nav.scss */
+ul.sidr-class-menu li {
+  margin: 6px;
+}
 /* line 98, ../sass/components/_resources-nav.scss */
-.sidr-class-menu__link.sidr-class-nolink {
+ul.sidr-class-menu li a.sidr-class-is-active-trail {
+  background-color: #000;
   color: #fff;
-  padding-right: 1.2em;
-  cursor: pointer;
-}
-/* line 102, ../sass/components/_resources-nav.scss */
-.sidr-class-menu__link.sidr-class-nolink:after {
-  content: "\25b6";
-  color: #ccc;
-  float: right;
 }
 
-/* line 109, ../sass/components/_resources-nav.scss */
-.sidr-class-menu__link.sidr-class-nolink.reveal:after {
-  content: "\25bc";
-}
-
-/* line 113, ../sass/components/_resources-nav.scss */
+/* line 119, ../sass/components/_resources-nav.scss */
 .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu {
   display: none !important;
 }
 
-/* line 116, ../sass/components/_resources-nav.scss */
+/* line 122, ../sass/components/_resources-nav.scss */
 .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu.show-me {
   display: block !important;
 }
-/* line 118, ../sass/components/_resources-nav.scss */
+/* line 124, ../sass/components/_resources-nav.scss */
 .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu.show-me a.sidr-class-menu__link {
   color: #f37741;
 }
-/* line 120, ../sass/components/_resources-nav.scss */
+/* line 126, ../sass/components/_resources-nav.scss */
 .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu.show-me a.sidr-class-menu__link:hover, .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu.show-me a.sidr-class-menu__link:focus {
   color: #fff;
 }
@@ -2207,7 +2195,7 @@ ol.search-results li .search-snippet-info p.search-info {
   border: none;
 }
 
-/* line 351, ../sass/components/_main.scss */
+/* line 350, ../sass/components/_main.scss */
 article iframe {
   min-height: 960px;
   border: 0 !important;
@@ -3001,9 +2989,9 @@ section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
   /* line 85, ../sass/layouts/_responsive.scss */
   .sidebar-first #content {
     float: left;
-    width: 25%;
-    margin-left: 12.5%;
-    margin-right: -37.5%;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
   }
   /* line 90, ../sass/layouts/_responsive.scss */
   .sidebar-first .region-sidebar-first {
@@ -3016,100 +3004,11 @@ section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 98, ../sass/layouts/_responsive.scss */
-  .sidebar-second {
-    /* Span 2 columns, starting in 1st column from left. */
-    /* Span 1 column, starting in 3rd column from left. */
-  }
-  /* line 100, ../sass/layouts/_responsive.scss */
-  .sidebar-second #content {
-    float: left;
-    width: 25%;
-    margin-left: 0%;
-    margin-right: -25%;
-  }
-  /* line 105, ../sass/layouts/_responsive.scss */
-  .sidebar-second .region-sidebar-second {
-    float: left;
-    width: 12.5%;
-    margin-left: 25%;
-    margin-right: -37.5%;
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-  /* line 113, ../sass/layouts/_responsive.scss */
-  .two-sidebars {
-    /* Span 2 columns, starting in 2nd column from left. */
-    /* Span 1 column, starting in 1st column from left. */
-    /* Start a new row and span all 3 columns. */
-  }
-  /* line 115, ../sass/layouts/_responsive.scss */
-  .two-sidebars #content {
-    float: left;
-    width: 25%;
-    margin-left: 12.5%;
-    margin-right: -37.5%;
-  }
-  /* line 120, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-first {
-    float: left;
-    width: 12.5%;
-    margin-left: 0%;
-    margin-right: -12.5%;
-  }
-  /* line 125, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second {
-    float: left;
-    width: 37.5%;
-    margin-left: 0%;
-    margin-right: -37.5%;
-    padding-left: 0;
-    padding-right: 0;
-    clear: left;
-    /* Apply the shared properties of grid items in a single, efficient ruleset. */
-    /* Span 1 column, starting in the 1st column from left. */
-    /* Span 1 column, starting in the 2nd column from left. */
-    /* Span 1 column, starting in the 3rd column from left. */
-  }
-  /* line 131, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block {
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-  }
-  /* line 135, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
-    float: left;
-    width: 12.5%;
-    margin-left: 0%;
-    margin-right: -12.5%;
-    clear: left;
-  }
-  /* line 140, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
-    float: left;
-    width: 12.5%;
-    margin-left: 12.5%;
-    margin-right: -25%;
-  }
-  /* line 144, ../sass/layouts/_responsive.scss */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
-    float: left;
-    width: 12.5%;
-    margin-left: 25%;
-    margin-right: -37.5%;
-  }
 }
 /**
  * Use 8 grid columns for larger screens.
  */
-@media all and (min-width: 960px) {
+@media all and (min-width: 999px) {
   /**
    * The layout when there is only one sidebar, the left one.
    */
@@ -3188,18 +3087,46 @@ section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
   }
 }
 /* custom media queries */
-@media all and (max-width: 1024px) {
-  /* The layout when there is only one sidebar, the left one. */
-  /* line 8, ../sass/components/_custom-queries.scss */
-  .sidebar-first {
-    /* hide first column */
+@media all and (max-width: 999px) {
+  /* line 7, ../sass/components/_custom-queries.scss */
+  form#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper {
+    width: auto;
   }
-  /* line 9, ../sass/components/_custom-queries.scss */
-  .sidebar-first #content {
-    float: left;
+
+  /* line 13, ../sass/components/_custom-queries.scss */
+  #nav-wrapper {
+    margin-bottom: 0;
+  }
+  /* line 15, ../sass/components/_custom-queries.scss */
+  #nav-wrapper #navigation {
+    background-color: #3169a2;
     width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
+    padding-left: 160px;
+    padding-right: 0;
+  }
+  /* line 21, ../sass/components/_custom-queries.scss */
+  #nav-wrapper #navigation ul {
+    background: #3169a2;
+    display: block;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 699px) {
+  /* line 36, ../sass/components/_custom-queries.scss */
+  header#header #block-views-exp-rti-indexed-search-page {
+    margin-top: 0;
+    float: none;
+    display: block;
+    clear: left;
+  }
+  /* line 44, ../sass/components/_custom-queries.scss */
+  header#header #block-views-exp-rti-indexed-search-page form#views-exposed-form-rti-indexed-search-page .views-widget {
+    text-align: right;
+    background-color: transparent;
+  }
+  /* line 48, ../sass/components/_custom-queries.scss */
+  header#header #block-views-exp-rti-indexed-search-page form#views-exposed-form-rti-indexed-search-page .views-widget input#edit-search-text {
+    width: 350px;
+    text-align: left;
   }
 }
 /**

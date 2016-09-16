@@ -1,18 +1,61 @@
 /* custom media queries */
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 999px) {
 
-  $zen-column-count: 8;
+  form#views-exposed-form-rti-indexed-search-page {
 
-   /* The layout when there is only one sidebar, the left one. */
-  .sidebar-first {
-    #content {
-      @include zen-grid-item(8, 1);
+    #edit-search-text-wrapper {
+      width: auto;
     }
 
-    /* hide first column */
-    .region-sidebar-first {
-      //display:none;
-    }
   }
+
+  #nav-wrapper {
+    margin-bottom: 0;
+      #navigation {
+        background-color: #3169a2;
+        width: 100%;
+        padding-left: 160px;
+        padding-right: 0;
+
+        ul {
+          background: rgb(49, 105, 162);
+          display: block;
+        }
+
+      }
+
+  }
+
+}
+
+@media all and (min-width: 320px) and (max-width: 699px) {
+
+  header#header {
+
+    #block-views-exp-rti-indexed-search-page {
+      margin-top: 0;
+      float: none;
+      display: block;
+      clear: left;
+
+      form#views-exposed-form-rti-indexed-search-page {
+
+        .views-widget {
+          text-align: right;
+          background-color: transparent;
+          
+          input#edit-search-text {
+            width: 350px;
+            text-align: left;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
 }
