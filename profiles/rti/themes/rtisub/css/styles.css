@@ -1489,7 +1489,7 @@ tr.selected td {
 /* line 34, ../sass/components/_header.scss */
 #header-wrapper header.header .header-region-search-form {
   float: right;
-  margin: 2em 0 2em 0;
+  margin: 3em 0 2em 0;
 }
 /* line 38, ../sass/components/_header.scss */
 #header-wrapper header.header .header-region-search-form .views-submit-button {

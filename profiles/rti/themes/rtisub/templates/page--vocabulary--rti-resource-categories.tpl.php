@@ -38,6 +38,15 @@
       </div>
     <?php endif; ?>
 
+    <div class="header-region-search-form">
+      <?php 
+        if (strpos(request_path(), 'rti-search') === FALSE) {
+          $block = module_invoke('views', 'block_view', '-exp-rti_indexed_search-page');
+          print $block['content']['#markup'];        
+        }
+      ?>
+    </div>
+
     <?php print render($page['header']); ?>
 
   </header>
