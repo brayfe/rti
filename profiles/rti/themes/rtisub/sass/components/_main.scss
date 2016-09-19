@@ -56,13 +56,59 @@ h2.titleInsert{
   #main{
 	  max-width: 1150px;
 	  margin: 0 auto;
+    min-height: 320px;
 	  background-color:rgba(255,255,255,0.85);
 	  padding:1.625em 1em 3em 1em;
 	  #content{
-	  	// text-shadow: 1px 1px 5px #fff !important;
+	  	.main-region-search-form{
+        float:none;
+        margin:2em 0;
+        text-align: center;
+
+        form {
+          display: inline-block;
+          margin-right: 6px;
+        }
+
+        .reset-btn {
+          vertical-align: top;
+          height: 50px;
+          border-radius: 4px;
+          font-size: 1.12em;
+          font-weight: 600;
+          display: inline-block;
+          background: $niceblue;
+          
+          a {
+            color: #fff;
+            border: none;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: "Open Sans", sans-serif;
+            padding: 0 .5em;
+            border-radius: 4px;
+            height: 50px;
+            line-height: 50px;
+            display: inline-block;
+
+
+            &:hover,
+            &:focus {
+              background-color: $darkblue;
+            }
+
+          }
+
+        }
+
+      }
+
 	  }
+
   }
+
 }
+
 .page-inner,
 .region-bottom {
   margin-left: auto;

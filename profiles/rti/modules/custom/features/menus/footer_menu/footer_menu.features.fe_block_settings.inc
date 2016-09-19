@@ -22,10 +22,10 @@ function footer_menu_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rtisub' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'footer',
+        'status' => 1,
         'theme' => 'rtisub',
-        'weight' => 0,
+        'weight' => -14,
       ),
       'seven' => array(
         'region' => '',
@@ -48,10 +48,10 @@ function footer_menu_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'rtisub' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'footer',
+        'status' => 1,
         'theme' => 'rtisub',
-        'weight' => 0,
+        'weight' => -15,
       ),
       'seven' => array(
         'region' => '',
