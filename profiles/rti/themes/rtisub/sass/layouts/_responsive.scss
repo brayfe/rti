@@ -83,12 +83,12 @@ $zen-auto-include-item-base: false;
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     #content {
-      @include zen-grid-item(8, 1);
+      //@include zen-grid-item(8, 1);
     }
 
     /* Span 1 column, starting in 1st column from left. */
     .region-sidebar-first {
-      @include zen-grid-item(1, 1);
+      //@include zen-grid-item(1, 1);
     }
   }
 
