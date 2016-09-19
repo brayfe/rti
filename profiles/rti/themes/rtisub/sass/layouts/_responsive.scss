@@ -75,7 +75,7 @@ $zen-auto-include-item-base: false;
  */
 @media all and (min-width: 480px) and (max-width: 959px) {
 
-  $zen-column-count: 3;
+  $zen-column-count: 8;
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -83,7 +83,7 @@ $zen-auto-include-item-base: false;
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     #content {
-      @include zen-grid-item(2, 2);
+      @include zen-grid-item(8, 1);
     }
 
     /* Span 1 column, starting in 1st column from left. */
@@ -95,63 +95,63 @@ $zen-auto-include-item-base: false;
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  .sidebar-second {
-    /* Span 2 columns, starting in 1st column from left. */
-    #content {
-      @include zen-grid-item(2, 1);
-    }
+  // .sidebar-second {
+  //   /* Span 2 columns, starting in 1st column from left. */
+  //   #content {
+  //     @include zen-grid-item(2, 1);
+  //   }
 
-    /* Span 1 column, starting in 3rd column from left. */
-    .region-sidebar-second {
-      @include zen-grid-item(1, 3);
-    }
-  }
+  //   /* Span 1 column, starting in 3rd column from left. */
+  //   .region-sidebar-second {
+  //     @include zen-grid-item(1, 3);
+  //   }
+  // }
 
-  /**
-   * The layout when there are two sidebars.
-   */
-  .two-sidebars {
-    /* Span 2 columns, starting in 2nd column from left. */
-    #content {
-      @include zen-grid-item(2, 2);
-    }
+  // /**
+  //  * The layout when there are two sidebars.
+  //  */
+  // .two-sidebars {
+  //   /* Span 2 columns, starting in 2nd column from left. */
+  //   #content {
+  //     @include zen-grid-item(2, 2);
+  //   }
 
-    /* Span 1 column, starting in 1st column from left. */
-    .region-sidebar-first {
-      @include zen-grid-item(1, 1);
-    }
+  //   /* Span 1 column, starting in 1st column from left. */
+  //   .region-sidebar-first {
+  //     @include zen-grid-item(1, 1);
+  //   }
 
-    /* Start a new row and span all 3 columns. */
-    .region-sidebar-second {
-      @include zen-grid-item(3, 1);
-      @include zen-nested-container(); // Since we're making every block in this region be a grid item.
-      @include zen-clear();
+  //   /* Start a new row and span all 3 columns. */
+  //   .region-sidebar-second {
+  //     @include zen-grid-item(3, 1);
+  //     @include zen-nested-container(); // Since we're making every block in this region be a grid item.
+  //     @include zen-clear();
 
-      /* Apply the shared properties of grid items in a single, efficient ruleset. */
-      .block {
-        @include zen-grid-item-base();
-      }
-      /* Span 1 column, starting in the 1st column from left. */
-      .block:nth-child(3n+1) {
-        @include zen-grid-item(1, 1);
-        @include zen-clear();
-      }
-      /* Span 1 column, starting in the 2nd column from left. */
-      .block:nth-child(3n+2) {
-        @include zen-grid-item(1, 2);
-      }
-      /* Span 1 column, starting in the 3rd column from left. */
-      .block:nth-child(3n) {
-        @include zen-grid-item(1, 3);
-      }
-    }
-  }
+  //     /* Apply the shared properties of grid items in a single, efficient ruleset. */
+  //     .block {
+  //       @include zen-grid-item-base();
+  //     }
+  //     /* Span 1 column, starting in the 1st column from left. */
+  //     .block:nth-child(3n+1) {
+  //       @include zen-grid-item(1, 1);
+  //       @include zen-clear();
+  //     }
+  //     /* Span 1 column, starting in the 2nd column from left. */
+  //     .block:nth-child(3n+2) {
+  //       @include zen-grid-item(1, 2);
+  //     }
+  //     /* Span 1 column, starting in the 3rd column from left. */
+  //     .block:nth-child(3n) {
+  //       @include zen-grid-item(1, 3);
+  //     }
+  //   }
+  // }
 }
 
 /**
  * Use 8 grid columns for larger screens.
  */
-@media all and (min-width: 960px) {
+@media all and (min-width: 999px) {
 
   $zen-column-count: 8;
 

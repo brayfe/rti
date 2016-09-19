@@ -21,7 +21,7 @@ function responsive_menu_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'responsive_menus_sidr_css_selectors';
-  $strongarm->value = '#block-menu-block-1';
+  $strongarm->value = '#block-menu-menu-category-menu';
   $export['responsive_menus_sidr_css_selectors'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -35,7 +35,7 @@ function responsive_menu_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'responsive_menus_sidr_media_size';
-  $strongarm->value = '1024';
+  $strongarm->value = '999';
   $export['responsive_menus_sidr_media_size'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -63,7 +63,7 @@ function responsive_menu_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'responsive_menus_sidr_trigger_txt';
-  $strongarm->value = 'Resources Menu';
+  $strongarm->value = 'Category Menu';
   $export['responsive_menus_sidr_trigger_txt'] = $strongarm;
 
   $strongarm = new stdClass();

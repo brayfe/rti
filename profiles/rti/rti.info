@@ -99,6 +99,7 @@ dependencies[] = token
 dependencies[] = ckeditor
 dependencies[] = ckeditor_swf
 dependencies[] = jquery_update
+dependencies[] = responsive_menus
 
 ; Views
 dependencies[] = better_exposed_filters
