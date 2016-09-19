@@ -18,7 +18,7 @@ function rti_search_view_default_fe_block_settings() {
     'delta' => '-exp-rti_indexed_search-page',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => 'rti-search?search_text=*',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'rtisub' => array(
