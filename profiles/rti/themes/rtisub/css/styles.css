@@ -3109,21 +3109,43 @@ section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
     background: #3169a2;
     display: block;
   }
+
+  /* line 32, ../sass/components/_custom-queries.scss */
+  .page-rti-search #main-wrapper {
+    position: relative;
+  }
+  /* line 35, ../sass/components/_custom-queries.scss */
+  .page-rti-search #main-wrapper .filters {
+    position: absolute;
+    top: -88px;
+    width: 250px;
+  }
+  /* line 41, ../sass/components/_custom-queries.scss */
+  .page-rti-search #main-wrapper h2#filters-btn {
+    cursor: pointer;
+    margin-top: 0;
+  }
+  /* line 48, ../sass/components/_custom-queries.scss */
+  .page-rti-search .region-sidebar-first {
+    display: none;
+    background-color: #fff;
+    width: 250px;
+  }
 }
 @media all and (min-width: 320px) and (max-width: 699px) {
-  /* line 36, ../sass/components/_custom-queries.scss */
+  /* line 62, ../sass/components/_custom-queries.scss */
   header#header #block-views-exp-rti-indexed-search-page {
     margin-top: 0;
     float: none;
     display: block;
     clear: left;
   }
-  /* line 44, ../sass/components/_custom-queries.scss */
+  /* line 70, ../sass/components/_custom-queries.scss */
   header#header #block-views-exp-rti-indexed-search-page form#views-exposed-form-rti-indexed-search-page .views-widget {
     text-align: right;
     background-color: transparent;
   }
-  /* line 48, ../sass/components/_custom-queries.scss */
+  /* line 74, ../sass/components/_custom-queries.scss */
   header#header #block-views-exp-rti-indexed-search-page form#views-exposed-form-rti-indexed-search-page .views-widget input#edit-search-text {
     width: 350px;
     text-align: left;

@@ -27,6 +27,32 @@
 
   }
 
+  .page-rti-search {
+
+    #main-wrapper {
+      position: relative;
+
+      .filters {
+        position: absolute;
+        top: -88px;
+        width: 250px;
+      }
+
+      h2#filters-btn {
+        cursor: pointer;
+        margin-top: 0;
+      }
+
+    }
+
+    .region-sidebar-first {
+      display:none;
+      background-color: #fff;
+      width: 250px;
+    }
+
+  }
+
 }
 
 @media all and (min-width: 320px) and (max-width: 699px) {

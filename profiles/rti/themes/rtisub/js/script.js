@@ -21,6 +21,17 @@ Drupal.behaviors.my_custom_behavior = {
 // Place your code here.
 
 
+// mobile menu 
+
+$('.page-rti-search .region-sidebar-first').wrap('<div class="filters"></div>');
+$('<h2 id="filters-btn">Filters</h2>').insertBefore('.page-rti-search .region-sidebar-first');
+$('#filters-btn').bind('click', function(){
+	$('.page-rti-search .region-sidebar-first').slideToggle();
+});
+
+/* -------- end mobile menu ---------*/
+
+
 // end code here
   }
 };
