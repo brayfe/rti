@@ -48,6 +48,12 @@ class VideoMigration extends RTINodeMigration {
     $this->addFieldMapping('field_resource_file:preserve_files')
       ->defaultValue(TRUE);
 
+    // Resource Link.
+    $this->addFieldMapping('field_link', 'field_video_captivate_file')
+      ->callbacks(array($this, 'prependURL'));
+    $this->addFieldMapping('field_link:title', 'field_video_captivate_file:title');
+    $this->addFieldMapping('field_link:attributes', 'field_video_captivate_file:attributes');
+
     // Featured Resource.
     $this->addFieldMapping('field_featured_resource', 'field_featured_resource');
 
@@ -104,6 +110,13 @@ class VideoMigration extends RTINodeMigration {
     $this->addFieldMapping('field_free_tags:source_type')
       ->defaultValue('tid');
 
+  }
+
+  /**
+   * Callback to prepend the server url where the modules are stored.
+   */
+  public function prependURL($row) {
+    return 'http://resources.buildingrti.utexas.org/videos/' . $row[0];
   }
 
   /**
