@@ -46,8 +46,10 @@ class TaxonomyMigration extends RTITermMigration {
           ->defaultValue(t('Term Icon'));
       $this->addFieldMapping('field_default_resource_image:title', 'title')
           ->defaultValue(t('Taxonomy Icon'));
+      $this->addFieldMapping('field_default_resource_image:destination_dir')
+          ->defaultValue('public://default_images');
       $this->addFieldMapping('field_default_resource_image:file_replace')
-          ->defaultValue(FILE_EXISTS_REUSE);
+          ->defaultValue(MigrateFile::FILE_EXISTS_REUSE);
       $this->addFieldMapping('field_default_resource_image:preserve_files')
           ->defaultValue(TRUE);
     }
@@ -70,8 +72,8 @@ class TaxonomyMigration extends RTITermMigration {
         global $base_url;
         // Migrate file from this URI and return the fid.
         $row->temp_fid = $base_url . '/profiles/rti/themes/rtisub/icon-images/'
-            . $this->icons[$row->name];
-        // Set the Alt text.
+          . $this->icons[$row->name];
+        // Set the alt text.
         $row->alt = $row->name . " Icon";
         // Set the title text.
         $row->title = $row->name;
