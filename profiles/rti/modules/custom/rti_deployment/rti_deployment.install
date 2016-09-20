@@ -43,6 +43,7 @@ function rti_deployment_update_7101() {
   }
 
   // Set the homepage to a recently migrated Basic Page.
-  variable_set('site_frontpage', 'node/5');
+    $home_page = drupal_get_normal_path('home');
+  variable_set('site_frontpage', $home_page);
 
 }
