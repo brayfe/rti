@@ -3150,58 +3150,102 @@ section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
   }
 }
 /* custom media queries */
+@media all and (max-width: 1200px) {
+  /* line 5, ../sass/components/_custom-queries.scss */
+  #header-wrapper header.header {
+    padding: 0 1em 0 22px;
+  }
+  /* line 8, ../sass/components/_custom-queries.scss */
+  #header-wrapper header.header .header__logo {
+    margin-right: 2em;
+  }
+}
 @media all and (max-width: 999px) {
-  /* line 7, ../sass/components/_custom-queries.scss */
+  /* line 19, ../sass/components/_custom-queries.scss */
   form#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper {
-    width: auto;
+    width: 400px;
   }
 
-  /* line 13, ../sass/components/_custom-queries.scss */
+  /* line 25, ../sass/components/_custom-queries.scss */
   #nav-wrapper {
     margin-bottom: 0;
   }
-  /* line 15, ../sass/components/_custom-queries.scss */
+  /* line 27, ../sass/components/_custom-queries.scss */
   #nav-wrapper #navigation {
     background-color: #3169a2;
     width: 100%;
     padding-left: 160px;
     padding-right: 0;
   }
-  /* line 21, ../sass/components/_custom-queries.scss */
+  /* line 33, ../sass/components/_custom-queries.scss */
   #nav-wrapper #navigation ul {
     background: #3169a2;
     display: block;
   }
 
-  /* line 33, ../sass/components/_custom-queries.scss */
+  /* line 45, ../sass/components/_custom-queries.scss */
   .page-resources-parents #nav-wrapper #navigation,
   .page-rti-search #nav-wrapper #navigation {
     padding-left: 0;
   }
 
-  /* line 39, ../sass/components/_custom-queries.scss */
-  .region-sidebar-first {
+  /* line 54, ../sass/components/_custom-queries.scss */
+  .page-resources-parents .region-sidebar-first,
+  .page-rti-search .region-sidebar-first {
     padding: 1em 1em 1px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
   }
 }
-@media all and (min-width: 320px) and (max-width: 699px) {
-  /* line 50, ../sass/components/_custom-queries.scss */
-  header#header #block-views-exp-rti-indexed-search-page {
+@media all and (min-width: 320px) and (max-width: 730px) {
+  /* line 67, ../sass/components/_custom-queries.scss */
+  #header-wrapper header#header .header__logo {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  /* line 72, ../sass/components/_custom-queries.scss */
+  #header-wrapper header#header .header-region-search-form {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 2em;
+  }
+  /* line 78, ../sass/components/_custom-queries.scss */
+  #header-wrapper header#header #block-views-exp-rti-indexed-search-page {
     margin-top: 0;
     float: none;
     display: block;
     clear: left;
   }
-  /* line 58, ../sass/components/_custom-queries.scss */
-  header#header #block-views-exp-rti-indexed-search-page form#views-exposed-form-rti-indexed-search-page .views-widget {
+  /* line 86, ../sass/components/_custom-queries.scss */
+  #header-wrapper header#header #block-views-exp-rti-indexed-search-page form#views-exposed-form-rti-indexed-search-page .views-widget {
     text-align: right;
     background-color: transparent;
   }
-  /* line 62, ../sass/components/_custom-queries.scss */
-  header#header #block-views-exp-rti-indexed-search-page form#views-exposed-form-rti-indexed-search-page .views-widget input#edit-search-text {
-    width: 350px;
+  /* line 90, ../sass/components/_custom-queries.scss */
+  #header-wrapper header#header #block-views-exp-rti-indexed-search-page form#views-exposed-form-rti-indexed-search-page .views-widget input#edit-search-text {
     text-align: left;
+  }
+
+  /* line 106, ../sass/components/_custom-queries.scss */
+  .node-type-resource .resource-image img {
+    margin: 0 1em 1em 0;
+  }
+  /* line 112, ../sass/components/_custom-queries.scss */
+  .node-type-resource .node-fields-wrapper {
+    margin-left: 0;
+  }
+  /* line 115, ../sass/components/_custom-queries.scss */
+  .node-type-resource .node-fields-wrapper ul li {
+    list-style-position: inside;
+    margin-bottom: 1em;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 630px) {
+  /* line 128, ../sass/components/_custom-queries.scss */
+  form#views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper, #views-exposed-form-rti-indexed-search-page #edit-search-text--2-wrapper {
+    width: 260px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
   }
 }
 /**
