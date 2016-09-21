@@ -1701,21 +1701,25 @@ ul.sidr-class-menu li a.sidr-class-is-active-trail {
   background-color: #000;
   color: #fff;
 }
+/* line 103, ../sass/components/_resources-nav.scss */
+ul.sidr-class-menu li ul {
+  display: none;
+}
 
-/* line 119, ../sass/components/_resources-nav.scss */
+/* line 109, ../sass/components/_resources-nav.scss */
 .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu {
   display: none !important;
 }
 
-/* line 122, ../sass/components/_resources-nav.scss */
+/* line 112, ../sass/components/_resources-nav.scss */
 .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu.show-me {
   display: block !important;
 }
-/* line 124, ../sass/components/_resources-nav.scss */
+/* line 114, ../sass/components/_resources-nav.scss */
 .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu.show-me a.sidr-class-menu__link {
   color: #f37741;
 }
-/* line 126, ../sass/components/_resources-nav.scss */
+/* line 116, ../sass/components/_resources-nav.scss */
 .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu.show-me a.sidr-class-menu__link:hover, .sidr-class-menu-block-1 > .sidr-class-menu .sidr-class-menu.show-me a.sidr-class-menu__link:focus {
   color: #fff;
 }
@@ -2878,14 +2882,15 @@ section.sidebar #block-menu-menu-category-menu ul.menu li a.is-active-trail.acti
 /* line 34, ../sass/components/_sidebar.scss */
 section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu {
   margin-top: -4px;
+  display: none;
 }
-/* line 36, ../sass/components/_sidebar.scss */
+/* line 37, ../sass/components/_sidebar.scss */
 section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li {
   list-style-image: none;
   list-style-type: none;
   line-height: 16px;
 }
-/* line 40, ../sass/components/_sidebar.scss */
+/* line 41, ../sass/components/_sidebar.scss */
 section.sidebar #block-menu-menu-category-menu ul.menu li ul.menu li a {
   color: #333;
   text-decoration: none;
