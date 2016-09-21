@@ -50,20 +50,6 @@ ul {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 85, ../sass/layouts/_responsive.scss */
-  .sidebar-first #content {
-    float: right;
-    width: 100%;
-    margin-right: 0%;
-    margin-left: -100%;
-  }
-  /* line 90, ../sass/layouts/_responsive.scss */
-  .sidebar-first .region-sidebar-first {
-    float: right;
-    width: 12.5%;
-    margin-right: 0%;
-    margin-left: -12.5%;
-  }
 
   /**
    * The layout when there is only one sidebar, the right one.
