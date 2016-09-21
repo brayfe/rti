@@ -63,7 +63,7 @@ function responsive_menu_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'responsive_menus_sidr_trigger_txt';
-  $strongarm->value = 'Category Menu';
+  $strongarm->value = 'Resource Categories';
   $export['responsive_menus_sidr_trigger_txt'] = $strongarm;
 
   $strongarm = new stdClass();

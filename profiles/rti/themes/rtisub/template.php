@@ -45,16 +45,24 @@ function rtisub_views_pre_render(&$view) {
  */
 function rtisub_preprocess_field(&$variables, $hook) {
   if ($variables['element']['#field_name'] == 'field_link' && isset($variables['element']['#object']->field_resource_type['und'][0]['taxonomy_term']->name)) {
-    $colorbox_types = array('Module', 'Video');
+    $colorbox_types = array('Module', 'Video', 'Podcast');
     $resource_type = $variables['element']['#object']->field_resource_type['und'][0]['taxonomy_term']->name;
 
+    // If resource should load in colorbox.
     if (in_array($resource_type, $colorbox_types)) {
+      // Determine if Podcast is external or internal.
+      if ($resource_type == 'Podcast' && strpos($variables['element']['#object']->field_link['und'][0]['url'], 'resources.buildingrti.utexas.org') === FALSE) {
+        // This is an external link.
+        return;
+      }
+      // Load colorbox for internal resources.
       $variables['items'][0]['#element']['query'] = array(
         'width' => 1230,
         'height' => 800,
         'iframe' => TRUE,
       );
       $variables['items'][0]['#element']['attributes'] = array('class' => array('colorbox-load'));
+
     }
   }
 }

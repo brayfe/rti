@@ -108,7 +108,7 @@ class OnlineModuleMigration extends RTINodeMigration {
    * Callback to prepend the server url where the modules are stored.
    */
   public function prependURL($row) {
-    return 'http://resources.buildingrti.utexas.org/Drupal_Modules/' . $row[0];
+    return 'http://resources.buildingrti.utexas.org/modules/' . $row[0];
   }
 
   /**

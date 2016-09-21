@@ -37,9 +37,10 @@ class PodcastMigration extends RTINodeMigration {
     $this->addFieldMapping('field_image:alt', 'field_podcast_image:alt');
 
     // Resource Link.
-    $this->addFieldMapping('field_link', 'field_podcast_link');
-    $this->addFieldMapping('field_link:title', 'field_podcast_link:title');
-    $this->addFieldMapping('field_link:attributes', 'field_podcast_link:attributes');
+    $this->addFieldMapping('field_link', 'podcast_link');
+    $this->addFieldMapping('field_link:title', 'podcast_link_title');
+    $this->addFieldMapping('field_link:attributes', 'podcast_link_attrs');
+
 
     // Resource Summary.
     $this->addFieldMapping('field_summary', 'field_resource_summary');
@@ -101,6 +102,29 @@ class PodcastMigration extends RTINodeMigration {
     $this->addFieldMapping('field_free_tags:source_type')
       ->defaultValue('tid');
 
+  }
+
+  /**
+   * PrepareRow.
+   */
+  public function prepareRow($row) {
+    // Allow our parent classes to ignore rows and edit $row.
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+
+    // Captivate Links point to resources.buildingrti.
+    if (isset($row->field_podcast_captivate_link)) {
+      $row->podcast_link = 'http://resources.buildingrti.utexas.org/podcasts/' . $row->field_podcast_captivate_link[0];
+      $row->podcast_link_title= $row->{'field_podcast_captivate_link:title'};
+      $row->podcast_link_attrs = $row->{'field_podcast_captivate_link:attributes'};
+    }
+    // External links are left alone.
+    elseif (isset($row->field_podcast_link)) {
+      $row->podcast_link = $row->field_podcast_link;
+      $row->podcast_link_title= $row->{'field_podcast_link:title'};
+      $row->podcast_link_attrs = $row->{'field_podcast_link:attributes'};
+    }
   }
 
   /**
