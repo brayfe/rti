@@ -439,7 +439,7 @@ function rti_resource_content_type_field_default_field_instances() {
     'settings' => array(
       'description_field' => 0,
       'file_directory' => 'resource_files',
-      'file_extensions' => 'txt doc docx ppt pptx pdf mpeg mp4 zip mov',
+      'file_extensions' => 'txt doc docx ppt pptx pdf zip',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -452,8 +452,8 @@ function rti_resource_content_type_field_default_field_instances() {
         ),
         'allowed_types' => array(
           'audio' => 0,
-          'document' => 0,
-          'image' => 0,
+          'document' => 'document',
+          'image' => 'image',
           'video' => 0,
         ),
         'browser_plugins' => array(
