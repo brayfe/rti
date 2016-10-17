@@ -170,13 +170,13 @@ function rti_search_view_views_default_views() {
     2 => '2',
     1 => 0,
     5 => 0,
-    3 => 0,
     4 => 0,
+    3 => 0,
   );
   $handler->display->display_options['filters']['search_api_views_fulltext']['min_length'] = '2';
   $handler->display->display_options['filters']['search_api_views_fulltext']['fields'] = array(
     'body:value' => 'body:value',
-    'title' => 'title',
+    'search_api_aggregation_1' => 'search_api_aggregation_1',
   );
 
   /* Display: Page */
