@@ -13,7 +13,7 @@ function rti_category_menu_menu_default_menu_custom() {
   // Exported menu: menu-category-menu.
   $menus['menu-category-menu'] = array(
     'menu_name' => 'menu-category-menu',
-    'title' => 'Resource Categories',
+    'title' => 'Resources',
     'description' => 'Menu based on the Resource Categories taxonomy.',
   );
   // Translatables
