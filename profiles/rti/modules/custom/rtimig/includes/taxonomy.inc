@@ -15,19 +15,19 @@ class TaxonomyMigration extends RTITermMigration {
 
   // Lookup array for Resource Type Taxonomy.
   public $icons = array(
-    'Booklet' => 'booklet-icon-large.png',
-    'Document' => 'document-icon-large.png',
-    'Instructional Material' => 'instructional-materials-icon-large.png',
-    'Leadership Tool' => 'leadership-tool-icon-large.png',
-    'Lesson' => 'lesson-icon-large.png',
-    'Link & Website' => 'link-website-icon-large.png',
-    'Module' => 'module-icon-large.png',
-    'Podcast' => 'podcast-icon-large.png',
-    'Presentation' => 'presentation-icon-large.png',
-    'Resource Page' => 'resource-page-icon-large.png',
+    'Booklets' => 'booklet-icon-large.png',
+    'Documents' => 'document-icon-large.png',
+    'Instructional Materials' => 'instructional-materials-icon-large.png',
+    'Leadership Tools' => 'leadership-tool-icon-large.png',
+    'Lessons' => 'lesson-icon-large.png',
+    'Links & Websites' => 'link-website-icon-large.png',
+    'Modules' => 'module-icon-large.png',
+    'Podcasts' => 'podcast-icon-large.png',
+    'Presentations' => 'presentation-icon-large.png',
+    'Resource Pages' => 'resource-page-icon-large.png',
     'Research' => 'research-icon-large.png',
-    'Video' => 'video-icon-large.png',
-    'Webinar' => 'webinar-icon-large.png',
+    'Videos' => 'video-icon-large.png',
+    'Webinars' => 'webinar-icon-large.png',
   );
 
   /**

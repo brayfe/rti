@@ -144,7 +144,7 @@ dependencies[] = rti_search_facets_blocks
 dependencies[] = colorbox_load_setting
 dependencies[] = google_analytics
 dependencies[] = responsive_menu_settings
-dependencies[] = url_alias_patterns
+dependencies[] = rti_url_alias_patterns
 dependencies[] = rti_site_name
 
 ; Features - Taxonomy

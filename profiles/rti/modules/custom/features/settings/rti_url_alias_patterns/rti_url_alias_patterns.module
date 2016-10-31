@@ -4,4 +4,4 @@
  * Code for the URL Alias Patterns feature.
  */
 
-include_once 'url_alias_patterns.features.inc';
+include_once 'rti_url_alias_patterns.features.inc';
