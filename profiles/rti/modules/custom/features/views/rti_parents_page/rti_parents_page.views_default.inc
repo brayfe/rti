@@ -164,7 +164,7 @@ function rti_parents_page_views_default_views() {
   $handler->display->display_options['filters']['field_stakeholders']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['filters']['field_stakeholders']['field'] = 'field_stakeholders';
   $handler->display->display_options['filters']['field_stakeholders']['value'] = array(
-    62 => '62',
+    59 => '59',
   );
 
   /* Display: Page */
