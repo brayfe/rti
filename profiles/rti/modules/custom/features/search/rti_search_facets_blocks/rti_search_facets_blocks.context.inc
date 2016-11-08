@@ -33,12 +33,6 @@ function rti_search_facets_blocks_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
-        'facetapi-75QyZDcnQy6N6NZpHQe6H6zGSFpUEB2q' => array(
-          'module' => 'facetapi',
-          'delta' => '75QyZDcnQy6N6NZpHQe6H6zGSFpUEB2q',
-          'region' => 'sidebar_first',
-          'weight' => '-9',
-        ),
         'facetapi-H6BRTu3HtQ341ZX355uDYYyj0FHcJeRZ' => array(
           'module' => 'facetapi',
           'delta' => 'H6BRTu3HtQ341ZX355uDYYyj0FHcJeRZ',
