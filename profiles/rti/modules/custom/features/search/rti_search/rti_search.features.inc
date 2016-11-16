@@ -91,7 +91,7 @@ function rti_search_default_search_api_index() {
           "settings" : {
             "fields" : { "title" : true, "search_api_aggregation_1" : true, "body:value" : true },
             "file" : "",
-            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc\\r\\nand"
+            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc\\r\\nand\\r\\nto"
           }
         },
         "search_api_highlighting" : {
