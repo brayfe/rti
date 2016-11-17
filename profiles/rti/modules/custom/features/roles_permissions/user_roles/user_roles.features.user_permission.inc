@@ -16,6 +16,7 @@ function user_roles_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'auditor' => 'auditor',
+      'editor' => 'editor',
     ),
     'module' => 'admin_menu',
   );
@@ -26,6 +27,7 @@ function user_roles_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'auditor' => 'auditor',
+      'editor' => 'editor',
     ),
     'module' => 'system',
   );
@@ -36,6 +38,7 @@ function user_roles_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'auditor' => 'auditor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -56,6 +59,7 @@ function user_roles_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'auditor' => 'auditor',
+      'editor' => 'editor',
     ),
     'module' => 'system',
   );
