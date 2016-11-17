@@ -177,7 +177,7 @@ function rti_search_facets_facetapi_default_facet_settings() {
     'facet_fewer_text' => 'Show fewer',
     'soft_limit' => '0',
     'nofollow' => 1,
-    'show_expanded' => 1,
+    'show_expanded' => 0,
     'empty_text' => array(
       'value' => '<p>No results.</p>
 ',
