@@ -2321,16 +2321,18 @@ article iframe {
 /* line 54, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper label,
 #views-exposed-form-rti-indexed-search-page #edit-search-text--2-wrapper label {
-  display: none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
-/* line 57, ../sass/components/_views.scss */
+/* line 59, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget,
 #views-exposed-form-rti-indexed-search-page #edit-search-text--2-wrapper .views-widget {
   display: inline-block;
   border: none;
   font-size: 1em;
 }
-/* line 61, ../sass/components/_views.scss */
+/* line 63, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page #edit-search-text-wrapper .views-widget input,
 #views-exposed-form-rti-indexed-search-page #edit-search-text--2-wrapper .views-widget input {
   width: 100%;
@@ -2339,7 +2341,7 @@ article iframe {
   vertical-align: middle;
   border: 1px solid #3169a2;
 }
-/* line 70, ../sass/components/_views.scss */
+/* line 72, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-submit-button {
   display: inline-block;
   vertical-align: top;
@@ -2347,7 +2349,7 @@ article iframe {
   margin-left: -5px;
   margin-top: 0;
 }
-/* line 76, ../sass/components/_views.scss */
+/* line 78, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-submit-button input {
   width: 100%;
   margin-top: 0;
@@ -2361,19 +2363,19 @@ article iframe {
   font-size: 1.4em;
   height: 50px;
 }
-/* line 89, ../sass/components/_views.scss */
+/* line 91, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-submit-button input:hover, #views-exposed-form-rti-indexed-search-page .views-submit-button input:focus {
   background-color: #0A4886;
 }
 
-/* line 98, ../sass/components/_views.scss */
+/* line 100, ../sass/components/_views.scss */
 input.form-text, input.form-submit {
   width: 80%;
   height: 3em;
   border: none;
 }
 
-/* line 104, ../sass/components/_views.scss */
+/* line 106, ../sass/components/_views.scss */
 form input {
   padding: 0 0.5em;
   box-sizing: border-box;
@@ -2385,13 +2387,13 @@ form input {
 }
 
 /* put icon labels on resources for the view, but also the full node display */
-/* line 115, ../sass/components/_views.scss */
+/* line 117, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper {
   margin-top: 0;
   width: 110px;
   float: left;
 }
-/* line 119, ../sass/components/_views.scss */
+/* line 121, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper .resource-type {
   display: inline-block;
   padding: 1px 6px;
@@ -2399,38 +2401,38 @@ form input {
   width: 100px;
   text-align: center;
 }
-/* line 126, ../sass/components/_views.scss */
+/* line 128, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper .resource-thumb {
   text-align: center;
 }
-/* line 128, ../sass/components/_views.scss */
+/* line 130, ../sass/components/_views.scss */
 .resource-type-thumb-wrapper .resource-thumb img {
   width: 60px;
   height: auto;
 }
 
-/* line 135, ../sass/components/_views.scss */
+/* line 137, ../sass/components/_views.scss */
 .resource-list-text {
   margin-left: 145px;
 }
-/* line 137, ../sass/components/_views.scss */
+/* line 139, ../sass/components/_views.scss */
 .resource-list-text h3.resource-title {
   margin-bottom: 0.4em;
   margin-top: 0;
   display: block;
   line-height: 1.2em;
 }
-/* line 142, ../sass/components/_views.scss */
+/* line 144, ../sass/components/_views.scss */
 .resource-list-text h3.resource-title a {
   color: #333;
   text-decoration: none;
 }
-/* line 147, ../sass/components/_views.scss */
+/* line 149, ../sass/components/_views.scss */
 .resource-list-text .resource-summary, .resource-list-text .resource-summary p {
   margin-top: 0;
   margin-bottom: 1em;
 }
-/* line 152, ../sass/components/_views.scss */
+/* line 154, ../sass/components/_views.scss */
 .resource-list-text .get-resource-btn a {
   text-decoration: none;
   padding: .5em;
@@ -2443,20 +2445,20 @@ form input {
   font-size: 0.75em;
   display: inline-block;
 }
-/* line 163, ../sass/components/_views.scss */
+/* line 165, ../sass/components/_views.scss */
 .resource-list-text .get-resource-btn a:hover, .resource-list-text .get-resource-btn a:focus {
   background-color: #333;
 }
 
-/* line 170, ../sass/components/_views.scss */
+/* line 172, ../sass/components/_views.scss */
 .views-exposed-form .views-submit-button {
   display: none;
 }
-/* line 173, ../sass/components/_views.scss */
+/* line 175, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widgets {
   text-align: center;
 }
-/* line 176, ../sass/components/_views.scss */
+/* line 178, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget {
   padding: 0;
   width: 250px;
@@ -2465,7 +2467,7 @@ form input {
   float: none;
   font-size: 0.8em;
 }
-/* line 183, ../sass/components/_views.scss */
+/* line 185, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .views-widget {
   display: none;
   width: 100%;
@@ -2474,11 +2476,11 @@ form input {
   border-right: 1px solid #666;
   border-bottom: 1px solid #666;
 }
-/* line 191, ../sass/components/_views.scss */
+/* line 193, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget #edit-submit-resources-dynamic-filtered-pages {
   display: none;
 }
-/* line 195, ../sass/components/_views.scss */
+/* line 197, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item a {
   color: #333;
   line-height: 1.2em;
@@ -2488,19 +2490,19 @@ form input {
   padding: 2px 1em;
   border-top: 1px solid #666;
 }
-/* line 203, ../sass/components/_views.scss */
+/* line 205, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item a:hover, .views-exposed-form .views-exposed-widget .form-item a:focus {
   background-color: #e6e6e6;
 }
-/* line 207, ../sass/components/_views.scss */
+/* line 209, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item #edit-type-1-all a {
   border-top: none;
 }
-/* line 211, ../sass/components/_views.scss */
+/* line 213, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget .form-item-edit-type-all a:first-child {
   border: none;
 }
-/* line 214, ../sass/components/_views.scss */
+/* line 216, ../sass/components/_views.scss */
 .views-exposed-form .views-exposed-widget label {
   font-weight: normal;
   width: 100%;
@@ -2514,16 +2516,16 @@ form input {
 }
 
 /* events */
-/* line 230, ../sass/components/_views.scss */
+/* line 232, ../sass/components/_views.scss */
 .view-rti-events {
   margin-top: 1em;
 }
-/* line 232, ../sass/components/_views.scss */
+/* line 234, ../sass/components/_views.scss */
 .view-rti-events .views-row {
   margin-bottom: 1em;
   border-bottom: 1px solid #333;
 }
-/* line 236, ../sass/components/_views.scss */
+/* line 238, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-title a {
   color: #333;
   font-size: 1.17em;
@@ -2535,15 +2537,15 @@ form input {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
-/* line 248, ../sass/components/_views.scss */
+/* line 250, ../sass/components/_views.scss */
 .view-rti-events .views-row span.date-display-single, .view-rti-events .views-row .date-display-range {
   font-size: 0.8em;
 }
-/* line 251, ../sass/components/_views.scss */
+/* line 253, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-body p {
   margin-top: 6px;
 }
-/* line 253, ../sass/components/_views.scss */
+/* line 255, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-body p a {
   color: #333;
   border-bottom: 1px solid #333;
@@ -2551,15 +2553,15 @@ form input {
   text-decoration: none;
   font-style: italic;
 }
-/* line 259, ../sass/components/_views.scss */
+/* line 261, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-body p a:after {
   content: " \00bb";
 }
-/* line 262, ../sass/components/_views.scss */
+/* line 264, ../sass/components/_views.scss */
 .view-rti-events .views-row .views-field-body p a:hover, .view-rti-events .views-row .views-field-body p a:focus {
   border: none;
 }
-/* line 268, ../sass/components/_views.scss */
+/* line 270, ../sass/components/_views.scss */
 .view-rti-events .views-row-last {
   border-bottom: none;
 }
