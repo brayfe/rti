@@ -1,5 +1,5 @@
 /* styling for views */
-.view-rti-indexed-search, 
+.view-rti-indexed-search,
 .view-rti-parents,
 .view-rti-featured-items{
 	.view-content{
@@ -52,7 +52,9 @@
 		vertical-align: top;
 		margin-top: 0;
 		label{
-			display: none;
+	   position: absolute;
+	   top: -9999px;
+	   left: -9999px;
 		}
 		.views-widget{
 			display: inline-block;
@@ -267,5 +269,5 @@ form input{
 	}
 	.views-row-last{
 		border-bottom:none;
-	}	
+	}
 }
