@@ -11,7 +11,7 @@ function rti_resource_browser_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'resource_browser';
+  $view->name = 'rti_resource_browser';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -231,14 +231,14 @@ function rti_resource_browser_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'admin/resource-browser';
+  $handler->display->display_options['path'] = 'admin/rti-resource-browser';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'RTI Resource Browser';
   $handler->display->display_options['menu']['weight'] = '-1000';
   $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
-  $export['resource_browser'] = $view;
+  $export['rti_resource_browser'] = $view;
 
   return $export;
 }
