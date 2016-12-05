@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RTI Resource Browser feature.
+ */
+
+include_once 'rti_resource_browser.features.inc';
