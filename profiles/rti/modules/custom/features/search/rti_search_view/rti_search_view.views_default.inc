@@ -156,6 +156,10 @@ function rti_search_view_views_default_views() {
   $handler->display->display_options['sorts']['field_resource_ranking']['id'] = 'field_resource_ranking';
   $handler->display->display_options['sorts']['field_resource_ranking']['table'] = 'search_api_index_rti_content_index';
   $handler->display->display_options['sorts']['field_resource_ranking']['field'] = 'field_resource_ranking';
+  /* Sort criterion: Indexed Node: Entity ID */
+  $handler->display->display_options['sorts']['search_api_id']['id'] = 'search_api_id';
+  $handler->display->display_options['sorts']['search_api_id']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['sorts']['search_api_id']['field'] = 'search_api_id';
   /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_rti_content_index';
