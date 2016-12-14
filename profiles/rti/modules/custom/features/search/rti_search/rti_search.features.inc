@@ -23,14 +23,14 @@ function rti_search_default_search_api_index() {
         "body:value" : { "type" : "text" },
         "field_featured_resource" : { "type" : "boolean" },
         "field_free_tags" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_free_tags:name" : { "type" : "list\\u003Ctext\\u003E" },
         "field_resource_category" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_resource_ranking" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_resource_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_special_populations" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_stakeholders" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "search_api_aggregation_1" : { "type" : "text", "boost" : "8.0" },
         "search_api_language" : { "type" : "string" },
-        "title" : { "type" : "string", "boost" : "8.0" }
+        "title" : { "type" : "text", "boost" : "21.0" }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
@@ -47,30 +47,19 @@ function rti_search_default_search_api_index() {
         },
         "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } },
         "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_aggregation" : {
-          "status" : 1,
-          "weight" : "0",
-          "settings" : { "fields" : { "search_api_aggregation_1" : {
-                "name" : "FullText Title",
-                "type" : "fulltext",
-                "fields" : [ "title" ],
-                "description" : "A Fulltext aggregation of the following fields: Title."
-              }
-            }
-          }
-        }
+        "search_api_alter_add_aggregation" : { "status" : 1, "weight" : "0", "settings" : [] }
       },
       "processors" : {
         "search_api_case_ignore" : {
           "status" : 1,
           "weight" : "0",
-          "settings" : { "fields" : { "title" : true, "search_api_aggregation_1" : true, "body:value" : true } }
+          "settings" : { "fields" : { "title" : true, "body:value" : true, "field_free_tags:name" : true } }
         },
         "search_api_html_filter" : {
           "status" : 1,
           "weight" : "10",
           "settings" : {
-            "fields" : { "title" : true, "search_api_aggregation_1" : true, "body:value" : true },
+            "fields" : { "title" : true, "body:value" : true, "field_free_tags:name" : true },
             "title" : 0,
             "alt" : 1,
             "tags" : "h1 = 5\\r\\nh2 = 3\\r\\nh3 = 2\\r\\nstrong = 2\\r\\nb = 2\\r\\nem = 1.5\\r\\nu = 1.5"
@@ -80,7 +69,7 @@ function rti_search_default_search_api_index() {
           "status" : 1,
           "weight" : "20",
           "settings" : {
-            "fields" : { "search_api_aggregation_1" : true, "body:value" : true },
+            "fields" : { "title" : true, "body:value" : true, "field_free_tags:name" : true },
             "spaces" : "[^[:alnum:]-]",
             "ignorable" : "[\\u0027-]"
           }
@@ -89,7 +78,7 @@ function rti_search_default_search_api_index() {
           "status" : 1,
           "weight" : "30",
           "settings" : {
-            "fields" : { "title" : true, "search_api_aggregation_1" : true, "body:value" : true },
+            "fields" : { "title" : true, "body:value" : true, "field_free_tags:name" : true },
             "file" : "",
             "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc\\r\\nand\\r\\nto"
           }
@@ -103,8 +92,14 @@ function rti_search_default_search_api_index() {
             "excerpt" : 1,
             "excerpt_length" : "256",
             "exclude_fields" : [],
-            "highlight" : "always"
+            "highlight" : "always",
+            "highlight_partial" : 1
           }
+        },
+        "search_api_porter_stemmer" : {
+          "status" : 0,
+          "weight" : "35",
+          "settings" : { "fields" : { "body:value" : true }, "exceptions" : "texan=texa" }
         }
       }
     },
@@ -131,9 +126,9 @@ function rti_search_default_search_api_server() {
       "partial_matches" : 1,
       "indexes" : { "rti_content_index" : {
           "title" : {
-            "table" : "search_api_db_rti_content_index",
-            "type" : "string",
-            "boost" : "8.0",
+            "table" : "search_api_db_rti_content_index_text",
+            "type" : "text",
+            "boost" : "21.0",
             "column" : "title"
           },
           "field_resource_category" : {
@@ -189,10 +184,10 @@ function rti_search_default_search_api_server() {
             "type" : "boolean",
             "boost" : "1.0"
           },
-          "search_api_aggregation_1" : {
+          "field_free_tags:name" : {
             "table" : "search_api_db_rti_content_index_text",
-            "type" : "text",
-            "boost" : "8.0"
+            "type" : "list\\u003Ctext\\u003E",
+            "boost" : "1.0"
           }
         }
       }
