@@ -1,3 +1,23 @@
+Search API 1.x, dev (xxxx-xx-xx):
+---------------------------------
+- #2828380 by jansete: Fixed taxonomy term access tag in Views filter.
+- #2827717 by Fabien.Godineau, drunken monkey: Fixed disabling of search views
+  when reverting an index.
+- #2822836 by prince_zyxware: Fixed some Drupal coding standards violations.
+- #2822145 by drunken monkey: Fixed problem with phrase search in Views
+  fulltext filter.
+- #2778261 by drunken monkey, BAHbKA: Fixed "Index items immediately"
+  functionality for unindexed items.
+- #2358065 by Jelle_S, graper, drunken monkey: Added the option for
+  highlighting of partial matches to the processor.
+- #2779159 by mark_fullmer, drunken monkey: Added a Stemmer processor.
+- #2649412 by relaxnow, GoZ: Added support for minimum granularity to date
+  facets.
+- #2769021 by Plazik, drunken monkey: Added the generated Search API query to
+  the Views preview.
+- #2769877 by mfernea: Fixed database exception when filtering for anonymous
+  user.
+
 Search API 1.20 (2016-07-21):
 -----------------------------
 - #2731103 by drunken monkey: Fixed the default value for the taxonomy term

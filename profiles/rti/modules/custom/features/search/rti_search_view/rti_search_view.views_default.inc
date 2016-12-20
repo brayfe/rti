@@ -180,7 +180,8 @@ function rti_search_view_views_default_views() {
   $handler->display->display_options['filters']['search_api_views_fulltext']['min_length'] = '2';
   $handler->display->display_options['filters']['search_api_views_fulltext']['fields'] = array(
     'body:value' => 'body:value',
-    'search_api_aggregation_1' => 'search_api_aggregation_1',
+    'field_free_tags:name' => 'field_free_tags:name',
+    'title' => 'title',
   );
 
   /* Display: Page */
