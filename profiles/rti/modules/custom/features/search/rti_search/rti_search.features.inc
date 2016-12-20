@@ -20,10 +20,10 @@ function rti_search_default_search_api_index() {
       "index_directly" : 0,
       "cron_limit" : "50",
       "fields" : {
-        "body:value" : { "type" : "text" },
+        "body:value" : { "type" : "text", "boost" : "0.2" },
         "field_featured_resource" : { "type" : "boolean" },
         "field_free_tags" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_free_tags:name" : { "type" : "list\\u003Ctext\\u003E" },
+        "field_free_tags:name" : { "type" : "list\\u003Ctext\\u003E", "boost" : "8.0" },
         "field_resource_category" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_resource_ranking" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_resource_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
@@ -176,7 +176,7 @@ function rti_search_default_search_api_server() {
           "body:value" : {
             "table" : "search_api_db_rti_content_index_text",
             "type" : "text",
-            "boost" : "1.0"
+            "boost" : "0.2"
           },
           "field_featured_resource" : {
             "table" : "search_api_db_rti_content_index",
@@ -187,7 +187,7 @@ function rti_search_default_search_api_server() {
           "field_free_tags:name" : {
             "table" : "search_api_db_rti_content_index_text",
             "type" : "list\\u003Ctext\\u003E",
-            "boost" : "1.0"
+            "boost" : "8.0"
           }
         }
       }
