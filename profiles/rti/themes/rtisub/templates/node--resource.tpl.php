@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Returns the HTML for a node.
@@ -22,7 +23,7 @@
       <?php print render($content['field_resource_type']); ?>
       <div class="resource-image">
         <?php print render($resource_image); ?>
-      </div> 
+      </div>
   </div>
   <div class="node-fields-wrapper">
     <?php
@@ -30,7 +31,6 @@
       print render($content['field_resource_file']);
       print render($content['field_link']);
       print render($content['field_resource_category']);
-      print render($content['field_free_tags']); 
       print render($content['field_related_resources']);
     ?>
   </div>
@@ -39,9 +39,9 @@
 <?php if($variables['view_mode'] == 'teaser'): ?>
   <div class="type-image-wrapper">
       <?php print render($content['field_resource_type']); ?>
-      <div class="resource-image"> 
+      <div class="resource-image">
         <?php print render($resource_image); ?>
-      </div> 
+      </div>
   </div>
   <div class="node-fields-wrapper">
     <h3<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
