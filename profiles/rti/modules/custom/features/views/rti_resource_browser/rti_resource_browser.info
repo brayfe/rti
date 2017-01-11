@@ -1,9 +1,9 @@
 name = RTI Resource Browser
 core = 7.x
 package = Views
-version = 7.x-1.0-20161205
-dependencies[] = ctools
+version = 7.x-1.0-20170110
 dependencies[] = views
+dependencies[] = views_data_export
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[views_view][] = rti_resource_browser

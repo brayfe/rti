@@ -45,7 +45,16 @@ function rti_deployment_update_7101() {
   // Set the homepage to a recently migrated Basic Page.
   $home_page = drupal_get_normal_path('home');
   variable_set('site_frontpage', $home_page);
-  
+
   //Rebuild Node Access Permissions.
   node_access_rebuild();
+}
+
+/**
+ * Implements hook_update_N().
+ *
+ * Enable views_data_export module.
+ */
+function rti_deployment_update_7102() {
+  module_enable(array('views_data_export'), FALSE);
 }
