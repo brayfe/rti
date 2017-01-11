@@ -91,7 +91,7 @@ function rti_search_default_search_api_index() {
             "suffix" : "\\u003C\\/strong\\u003E",
             "excerpt" : 1,
             "excerpt_length" : "256",
-            "exclude_fields" : [],
+            "exclude_fields" : { "field_free_tags:name" : "field_free_tags:name" },
             "highlight" : "always",
             "highlight_partial" : 1
           }
