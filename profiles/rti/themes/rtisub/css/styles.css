@@ -2641,7 +2641,7 @@ form input {
 }
 /* line 66, ../sass/components/_facetapi-blocks.scss */
 .block-facetapi .item-list ul.facetapi-facet-field-resource-category > li.leaf {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 /* resources - full nodes styles */
