@@ -111,6 +111,11 @@ function rti_resource_browser_views_default_views() {
   $handler->display->display_options['fields']['field_resource_type']['field'] = 'field_resource_type';
   $handler->display->display_options['fields']['field_resource_type']['label'] = 'RTI Resource Type';
   $handler->display->display_options['fields']['field_resource_type']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_free_tags']['id'] = 'field_free_tags';
+  $handler->display->display_options['fields']['field_free_tags']['table'] = 'field_data_field_free_tags';
+  $handler->display->display_options['fields']['field_free_tags']['field'] = 'field_free_tags';
+  $handler->display->display_options['fields']['field_free_tags']['delta_offset'] = '0';
   /* Field: Content: Ranking */
   $handler->display->display_options['fields']['field_resource_ranking']['id'] = 'field_resource_ranking';
   $handler->display->display_options['fields']['field_resource_ranking']['table'] = 'field_data_field_resource_ranking';
