@@ -2345,13 +2345,13 @@ article iframe {
 #views-exposed-form-rti-indexed-search-page .views-submit-button {
   display: inline-block;
   vertical-align: top;
-  width: 100px;
+  width: 148px;
   margin-left: -5px;
   margin-top: 0;
 }
 /* line 78, ../sass/components/_views.scss */
 #views-exposed-form-rti-indexed-search-page .views-submit-button input {
-  width: 100%;
+  width: auto;
   margin-top: 0;
   background-color: #3169a2;
   color: #fff;
