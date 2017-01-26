@@ -31,6 +31,7 @@ function rtisub_preprocess_maintenance_page(&$variables, $hook) {
 function rtisub_views_pre_render(&$view) {
   if ($view->name == 'rti_indexed_search' && $view->current_display == 'page') {
     $block = module_invoke('views', 'block_view', '-exp-rti_indexed_search-page');
+    $block['content']['#markup'] = str_replace('Search', 'Refine Search', $block['content']['#markup']);
     $view->attachment_before = '<div class="main-region-search-form">' .
     $block['content']['#markup'] . '<span class="reset-btn"><a href="/rti-search">New Search</a></span></div>';
   }
