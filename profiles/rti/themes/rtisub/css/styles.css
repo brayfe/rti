@@ -1494,13 +1494,14 @@ tr.selected td {
 /* line 38, ../sass/components/_header.scss */
 #header-wrapper header.header .header-region-search-form .views-submit-button {
   margin-left: -5px;
+  width: 86px;
 }
 
-/* line 45, ../sass/components/_header.scss */
+/* line 46, ../sass/components/_header.scss */
 .header__region {
   clear: none !important;
 }
-/* line 47, ../sass/components/_header.scss */
+/* line 48, ../sass/components/_header.scss */
 .header__region #block-views-exp-rti-indexed-search-page {
   display: inline-block;
   float: right;
