@@ -12,3 +12,4 @@ features[fe_block_settings][] = views--exp-rti_indexed_search-page
 features[features_api][] = api:2
 features[views_view][] = rti_indexed_search
 project path = profiles/rti/modules/custom/features/search
+files[] = 'rti_search_view_authenticated_relevance.inc'
