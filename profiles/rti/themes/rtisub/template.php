@@ -31,7 +31,6 @@ function rtisub_preprocess_maintenance_page(&$variables, $hook) {
 function rtisub_views_pre_render(&$view) {
   if ($view->name == 'rti_indexed_search' && $view->current_display == 'page') {
     $block = module_invoke('views', 'block_view', '-exp-rti_indexed_search-page');
-    // $block['content']['#markup'] = str_replace('Search', 'Refine Search', $block['content']['#markup']);
     $view->attachment_before = '<div class="main-region-search-form">' .
     $block['content']['#markup'] . '</div>';
   }
@@ -204,14 +203,13 @@ function rtisub_preprocess_views_view_fields(&$variables) {
  * Implements hook_form_alter().
  */
 function rtisub_form_alter(&$form, &$form_state, $form_id) {
-  switch ($form['#id']) {
-    case 'views-exposed-form-rti-indexed-search-page':
-      $form['rti-search-new-search'] = array(
-        '#type' => 'submit',
-        '#value' => 'New Search!!!',
-        '#submit' => array('rtisub_search_new_search'),
-      );
-      break;
+  if (arg(0) == "rti-search" && $form_state['view']->name == 'rti_indexed_search' && $form_state['view']->current_display == "page") {
+    $form['submit']['#value'] = "Refine Search";
+    $form['rti-search-new-search'] = array(
+      '#type' => 'submit',
+      '#value' => 'New Search',
+      '#submit' => array('rtisub_search_new_search'),
+    );
   }
 }
 
