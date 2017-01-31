@@ -14,7 +14,7 @@ class rti_search_view_authenticated_relevance extends views_handler_field {
    * Called to add the field to a query.
    */
   public function query() {
-
+    // Do nothing to override the default query action.
   }
 
   /**
@@ -24,11 +24,11 @@ class rti_search_view_authenticated_relevance extends views_handler_field {
    *   The values retrieved from the database.
    */
   public function render($values) {
-    global $user;
-    if (in_array('editor', $user->roles)) {
+    if (user_access('view relevance in search')) {
       $relevance = $values->_entity_properties['search_api_relevance'];
-      $output = "<div class='admin-relevance'>Relevance: " . $relevance . "</div>"; 
+      $output = "<div class='admin-relevance'>Relevance: " . $relevance . "</div>";
       return $output;
     }
   }
+
 }
