@@ -270,6 +270,12 @@ function rti_search_view_views_default_views() {
   $handler->display->display_options['fields']['search_api_excerpt']['exclude'] = TRUE;
   $handler->display->display_options['fields']['search_api_excerpt']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['search_api_excerpt']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Authenticated Relevance Field */
+  $handler->display->display_options['fields']['authenticated_relevance_field']['id'] = 'authenticated_relevance_field';
+  $handler->display->display_options['fields']['authenticated_relevance_field']['table'] = 'search_api_index_rti_content_index';
+  $handler->display->display_options['fields']['authenticated_relevance_field']['field'] = 'authenticated_relevance_field';
+  $handler->display->display_options['fields']['authenticated_relevance_field']['label'] = '';
+  $handler->display->display_options['fields']['authenticated_relevance_field']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'rti-search';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'RTI Indexed Search';

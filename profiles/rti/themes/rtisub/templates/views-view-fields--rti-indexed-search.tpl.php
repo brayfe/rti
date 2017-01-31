@@ -48,4 +48,7 @@
 	<?php endif; ?>
 
   <span class="get-resource-btn"><?php print $fields['view_node']->content; ?></span><br />
+  <?php if (isset($authenticated_relevance_field)) : ?>
+    <?php print $authenticated_relevance_field; ?>
+  <?php endif; ?>
 </div>

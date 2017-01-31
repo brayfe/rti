@@ -133,7 +133,6 @@ function rtisub_preprocess_views_view_fields(&$variables) {
     $term_name = $term->name;
     $alt = $term_name;
     $title = $term_name;
-
     // If an image already exists, load the data,
     // and default the alt and title if empty.
     if (!empty($variables['row']->_field_data['field_image']['entity']->field_image['und'][0]['fid'])) {
@@ -169,6 +168,10 @@ function rtisub_preprocess_views_view_fields(&$variables) {
         $variables['row']->_entity_properties['search_api_excerpt'] != '') {
       $variables['excerpt'] = $variables['row']->_entity_properties['search_api_excerpt'];
       $variables['relevance'] = $variables['row']->_entity_properties['search_api_relevance'];
+    }
+
+    if (isset($variables['fields']['authenticated_relevance_field']->content)) {
+      $variables['authenticated_relevance_field'] = $variables['fields']['authenticated_relevance_field']->content;
     }
   }
   // Non-Search API view.
