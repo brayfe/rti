@@ -32,9 +32,10 @@ function rtisub_views_pre_render(&$view) {
   if ($view->name == 'rti_indexed_search' && $view->current_display == 'page') {
     $block = module_invoke('views', 'block_view', '-exp-rti_indexed_search-page');
     $view->attachment_before = '<div class="main-region-search-form">' .
-    $block['content']['#markup'] . '<span class="reset-btn"><a href="/rti-search">Reset</a></span></div>';
+    $block['content']['#markup'] . '</div>';
   }
 }
+
 
 
 /**
@@ -199,6 +200,29 @@ function rtisub_preprocess_views_view_fields(&$variables) {
       ));
     }
   }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function rtisub_form_alter(&$form, &$form_state, $form_id) {
+  if (arg(0) == "rti-search" && $form_state['view']->name == 'rti_indexed_search' && $form_state['view']->current_display == "page") {
+    $form['submit']['#value'] = "Refine Search";
+    $form['rti-search-new-search'] = array(
+      '#type' => 'submit',
+      '#value' => 'New Search',
+      '#submit' => array('rtisub_search_new_search'),
+    );
+  }
+}
+
+/**
+ * Custom New Search callback for RTI Search page.
+ */
+function rtisub_search_new_search($form, &$form_state) {
+  $search_text = $form_state['values']['search_text'];
+  $options = array('query' => array('search_text' => $search_text));
+  drupal_goto("/rti-search", $options);
 }
 
 /**
