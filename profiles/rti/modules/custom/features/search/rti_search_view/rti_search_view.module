@@ -1,7 +1,20 @@
 <?php
+
 /**
  * @file
  * Code for the Search View feature.
  */
 
 include_once 'rti_search_view.features.inc';
+
+/**
+ * Implements hook_permission().
+ */
+function rti_search_view_permission() {
+  return array(
+    'view relevance in search' => array(
+      'title' => t('View "Relevance" in RTI Search page results'),
+      'description' => t('Allow user to see the Search API relevance score in /rti-search page.'),
+    ),
+  );
+}

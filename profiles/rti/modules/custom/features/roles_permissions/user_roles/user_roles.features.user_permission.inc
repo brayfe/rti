@@ -53,6 +53,16 @@ function user_roles_user_default_permissions() {
     'module' => 'view_unpublished',
   );
 
+  // Exported permission: 'view relevance in search'.
+  $permissions['view relevance in search'] = array(
+    'name' => 'view relevance in search',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+    ),
+    'module' => 'rti_search_view',
+  );
+
   // Exported permission: 'view the administration theme'.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
