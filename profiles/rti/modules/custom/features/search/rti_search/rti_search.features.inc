@@ -80,7 +80,7 @@ function rti_search_default_search_api_index() {
           "settings" : {
             "fields" : { "title" : true, "body:value" : true, "field_free_tags:name" : true },
             "file" : "",
-            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc\\r\\nand\\r\\nto\\r\\nfor"
+            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc\\r\\nand\\r\\nto\\r\\nfor\\r\\non"
           }
         },
         "search_api_highlighting" : {
