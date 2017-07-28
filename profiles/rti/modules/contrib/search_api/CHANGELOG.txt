@@ -1,5 +1,23 @@
-Search API 1.x, dev (xxxx-xx-xx):
----------------------------------
+Search API 1.21 (2017-02-23):
+-----------------------------
+- #2780341 by Berdir: Fixed passing of custom ranges to date facets.
+- #2765317 by JorgenSandstrom, NWOM, drunken monkey: Added a "Last" aggregation
+  type.
+- #2842856 by drunken monkey: Fixed language filters for "Multiple types"
+  indexes.
+- #2844990 by drunken monkey: Made the "Role filter" data alteration available
+  for multi-type indexes.
+- #2837745 by drunken monkey, klausi: Fixed NULL tags on old serialized queries.
+- #2833482 by drunken monkey: Fixed undefined constant when uninstalling facets
+  module.
+- #2840261 by alan-ps: Fixed usage of outdated hash functions.
+- #1670420 by kyletaylored, dorficus, drunken monkey: Fixed potential fatal
+  error in facet adapter's getSearchKeys() method.
+- #2838075 by dsnopek: Fixed possible race condition in
+  hook_system_info_alter().
+- #2836687 by sarthak drupal: Fixed one doc comment typo.
+- #2632880 by drunken monkey, donquixote: Added possibility to change indexed
+  bundles on disabled indexes.
 - #2828380 by jansete: Fixed taxonomy term access tag in Views filter.
 - #2827717 by Fabien.Godineau, drunken monkey: Fixed disabling of search views
   when reverting an index.
